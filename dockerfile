@@ -1,25 +1,22 @@
-# Stage 1: base
 FROM node:20-alpine AS base
 WORKDIR /app
+
 COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
 
-# Stage 2: build
+
 FROM base AS build
 COPY . .
 RUN yarn build
 
-# Stage 3: production
+
 FROM node:20-alpine AS production
 WORKDIR /app
 
-# Copy standalone app (có cả node_modules và server.js)
+ENV NODE_ENV=production
+
 COPY --from=build /app/.next/standalone ./
-
-# Copy static assets
 COPY --from=build /app/.next/static ./.next/static
-
-# Copy public folder
 COPY --from=build /app/public ./public
 
 EXPOSE 3000

@@ -1,14 +1,12 @@
-version: "3.8"
-
 services:
   app:
-    image: beenguyen0601/mall-shop:prod
-    container_name: mall-shop
+    image: beenguyen0601/english-class-fe:prod
+    container_name: english-class-fe
     restart: unless-stopped
-    ports:
-      - "3000:3000"
+
     env_file:
       - .env
+
     networks:
       - app-net
 
