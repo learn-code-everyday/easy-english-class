@@ -113,7 +113,7 @@ export default function LoginForm({
           mb={2}
           sx={{ textShadow: "0 2px 8px rgba(0,0,0,0.12)" }}
         >
-          <Trans>Login to your Account</Trans>
+          <Trans>Login sssssto your Account</Trans>
         </Typography>
 
         <Formik
