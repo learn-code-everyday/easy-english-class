@@ -6,6 +6,10 @@ RUN yarn install --frozen-lockfile
 
 
 FROM base AS build
+
+ARG NEXT_PUBLIC_API_URI
+ENV NEXT_PUBLIC_API_URI=$NEXT_PUBLIC_API_URI
+
 COPY . .
 RUN yarn build
 

@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 import { Formik } from "formik";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import * as Yup from "yup";
 
@@ -47,11 +48,12 @@ export default function LoginForm({
   const { login } = useAuthStore();
   const { setLoading } = useLoadingStore();
 
+  const router = useRouter();
   const isMobile = useMediaQuery("(max-width:900px)");
   const [showPassword, setShowPassword] = React.useState(false);
 
   const onLoginWithGoogle = () => {
-    window.location.href = `${apiUri}/api/google`;
+    router.push(`${apiUri}/api/google`);
   };
 
   return (

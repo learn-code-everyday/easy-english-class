@@ -16,6 +16,7 @@ import {
 } from "@mui/material";
 import { Formik, Form } from "formik";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import * as Yup from "yup";
 
@@ -53,10 +54,12 @@ export default function RegisterForm({
   onScreen: (e: ScreenView) => void;
   onClose: () => void;
 }) {
+  const router = useRouter();
   const isMobile = useMediaQuery("(max-width:900px)");
 
   const handleGoogle = () => {
     window.location.href = `${apiUri}/api/google`;
+    router.push(`${apiUri}/api/google`);
   };
 
   return (
