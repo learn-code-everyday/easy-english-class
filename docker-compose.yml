@@ -10,6 +10,8 @@ services:
     networks:
       - app-net
 
+    ports:
+      - "4000:3000" 
 networks:
   app-net:
     external: true
