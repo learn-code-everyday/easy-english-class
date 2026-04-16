@@ -34,6 +34,9 @@ jobs:
     needs: build
 
     steps:
+      - name: Checkout code (for docker-compose)
+        uses: actions/checkout@v3
+
       - name: Create env
         run: echo "${{ secrets.ENV_FILE }}" > .env
 
@@ -43,6 +46,14 @@ jobs:
           echo "${{ secrets.SSH_KEY }}" > ~/.ssh/app.pem
           chmod 600 ~/.ssh/app.pem
           ssh-keyscan -H ${{ secrets.EC2_IP }} >> ~/.ssh/known_hosts
+
+      # ================================
+      # 🔥 FIX QUAN TRỌNG: UPLOAD COMPOSE
+      # ================================
+      - name: Upload docker-compose
+        run: |
+          scp -i ~/.ssh/app.pem docker-compose.yml \
+          ${{ secrets.SSH_USER }}@${{ secrets.EC2_IP }}:/home/www/english-class/fe-deploy/docker-compose.yml
 
       - name: Upload env
         run: |
@@ -58,6 +69,8 @@ jobs:
 
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_APPNAME }}:prod
 
+            docker compose down
             docker compose up -d --force-recreate
 
+            docker ps
           EOF
