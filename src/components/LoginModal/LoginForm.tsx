@@ -15,7 +15,6 @@ import {
 } from "@mui/material";
 import { Formik } from "formik";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import React from "react";
 import * as Yup from "yup";
 
@@ -35,25 +34,20 @@ const validationSchema = Yup.object().shape({
 });
 
 type LoginFormProps = {
-  apiUri: string;
   onScreen: (e: ScreenView) => void;
   onClose: () => void;
 };
 
-export default function LoginForm({
-  apiUri,
-  onScreen,
-  onClose,
-}: LoginFormProps) {
+export default function LoginForm({ onScreen, onClose }: LoginFormProps) {
   const { login } = useAuthStore();
   const { setLoading } = useLoadingStore();
 
-  const router = useRouter();
   const isMobile = useMediaQuery("(max-width:900px)");
   const [showPassword, setShowPassword] = React.useState(false);
 
   const onLoginWithGoogle = () => {
-    router.push(`${apiUri}/api/google`);
+    const origin = window.location.origin;
+    window.location.href = `/api/google?origin=${encodeURIComponent(origin)}`;
   };
 
   return (

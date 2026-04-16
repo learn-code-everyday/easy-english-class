@@ -28,7 +28,6 @@ export default function LoginModal({
   open: controlledOpen,
   onClose,
 }: LoginModalProps) {
-  const apiUri = process.env.NEXT_PUBLIC_API_URI || "";
   const router = useRouter();
   const { screen: screenFromQuery } = router.query;
 
@@ -83,14 +82,10 @@ export default function LoginModal({
       scroll="body"
     >
       {screen === "login" && (
-        <LoginForm apiUri={apiUri} onScreen={setScreen} onClose={handleClose} />
+        <LoginForm onScreen={setScreen} onClose={handleClose} />
       )}
       {screen === "register" && (
-        <RegisterForm
-          apiUri={apiUri}
-          onScreen={setScreen}
-          onClose={handleClose}
-        />
+        <RegisterForm onScreen={setScreen} onClose={handleClose} />
       )}
       {screen === "forgot-password" && (
         <ForgetPasswordForm onScreen={setScreen} onClose={handleClose} />

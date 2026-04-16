@@ -16,7 +16,6 @@ import {
 } from "@mui/material";
 import { Formik, Form } from "formik";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import React from "react";
 import * as Yup from "yup";
 
@@ -46,20 +45,17 @@ const RegisterSchema = Yup.object().shape({
 });
 
 export default function RegisterForm({
-  apiUri,
   onScreen,
   onClose,
 }: {
-  apiUri: string;
   onScreen: (e: ScreenView) => void;
   onClose: () => void;
 }) {
-  const router = useRouter();
   const isMobile = useMediaQuery("(max-width:900px)");
 
-  const handleGoogle = () => {
-    window.location.href = `${apiUri}/api/google`;
-    router.push(`${apiUri}/api/google`);
+  const onLoginWithGoogle = () => {
+    const origin = window.location.origin;
+    window.location.href = `/api/google?origin=${encodeURIComponent(origin)}`;
   };
 
   return (
@@ -172,7 +168,7 @@ export default function RegisterForm({
               <button
                 type="button"
                 className="w-full rounded-md bg-white py-3 font-bold text-indigo-600 flex items-center justify-center gap-2 hover:bg-indigo-50 transition"
-                onClick={handleGoogle}
+                onClick={onLoginWithGoogle}
                 disabled={isSubmitting}
               >
                 <GoogleIcon style={{ fontSize: 20 }} />
