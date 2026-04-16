@@ -8,10 +8,8 @@ import {
   getPath,
 } from "@/helpers/restful";
 
-const API = process.env.NEXT_PUBLIC_API_URI;
-
 export const axiosInstance = axios.create({
-  baseURL: API,
+  baseURL: process.env.NEXT_PUBLIC_API_URI,
   timeout: 1000,
   headers: {
     Accept: "application/json",

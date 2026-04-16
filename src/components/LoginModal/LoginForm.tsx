@@ -53,6 +53,7 @@ export default function LoginForm({
   const [showPassword, setShowPassword] = React.useState(false);
 
   const onLoginWithGoogle = () => {
+    console.log(process.env.NEXT_PUBLIC_API_URI);
     router.push(`${apiUri}/api/google`);
   };
 
