@@ -28,6 +28,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_APPNAME }}:prod
+          build-args: |
+            NEXT_PUBLIC_API_URI=${{ secrets.NEXT_PUBLIC_API_URI }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,9 +49,6 @@ jobs:
           chmod 600 ~/.ssh/app.pem
           ssh-keyscan -H ${{ secrets.EC2_IP }} >> ~/.ssh/known_hosts
 
-      # ================================
-      # 🔥 FIX QUAN TRỌNG: UPLOAD COMPOSE
-      # ================================
       - name: Upload docker-compose
         run: |
           scp -i ~/.ssh/app.pem docker-compose.yml \
