@@ -54,8 +54,7 @@ export default function RegisterForm({
   const isMobile = useMediaQuery("(max-width:900px)");
 
   const onLoginWithGoogle = () => {
-    const origin = window.location.origin;
-    window.location.href = `/api/google?origin=${encodeURIComponent(origin)}`;
+    window.location.href = `${process.env.NEXT_PUBLIC_API_URI}/api/google?origin=english`;
   };
 
   return (

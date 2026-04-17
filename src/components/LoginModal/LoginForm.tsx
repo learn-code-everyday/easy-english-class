@@ -46,8 +46,7 @@ export default function LoginForm({ onScreen, onClose }: LoginFormProps) {
   const [showPassword, setShowPassword] = React.useState(false);
 
   const onLoginWithGoogle = () => {
-    const origin = window.location.origin;
-    window.location.href = `/api/google?origin=${encodeURIComponent(origin)}`;
+    window.location.href = `${process.env.NEXT_PUBLIC_API_URI}/api/google?origin=english`;
   };
 
   return (
