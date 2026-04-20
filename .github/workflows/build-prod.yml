@@ -1,4 +1,4 @@
-name: Build & Deploy English FE
+name: Build & Deploy MAP Visualizer Frontend
 
 on:
   push:
