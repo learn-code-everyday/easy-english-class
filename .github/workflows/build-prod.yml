@@ -68,8 +68,7 @@ jobs:
 
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_APPNAME }}:prod
 
-            docker compose down
-            docker compose up -d --force-recreate
+            docker compose -p english up -d --force-recreate
 
             docker ps
           EOF
