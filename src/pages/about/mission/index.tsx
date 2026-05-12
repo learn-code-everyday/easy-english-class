@@ -1,5 +1,6 @@
 "use client";
 
+import { t, Trans } from "@lingui/macro";
 import {
   Box,
   Container,
@@ -126,7 +127,7 @@ const OurMissionPage = () => {
           gutterBottom
           sx={{ mb: 3 }}
         >
-          Our Mission
+          <Trans>Our Mission</Trans>
         </Typography>
 
         <Typography
@@ -136,40 +137,42 @@ const OurMissionPage = () => {
           textAlign="center"
           sx={{ fontStyle: "italic", mb: 8, maxWidth: 800, mx: "auto" }}
         >
-          Empowering every learner to achieve their full potential through
-          quality English education.
+          <Trans>
+            Empowering every learner to achieve their full potential through
+            quality English education.
+          </Trans>
         </Typography>
 
         {/* Mission Sections */}
         <MissionSection
-          title="Accessible Learning for Everyone"
-          description="We are committed to making English education accessible to learners from all backgrounds and skill levels. Through flexible schedules, online and offline classes, and affordable pricing, we ensure no one is left behind."
+          title={t`Accessible Learning for Everyone`}
+          description={t`We are committed to making English education accessible to learners from all backgrounds and skill levels. Through flexible schedules, online and offline classes, and affordable pricing, we ensure no one is left behind.`}
           imageSrc="/images/accessible_learning.jpg"
         />
 
         <MissionSection
-          title="Innovative Teaching Methods"
-          description="Our courses use the latest pedagogical research, incorporating interactive activities, technology, and real-world communication practice to create an engaging and effective learning environment."
+          title={t`Innovative Teaching Methods`}
+          description={t`Our courses use the latest pedagogical research, incorporating interactive activities, technology, and real-world communication practice to create an engaging and effective learning environment.`}
           imageSrc="/images/innovative_methods.jpg"
           reverse
         />
 
         <MissionSection
-          title="Personalized Learning Paths"
-          description="We understand that every learner is unique. Our experienced instructors design tailored lesson plans that meet individual goals, pace, and learning styles for optimal progress."
+          title={t`Personalized Learning Paths`}
+          description={t`We understand that every learner is unique. Our experienced instructors design tailored lesson plans that meet individual goals, pace, and learning styles for optimal progress.`}
           imageSrc="/images/personalized_paths.jpg"
         />
 
         <MissionSection
-          title="Community and Support"
-          description="Learning is more fun and effective in a supportive community. We foster a welcoming environment where students connect, practice, and grow together with mentorship and guidance at every step."
+          title={t`Community and Support`}
+          description={t`Learning is more fun and effective in a supportive community. We foster a welcoming environment where students connect, practice, and grow together with mentorship and guidance at every step.`}
           imageSrc="/images/community_support.jpg"
           reverse
         />
 
         <MissionSection
-          title="Global Opportunities"
-          description="Our mission extends beyond language skills. We aim to open doors to global academic, professional, and cultural opportunities by empowering learners with English proficiency."
+          title={t`Global Opportunities`}
+          description={t`Our mission extends beyond language skills. We aim to open doors to global academic, professional, and cultural opportunities by empowering learners with English proficiency.`}
           imageSrc="/images/global_opportunities.jpg"
         />
 
@@ -181,7 +184,7 @@ const OurMissionPage = () => {
             color="#035a8e"
             gutterBottom
           >
-            Watch Our Story
+            <Trans>Watch Our Story</Trans>
           </Typography>
           <Box
             component="video"
@@ -197,8 +200,10 @@ const OurMissionPage = () => {
             }}
           />
           <Typography variant="caption" color="text.secondary" sx={{ mt: 1 }}>
-            A glimpse into our passion and dedication to quality English
-            education.
+            <Trans>
+              A glimpse into our passion and dedication to quality English
+              education.
+            </Trans>
           </Typography>
         </Box>
 
@@ -216,10 +221,13 @@ const OurMissionPage = () => {
           }}
         >
           <Typography variant="h4" fontWeight="bold" gutterBottom>
-            Ready to transform your English skills?
+            <Trans>Ready to transform your English skills?</Trans>
           </Typography>
           <Typography variant="h6" sx={{ mb: 3 }}>
-            Join thousands of successful learners and start your journey today!
+            <Trans>
+              Join thousands of successful learners and start your journey
+              today!
+            </Trans>
           </Typography>
           <Link
             href="/register"
@@ -244,7 +252,7 @@ const OurMissionPage = () => {
               e.currentTarget.style.color = "#fc9a14";
             }}
           >
-            Join now
+            <Trans>Join now</Trans>
           </Link>
         </Box>
       </Container>

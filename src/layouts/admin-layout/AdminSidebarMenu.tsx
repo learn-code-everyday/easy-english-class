@@ -1,3 +1,4 @@
+import { Trans } from "@lingui/macro";
 import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -91,7 +92,7 @@ const AdminSidebarMenu: React.FC<AdminSidebarMenuProps> = ({
       <>
         <hr className="my-3 md:min-w-full" />
         <h6 className="block py-1 text-xs font-bold uppercase text-primary-dark no-underline md:min-w-full">
-          Loading...
+          <Trans>Loading...</Trans>
         </h6>
       </>
     );

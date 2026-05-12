@@ -1,4 +1,5 @@
 "use client";
+import { t, Trans } from "@lingui/macro";
 import {
   Box,
   Typography,
@@ -10,10 +11,10 @@ import {
 import React, { useState } from "react";
 
 const courseOptions = [
-  { label: "Beginner", value: "beginner" },
-  { label: "Intermediate", value: "intermediate" },
-  { label: "Advanced", value: "advanced" },
-  { label: "Conversation Practice", value: "conversation" },
+  { label: t`Beginner`, value: "beginner" },
+  { label: t`Intermediate`, value: "intermediate" },
+  { label: t`Advanced`, value: "advanced" },
+  { label: t`Conversation Practice`, value: "conversation" },
 ];
 
 export default function IeltsRegister() {
@@ -41,13 +42,13 @@ export default function IeltsRegister() {
         variant="h4"
         sx={{ mb: 3, fontWeight: "bold", color: "#004d40" }}
       >
-        Register for IELTS Course
+        <Trans>Register for IELTS Course</Trans>
       </Typography>
       {!submitted ? (
         <Paper sx={{ p: 4, maxWidth: 600, mx: "auto" }} elevation={3}>
           <form onSubmit={handleSubmit}>
             <TextField
-              label="Full Name"
+              label={t`Full Name`}
               name="fullName"
               value={form.fullName}
               onChange={handleChange}
@@ -56,7 +57,7 @@ export default function IeltsRegister() {
               sx={{ mb: 3 }}
             />
             <TextField
-              label="Email Address"
+              label={t`Email Address`}
               name="email"
               type="email"
               value={form.email}
@@ -67,7 +68,7 @@ export default function IeltsRegister() {
             />
             <TextField
               select
-              label="Select Course"
+              label={t`Select Course`}
               name="course"
               value={form.course}
               onChange={handleChange}
@@ -82,7 +83,7 @@ export default function IeltsRegister() {
               ))}
             </TextField>
             <Button variant="contained" color="primary" fullWidth type="submit">
-              Submit
+              <Trans>Submit</Trans>
             </Button>
           </form>
         </Paper>
@@ -92,7 +93,7 @@ export default function IeltsRegister() {
           textAlign="center"
           sx={{ color: "#00796b", mt: 3, fontWeight: "bold" }}
         >
-          Thank you for registering! We will contact you soon.
+          <Trans>Thank you for registering! We will contact you soon.</Trans>
         </Typography>
       )}
     </Box>

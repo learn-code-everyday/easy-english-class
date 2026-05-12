@@ -1,3 +1,5 @@
+import { t } from "@lingui/macro";
+
 import { GetAuthToken, SetAuthToken } from "@/graphql/auth";
 import { clearAuthSession, isAuthSessionError } from "@/graphql/session";
 import { toast } from "@/helpers/toast";
@@ -54,7 +56,7 @@ export async function login(email: string, password: string) {
 
     window.location.assign("/manage/dashboard");
 
-    toast.success("Login successfully");
+    toast.success(t`Login successfully`);
     setAuthStatus(AuthStatuses.LOADED);
     return user;
   } catch (error: any) {

@@ -1,5 +1,6 @@
 "use client";
 
+import { t, Trans } from "@lingui/macro";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
   Box,
@@ -18,72 +19,62 @@ import MainLayout from "@/layouts/MainLayout";
 
 const faqSections = [
   {
-    title: "Course Information",
+    title: t`Course Information`,
     faqs: [
       {
-        question: "What levels of English courses do you offer?",
-        answer:
-          "We offer Beginner, Intermediate, Advanced courses, Conversation Practice, and IELTS preparation to suit every level.",
+        question: t`What levels of English courses do you offer?`,
+        answer: t`We offer Beginner, Intermediate, Advanced courses, Conversation Practice, and IELTS preparation to suit every level.`,
       },
       {
-        question: "How long is each course?",
-        answer:
-          "Each course typically lasts 3 months with weekly sessions. Conversation Practice is usually 1 month.",
+        question: t`How long is each course?`,
+        answer: t`Each course typically lasts 3 months with weekly sessions. Conversation Practice is usually 1 month.`,
       },
       {
-        question: "Are classes online or in-person?",
-        answer:
-          "We provide flexible options for both online live classes and in-person sessions depending on your location and preference.",
+        question: t`Are classes online or in-person?`,
+        answer: t`We provide flexible options for both online live classes and in-person sessions depending on your location and preference.`,
       },
     ],
   },
   {
-    title: "Registration & Payment",
+    title: t`Registration & Payment`,
     faqs: [
       {
-        question: "How do I register for a course?",
-        answer:
-          "You can register directly on our website by selecting your desired course and completing the enrollment form.",
+        question: t`How do I register for a course?`,
+        answer: t`You can register directly on our website by selecting your desired course and completing the enrollment form.`,
       },
       {
-        question: "What payment methods are accepted?",
-        answer:
-          "We accept all major credit/debit cards, bank transfers, and popular e-wallets.",
+        question: t`What payment methods are accepted?`,
+        answer: t`We accept all major credit/debit cards, bank transfers, and popular e-wallets.`,
       },
       {
-        question: "Are there any discounts?",
-        answer:
-          "Yes! Early bird discounts, group rates, and referral bonuses are available. Contact support for details.",
+        question: t`Are there any discounts?`,
+        answer: t`Yes! Early bird discounts, group rates, and referral bonuses are available. Contact support for details.`,
       },
     ],
   },
   {
-    title: "Course Policies",
+    title: t`Course Policies`,
     faqs: [
       {
-        question: "Can I get a refund if I cancel?",
-        answer:
-          "Full refunds are available within the first week of class. Partial refunds are prorated based on attendance thereafter.",
+        question: t`Can I get a refund if I cancel?`,
+        answer: t`Full refunds are available within the first week of class. Partial refunds are prorated based on attendance thereafter.`,
       },
       {
-        question: "Do I get a certificate after course completion?",
-        answer:
-          "Yes, upon successful completion you will receive a certificate recognized by our institution.",
+        question: t`Do I get a certificate after course completion?`,
+        answer: t`Yes, upon successful completion you will receive a certificate recognized by our institution.`,
       },
     ],
   },
   {
-    title: "Technical Support",
+    title: t`Technical Support`,
     faqs: [
       {
-        question: "What if I have trouble accessing online classes?",
-        answer:
-          "Our tech support team is available 24/7. Contact us via chat or email and we’ll assist you promptly.",
+        question: t`What if I have trouble accessing online classes?`,
+        answer: t`Our tech support team is available 24/7. Contact us via chat or email and we'll assist you promptly.`,
       },
       {
-        question: "Are there prerequisites for online courses?",
-        answer:
-          "A stable internet connection and a device with video/audio capability are required. Basic computer skills are recommended.",
+        question: t`Are there prerequisites for online courses?`,
+        answer: t`A stable internet connection and a device with video/audio capability are required. Basic computer skills are recommended.`,
       },
     ],
   },
@@ -113,7 +104,7 @@ const FAQPageExpanded = () => {
           gutterBottom
           sx={{ mb: 3 }}
         >
-          Frequently Asked Questions
+          <Trans>Frequently Asked Questions</Trans>
         </Typography>
 
         <Typography
@@ -124,8 +115,10 @@ const FAQPageExpanded = () => {
           mb={6}
           sx={{ fontStyle: "italic", maxWidth: 700, mx: "auto" }}
         >
-          Find answers to common questions about courses, registration,
-          policies, and support.
+          <Trans>
+            Find answers to common questions about courses, registration,
+            policies, and support.
+          </Trans>
         </Typography>
 
         {faqSections.map(({ title, faqs }, i) => (
@@ -199,7 +192,7 @@ const FAQPageExpanded = () => {
                     color="#035a8e"
                     mb={2}
                   >
-                    Watch Our Course Overview Video
+                    <Trans>Watch Our Course Overview Video</Trans>
                   </Typography>
                   <Box
                     sx={{
@@ -213,7 +206,7 @@ const FAQPageExpanded = () => {
                   >
                     <iframe
                       src="https://www.youtube.com/embed/4W_Zt2cbGlc"
-                      title="Course Overview"
+                      title={t`Course Overview`}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                       style={{
@@ -240,9 +233,9 @@ const FAQPageExpanded = () => {
           color="text.secondary"
           sx={{ fontStyle: "italic", fontSize: "1rem" }}
         >
-          Still have questions? Reach out to our support team via{" "}
+          <Trans>Still have questions? Reach out to our support team via</Trans>{" "}
           <MuiLink href="/contact" underline="hover" color="primary">
-            Contact Page
+            <Trans>Contact Page</Trans>
           </MuiLink>
           .
         </Typography>

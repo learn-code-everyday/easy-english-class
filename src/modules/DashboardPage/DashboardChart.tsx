@@ -1,3 +1,5 @@
+import { Trans } from "@lingui/macro";
+
 import StudentGrowthBarChart from "./StudentGrowthBarChart";
 import UserRatioPieChart from "./UserRatioPieChart";
 
@@ -20,12 +22,14 @@ const DashboardCharts = () => {
     <div className="flex flex-col lg:flex-row w-full justify-between gap-8">
       <div className="bg-white rounded-2xl shadow p-6 w-full">
         <h2 className="text-lg font-semibold mb-4">
-          Student Growth (6 months)
+          <Trans>Student Growth (6 months)</Trans>
         </h2>
         <StudentGrowthBarChart data={studentGrowth} />
       </div>
       <div className="bg-white rounded-2xl shadow p-6 w-full">
-        <h2 className="text-lg font-semibold mb-4">Students vs Teachers</h2>
+        <h2 className="text-lg font-semibold mb-4">
+          <Trans>Students vs Teachers</Trans>
+        </h2>
         <UserRatioPieChart data={userRatio} />
       </div>
     </div>

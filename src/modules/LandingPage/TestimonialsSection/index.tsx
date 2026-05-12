@@ -1,12 +1,14 @@
+import { t, Trans } from "@lingui/macro";
+
 const testimonials = [
   {
     name: "Lan",
-    text: "The teachers are incredibly dedicated; I scored IELTS 6.5 after 6 months!",
+    text: t`The teachers are incredibly dedicated; I scored IELTS 6.5 after 6 months!`,
     image: "/images/english/lan.jpg",
   },
   {
     name: "Minh",
-    text: "The flexible schedule perfectly fits working students.",
+    text: t`The flexible schedule perfectly fits working students.`,
     image: "/images/english/minh.jpg",
   },
 ];
@@ -15,7 +17,7 @@ export default function TestimonialsSection() {
   return (
     <section className="bg-gray-50 px-6 py-20 text-center">
       <h2 className="mb-16 text-4xl font-extrabold tracking-tight text-gray-900">
-        What Our Students Say
+        <Trans>What Our Students Say</Trans>
       </h2>
       <div className="mx-auto max-w-5xl grid gap-10 md:grid-cols-2">
         {testimonials.map((t, idx) => (

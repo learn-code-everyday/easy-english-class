@@ -1,4 +1,5 @@
 "use client";
+import { Trans } from "@lingui/macro";
 import { Box, Typography, Button } from "@mui/material";
 import React from "react";
 
@@ -16,11 +17,13 @@ export default function IeltsIntro() {
       }}
     >
       <Typography variant="h2" sx={{ mb: 2, fontWeight: "bold" }}>
-        IELTS Preparation Course
+        <Trans>IELTS Preparation Course</Trans>
       </Typography>
       <Typography variant="h6" sx={{ maxWidth: 700, mx: "auto", mb: 4 }}>
-        Get ready for your IELTS exam with comprehensive lessons, real test
-        strategies, and expert coaching to boost your score.
+        <Trans>
+          Get ready for your IELTS exam with comprehensive lessons, real test
+          strategies, and expert coaching to boost your score.
+        </Trans>
       </Typography>
       <Button
         variant="contained"
@@ -28,7 +31,7 @@ export default function IeltsIntro() {
         sx={{ px: 6, py: 1.5, fontWeight: "bold", fontSize: "1.1rem" }}
         href="#register"
       >
-        Register Now
+        <Trans>Register Now</Trans>
       </Button>
     </Box>
   );

@@ -1,3 +1,4 @@
+import { t, Trans } from "@lingui/macro";
 import { Avatar, Button } from "@mui/material";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -62,7 +63,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, menu }) => {
           <button
             className="p-2 text-2xl text-gray-600 hover:text-blue-700 rounded-full focus:outline-none"
             onClick={onClose}
-            aria-label="Close menu"
+            aria-label={t`Close menu`}
           >
             <IoMdClose />
           </button>
@@ -135,7 +136,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, menu }) => {
                 href="/manage/dashboard"
                 className="rounded px-3 py-2 hover:bg-blue-50"
               >
-                Management Site
+                <Trans>Management Site</Trans>
               </Link>
               <button
                 className="px-3 py-2 text-left text-red-600 hover:bg-red-50"
@@ -144,7 +145,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, menu }) => {
                   onClose();
                 }}
               >
-                Logout
+                <Trans>Logout</Trans>
               </button>
             </div>
           ) : (
@@ -156,7 +157,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ open, onClose, menu }) => {
                   setOpenModal(true);
                 }}
               >
-                Login
+                <Trans>Login</Trans>
               </Button>
               <LoginModal
                 open={openModal}

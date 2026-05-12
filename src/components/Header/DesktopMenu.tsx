@@ -1,3 +1,4 @@
+import { Trans } from "@lingui/macro";
 import { Menu, MenuItem, Avatar, Button } from "@mui/material";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // App Router
@@ -79,7 +80,7 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
               onClick={() => setOpenModal(true)}
               className="ml-4 rounded-full bg-blue-600 px-5 py-2 font-semibold text-white transition hover:bg-blue-700 md:inline-block"
             >
-              Login
+              <Trans>Login</Trans>
             </Button>
             <LoginModal open={openModal} onClose={() => setOpenModal(false)} />
           </>
@@ -124,10 +125,10 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
                 onClick={handleClose}
                 sx={{ fontWeight: "bold" }}
               >
-                Management Site
+                <Trans>Management Site</Trans>
               </MenuItem>
               <MenuItem onClick={handleLogout} sx={{ color: "red" }}>
-                Logout
+                <Trans>Logout</Trans>
               </MenuItem>
             </Menu>
           </>

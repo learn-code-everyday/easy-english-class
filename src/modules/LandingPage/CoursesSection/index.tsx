@@ -1,17 +1,19 @@
+import { t, Trans } from "@lingui/macro";
+
 const courses = [
   {
-    name: "Beginner English",
-    desc: "A cheerful young adult learning English basics, sitting with a notebook and pen, casual classroom background, bright and friendly atmosphere, warm colors, simple communication icons floating around",
+    name: t`Beginner English`,
+    desc: t`A cheerful young adult learning English basics, sitting with a notebook and pen, casual classroom background, bright and friendly atmosphere, warm colors, simple communication icons floating around`,
     image: "/images/english/beginner.jpg",
   },
   {
-    name: "Intermediate English",
-    desc: "A confident young professional giving a presentation in English, standing in front of a small audience, business casual attire, modern office or seminar room, confident gestures, clear and bright lighting",
+    name: t`Intermediate English`,
+    desc: t`A confident young professional giving a presentation in English, standing in front of a small audience, business casual attire, modern office or seminar room, confident gestures, clear and bright lighting`,
     image: "/images/english/intermediate.jpg",
   },
   {
-    name: "Advanced English",
-    desc: "A focused student studying for IELTS, surrounded by textbooks and laptop, calm and quiet library environment, serious and determined expression, academic atmosphere with charts and notes visible",
+    name: t`Advanced English`,
+    desc: t`A focused student studying for IELTS, surrounded by textbooks and laptop, calm and quiet library environment, serious and determined expression, academic atmosphere with charts and notes visible`,
     image: "/images/english/advanced.jpg",
   },
 ];
@@ -19,7 +21,9 @@ const courses = [
 export default function CoursesSection() {
   return (
     <section className="bg-white px-6 py-16">
-      <h2 className="mb-12 text-center text-3xl font-bold">Our courses</h2>
+      <h2 className="mb-12 text-center text-3xl font-bold">
+        <Trans>Our courses</Trans>
+      </h2>
       <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-3">
         {courses.map((c, idx) => (
           <div

@@ -1,17 +1,19 @@
+import { t, Trans } from "@lingui/macro";
+
 const features = [
   {
-    title: "Native Teachers",
-    desc: "Learn with 100% American and British instructors",
+    title: t`Native Teachers`,
+    desc: t`Learn with 100% American and British instructors`,
     icon: "🧑‍🏫",
   },
   {
-    title: "Guaranteed Results",
-    desc: "Money-back if you dont achieve your goals",
+    title: t`Guaranteed Results`,
+    desc: t`Money-back if you dont achieve your goals`,
     icon: "💯",
   },
   {
-    title: "Flexible Schedule",
-    desc: "Learn anytime, anywhere",
+    title: t`Flexible Schedule`,
+    desc: t`Learn anytime, anywhere`,
     icon: "⏰",
   },
 ];
@@ -19,7 +21,9 @@ const features = [
 export default function FeaturesSection() {
   return (
     <section className="bg-gray-50 px-6 py-16 text-center">
-      <h2 className="mb-12 text-3xl font-bold">Why Choose Us?</h2>
+      <h2 className="mb-12 text-3xl font-bold">
+        <Trans>Why Choose Us?</Trans>
+      </h2>
       <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-3">
         {features.map((f, idx) => (
           <div

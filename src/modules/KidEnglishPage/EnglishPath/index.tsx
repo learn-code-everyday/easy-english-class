@@ -1,22 +1,23 @@
 "use client";
+import { t, Trans } from "@lingui/macro";
 import { Box, Typography, Grid, Paper } from "@mui/material";
 import React from "react";
 
 const learningPaths = [
   {
-    ageRange: "3 - 5 years",
-    focus: "Basic vocabulary, phonics, colors, numbers, simple sentences",
-    activities: "Songs, picture books, interactive games",
+    ageRange: t`3 - 5 years`,
+    focus: t`Basic vocabulary, phonics, colors, numbers, simple sentences`,
+    activities: t`Songs, picture books, interactive games`,
   },
   {
-    ageRange: "6 - 8 years",
-    focus: "Basic grammar, conversation skills, simple writing",
-    activities: "Storytelling, role-play, group activities",
+    ageRange: t`6 - 8 years`,
+    focus: t`Basic grammar, conversation skills, simple writing`,
+    activities: t`Storytelling, role-play, group activities`,
   },
   {
-    ageRange: "9 - 12 years",
-    focus: "Reading comprehension, writing skills, oral presentation",
-    activities: "Creative writing, debates, presentations",
+    ageRange: t`9 - 12 years`,
+    focus: t`Reading comprehension, writing skills, oral presentation`,
+    activities: t`Creative writing, debates, presentations`,
   },
 ];
 
@@ -27,7 +28,7 @@ export default function KidEnglishPath() {
         variant="h4"
         sx={{ mb: 4, fontWeight: "bold", color: "#6d4c41" }}
       >
-        Learning Path & Stages
+        <Trans>Learning Path & Stages</Trans>
       </Typography>
       <Grid container spacing={4}>
         {learningPaths.map(({ ageRange, focus, activities }) => (
@@ -48,7 +49,7 @@ export default function KidEnglishPath() {
               }}
             >
               <Typography variant="h6" fontWeight="bold" gutterBottom>
-                Age {ageRange}
+                <Trans>Age</Trans> {ageRange}
               </Typography>
               <Box>
                 <Typography
@@ -56,7 +57,7 @@ export default function KidEnglishPath() {
                   fontWeight="bold"
                   sx={{ mb: 1 }}
                 >
-                  Focus:
+                  <Trans>Focus:</Trans>
                 </Typography>
                 <Typography variant="body2" sx={{ mb: 2 }}>
                   {focus}
@@ -66,7 +67,7 @@ export default function KidEnglishPath() {
                   fontWeight="bold"
                   sx={{ mb: 1 }}
                 >
-                  Activities:
+                  <Trans>Activities:</Trans>
                 </Typography>
                 <Typography variant="body2">{activities}</Typography>
               </Box>

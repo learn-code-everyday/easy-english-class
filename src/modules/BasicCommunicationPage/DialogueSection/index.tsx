@@ -1,5 +1,6 @@
 "use client";
 
+import { Trans } from "@lingui/macro";
 import { Paper, Typography } from "@mui/material";
 import React from "react";
 
@@ -19,20 +20,29 @@ const DialogueSection = () => (
     }}
   >
     <Typography variant="h5" fontWeight="bold" mb={2} color="#035a8e">
-      Sample Dialogue
+      <Trans>Sample Dialogue</Trans>
     </Typography>
     <Typography sx={{ mb: 1 }}>
-      <strong>Anna:</strong> Hello! How are you today?
+      <strong>
+        <Trans>Anna:</Trans>
+      </strong>{" "}
+      <Trans>Hello! How are you today?</Trans>
     </Typography>
     <Typography sx={{ mb: 1 }}>
-      <strong>Ben:</strong> I’m fine, thank you. And you?
+      <strong>
+        <Trans>Ben:</Trans>
+      </strong>{" "}
+      <Trans>I&apos;m fine, thank you. And you?</Trans>
     </Typography>
     <Typography sx={{ mb: 2 }}>
-      <strong>Anna:</strong> I’m great, thanks for asking!
+      <strong>
+        <Trans>Anna:</Trans>
+      </strong>{" "}
+      <Trans>I&apos;m great, thanks for asking!</Trans>
     </Typography>
     <audio controls style={{ width: "100%", outline: "none" }}>
       <source src={dialogueAudioUrl} type="audio/mp3" />
-      Your browser does not support the audio element.
+      <Trans>Your browser does not support the audio element.</Trans>
     </audio>
   </Paper>
 );

@@ -1,3 +1,4 @@
+import { t, Trans } from "@lingui/macro";
 import { Box, Stack, Typography } from "@mui/material";
 
 import CopyValue from "@/components/CopyValue";
@@ -29,7 +30,7 @@ export default function PaymentQRSection({ method, amount, invoiceNo }: Props) {
           accountNo={BANK_INFO.accountNo}
           accountName={BANK_INFO.accountName}
           amount={amount}
-          addInfo={`Pay tuition ${invoiceNo}`}
+          addInfo={t`Pay tuition ${invoiceNo}`}
         />
         <Typography
           variant="caption"
@@ -37,24 +38,30 @@ export default function PaymentQRSection({ method, amount, invoiceNo }: Props) {
           mt={1}
           textAlign="center"
         >
-          Scan VietQR code with your banking app.
+          <Trans>Scan VietQR code with your banking app.</Trans>
         </Typography>
         <Stack spacing={1} width="100%" alignItems="center" mt={1}>
           <Stack direction="row" alignItems="center" spacing={1}>
-            <Typography fontWeight={500}>Account No:</Typography>
+            <Typography fontWeight={500}>
+              <Trans>Account No:</Trans>
+            </Typography>
             <Typography>{BANK_INFO.accountNo}</Typography>
-            <CopyValue value={BANK_INFO.accountNo} label="Account No" />
+            <CopyValue value={BANK_INFO.accountNo} label={t`Account No`} />
           </Stack>
           <Stack direction="row" alignItems="center" spacing={1}>
-            <Typography fontWeight={500}>Account Name:</Typography>
+            <Typography fontWeight={500}>
+              <Trans>Account Name:</Trans>
+            </Typography>
             <Typography>{BANK_INFO.accountName}</Typography>
           </Stack>
           <Stack direction="row" alignItems="center" spacing={1}>
-            <Typography fontWeight={500}>Transfer Info:</Typography>
-            <Typography>{`Pay tuition ${invoiceNo}`}</Typography>
+            <Typography fontWeight={500}>
+              <Trans>Transfer Info:</Trans>
+            </Typography>
+            <Typography>{t`Pay tuition ${invoiceNo}`}</Typography>
             <CopyValue
-              value={`Pay tuition ${invoiceNo}`}
-              label="Transfer Info"
+              value={t`Pay tuition ${invoiceNo}`}
+              label={t`Transfer Info`}
             />
           </Stack>
         </Stack>
@@ -66,7 +73,7 @@ export default function PaymentQRSection({ method, amount, invoiceNo }: Props) {
         <MomoQR
           phone={MOMO_INFO.phone}
           amount={amount}
-          comment={`Pay tuition ${invoiceNo}`}
+          comment={t`Pay tuition ${invoiceNo}`}
         />
         <Typography
           variant="caption"
@@ -74,25 +81,29 @@ export default function PaymentQRSection({ method, amount, invoiceNo }: Props) {
           mt={1}
           textAlign="center"
         >
-          Scan Momo QR to pay.
+          <Trans>Scan Momo QR to pay.</Trans>
         </Typography>
         <Stack spacing={1} width="100%" alignItems="center" mt={1}>
           <Stack direction="row" alignItems="center" spacing={1}>
-            <Typography fontWeight={500}>Phone:</Typography>
+            <Typography fontWeight={500}>
+              <Trans>Phone:</Trans>
+            </Typography>
             <Typography>{MOMO_INFO.phone}</Typography>
-            <CopyValue value={MOMO_INFO.phone} label="Phone" />
+            <CopyValue value={MOMO_INFO.phone} label={t`Phone`} />
           </Stack>
           <Stack direction="row" alignItems="center" spacing={1}>
-            <Typography fontWeight={500}>Comment:</Typography>
-            <Typography>{`Pay tuition ${invoiceNo}`}</Typography>
-            <CopyValue value={`Pay tuition ${invoiceNo}`} label="Comment" />
+            <Typography fontWeight={500}>
+              <Trans>Comment:</Trans>
+            </Typography>
+            <Typography>{t`Pay tuition ${invoiceNo}`}</Typography>
+            <CopyValue value={t`Pay tuition ${invoiceNo}`} label={t`Comment`} />
           </Stack>
         </Stack>
       </Box>
     );
   return (
     <Typography color="text.secondary" align="center">
-      No QR available for this payment method.
+      <Trans>No QR available for this payment method.</Trans>
     </Typography>
   );
 }

@@ -1,4 +1,5 @@
 "use client";
+import { t, Trans } from "@lingui/macro";
 import {
   Box,
   Typography,
@@ -11,12 +12,12 @@ import {
 import React, { useState } from "react";
 
 const quizSample = {
-  question: "What does IELTS stand for?",
+  question: t`What does IELTS stand for?`,
   options: [
-    "International English Language Testing System",
-    "International English Language Teaching Service",
-    "International English Learning Test Standard",
-    "International Exam of Language Testing System",
+    t`International English Language Testing System`,
+    t`International English Language Teaching Service`,
+    t`International English Learning Test Standard`,
+    t`International Exam of Language Testing System`,
   ],
   answer: 0,
 };
@@ -33,10 +34,10 @@ export default function IeltsQuiz() {
   const handleSubmit = () => {
     if (selected === quizSample.answer) {
       setFeedback(
-        "Correct! IELTS stands for International English Language Testing System."
+        t`Correct! IELTS stands for International English Language Testing System.`
       );
     } else {
-      setFeedback("Incorrect. Please try again.");
+      setFeedback(t`Incorrect. Please try again.`);
     }
   };
 
@@ -46,7 +47,7 @@ export default function IeltsQuiz() {
         variant="h4"
         sx={{ mb: 3, fontWeight: "bold", color: "#004d40" }}
       >
-        Quiz Sample
+        <Trans>Quiz Sample</Trans>
       </Typography>
       <Paper sx={{ p: 3, maxWidth: 600, mx: "auto" }} elevation={3}>
         <Typography variant="h6" sx={{ mb: 2 }}>
@@ -72,7 +73,7 @@ export default function IeltsQuiz() {
           onClick={handleSubmit}
           disabled={selected === null}
         >
-          Submit
+          <Trans>Submit</Trans>
         </Button>
         {feedback && (
           <Typography

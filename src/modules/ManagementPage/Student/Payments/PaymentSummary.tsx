@@ -1,3 +1,4 @@
+import { Trans } from "@lingui/macro";
 import { Card, Stack, Typography } from "@mui/material";
 
 import { StudentPayment } from "./PaymentTable";
@@ -19,7 +20,7 @@ export default function PaymentSummary({ data }: Props) {
     <Stack direction={{ xs: "column", sm: "row" }} spacing={2} mb={2}>
       <Card sx={{ p: 2, flex: 1, minWidth: 200, bgcolor: "#f3fff7" }}>
         <Typography variant="subtitle2" color="text.secondary">
-          Total
+          <Trans>Total</Trans>
         </Typography>
         <Typography variant="h5" color="primary" fontWeight={600}>
           {total.toLocaleString()}₫
@@ -27,7 +28,7 @@ export default function PaymentSummary({ data }: Props) {
       </Card>
       <Card sx={{ p: 2, flex: 1, minWidth: 200, bgcolor: "#e6f6ff" }}>
         <Typography variant="subtitle2" color="text.secondary">
-          Paid
+          <Trans>Paid</Trans>
         </Typography>
         <Typography variant="h5" color="success.main" fontWeight={600}>
           {paid.toLocaleString()}₫
@@ -35,7 +36,7 @@ export default function PaymentSummary({ data }: Props) {
       </Card>
       <Card sx={{ p: 2, flex: 1, minWidth: 200, bgcolor: "#fff7f0" }}>
         <Typography variant="subtitle2" color="text.secondary">
-          Unpaid / Overdue
+          <Trans>Unpaid / Overdue</Trans>
         </Typography>
         <Typography variant="h5" color="error.main" fontWeight={600}>
           {unpaid.toLocaleString()}₫

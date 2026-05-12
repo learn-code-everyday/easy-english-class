@@ -5,7 +5,10 @@ import React from "react";
 
 interface CourseFilterProps {
   selected: string;
-  options: string[];
+  options: {
+    label: string;
+    value: string;
+  }[];
   onChange: (selected: string) => void;
 }
 
@@ -18,13 +21,13 @@ export default function CourseFilter({
     <Stack direction="row" spacing={2} justifyContent="center" mb={6}>
       {options.map((opt) => (
         <Button
-          key={opt}
-          variant={opt === selected ? "contained" : "outlined"}
+          key={opt.value}
+          variant={opt.value === selected ? "contained" : "outlined"}
           color="primary"
-          onClick={() => onChange(opt)}
+          onClick={() => onChange(opt.value)}
           sx={{ textTransform: "none", fontWeight: "bold" }}
         >
-          {opt}
+          {opt.label}
         </Button>
       ))}
     </Stack>

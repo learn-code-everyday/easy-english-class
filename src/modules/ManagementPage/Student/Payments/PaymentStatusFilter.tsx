@@ -1,11 +1,12 @@
+import { t, Trans } from "@lingui/macro";
 import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 
 const statusOptions = [
-  { label: "All", value: "ALL" },
-  { label: "Paid", value: "PAID" },
-  { label: "Unpaid", value: "UNPAID" },
-  { label: "Refunded", value: "REFUNDED" },
-  { label: "Overdue", value: "OVERDUE" },
+  { label: t`All`, value: "ALL" },
+  { label: t`Paid`, value: "PAID" },
+  { label: t`Unpaid`, value: "UNPAID" },
+  { label: t`Refunded`, value: "REFUNDED" },
+  { label: t`Overdue`, value: "OVERDUE" },
 ];
 
 type Props = {
@@ -16,9 +17,11 @@ type Props = {
 export default function PaymentStatusFilter({ value, onChange }: Props) {
   return (
     <FormControl size="small" sx={{ minWidth: 140 }}>
-      <InputLabel>Status</InputLabel>
+      <InputLabel>
+        <Trans>Status</Trans>
+      </InputLabel>
       <Select
-        label="Status"
+        label={t`Status`}
         value={value}
         onChange={(e) => onChange(e.target.value)}
       >

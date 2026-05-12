@@ -1,11 +1,12 @@
+import { t, Trans } from "@lingui/macro";
 import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 
 const ASSIGNMENT_STATUS_OPTIONS = [
-  { label: "All", value: "ALL" },
-  { label: "Pending", value: "PENDING" },
-  { label: "Submitted", value: "SUBMITTED" },
-  { label: "Overdue", value: "OVERDUE" },
-  { label: "Graded", value: "GRADED" },
+  { label: t`All`, value: "ALL" },
+  { label: t`Pending`, value: "PENDING" },
+  { label: t`Submitted`, value: "SUBMITTED" },
+  { label: t`Overdue`, value: "OVERDUE" },
+  { label: t`Graded`, value: "GRADED" },
 ];
 
 type Props = {
@@ -16,10 +17,12 @@ type Props = {
 export default function AssignmentStatusFilter({ value, onChange }: Props) {
   return (
     <FormControl size="small" sx={{ minWidth: 160 }}>
-      <InputLabel>Status</InputLabel>
+      <InputLabel>
+        <Trans>Status</Trans>
+      </InputLabel>
       <Select
         value={value}
-        label="Status"
+        label={t`Status`}
         onChange={(e) => onChange(e.target.value)}
       >
         {ASSIGNMENT_STATUS_OPTIONS.map((opt) => (

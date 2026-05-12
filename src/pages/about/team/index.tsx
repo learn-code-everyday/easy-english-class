@@ -1,5 +1,6 @@
 "use client";
 
+import { t, Trans } from "@lingui/macro";
 import { Box, Container, Typography, Avatar, Grid, Paper } from "@mui/material";
 import Link from "next/link";
 import React from "react";
@@ -10,45 +11,39 @@ import MainLayout from "@/layouts/MainLayout";
 const teamMembers = [
   {
     name: "Alice Nguyen",
-    position: "Founder & CEO",
+    position: t`Founder & CEO`,
     avatar: "/team/alice.jpg",
-    description:
-      "Visionary leader passionate about education and technology, guiding our mission with commitment and heart.",
+    description: t`Visionary leader passionate about education and technology, guiding our mission with commitment and heart.`,
   },
   {
     name: "Brian Tran",
-    position: "Head of Curriculum",
+    position: t`Head of Curriculum`,
     avatar: "/team/brian.jpg",
-    description:
-      "Experienced educator designing innovative, practical, and engaging English learning programs.",
+    description: t`Experienced educator designing innovative, practical, and engaging English learning programs.`,
   },
   {
     name: "Cindy Le",
-    position: "Marketing Manager",
+    position: t`Marketing Manager`,
     avatar: "/team/cindy.jpg",
-    description:
-      "Creative strategist bringing our message to students worldwide and growing our community.",
+    description: t`Creative strategist bringing our message to students worldwide and growing our community.`,
   },
   {
     name: "David Ho",
-    position: "Lead Instructor",
+    position: t`Lead Instructor`,
     avatar: "/team/david.jpg",
-    description:
-      "Dedicated teacher focused on helping students gain confidence and fluency through real-world practice.",
+    description: t`Dedicated teacher focused on helping students gain confidence and fluency through real-world practice.`,
   },
   {
     name: "Eva Pham",
-    position: "Product Manager",
+    position: t`Product Manager`,
     avatar: "/team/eva.jpg",
-    description:
-      "Driving product innovation and user experience for seamless and effective learning journeys.",
+    description: t`Driving product innovation and user experience for seamless and effective learning journeys.`,
   },
   {
     name: "Frank Nguyen",
-    position: "Technical Lead",
+    position: t`Technical Lead`,
     avatar: "/team/frank.jpg",
-    description:
-      "Ensuring a robust, secure, and scalable platform supporting millions of learners worldwide.",
+    description: t`Ensuring a robust, secure, and scalable platform supporting millions of learners worldwide.`,
   },
 ];
 
@@ -181,7 +176,7 @@ const OurTeamPage = () => {
           gutterBottom
           sx={{ mb: 4 }}
         >
-          Meet Our Team
+          <Trans>Meet Our Team</Trans>
         </Typography>
         <Typography
           variant="h5"
@@ -191,8 +186,10 @@ const OurTeamPage = () => {
           mb={6}
           sx={{ fontStyle: "italic", maxWidth: 800, mx: "auto" }}
         >
-          A passionate group of educators, innovators, and leaders dedicated to
-          empowering learners worldwide.
+          <Trans>
+            A passionate group of educators, innovators, and leaders dedicated
+            to empowering learners worldwide.
+          </Trans>
         </Typography>
 
         <Grid container spacing={4}>
@@ -222,11 +219,13 @@ const OurTeamPage = () => {
           }}
         >
           <Typography variant="h4" fontWeight="bold" gutterBottom>
-            Join Our Community
+            <Trans>Join Our Community</Trans>
           </Typography>
           <Typography variant="h6" sx={{ mb: 3 }}>
-            Become a part of our mission to make English education accessible to
-            everyone.
+            <Trans>
+              Become a part of our mission to make English education accessible
+              to everyone.
+            </Trans>
           </Typography>
           <Link
             href="/register"
@@ -251,7 +250,7 @@ const OurTeamPage = () => {
               e.currentTarget.style.color = "#fc9a14";
             }}
           >
-            Get Started
+            <Trans>Get Started</Trans>
           </Link>
         </Box>
       </Container>

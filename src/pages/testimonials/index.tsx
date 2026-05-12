@@ -1,5 +1,6 @@
 "use client";
 
+import { t, Trans } from "@lingui/macro";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import {
   Box,
@@ -20,59 +21,51 @@ import MainLayout from "@/layouts/MainLayout";
 const testimonials = [
   {
     name: "Emily Nguyen",
-    position: "Student",
+    position: t`Student`,
     avatar: "/avatars/emily.jpg",
-    feedback:
-      "This English course transformed my confidence. The instructors are amazing and the curriculum is very practical.",
+    feedback: t`This English course transformed my confidence. The instructors are amazing and the curriculum is very practical.`,
   },
   {
     name: "James Lee",
-    position: "Working Professional",
+    position: t`Working Professional`,
     avatar: "/avatars/james.jpg",
-    feedback:
-      "I improved my business English tremendously. The classes fit well into my busy schedule.",
+    feedback: t`I improved my business English tremendously. The classes fit well into my busy schedule.`,
   },
   {
     name: "Sophia Tran",
-    position: "University Student",
+    position: t`University Student`,
     avatar: "/avatars/sophia.jpg",
-    feedback:
-      "Fun and engaging lessons with a great community. Highly recommend to anyone learning English!",
+    feedback: t`Fun and engaging lessons with a great community. Highly recommend to anyone learning English!`,
   },
   {
     name: "Michael Pham",
-    position: "Freelancer",
+    position: t`Freelancer`,
     avatar: "/avatars/michael.jpg",
-    feedback:
-      "Practical approach and lots of speaking practice. My English skills have never been better!",
+    feedback: t`Practical approach and lots of speaking practice. My English skills have never been better!`,
   },
   {
     name: "Anna Le",
-    position: "Entrepreneur",
+    position: t`Entrepreneur`,
     avatar: "/avatars/anna.jpg",
-    feedback:
-      "The course content is clear and practical, and the teachers really care about students’ progress.",
+    feedback: t`The course content is clear and practical, and the teachers really care about students' progress.`,
   },
   {
     name: "David Hoang",
-    position: "Marketing Specialist",
+    position: t`Marketing Specialist`,
     avatar: "/avatars/david.jpg",
-    feedback:
-      "Thanks to these courses, my English communication at work has improved significantly.",
+    feedback: t`Thanks to these courses, my English communication at work has improved significantly.`,
   },
   {
     name: "Linda Phan",
-    position: "Graduate Student",
+    position: t`Graduate Student`,
     avatar: "/avatars/linda.jpg",
-    feedback:
-      "I loved the interactive classes and the friendly environment. Learning English became fun!",
+    feedback: t`I loved the interactive classes and the friendly environment. Learning English became fun!`,
   },
   {
     name: "Tommy Vu",
-    position: "Software Engineer",
+    position: t`Software Engineer`,
     avatar: "/avatars/tommy.jpg",
-    feedback:
-      "Highly recommend! The course helped me prepare for my international job interviews.",
+    feedback: t`Highly recommend! The course helped me prepare for my international job interviews.`,
   },
 ];
 
@@ -106,7 +99,7 @@ const TestimonialsPage = () => {
             fontFamily: "Montserrat, Roboto, Arial, sans-serif",
           }}
         >
-          What Our Students Say
+          <Trans>What Our Students Say</Trans>
         </Typography>
 
         <Typography
@@ -124,8 +117,10 @@ const TestimonialsPage = () => {
             opacity: 0.9,
           }}
         >
-          Curious what our students think? Here’s what they say after
-          transforming their English skills!
+          <Trans>
+            Curious what our students think? Here&apos;s what they say after
+            transforming their English skills!
+          </Trans>
         </Typography>
 
         <Typography
@@ -135,8 +130,10 @@ const TestimonialsPage = () => {
           color="text.secondary"
           sx={{ fontSize: { xs: 14, sm: 15.5 }, letterSpacing: 0.1 }}
         >
-          Real feedback from students who have achieved outstanding results with
-          our English courses.
+          <Trans>
+            Real feedback from students who have achieved outstanding results
+            with our English courses.
+          </Trans>
         </Typography>
 
         <Swiper
@@ -285,7 +282,7 @@ const TestimonialsPage = () => {
               fontFamily: "Montserrat, Roboto, Arial, sans-serif",
             }}
           >
-            Ready to start your own success story?
+            <Trans>Ready to start your own success story?</Trans>
           </Typography>
           <Button
             variant="contained"
@@ -312,7 +309,7 @@ const TestimonialsPage = () => {
               },
             }}
           >
-            Join Now
+            <Trans>Join Now</Trans>
           </Button>
         </Box>
       </Container>

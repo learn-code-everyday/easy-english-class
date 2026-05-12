@@ -1,24 +1,25 @@
 "use client";
+import { t, Trans } from "@lingui/macro";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { Box, Typography, Grid, Paper } from "@mui/material";
 import React from "react";
 
 const topics = [
   {
-    title: "Listening Skills",
-    desc: "Practice with authentic IELTS listening materials to improve comprehension.",
+    title: t`Listening Skills`,
+    desc: t`Practice with authentic IELTS listening materials to improve comprehension.`,
   },
   {
-    title: "Reading Techniques",
-    desc: "Learn skimming, scanning, and time management for the reading test.",
+    title: t`Reading Techniques`,
+    desc: t`Learn skimming, scanning, and time management for the reading test.`,
   },
   {
-    title: "Writing Tasks",
-    desc: "Master essay writing and report descriptions with clear structures.",
+    title: t`Writing Tasks`,
+    desc: t`Master essay writing and report descriptions with clear structures.`,
   },
   {
-    title: "Speaking Practice",
-    desc: "Develop confidence and fluency with mock speaking tests and feedback.",
+    title: t`Speaking Practice`,
+    desc: t`Develop confidence and fluency with mock speaking tests and feedback.`,
   },
 ];
 
@@ -29,7 +30,7 @@ export default function IeltsTopics() {
         variant="h4"
         sx={{ mb: 4, fontWeight: "bold", color: "#004d40" }}
       >
-        Course Topics
+        <Trans>Course Topics</Trans>
       </Typography>
       <Grid container spacing={4}>
         {topics.map(({ title, desc }) => (

@@ -94,7 +94,7 @@ const VerifyEmailForm: React.FC<{
           "&:hover": { bgcolor: "rgba(255,255,255,0.13)" },
           zIndex: 10,
         }}
-        aria-label="Close"
+        aria-label={t`Close`}
       >
         <CloseIcon />
       </IconButton>

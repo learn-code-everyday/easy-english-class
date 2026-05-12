@@ -13,8 +13,2056 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "{title} course details"
+msgstr "{title} course details"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "1 month"
+msgstr "1 month"
+
+#: src/pages/courses/online/index.tsx
+msgid "2 months"
+msgstr "2 months"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "3 - 5 years"
+msgstr "3 - 5 years"
+
+#: src/pages/courses/online/index.tsx src/pages/pricing-fee/index.tsx
+msgid "3 months"
+msgstr "3 months"
+
+#: src/pages/courses/online/index.tsx
+msgid "4 months"
+msgstr "4 months"
+
+#: src/pages/courses/online/index.tsx
+msgid "5 months"
+msgstr "5 months"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "6 - 8 years"
+msgstr "6 - 8 years"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "9 - 12 years"
+msgstr "9 - 12 years"
+
+#: src/modules/LandingPage/CoursesSection/index.tsx
+msgid "A cheerful young adult learning English basics, sitting with a notebook and pen, casual classroom background, bright and friendly atmosphere, warm colors, simple communication icons floating around"
+msgstr "A cheerful young adult learning English basics, sitting with a notebook and pen, casual classroom background, bright and friendly atmosphere, warm colors, simple communication icons floating around"
+
+#: src/modules/LandingPage/HeroSection/index.tsx
+msgid "A comprehensive English course that boosts your confidence in communication and certification exams."
+msgstr "A comprehensive English course that boosts your confidence in communication and certification exams."
+
+#: src/modules/LandingPage/CoursesSection/index.tsx
+msgid "A confident young professional giving a presentation in English, standing in front of a small audience, business casual attire, modern office or seminar room, confident gestures, clear and bright lighting"
+msgstr "A confident young professional giving a presentation in English, standing in front of a small audience, business casual attire, modern office or seminar room, confident gestures, clear and bright lighting"
+
+#: src/modules/LandingPage/CoursesSection/index.tsx
+msgid "A focused student studying for IELTS, surrounded by textbooks and laptop, calm and quiet library environment, serious and determined expression, academic atmosphere with charts and notes visible"
+msgstr "A focused student studying for IELTS, surrounded by textbooks and laptop, calm and quiet library environment, serious and determined expression, academic atmosphere with charts and notes visible"
+
+#: src/modules/KidEnglishPage/Introduction/index.tsx
+msgid "A fun and interactive English course designed specifically for kids aged 3-12. Our program helps your child develop essential language skills with games, songs, stories, and activities."
+msgstr "A fun and interactive English course designed specifically for kids aged 3-12. Our program helps your child develop essential language skills with games, songs, stories, and activities."
+
+#: src/pages/about/mission/index.tsx
+msgid "A glimpse into our passion and dedication to quality English education."
+msgstr "A glimpse into our passion and dedication to quality English education."
+
+#: src/pages/about/team/index.tsx
+msgid "A passionate group of educators, innovators, and leaders dedicated to empowering learners worldwide."
+msgstr "A passionate group of educators, innovators, and leaders dedicated to empowering learners worldwide."
+
+#: src/pages/about/faq/index.tsx
+msgid "A stable internet connection and a device with video/audio capability are required. Basic computer skills are recommended."
+msgstr "A stable internet connection and a device with video/audio capability are required. Basic computer skills are recommended."
+
+#: src/pages/403.tsx
+msgid "Access Denied"
+msgstr "Access Denied"
+
+#: src/pages/about/mission/index.tsx
+msgid "Accessible Learning for Everyone"
+msgstr "Accessible Learning for Everyone"
+
+#: src/modules/ManagementPage/Profile/PaymentInfoForm/index.tsx
+msgid "Account Holder Name"
+msgstr "Account Holder Name"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Account Name:"
+msgstr "Account Name:"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Account No"
+msgstr "Account No"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Account No:"
+msgstr "Account No:"
+
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
+msgid "Actions"
+msgstr "Actions"
+
+#: src/hooks/useStatusLabel.tsx src/pages/manage/classes/index.tsx
+msgid "Active"
+msgstr "Active"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Activities:"
+msgstr "Activities:"
+
+#: src/modules/ManagementPage/Profile/BasicInfoForm/index.tsx
+msgid "Address"
+msgstr "Address"
+
+#: src/pages/contact/index.tsx
+msgid "Address: 123 English St, Language City, USA"
+msgstr "Address: 123 English St, Language City, USA"
+
+#: src/constants/role.ts
+msgid "Admin"
+msgstr "Admin"
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Advanced"
+msgstr "Advanced"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Advanced (9-12 years)"
+msgstr "Advanced (9-12 years)"
+
+#: src/modules/LandingPage/CoursesSection/index.tsx
+msgid "Advanced English"
+msgstr "Advanced English"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Advanced essay writing"
+msgstr "Advanced essay writing"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Age"
+msgstr "Age"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Aim for band 7.0+"
+msgstr "Aim for band 7.0+"
+
+#: src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx src/modules/ManagementPage/Student/Materials/MaterialStatusFilter.tsx src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx src/pages/courses/online/index.tsx
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
+msgid "All"
+msgstr "All"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Already a member? Log in and enjoy your AI shopping experience with your personalized dashboard, rewards, and more."
+msgstr "Already a member? Log in and enjoy your AI shopping experience with your personalized dashboard, rewards, and more."
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Already have an account?"
+msgstr "Already have an account?"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "am"
+msgstr "am"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+msgid "Amount"
+msgstr "Amount"
+
+#: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
+msgid "Anna:"
+msgstr "Anna:"
+
+#: src/pages/about/faq/index.tsx
+msgid "Are classes online or in-person?"
+msgstr "Are classes online or in-person?"
+
+#: src/pages/about/faq/index.tsx
+msgid "Are there any discounts?"
+msgstr "Are there any discounts?"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Are there any prerequisites?"
+msgstr "Are there any prerequisites?"
+
+#: src/pages/about/faq/index.tsx
+msgid "Are there prerequisites for online courses?"
+msgstr "Are there prerequisites for online courses?"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Arrange the words to form a correct sentence: 'fine / am / I'"
+msgstr "Arrange the words to form a correct sentence: 'fine / am / I'"
+
+#: src/constants/menu.ts
+msgid "Assignment Management"
+msgstr "Assignment Management"
+
+#: src/constants/menu.ts
+msgid "Assignments"
+msgstr "Assignments"
+
+#: src/components/AvatarUploader/index.tsx
+msgid "Avatar updated!"
+msgstr "Avatar updated!"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Back"
+msgstr "Back"
+
+#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
+msgid "Back to Login"
+msgstr "Back to Login"
+
+#: src/modules/ManagementPage/Profile/PaymentInfoForm/index.tsx
+msgid "Bank Name"
+msgstr "Bank Name"
+
+#: src/modules/ManagementPage/Profile/PaymentInfoForm/index.tsx
+msgid "Bank Number"
+msgstr "Bank Number"
+
+#: src/modules/BasicCommunicationPage/HeaderSection/index.tsx
+msgid "Basic Communication in English"
+msgstr "Basic Communication in English"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Basic grammar, conversation skills, simple writing"
+msgstr "Basic grammar, conversation skills, simple writing"
+
+#: src/pages/manage/profile/index.tsx
+msgid "Basic Information"
+msgstr "Basic Information"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Basic vocabulary, phonics, colors, numbers, simple sentences"
+msgstr "Basic vocabulary, phonics, colors, numbers, simple sentences"
+
+#: src/pages/about/team/index.tsx
+msgid "Become a part of our mission to make English education accessible to everyone."
+msgstr "Become a part of our mission to make English education accessible to everyone."
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Beginner"
+msgstr "Beginner"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Beginner (3-5 years)"
+msgstr "Beginner (3-5 years)"
+
+#: src/modules/LandingPage/CoursesSection/index.tsx
+msgid "Beginner English"
+msgstr "Beginner English"
+
+#: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
+msgid "Ben:"
+msgstr "Ben:"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Blocked"
+msgstr "Blocked"
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "Brand Logo"
+msgstr "Brand Logo"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Build confidence in daily communication"
+msgstr "Build confidence in daily communication"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Build English foundation and communication skills"
+msgstr "Build English foundation and communication skills"
+
+#: src/pages/courses/online/index.tsx
+msgid "Business English"
+msgstr "Business English"
+
+#: src/pages/terms.tsx
+msgid "By using our website and services, you agree to comply with all our policies and regulations. Please read these terms carefully. If you have any questions, feel free to contact us."
+msgstr "By using our website and services, you agree to comply with all our policies and regulations. Please read these terms carefully. If you have any questions, feel free to contact us."
+
+#: src/pages/about/faq/index.tsx
+msgid "Can I get a refund if I cancel?"
+msgstr "Can I get a refund if I cancel?"
+
+#: src/modules/IeltsPage/IeltsFAQs/index.tsx
+msgid "Can I retake the course if I am not satisfied with my score?"
+msgstr "Can I retake the course if I am not satisfied with my score?"
+
+#: src/components/ProfileSection/index.tsx
+msgid "Cancel"
+msgstr "Cancel"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Canceled"
+msgstr "Canceled"
+
+#: src/components/AvatarUploader/index.tsx
+msgid "Cannot convert HEIC image!"
+msgstr "Cannot convert HEIC image!"
+
+#: src/pages/manage/profile/index.tsx
+msgid "Change Password"
+msgstr "Change Password"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Child's Age"
+msgstr "Child's Age"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Child's Name"
+msgstr "Child's Name"
+
+#: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx src/modules/ManagementPage/Student/Payments/PaymentTable.tsx src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
+msgid "Class"
+msgstr "Class"
+
+#: src/constants/menu.ts
+msgid "Class Management"
+msgstr "Class Management"
+
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
+msgid "Class Name"
+msgstr "Class Name"
+
+#: src/constants/menu.ts
+msgid "Classes"
+msgstr "Classes"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Classes 3 times a week"
+msgstr "Classes 3 times a week"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Classes 4 times a week"
+msgstr "Classes 4 times a week"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Classes 5 times a week"
+msgstr "Classes 5 times a week"
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Click start and practice speaking the sample dialogue above. Record your voice and listen back to improve your pronunciation."
+msgstr "Click start and practice speaking the sample dialogue above. Record your voice and listen back to improve your pronunciation."
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Click words to build the correct sentence in order."
+msgstr "Click words to build the correct sentence in order."
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx src/modules/EnglishOnlinePage/OnlineCourseCard/index.tsx src/modules/ManagementPage/Student/Payments/PaymentSuccessStep.tsx src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
+msgid "Close"
+msgstr "Close"
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Close live chat"
+msgstr "Close live chat"
+
+#: src/components/Header/MobileMenu.tsx
+msgid "Close menu"
+msgstr "Close menu"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Closed"
+msgstr "Closed"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Code verified successfully!"
+msgstr "Code verified successfully!"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Combine art and language skills by drawing and describing pictures related to lessons."
+msgstr "Combine art and language skills by drawing and describing pictures related to lessons."
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Comment"
+msgstr "Comment"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Comment:"
+msgstr "Comment:"
+
+#: src/pages/about/mission/index.tsx
+msgid "Community and Support"
+msgstr "Community and Support"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Complete the sentence: 'I ____ fine, thank you.'"
+msgstr "Complete the sentence: 'I ____ fine, thank you.'"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Completed"
+msgstr "Completed"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Confirm"
+msgstr "Confirm"
+
+#: src/components/LoginModal/RegisterForm.tsx src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "Confirm Password"
+msgstr "Confirm Password"
+
+#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "Confirm your password"
+msgstr "Confirm your password"
+
+#: src/pages/contact/index.tsx
+msgid "Contact Information"
+msgstr "Contact Information"
+
+#: src/pages/about/faq/index.tsx
+msgid "Contact Page"
+msgstr "Contact Page"
+
+#: src/pages/contact/index.tsx
+msgid "Contact Us"
+msgstr "Contact Us"
+
+#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
+msgid "Continue to login"
+msgstr "Continue to login"
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Conversation Practice"
+msgstr "Conversation Practice"
+
+#: src/pages/courses/online/index.tsx
+msgid "Conversational English"
+msgstr "Conversational English"
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Core Skills & Topics"
+msgstr "Core Skills & Topics"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "Correct! IELTS stands for International English Language Testing System."
+msgstr "Correct! IELTS stands for International English Language Testing System."
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Could not access microphone"
+msgstr "Could not access microphone"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Course"
+msgstr "Course"
+
+#: src/pages/about/faq/index.tsx
+msgid "Course Information"
+msgstr "Course Information"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Course Level"
+msgstr "Course Level"
+
+#: src/constants/menu.ts
+msgid "Course Management"
+msgstr "Course Management"
+
+#: src/constants/menu.ts
+msgid "Course Materials"
+msgstr "Course Materials"
+
+#: src/pages/about/faq/index.tsx
+msgid "Course Overview"
+msgstr "Course Overview"
+
+#: src/pages/about/faq/index.tsx
+msgid "Course Policies"
+msgstr "Course Policies"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Course Roadmaps"
+msgstr "Course Roadmaps"
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Course Topics"
+msgstr "Course Topics"
+
+#: src/constants/menu.ts
+msgid "Courses"
+msgstr "Courses"
+
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
+msgid "Created"
+msgstr "Created"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Creative Drawing"
+msgstr "Creative Drawing"
+
+#: src/pages/about/team/index.tsx
+msgid "Creative strategist bringing our message to students worldwide and growing our community."
+msgstr "Creative strategist bringing our message to students worldwide and growing our community."
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Creative writing, debates, presentations"
+msgstr "Creative writing, debates, presentations"
+
+#: src/pages/testimonials/index.tsx
+msgid "Curious what our students think? Here's what they say after transforming their English skills!"
+msgstr "Curious what our students think? Here's what they say after transforming their English skills!"
+
+#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "Current Password"
+msgstr "Current Password"
+
+#: src/constants/menu.ts src/pages/403.tsx
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+msgid "Date"
+msgstr "Date"
+
 #: src/pages/manage/assignments/index.tsx
+msgid "Deadline"
+msgstr "Deadline"
+
+#: src/pages/about/team/index.tsx
+msgid "Dedicated teacher focused on helping students gain confidence and fluency through real-world practice."
+msgstr "Dedicated teacher focused on helping students gain confidence and fluency through real-world practice."
+
+#: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx src/pages/manage/classes/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Description"
+msgstr "Description"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Develop academic writing skills"
+msgstr "Develop academic writing skills"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Develop basic writing and reading skills"
+msgstr "Develop basic writing and reading skills"
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Develop basic writing skills with fun activities like drawing, labeling, and short sentences."
+msgstr "Develop basic writing skills with fun activities like drawing, labeling, and short sentences."
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Develop confidence and fluency with mock speaking tests and feedback."
+msgstr "Develop confidence and fluency with mock speaking tests and feedback."
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Develop essay writing skills"
+msgstr "Develop essay writing skills"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Didn't receive anything?"
+msgstr "Didn't receive anything?"
+
+#: src/pages/about/faq/index.tsx
+msgid "Do I get a certificate after course completion?"
+msgstr "Do I get a certificate after course completion?"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Do you offer certificates?"
+msgstr "Do you offer certificates?"
+
+#: src/modules/IeltsPage/IeltsFAQs/index.tsx
+msgid "Do you provide official IELTS practice materials?"
+msgstr "Do you provide official IELTS practice materials?"
+
+#: src/modules/ManagementPage/Student/Materials/MaterialStatusFilter.tsx
+msgid "Doc"
+msgstr "Doc"
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "Don't have an account?"
+msgstr "Don't have an account?"
+
+#: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx
+msgid "Download/View"
+msgstr "Download/View"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Draft"
+msgstr "Draft"
+
+#: src/pages/about/team/index.tsx
+msgid "Driving product innovation and user experience for seamless and effective learning journeys."
+msgstr "Driving product innovation and user experience for seamless and effective learning journeys."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Duration"
+msgstr "Duration"
+
+#: src/modules/EnglishOnlinePage/OnlineCourseCard/index.tsx
+msgid "Duration:"
+msgstr "Duration:"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Duration: 3 months"
+msgstr "Duration: 3 months"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Duration: 4 months"
+msgstr "Duration: 4 months"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Duration: 5 months"
+msgstr "Duration: 5 months"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Duration: 6 months"
+msgstr "Duration: 6 months"
+
+#: src/pages/about/faq/index.tsx
+msgid "Each course typically lasts 3 months with weekly sessions. Conversation Practice is usually 1 month."
+msgstr "Each course typically lasts 3 months with weekly sessions. Conversation Practice is usually 1 month."
+
+#: src/components/ProfileSection/index.tsx src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
+msgid "Edit"
+msgstr "Edit"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
+#: src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Email"
+msgstr "Email"
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx
+msgid "Email Address"
+msgstr "Email Address"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Email is invalid"
+msgstr "Email is invalid"
+
+#: src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Email is required"
+msgstr "Email is required"
+
+#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
+msgid "Email required"
+msgstr "Email required"
+
+#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
+msgid "Email sent successfully!"
+msgstr "Email sent successfully!"
+
+#: src/pages/contact/index.tsx
+msgid "Email:"
+msgstr "Email:"
+
+#: src/pages/about/mission/index.tsx
+msgid "Empowering every learner to achieve their full potential through quality English education."
+msgstr "Empowering every learner to achieve their full potential through quality English education."
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Encourage confident speaking with role plays, dialogues, and pronunciation games."
+msgstr "Encourage confident speaking with role plays, dialogues, and pronunciation games."
+
+#: src/helpers/locales.ts
+msgid "English"
+msgstr "English"
+
+#: src/components/Footer/index.tsx
+msgid "English Class All Rights Reserved"
+msgstr "English Class All Rights Reserved"
+
+#: src/pages/courses/online/index.tsx
+msgid "English for Beginners"
+msgstr "English for Beginners"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Enjoy captivating stories with colorful illustrations and simple text, perfect for young learners."
+msgstr "Enjoy captivating stories with colorful illustrations and simple text, perfect for young learners."
+
+#: src/pages/about/team/index.tsx
+msgid "Ensuring a robust, secure, and scalable platform supporting millions of learners worldwide."
+msgstr "Ensuring a robust, secure, and scalable platform supporting millions of learners worldwide."
+
+#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "Enter current password"
+msgstr "Enter current password"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Enter Email Code"
+msgstr "Enter Email Code"
+
+#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "Enter new password"
+msgstr "Enter new password"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
+msgid "Enter your email"
+msgstr "Enter your email"
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "Enter your password"
+msgstr "Enter your password"
+
+#: src/pages/testimonials/index.tsx
+msgid "Entrepreneur"
+msgstr "Entrepreneur"
+
+#: src/constants/menu.ts
+msgid "Event Management"
+msgstr "Event Management"
+
+#: src/constants/menu.ts
+msgid "Events"
+msgstr "Events"
+
+#: src/pages/courses/online/index.tsx
+msgid "Exam"
+msgstr "Exam"
+
+#: src/pages/about/team/index.tsx
+msgid "Experienced educator designing innovative, practical, and engaging English learning programs."
+msgstr "Experienced educator designing innovative, practical, and engaging English learning programs."
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Expert-level essay and speaking skills"
+msgstr "Expert-level essay and speaking skills"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Failed"
+msgstr "Failed"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Failed to resend code"
+msgstr "Failed to resend code"
+
+#: src/pages/contact/index.tsx
+msgid "Failed to send message. Please try again later."
+msgstr "Failed to send message. Please try again later."
+
+#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
+msgid "Failed to send reset email"
+msgstr "Failed to send reset email"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Failed to update password"
+msgstr "Failed to update password"
+
 #: src/pages/manage/classes/index.tsx
+msgid "Fee"
+msgstr "Fee"
+
+#: src/components/AvatarUploader/index.tsx
+msgid "File type must be JPG, PNG, GIF or HEIC."
+msgstr "File type must be JPG, PNG, GIF or HEIC."
+
+#: src/pages/about/faq/index.tsx
+msgid "Find answers to common questions about courses, registration, policies, and support."
+msgstr "Find answers to common questions about courses, registration, policies, and support."
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "fine"
+msgstr "fine"
+
+#: src/modules/LandingPage/FeaturesSection/index.tsx
+msgid "Flexible Schedule"
+msgstr "Flexible Schedule"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Focus on all 4 skills: reading, writing, listening, speaking"
+msgstr "Focus on all 4 skills: reading, writing, listening, speaking"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Focus on listening and speaking skills"
+msgstr "Focus on listening and speaking skills"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Focus:"
+msgstr "Focus:"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Focused speaking practice to improve fluency and confidence in daily conversations."
+msgstr "Focused speaking practice to improve fluency and confidence in daily conversations."
+
+#: src/pages/courses/online/index.tsx
+msgid "Focused training on IELTS Listening, Reading, Writing and Speaking with test strategies."
+msgstr "Focused training on IELTS Listening, Reading, Writing and Speaking with test strategies."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "For learners aiming for fluency, advanced grammar, idioms, and professional English usage."
+msgstr "For learners aiming for fluency, advanced grammar, idioms, and professional English usage."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "For learners starting from scratch, focusing on basic grammar, vocabulary, and speaking skills."
+msgstr "For learners starting from scratch, focusing on basic grammar, vocabulary, and speaking skills."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "For those who know the basics and want to improve conversation, writing, and comprehension."
+msgstr "For those who know the basics and want to improve conversation, writing, and comprehension."
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "Forgot password?"
+msgstr "Forgot password?"
+
+#: src/pages/about/team/index.tsx
+msgid "Founder & CEO"
+msgstr "Founder & CEO"
+
+#: src/pages/testimonials/index.tsx
+msgid "Freelancer"
+msgstr "Freelancer"
+
+#: src/modules/IeltsPage/IeltsFAQs/index.tsx src/pages/about/faq/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Frequently Asked Questions"
+msgstr "Frequently Asked Questions"
+
+#: src/components/LoginModal/RegisterForm.tsx src/modules/IeltsPage/IeltsRegister/index.tsx src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Full Name"
+msgstr "Full Name"
+
+#: src/pages/about/faq/index.tsx
+msgid "Full refunds are available within the first week of class. Partial refunds are prorated based on attendance thereafter."
+msgstr "Full refunds are available within the first week of class. Partial refunds are prorated based on attendance thereafter."
+
+#: src/pages/testimonials/index.tsx
+msgid "Fun and engaging lessons with a great community. Highly recommend to anyone learning English!"
+msgstr "Fun and engaging lessons with a great community. Highly recommend to anyone learning English!"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Fun Learning Activities"
+msgstr "Fun Learning Activities"
+
+#: src/pages/courses/online/index.tsx
+msgid "General"
+msgstr "General"
+
+#: src/modules/IeltsPage/IeltsIntro/index.tsx
+msgid "Get ready for your IELTS exam with comprehensive lessons, real test strategies, and expert coaching to boost your score."
+msgstr "Get ready for your IELTS exam with comprehensive lessons, real test strategies, and expert coaching to boost your score."
+
+#: src/pages/about/team/index.tsx
+msgid "Get Started"
+msgstr "Get Started"
+
+#: src/pages/about/mission/index.tsx
+msgid "Global Opportunities"
+msgstr "Global Opportunities"
+
+#: src/pages/403.tsx src/pages/404.tsx
+msgid "Go back"
+msgstr "Go back"
+
+#: src/pages/404.tsx
+msgid "Go home"
+msgstr "Go home"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Good evening"
+msgstr "Good evening"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Good morning"
+msgstr "Good morning"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Good night"
+msgstr "Good night"
+
+#: src/hooks/useStatusLabel.tsx src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx src/pages/manage/assignments/index.tsx
+msgid "Graded"
+msgstr "Graded"
+
+#: src/pages/testimonials/index.tsx
+msgid "Graduate Student"
+msgstr "Graduate Student"
+
+#: src/modules/LandingPage/FeaturesSection/index.tsx
+msgid "Guaranteed Results"
+msgstr "Guaranteed Results"
+
+#: src/pages/contact/index.tsx
+msgid "Have questions or feedback? Send us a message and we will get back to you soon."
+msgstr "Have questions or feedback? Send us a message and we will get back to you soon."
+
+#: src/pages/about/team/index.tsx
+msgid "Head of Curriculum"
+msgstr "Head of Curriculum"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Hello night"
+msgstr "Hello night"
+
+#: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
+msgid "Hello! How are you today?"
+msgstr "Hello! How are you today?"
+
+#: src/pages/manage/dashboard/index.tsx
+msgid "Here's your dashboard overview."
+msgstr "Here's your dashboard overview."
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Hi! How can we assist you today?"
+msgstr "Hi! How can we assist you today?"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Hide password"
+msgstr "Hide password"
+
+#: src/pages/testimonials/index.tsx
+msgid "Highly recommend! The course helped me prepare for my international job interviews."
+msgstr "Highly recommend! The course helped me prepare for my international job interviews."
+
+#: src/components/PageHeader/index.tsx src/pages/403.tsx
+msgid "Home"
+msgstr "Home"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "How can I contact my instructor?"
+msgstr "How can I contact my instructor?"
+
+#: src/pages/about/faq/index.tsx
+msgid "How do I register for a course?"
+msgstr "How do I register for a course?"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "How do you greet someone in the morning?"
+msgstr "How do you greet someone in the morning?"
+
+#: src/pages/about/faq/index.tsx
+msgid "How long is each course?"
+msgstr "How long is each course?"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "I"
+msgstr "I"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "I accept the <0>Terms and Conditions</0>"
+msgstr "I accept the <0>Terms and Conditions</0>"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "I agree to the <0>Privacy Policy</0>"
+msgstr "I agree to the <0>Privacy Policy</0>"
+
+#: src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
+msgid "I have paid"
+msgstr "I have paid"
+
+#: src/pages/testimonials/index.tsx
+msgid "I improved my business English tremendously. The classes fit well into my busy schedule."
+msgstr "I improved my business English tremendously. The classes fit well into my busy schedule."
+
+#: src/pages/testimonials/index.tsx
+msgid "I loved the interactive classes and the friendly environment. Learning English became fun!"
+msgstr "I loved the interactive classes and the friendly environment. Learning English became fun!"
+
+#: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
+msgid "I'm fine, thank you. And you?"
+msgstr "I'm fine, thank you. And you?"
+
+#: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
+msgid "I'm great, thanks for asking!"
+msgstr "I'm great, thanks for asking!"
+
+#: src/pages/courses/online/index.tsx
+msgid "IELTS Preparation"
+msgstr "IELTS Preparation"
+
+#: src/modules/IeltsPage/IeltsIntro/index.tsx
+msgid "IELTS Preparation Course"
+msgstr "IELTS Preparation Course"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Improve grammar and vocabulary to B1 level"
+msgstr "Improve grammar and vocabulary to B1 level"
+
+#: src/pages/courses/online/index.tsx
+msgid "Improve your speaking skills through practical conversation practice."
+msgstr "Improve your speaking skills through practical conversation practice."
+
+#: src/hooks/useStatusLabel.tsx src/pages/manage/classes/index.tsx
+msgid "Inactive"
+msgstr "Inactive"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "Incorrect. Please try again."
+msgstr "Incorrect. Please try again."
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Individualized feedback and coaching"
+msgstr "Individualized feedback and coaching"
+
+#: src/pages/about/mission/index.tsx
+msgid "Innovative Teaching Methods"
+msgstr "Innovative Teaching Methods"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Interactive Games"
+msgstr "Interactive Games"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Interactive Quiz"
+msgstr "Interactive Quiz"
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Intermediate"
+msgstr "Intermediate"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Intermediate (6-8 years)"
+msgstr "Intermediate (6-8 years)"
+
+#: src/modules/LandingPage/CoursesSection/index.tsx
+msgid "Intermediate English"
+msgstr "Intermediate English"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "International English Language Teaching Service"
+msgstr "International English Language Teaching Service"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "International English Language Testing System"
+msgstr "International English Language Testing System"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "International English Learning Test Standard"
+msgstr "International English Learning Test Standard"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "International Exam of Language Testing System"
+msgstr "International Exam of Language Testing System"
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Introduce simple stories, picture books, and reading comprehension activities."
+msgstr "Introduce simple stories, picture books, and reading comprehension activities."
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
+#: src/pages/contact/index.tsx
+msgid "Invalid email"
+msgstr "Invalid email"
+
+#: src/pages/contact/index.tsx
+msgid "Invalid phone number"
+msgstr "Invalid phone number"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Invalid verification code"
+msgstr "Invalid verification code"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
+msgid "Invoice"
+msgstr "Invoice"
+
+#: src/pages/about/mission/index.tsx
+msgid "Join now"
+msgstr "Join now"
+
+#: src/modules/KidEnglishPage/Introduction/index.tsx src/pages/testimonials/index.tsx
+msgid "Join Now"
+msgstr "Join Now"
+
+#: src/pages/about/team/index.tsx
+msgid "Join Our Community"
+msgstr "Join Our Community"
+
+#: src/pages/about/mission/index.tsx
+msgid "Join thousands of successful learners and start your journey today!"
+msgstr "Join thousands of successful learners and start your journey today!"
+
+#: src/modules/KidEnglishPage/Introduction/index.tsx
+msgid "Kid English Learning Program"
+msgstr "Kid English Learning Program"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Late"
+msgstr "Late"
+
+#: src/pages/about/team/index.tsx
+msgid "Lead Instructor"
+msgstr "Lead Instructor"
+
+#: src/modules/LandingPage/FeaturesSection/index.tsx
+msgid "Learn anytime, anywhere"
+msgstr "Learn anytime, anywhere"
+
+#: src/pages/courses/online/index.tsx
+msgid "Learn business vocabulary, email writing, presentations, negotiations, and more."
+msgstr "Learn business vocabulary, email writing, presentations, negotiations, and more."
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Learn English naturally through fun songs and rhymes that improve pronunciation and rhythm."
+msgstr "Learn English naturally through fun songs and rhymes that improve pronunciation and rhythm."
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Learn essential vocabulary and grammar structures through interactive lessons and games."
+msgstr "Learn essential vocabulary and grammar structures through interactive lessons and games."
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Learn skimming, scanning, and time management for the reading test."
+msgstr "Learn skimming, scanning, and time management for the reading test."
+
+#: src/pages/courses/online/index.tsx
+msgid "Learn the basics of English grammar, vocabulary, and pronunciation."
+msgstr "Learn the basics of English grammar, vocabulary, and pronunciation."
+
+#: src/modules/LandingPage/FeaturesSection/index.tsx
+msgid "Learn with 100% American and British instructors"
+msgstr "Learn with 100% American and British instructors"
+
+#: src/constants/menu.ts
+msgid "LEARNING"
+msgstr "LEARNING"
+
+#: src/pages/about/mission/index.tsx
+msgid "Learning is more fun and effective in a supportive community. We foster a welcoming environment where students connect, practice, and grow together with mentorship and guidance at every step."
+msgstr "Learning is more fun and effective in a supportive community. We foster a welcoming environment where students connect, practice, and grow together with mentorship and guidance at every step."
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Learning Path & Stages"
+msgstr "Learning Path & Stages"
+
+#: src/pages/manage/classes/index.tsx
+msgid "Level"
+msgstr "Level"
+
+#: src/modules/ManagementPage/Student/Materials/MaterialStatusFilter.tsx
+msgid "Link"
+msgstr "Link"
+
+#: src/modules/IeltsPage/IeltsAudio/index.tsx
+msgid "Listen to the audio below and try to answer related questions."
+msgstr "Listen to the audio below and try to answer related questions."
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Listening"
+msgstr "Listening"
+
+#: src/modules/IeltsPage/IeltsAudio/index.tsx
+msgid "Listening Practice"
+msgstr "Listening Practice"
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Listening Skills"
+msgstr "Listening Skills"
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Live chat support"
+msgstr "Live chat support"
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Live Support"
+msgstr "Live Support"
+
+#: src/layouts/admin-layout/AdminSidebarMenu.tsx
+msgid "Loading..."
+msgstr "Loading..."
+
+#: src/components/Header/DesktopMenu.tsx src/components/Header/MobileMenu.tsx src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx
+msgid "Login"
+msgstr "Login"
+
+#: src/stores/auth/actions.ts
+msgid "Login successfully"
+msgstr "Login successfully"
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "Login to your Account"
+msgstr "Login to your Account"
+
+#: src/components/Header/DesktopMenu.tsx src/components/Header/MobileMenu.tsx src/components/ProfileDropdown/index.tsx
+msgid "Logout"
+msgstr "Logout"
+
+#: src/constants/menu.ts
+msgid "MANAGEMENT"
+msgstr "MANAGEMENT"
+
+#: src/components/Header/DesktopMenu.tsx src/components/Header/MobileMenu.tsx
+msgid "Management Site"
+msgstr "Management Site"
+
+#: src/pages/about/team/index.tsx
+msgid "Marketing Manager"
+msgstr "Marketing Manager"
+
+#: src/pages/testimonials/index.tsx
+msgid "Marketing Specialist"
+msgstr "Marketing Specialist"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Master all IELTS question types"
+msgstr "Master all IELTS question types"
+
+#: src/pages/courses/online/index.tsx
+msgid "Master English skills tailored for professional and business contexts."
+msgstr "Master English skills tailored for professional and business contexts."
+
+#: src/modules/LandingPage/HeroSection/index.tsx
+msgid "Master English with Ease"
+msgstr "Master English with Ease"
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Master essay writing and report descriptions with clear structures."
+msgstr "Master essay writing and report descriptions with clear structures."
+
+#: src/modules/BasicCommunicationPage/HeaderSection/index.tsx
+msgid "Master essential phrases, greetings, and polite expressions to kickstart your English conversation skills."
+msgstr "Master essential phrases, greetings, and polite expressions to kickstart your English conversation skills."
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Master intermediate grammar and vocabulary"
+msgstr "Master intermediate grammar and vocabulary"
+
+#: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx
+msgid "Material Name"
+msgstr "Material Name"
+
+#: src/constants/menu.ts src/pages/manage/student/materials/index.tsx
+msgid "Materials"
+msgstr "Materials"
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Media Devices API not supported"
+msgstr "Media Devices API not supported"
+
+#: src/pages/about/team/index.tsx
+msgid "Meet Our Team"
+msgstr "Meet Our Team"
+
+#: src/pages/contact/index.tsx
+msgid "Message"
+msgstr "Message"
+
+#: src/pages/contact/index.tsx
+msgid "Message is required"
+msgstr "Message is required"
+
+#: src/pages/contact/index.tsx
+msgid "Message sent successfully!"
+msgstr "Message sent successfully!"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+msgid "Method"
+msgstr "Method"
+
+#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "Min 6 chars"
+msgstr "Min 6 chars"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Mock exams with detailed analysis"
+msgstr "Mock exams with detailed analysis"
+
+#: src/modules/LandingPage/FeaturesSection/index.tsx
+msgid "Money-back if you dont achieve your goals"
+msgstr "Money-back if you dont achieve your goals"
+
+#: src/constants/menu.ts
+msgid "My Assignments"
+msgstr "My Assignments"
+
+#: src/constants/menu.ts
+msgid "My Class Scores"
+msgstr "My Class Scores"
+
+#: src/constants/menu.ts
+msgid "My Classes"
+msgstr "My Classes"
+
+#: src/components/ProfileDropdown/index.tsx
+msgid "My profile"
+msgstr "My profile"
+
+#: src/constants/menu.ts
+msgid "My Scores"
+msgstr "My Scores"
+
+#: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx
+msgid "N/A"
+msgstr "N/A"
+
+#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
+msgid "Name"
+msgstr "Name"
+
+#: src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Name is required"
+msgstr "Name is required"
+
+#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
+msgid "Name required"
+msgstr "Name required"
+
+#: src/modules/LandingPage/FeaturesSection/index.tsx
+msgid "Native Teachers"
+msgstr "Native Teachers"
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "New Here?"
+msgstr "New Here?"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "New Password"
+msgstr "New Password"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Next"
+msgstr "Next"
+
+#: src/components/AvatarUploader/index.tsx
+msgid "No image url returned!"
+msgstr "No image url returned!"
+
+#: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx
+msgid "No materials found"
+msgstr "No materials found"
+
+#: src/pages/manage/profile/index.tsx
+msgid "No Name"
+msgstr "No Name"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+msgid "No payments found."
+msgstr "No payments found."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "No prerequisites. We welcome all levels from beginners to advanced learners."
+msgstr "No prerequisites. We welcome all levels from beginners to advanced learners."
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "No QR available for this payment method."
+msgstr "No QR available for this payment method."
+
+#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
+msgid "No worries! Enter your email and we will send you a reset"
+msgstr "No worries! Enter your email and we will send you a reset"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+msgid "Note"
+msgstr "Note"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Objectives"
+msgstr "Objectives"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "One-on-one coaching sessions"
+msgstr "One-on-one coaching sessions"
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Open live chat"
+msgstr "Open live chat"
+
+#: src/pages/contact/index.tsx
+msgid "Optional"
+msgstr "Optional"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx
+msgid "or"
+msgstr "or"
+
+#: src/modules/LandingPage/CoursesSection/index.tsx
+msgid "Our courses"
+msgstr "Our courses"
+
+#: src/pages/about/mission/index.tsx
+msgid "Our courses use the latest pedagogical research, incorporating interactive activities, technology, and real-world communication practice to create an engaging and effective learning environment."
+msgstr "Our courses use the latest pedagogical research, incorporating interactive activities, technology, and real-world communication practice to create an engaging and effective learning environment."
+
+#: src/modules/IeltsPage/IeltsFAQs/index.tsx
+msgid "Our IELTS course typically runs for 3 months with flexible scheduling options."
+msgstr "Our IELTS course typically runs for 3 months with flexible scheduling options."
+
+#: src/pages/about/mission/index.tsx
+msgid "Our Mission"
+msgstr "Our Mission"
+
+#: src/pages/about/mission/index.tsx
+msgid "Our mission extends beyond language skills. We aim to open doors to global academic, professional, and cultural opportunities by empowering learners with English proficiency."
+msgstr "Our mission extends beyond language skills. We aim to open doors to global academic, professional, and cultural opportunities by empowering learners with English proficiency."
+
+#: src/pages/courses/online/index.tsx
+msgid "Our Online Courses"
+msgstr "Our Online Courses"
+
+#: src/pages/about/faq/index.tsx
+msgid "Our tech support team is available 24/7. Contact us via chat or email and we'll assist you promptly."
+msgstr "Our tech support team is available 24/7. Contact us via chat or email and we'll assist you promptly."
+
+#: src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx src/pages/manage/assignments/index.tsx
+msgid "Overdue"
+msgstr "Overdue"
+
+#: src/constants/menu.ts
+msgid "Overview Dashboard"
+msgstr "Overview Dashboard"
+
+#: src/components/PageHeader/index.tsx
+msgid "Page"
+msgstr "Page"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx src/modules/ManagementPage/Student/Payments/PaymentSummary.tsx
+msgid "Paid"
+msgstr "Paid"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Parent Email"
+msgstr "Parent Email"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Passed"
+msgstr "Passed"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx
+msgid "Password"
+msgstr "Password"
+
+#: src/pages/manage/profile/index.tsx
+msgid "Password changed successfully!"
+msgstr "Password changed successfully!"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Password is required"
+msgstr "Password is required"
+
+#: src/components/LoginModal/RegisterForm.tsx src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Password must be at least 6 characters"
+msgstr "Password must be at least 6 characters"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Password updated successfully!"
+msgstr "Password updated successfully!"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Passwords do not match"
+msgstr "Passwords do not match"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "Passwords must match"
+msgstr "Passwords must match"
+
+#: src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
+msgid "Pay Invoice"
+msgstr "Pay Invoice"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+msgid "Pay now"
+msgstr "Pay now"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Pay tuition {invoiceNo}"
+msgstr "Pay tuition {invoiceNo}"
+
+#: src/constants/menu.ts
+msgid "PAYMENT"
+msgstr "PAYMENT"
+
+#: src/constants/menu.ts src/pages/manage/student/payment/index.tsx
+msgid "Payment History"
+msgstr "Payment History"
+
+#: src/constants/menu.ts
+msgid "Payment Management"
+msgstr "Payment Management"
+
+#: src/pages/manage/profile/index.tsx
+msgid "Payment Method"
+msgstr "Payment Method"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentSuccessStep.tsx
+msgid "Payment Sent!"
+msgstr "Payment Sent!"
+
+#: src/constants/menu.ts
+msgid "Payments"
+msgstr "Payments"
+
+#: src/hooks/useStatusLabel.tsx src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx src/pages/manage/assignments/index.tsx
+msgid "Pending"
+msgstr "Pending"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Perfect advanced grammar and vocabulary"
+msgstr "Perfect advanced grammar and vocabulary"
+
+#: src/pages/manage/profile/index.tsx
+msgid "Personal Information"
+msgstr "Personal Information"
+
+#: src/pages/about/mission/index.tsx
+msgid "Personalized Learning Paths"
+msgstr "Personalized Learning Paths"
+
+#: src/modules/ManagementPage/Profile/BasicInfoForm/index.tsx src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Phone"
+msgstr "Phone"
+
+#: src/pages/contact/index.tsx
+msgid "Phone Number"
+msgstr "Phone Number"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx src/pages/contact/index.tsx
+msgid "Phone:"
+msgstr "Phone:"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Play games that reinforce vocabulary and grammar while keeping kids engaged and entertained."
+msgstr "Play games that reinforce vocabulary and grammar while keeping kids engaged and entertained."
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Please accept Privacy Policy"
+msgstr "Please accept Privacy Policy"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Please accept Terms and Conditions"
+msgstr "Please accept Terms and Conditions"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Please answer the question before proceeding."
+msgstr "Please answer the question before proceeding."
+
+#: src/components/LoginModal/RegisterForm.tsx src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Please confirm your password"
+msgstr "Please confirm your password"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Please enter only numbers"
+msgstr "Please enter only numbers"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Please enter your email"
+msgstr "Please enter your email"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Please enter your name"
+msgstr "Please enter your name"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Please enter your password"
+msgstr "Please enter your password"
+
+#: src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Please select a course"
+msgstr "Please select a course"
+
+#: src/pages/testimonials/index.tsx
+msgid "Practical approach and lots of speaking practice. My English skills have never been better!"
+msgstr "Practical approach and lots of speaking practice. My English skills have never been better!"
+
+#: src/pages/courses/online/index.tsx
+msgid "Practical lessons focused on everyday conversations, idioms, and expressions for fluency."
+msgstr "Practical lessons focused on everyday conversations, idioms, and expressions for fluency."
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Practice active listening through stories, songs, and audio exercises tailored for kids."
+msgstr "Practice active listening through stories, songs, and audio exercises tailored for kids."
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Practice Speaking - Voice Recorder"
+msgstr "Practice Speaking - Voice Recorder"
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Practice with authentic IELTS listening materials to improve comprehension."
+msgstr "Practice with authentic IELTS listening materials to improve comprehension."
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Practice with mock exams"
+msgstr "Practice with mock exams"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Practice with real IELTS exam materials"
+msgstr "Practice with real IELTS exam materials"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Prepare basic English grammar and vocabulary"
+msgstr "Prepare basic English grammar and vocabulary"
+
+#: src/pages/courses/online/index.tsx
+msgid "Prepare effectively for the IELTS exam with experienced instructors."
+msgstr "Prepare effectively for the IELTS exam with experienced instructors."
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Prepare for A1-A2 level exams"
+msgstr "Prepare for A1-A2 level exams"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Prepare for IELTS band 5.0"
+msgstr "Prepare for IELTS band 5.0"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Prepare for IELTS band 6.0"
+msgstr "Prepare for IELTS band 6.0"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Prepare for IELTS Junior exam"
+msgstr "Prepare for IELTS Junior exam"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Prepare for real test conditions"
+msgstr "Prepare for real test conditions"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Previous"
+msgstr "Previous"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Price (USD)"
+msgstr "Price (USD)"
+
+#: src/modules/EnglishOnlinePage/OnlineCourseCard/index.tsx
+msgid "Price:"
+msgstr "Price:"
+
+#: src/pages/privacy.tsx
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+#: src/pages/about/team/index.tsx
+msgid "Product Manager"
+msgstr "Product Manager"
+
+#: src/pages/courses/online/index.tsx
+msgid "Professional"
+msgstr "Professional"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "Quiz Sample"
+msgstr "Quiz Sample"
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Reading"
+msgstr "Reading"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Reading comprehension, writing skills, oral presentation"
+msgstr "Reading comprehension, writing skills, oral presentation"
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Reading Techniques"
+msgstr "Reading Techniques"
+
+#: src/modules/LandingPage/CallToActionSection/index.tsx
+msgid "Ready to Get Started?"
+msgstr "Ready to Get Started?"
+
+#: src/pages/testimonials/index.tsx
+msgid "Ready to start your own success story?"
+msgstr "Ready to start your own success story?"
+
+#: src/pages/about/mission/index.tsx
+msgid "Ready to transform your English skills?"
+msgstr "Ready to transform your English skills?"
+
+#: src/pages/testimonials/index.tsx
+msgid "Real feedback from students who have achieved outstanding results with our English courses."
+msgstr "Real feedback from students who have achieved outstanding results with our English courses."
+
+#: src/modules/ManagementPage/Profile/BasicInfoForm/index.tsx
+msgid "Referral Code"
+msgstr "Referral Code"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Refine listening and speaking skills"
+msgstr "Refine listening and speaking skills"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx
+msgid "Refunded"
+msgstr "Refunded"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx src/pages/pricing-fee/index.tsx
+msgid "Register"
+msgstr "Register"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Register for a Course"
+msgstr "Register for a Course"
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx
+msgid "Register for IELTS Course"
+msgstr "Register for IELTS Course"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Register for Kid English Course"
+msgstr "Register for Kid English Course"
+
+#: src/modules/EnglishOnlinePage/OnlineCourseCard/index.tsx src/modules/IeltsPage/IeltsIntro/index.tsx src/modules/LandingPage/CallToActionSection/index.tsx src/modules/LandingPage/HeroSection/index.tsx
+msgid "Register Now"
+msgstr "Register Now"
+
+#: src/modules/LandingPage/CallToActionSection/index.tsx
+msgid "Register now to receive tuition discounts today"
+msgstr "Register now to receive tuition discounts today"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Registering..."
+msgstr "Registering..."
+
+#: src/pages/about/faq/index.tsx
+msgid "Registration & Payment"
+msgstr "Registration & Payment"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Registration failed. Please try again."
+msgstr "Registration failed. Please try again."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Registration successful for {0}, thank you {1}!"
+msgstr "Registration successful for {0}, thank you {1}!"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Registration successful! Welcome to English Class!"
+msgstr "Registration successful! Welcome to English Class!"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Resend code"
+msgstr "Resend code"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Resend code ({countdown})"
+msgstr "Resend code ({countdown})"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Reset Password"
+msgstr "Reset Password"
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Reset recording"
+msgstr "Reset recording"
+
+#: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
+msgid "Sample Dialogue"
+msgstr "Sample Dialogue"
+
+#: src/components/ProfileSection/index.tsx
+msgid "Save"
+msgstr "Save"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Saving..."
+msgstr "Saving..."
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Scan Momo QR to pay."
+msgstr "Scan Momo QR to pay."
+
+#: src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
+msgid "Scan the QR or copy info below to pay"
+msgstr "Scan the QR or copy info below to pay"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Scan VietQR code with your banking app."
+msgstr "Scan VietQR code with your banking app."
+
+#: src/pages/manage/classes/index.tsx
+msgid "Schedule"
+msgstr "Schedule"
+
+#: src/constants/menu.ts
+msgid "Score Management"
+msgstr "Score Management"
+
+#: src/constants/menu.ts
+msgid "Scores"
+msgstr "Scores"
+
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
+msgid "Search"
+msgstr "Search"
+
+#: src/pages/manage/assignments/index.tsx
+msgid "Search by assignment, class..."
+msgstr "Search by assignment, class..."
+
+#: src/pages/manage/classes/index.tsx
+msgid "Search by class name, teacher..."
+msgstr "Search by class name, teacher..."
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Select {0} roadmap"
+msgstr "Select {0} roadmap"
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Select Course"
+msgstr "Select Course"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Select Course Level"
+msgstr "Select Course Level"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Select the course that best suits your English learning journey. Each course is carefully designed to help you progress step-by-step with experienced instructors and proven methods."
+msgstr "Select the course that best suits your English learning journey. Each course is carefully designed to help you progress step-by-step with experienced instructors and proven methods."
+
+#: src/pages/courses/online/index.tsx
+msgid "Select the course that fits your learning goals. Click \"View Details\" for more info."
+msgstr "Select the course that fits your learning goals. Click \"View Details\" for more info."
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Send"
+msgstr "Send"
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Send message"
+msgstr "Send message"
+
+#: src/pages/contact/index.tsx
+msgid "Send Message"
+msgstr "Send Message"
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Send Recording"
+msgstr "Send Recording"
+
+#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
+msgid "Send Request"
+msgstr "Send Request"
+
+#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx src/pages/contact/index.tsx
+msgid "Sending..."
+msgstr "Sending..."
+
+#: src/constants/menu.ts
+msgid "Settings"
+msgstr "Settings"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Show password"
+msgstr "Show password"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx
+msgid "Sign in With Google"
+msgstr "Sign in With Google"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Sign up to create an Account"
+msgstr "Sign up to create an Account"
+
+#: src/components/Footer/index.tsx
+msgid "Social icon"
+msgstr "Social icon"
+
+#: src/pages/testimonials/index.tsx
+msgid "Software Engineer"
+msgstr "Software Engineer"
+
+#: src/pages/manage/profile/index.tsx
+msgid "Something went wrong!"
+msgstr "Something went wrong!"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Songs & Rhymes"
+msgstr "Songs & Rhymes"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Songs, picture books, interactive games"
+msgstr "Songs, picture books, interactive games"
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "Sorry, your password must be at least 8 characters"
+msgstr "Sorry, your password must be at least 8 characters"
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Speaking"
+msgstr "Speaking"
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Speaking Practice"
+msgstr "Speaking Practice"
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Start Recording"
+msgstr "Start Recording"
+
+#: src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx src/pages/manage/scores/index.tsx
+msgid "Status"
+msgstr "Status"
+
+#: src/pages/about/faq/index.tsx
+msgid "Still have questions? Reach out to our support team via"
+msgstr "Still have questions? Reach out to our support team via"
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Stop Recording"
+msgstr "Stop Recording"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Story Time"
+msgstr "Story Time"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Storytelling, role-play, group activities"
+msgstr "Storytelling, role-play, group activities"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Strategies for high band score"
+msgstr "Strategies for high band score"
+
+#: src/constants/role.ts src/pages/testimonials/index.tsx
+msgid "Student"
+msgstr "Student"
+
+#: src/modules/DashboardPage/DashboardChart.tsx
+msgid "Student Growth (6 months)"
+msgstr "Student Growth (6 months)"
+
+#: src/pages/manage/classes/index.tsx
+msgid "Students"
+msgstr "Students"
+
+#: src/modules/DashboardPage/DashboardChart.tsx
+msgid "Students vs Teachers"
+msgstr "Students vs Teachers"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Study Info"
+msgstr "Study Info"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx src/modules/IeltsPage/IeltsQuiz/index.tsx src/modules/IeltsPage/IeltsRegister/index.tsx
+msgid "Submit"
+msgstr "Submit"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Submit Registration"
+msgstr "Submit Registration"
+
+#: src/hooks/useStatusLabel.tsx src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx src/pages/manage/assignments/index.tsx
+msgid "Submitted"
+msgstr "Submitted"
+
+#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
+msgid "successfully"
+msgstr "successfully"
+
+#: src/constants/menu.ts
+msgid "SYSTEM"
+msgstr "SYSTEM"
+
+#: src/graphql/error.ts
+msgid "System error! Please try again later."
+msgstr "System error! Please try again later."
+
+#: src/constants/menu.ts
+msgid "System Settings"
+msgstr "System Settings"
+
+#: src/constants/role.ts src/pages/manage/classes/index.tsx
+msgid "Teacher"
+msgstr "Teacher"
+
+#: src/constants/menu.ts
+msgid "TEACHING"
+msgstr "TEACHING"
+
+#: src/constants/menu.ts
+msgid "Teaching Materials"
+msgstr "Teaching Materials"
+
+#: src/pages/about/team/index.tsx
+msgid "Technical Lead"
+msgstr "Technical Lead"
+
+#: src/pages/about/faq/index.tsx
+msgid "Technical Support"
+msgstr "Technical Support"
+
+#: src/pages/terms.tsx
+msgid "Terms of Service"
+msgstr "Terms of Service"
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Thank you for registering! We will contact you soon."
+msgstr "Thank you for registering! We will contact you soon."
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Thank you for your message. Our support team will get back to you shortly."
+msgstr "Thank you for your message. Our support team will get back to you shortly."
+
+#: src/modules/ManagementPage/Student/Payments/PaymentSuccessStep.tsx
+msgid "Thank you. We will verify your transaction and update your status soon."
+msgstr "Thank you. We will verify your transaction and update your status soon."
+
+#: src/pages/testimonials/index.tsx
+msgid "Thanks to these courses, my English communication at work has improved significantly."
+msgstr "Thanks to these courses, my English communication at work has improved significantly."
+
+#: src/pages/testimonials/index.tsx
+msgid "The course content is clear and practical, and the teachers really care about students' progress."
+msgstr "The course content is clear and practical, and the teachers really care about students' progress."
+
+#: src/modules/LandingPage/TestimonialsSection/index.tsx
+msgid "The flexible schedule perfectly fits working students."
+msgstr "The flexible schedule perfectly fits working students."
+
+#: src/modules/LandingPage/TestimonialsSection/index.tsx
+msgid "The teachers are incredibly dedicated; I scored IELTS 6.5 after 6 months!"
+msgstr "The teachers are incredibly dedicated; I scored IELTS 6.5 after 6 months!"
+
+#: src/pages/courses/online/index.tsx
+msgid "This course covers fundamental grammar, basic vocabulary and pronunciation to start your English journey confidently."
+msgstr "This course covers fundamental grammar, basic vocabulary and pronunciation to start your English journey confidently."
+
+#: src/pages/testimonials/index.tsx
+msgid "This English course transformed my confidence. The instructors are amazing and the curriculum is very practical."
+msgstr "This English course transformed my confidence. The instructors are amazing and the curriculum is very practical."
+
+#: src/pages/manage/assignments/index.tsx
+msgid "Title"
+msgstr "Title"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentSummary.tsx
+msgid "Total"
+msgstr "Total"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Transfer Info"
+msgstr "Transfer Info"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Transfer Info:"
+msgstr "Transfer Info:"
+
+#: src/pages/403.tsx
+msgid "Try going back to dashboard."
+msgstr "Try going back to dashboard."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Tuition Fees"
+msgstr "Tuition Fees"
+
+#: src/modules/ManagementPage/Student/Materials/MaterialStatusFilter.tsx src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx src/pages/manage/classes/index.tsx
+msgid "Type"
+msgstr "Type"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Type your answer here..."
+msgstr "Type your answer here..."
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Type your message"
+msgstr "Type your message"
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Type your message..."
+msgstr "Type your message..."
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Unable to verify?"
+msgstr "Unable to verify?"
+
+#: src/pages/testimonials/index.tsx
+msgid "University Student"
+msgstr "University Student"
+
+#: src/constants/role.ts src/hooks/useStatusLabel.tsx
+msgid "Unknown"
+msgstr "Unknown"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx
+msgid "Unpaid"
+msgstr "Unpaid"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentSummary.tsx
+msgid "Unpaid / Overdue"
+msgstr "Unpaid / Overdue"
+
+#: src/components/AvatarUploader/index.tsx
+msgid "Update avatar failed!"
+msgstr "Update avatar failed!"
+
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
 msgid "Updated"
 msgstr "Updated"
 
@@ -22,768 +2070,226 @@ msgstr "Updated"
 msgid "Updated basic information!"
 msgstr "Updated basic information!"
 
-#: src/pages/manage/classes/index.tsx
-msgid "Type"
-msgstr "Type"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Full Name"
-msgstr "Full Name"
-
-#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
-msgid "Continue to login"
-msgstr "Continue to login"
-
-#: src/components/LoginModal/LoginForm.tsx
-msgid "Welcome to our English class, where you will embark on a fun and engaging journey to improve your language skills. Join us today to discover new ways to speak, read, and write English confidently!"
-msgstr "Welcome to our English class, where you will embark on a fun and engaging journey to improve your language skills. Join us today to discover new ways to speak, read, and write English confidently!"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Password updated successfully!"
-msgstr "Password updated successfully!"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Sign up to create an Account"
-msgstr "Sign up to create an Account"
-
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "View details"
-msgstr "View details"
-
-#: src/constants/menu.ts
-msgid "Classes"
-msgstr "Classes"
-
-#: src/components/LoginModal/LoginForm.tsx
-msgid "New Here?"
-msgstr "New Here?"
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Blocked"
-msgstr "Blocked"
-
-#: src/hooks/useStatusLabel.tsx
-#: src/pages/manage/assignments/index.tsx
-msgid "Graded"
-msgstr "Graded"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "Assignment Management"
-msgstr "Assignment Management"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Resend code ({countdown})"
-msgstr "Resend code ({countdown})"
-
-#: src/modules/ManagementPage/Profile/BasicInfoForm/index.tsx
-msgid "Referral Code"
-msgstr "Referral Code"
-
-#: src/components/PageHeader/index.tsx
-msgid "Page"
-msgstr "Page"
-
-#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
-msgid "Name"
-msgstr "Name"
-
 #: src/pages/manage/profile/index.tsx
-msgid "Personal Information"
-msgstr "Personal Information"
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Failed"
-msgstr "Failed"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Show password"
-msgstr "Show password"
-
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "Actions"
-msgstr "Actions"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Confirm"
-msgstr "Confirm"
-
-#: src/constants/menu.ts
-msgid "Dashboard"
-msgstr "Dashboard"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "New Password"
-msgstr "New Password"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Verification code resent!"
-msgstr "Verification code resent!"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Password"
-msgstr "Password"
-
-#: src/constants/menu.ts
-msgid "SYSTEM"
-msgstr "SYSTEM"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Already have an account?"
-msgstr "Already have an account?"
-
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "Search"
-msgstr "Search"
-
-#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
-msgid "You can now use it to login to your account. Remember, always keep your password confidential and complex."
-msgstr "You can now use it to login to your account. Remember, always keep your password confidential and complex."
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Failed to resend code"
-msgstr "Failed to resend code"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
-msgid "Invalid email"
-msgstr "Invalid email"
-
-#: src/components/LoginModal/RegisterForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Password must be at least 6 characters"
-msgstr "Password must be at least 6 characters"
-
-#: src/constants/menu.ts
-msgid "Teaching Materials"
-msgstr "Teaching Materials"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "or"
-msgstr "or"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "Enter your email"
-msgstr "Enter your email"
-
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "Enter current password"
-msgstr "Enter current password"
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Closed"
-msgstr "Closed"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Enter Email Code"
-msgstr "Enter Email Code"
-
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "Current Password"
-msgstr "Current Password"
-
-#: src/constants/menu.ts
-msgid "Course Management"
-msgstr "Course Management"
-
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "No worries! Enter your email and we will send you a reset"
-msgstr "No worries! Enter your email and we will send you a reset"
-
-#: src/modules/ManagementPage/Profile/BasicInfoForm/index.tsx
-msgid "Address"
-msgstr "Address"
-
-#: src/constants/role.ts
-#: src/hooks/useStatusLabel.tsx
-msgid "Unknown"
-msgstr "Unknown"
-
-#: src/hooks/useStatusLabel.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "Active"
-msgstr "Active"
+msgid "Updated payment method!"
+msgstr "Updated payment method!"
 
 #: src/pages/manage/profile/index.tsx
 msgid "Updated personal info!"
 msgstr "Updated personal info!"
 
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "I agree to the <0>Privacy Policy</0>"
-msgstr "I agree to the <0>Privacy Policy</0>"
-
 #: src/constants/menu.ts
-msgid "Class Management"
-msgstr "Class Management"
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Canceled"
-msgstr "Canceled"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "Payments"
-msgstr "Payments"
-
-#: src/constants/menu.ts
-msgid "My Scores"
-msgstr "My Scores"
-
-#: src/modules/ManagementPage/Profile/PaymentInfoForm/index.tsx
-msgid "Bank Name"
-msgstr "Bank Name"
-
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "Yo! Forgot Your Password?"
-msgstr "Yo! Forgot Your Password?"
-
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "Sending..."
-msgstr "Sending..."
-
-#: src/constants/menu.ts
-msgid "My Assignments"
-msgstr "My Assignments"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Please enter your password"
-msgstr "Please enter your password"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Reset Password"
-msgstr "Reset Password"
-
-#: src/modules/ManagementPage/Profile/PaymentInfoForm/index.tsx
-msgid "Bank Number"
-msgstr "Bank Number"
-
-#: src/pages/manage/assignments/index.tsx
-msgid "Title"
-msgstr "Title"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "My Classes"
-msgstr "My Classes"
-
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "All"
-msgstr "All"
-
-#: src/components/LoginModal/LoginForm.tsx
-msgid "Enter your password"
-msgstr "Enter your password"
-
-#: src/hooks/useStatusLabel.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "Inactive"
-msgstr "Inactive"
-
-#: src/pages/manage/classes/index.tsx
-msgid "Description"
-msgstr "Description"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
-msgid "Email"
-msgstr "Email"
-
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "Back to Login"
-msgstr "Back to Login"
-
-#: src/pages/manage/classes/index.tsx
-msgid "Fee"
-msgstr "Fee"
-
-#: src/components/LoginModal/LoginForm.tsx
-msgid "Login to your Account"
-msgstr "Login to your Account"
-
-#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
-msgid "You've updated the password"
-msgstr "You've updated the password"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Hide password"
-msgstr "Hide password"
-
-#: src/pages/manage/profile/index.tsx
-msgid "No Name"
-msgstr "No Name"
-
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "Email sent successfully!"
-msgstr "Email sent successfully!"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Code verified successfully!"
-msgstr "Code verified successfully!"
-
-#: src/constants/menu.ts
-msgid "Payment Management"
-msgstr "Payment Management"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Registration successful! Welcome to English Class!"
-msgstr "Registration successful! Welcome to English Class!"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Please accept Terms and Conditions"
-msgstr "Please accept Terms and Conditions"
-
-#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
-msgid "Name required"
-msgstr "Name required"
+msgid "User Management"
+msgstr "User Management"
 
 #: src/constants/menu.ts
 msgid "Users"
 msgstr "Users"
 
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "Class Name"
-msgstr "Class Name"
-
-#: src/constants/menu.ts
-msgid "Settings"
-msgstr "Settings"
-
-#: src/constants/role.ts
-msgid "Admin"
-msgstr "Admin"
-
-#: src/components/LoginModal/LoginForm.tsx
-msgid "Forgot password?"
-msgstr "Forgot password?"
-
-#: src/hooks/useStatusLabel.tsx
-#: src/pages/manage/assignments/index.tsx
-msgid "Pending"
-msgstr "Pending"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "Passwords must match"
-msgstr "Passwords must match"
-
-#: src/pages/manage/profile/index.tsx
-msgid "Change Password"
-msgstr "Change Password"
-
 #: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Please enter only numbers"
-msgstr "Please enter only numbers"
-
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "Enter new password"
-msgstr "Enter new password"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Failed to update password"
-msgstr "Failed to update password"
-
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "Min 6 chars"
-msgstr "Min 6 chars"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Saving..."
-msgstr "Saving..."
-
-#: src/modules/ManagementPage/Profile/PaymentInfoForm/index.tsx
-msgid "Account Holder Name"
-msgstr "Account Holder Name"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Sign in With Google"
-msgstr "Sign in With Google"
-
-#: src/pages/manage/assignments/index.tsx
-#~ msgid "Due Date"
-#~ msgstr "Due Date"
-
-#: src/constants/menu.ts
-msgid "Score Management"
-msgstr "Score Management"
-
-#: src/hooks/useStatusLabel.tsx
-#: src/pages/manage/assignments/index.tsx
-msgid "Submitted"
-msgstr "Submitted"
-
-#: src/pages/manage/assignments/index.tsx
-#~ msgid "Grade"
-#~ msgstr "Grade"
-
-#: src/constants/role.ts
-msgid "Student"
-msgstr "Student"
-
-#: src/constants/menu.ts
-#: src/pages/manage/student/payment/index.tsx
-msgid "Payment History"
-msgstr "Payment History"
-
-#: src/constants/menu.ts
-msgid "Event Management"
-msgstr "Event Management"
-
-#: src/components/ProfileDropdown/index.tsx
-msgid "My profile"
-msgstr "My profile"
-
-#: src/components/LoginModal/RegisterForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Please confirm your password"
-msgstr "Please confirm your password"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Password is required"
-msgstr "Password is required"
-
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "Created"
-msgstr "Created"
-
-#: src/components/ProfileSection/index.tsx
-msgid "Cancel"
-msgstr "Cancel"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Verification code must be 6 digits"
-msgstr "Verification code must be 6 digits"
-
-#: src/pages/manage/assignments/index.tsx
-msgid "Overdue"
-msgstr "Overdue"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Unable to verify?"
-msgstr "Unable to verify?"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Verifying..."
-msgstr "Verifying..."
-
-#: src/components/ProfileSection/index.tsx
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "Edit"
-msgstr "Edit"
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Draft"
-msgstr "Draft"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Please enter your email"
-msgstr "Please enter your email"
-
-#: src/pages/manage/assignments/index.tsx
-msgid "Deadline"
-msgstr "Deadline"
-
-#: src/helpers/locales.ts
-msgid "Vietnamese"
-msgstr "Vietnamese"
-
-#: src/constants/menu.ts
-msgid "My Class Scores"
-msgstr "My Class Scores"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Register"
-msgstr "Register"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/pages/manage/student/materials/index.tsx
-msgid "Materials"
-msgstr "Materials"
-
-#: src/pages/manage/classes/index.tsx
-msgid "Schedule"
-msgstr "Schedule"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Welcome Back!"
-msgstr "Welcome Back!"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Next"
-msgstr "Next"
-
-#: src/components/PageHeader/index.tsx
-msgid "Home"
-msgstr "Home"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Back"
-msgstr "Back"
-
-#: src/pages/manage/profile/index.tsx
-msgid "Basic Information"
-msgstr "Basic Information"
-
-#: src/pages/manage/classes/index.tsx
-msgid "Students"
-msgstr "Students"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Didn't receive anything?"
-msgstr "Didn't receive anything?"
-
-#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
-msgid "Email required"
-msgstr "Email required"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/LoginForm.tsx
-msgid "Brand Logo"
-msgstr "Brand Logo"
-
-#: src/pages/manage/assignments/index.tsx
-msgid "Search by assignment, class..."
-msgstr "Search by assignment, class..."
-
-#: src/constants/menu.ts
-msgid "PAYMENT"
-msgstr "PAYMENT"
-
-#: src/constants/menu.ts
-msgid "Overview Dashboard"
-msgstr "Overview Dashboard"
-
-#: src/helpers/locales.ts
-msgid "English"
-msgstr "English"
-
-#: src/components/LoginModal/LoginForm.tsx
-msgid "Don't have an account?"
-msgstr "Don't have an account?"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Passwords do not match"
-msgstr "Passwords do not match"
-
-#: src/constants/role.ts
-#: src/pages/manage/classes/index.tsx
-msgid "Teacher"
-msgstr "Teacher"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Resend code"
-msgstr "Resend code"
-
-#: src/components/ProfileDropdown/index.tsx
-msgid "Logout"
-msgstr "Logout"
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Passed"
-msgstr "Passed"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "TEACHING"
-msgstr "TEACHING"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "We've sent a code to {email}"
-msgstr "We've sent a code to {email}"
-
-#: src/pages/manage/classes/index.tsx
-msgid "Level"
-msgstr "Level"
-
-#: src/components/LoginModal/LoginForm.tsx
-msgid "Sorry, your password must be at least 8 characters"
-msgstr "Sorry, your password must be at least 8 characters"
-
-#: src/components/LoginModal/RegisterForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "Confirm Password"
-msgstr "Confirm Password"
-
-#: src/constants/menu.ts
-msgid "Courses"
-msgstr "Courses"
-
-#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
-msgid "successfully"
-msgstr "successfully"
-
-#: src/pages/manage/profile/index.tsx
-msgid "Updated payment method!"
-msgstr "Updated payment method!"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Already a member? Log in and enjoy your AI shopping experience with your personalized dashboard, rewards, and more."
-msgstr "Already a member? Log in and enjoy your AI shopping experience with your personalized dashboard, rewards, and more."
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Late"
-msgstr "Late"
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Completed"
-msgstr "Completed"
-
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "Failed to send reset email"
-msgstr "Failed to send reset email"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Please enter your name"
-msgstr "Please enter your name"
-
-#: src/pages/manage/profile/index.tsx
-msgid "Payment Method"
-msgstr "Payment Method"
-
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "Confirm your password"
-msgstr "Confirm your password"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "Scores"
-msgstr "Scores"
-
-#: src/components/ProfileSection/index.tsx
-msgid "Save"
-msgstr "Save"
-
-#: src/constants/menu.ts
-msgid "Events"
-msgstr "Events"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Registering..."
-msgstr "Registering..."
-
-#: src/pages/manage/profile/index.tsx
-msgid "Password changed successfully!"
-msgstr "Password changed successfully!"
-
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-#: src/pages/manage/classes/index.tsx
-#: src/pages/manage/scores/index.tsx
-msgid "Status"
-msgstr "Status"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "LEARNING"
-msgstr "LEARNING"
+msgid "Verification Code"
+msgstr "Verification Code"
 
 #: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
 msgid "Verification code is required"
 msgstr "Verification code is required"
 
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Verification code must be 6 digits"
+msgstr "Verification code must be 6 digits"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Verification code resent!"
+msgstr "Verification code resent!"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Verifying..."
+msgstr "Verifying..."
+
+#: src/modules/ManagementPage/Student/Materials/MaterialStatusFilter.tsx
+msgid "Video"
+msgstr "Video"
+
+#: src/helpers/locales.ts
+msgid "Vietnamese"
+msgstr "Vietnamese"
+
+#: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+msgid "View"
+msgstr "View"
+
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
+msgid "View details"
+msgstr "View details"
+
+#: src/modules/EnglishOnlinePage/OnlineCourseCard/index.tsx src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "View Details"
+msgstr "View Details"
+
+#: src/pages/about/team/index.tsx
+msgid "Visionary leader passionate about education and technology, guiding our mission with commitment and heart."
+msgstr "Visionary leader passionate about education and technology, guiding our mission with commitment and heart."
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Vocabulary & Grammar"
+msgstr "Vocabulary & Grammar"
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Voice sent! (simulate send)"
+msgstr "Voice sent! (simulate send)"
+
+#: src/pages/about/faq/index.tsx
+msgid "Watch Our Course Overview Video"
+msgstr "Watch Our Course Overview Video"
+
+#: src/pages/about/mission/index.tsx
+msgid "Watch Our Story"
+msgstr "Watch Our Story"
+
+#: src/pages/about/faq/index.tsx
+msgid "We accept all major credit/debit cards, bank transfers, and popular e-wallets."
+msgstr "We accept all major credit/debit cards, bank transfers, and popular e-wallets."
+
+#: src/pages/about/mission/index.tsx
+msgid "We are committed to making English education accessible to learners from all backgrounds and skill levels. Through flexible schedules, online and offline classes, and affordable pricing, we ensure no one is left behind."
+msgstr "We are committed to making English education accessible to learners from all backgrounds and skill levels. Through flexible schedules, online and offline classes, and affordable pricing, we ensure no one is left behind."
+
+#: src/pages/privacy.tsx
+msgid "We are committed to protecting your personal information and will not share it with third parties. All data is used solely to improve user experience and enhance our services."
+msgstr "We are committed to protecting your personal information and will not share it with third parties. All data is used solely to improve user experience and enhance our services."
+
+#: src/modules/IeltsPage/IeltsFAQs/index.tsx
+msgid "We offer a free retake within 6 months for students who meet course requirements."
+msgstr "We offer a free retake within 6 months for students who meet course requirements."
+
+#: src/pages/about/faq/index.tsx
+msgid "We offer Beginner, Intermediate, Advanced courses, Conversation Practice, and IELTS preparation to suit every level."
+msgstr "We offer Beginner, Intermediate, Advanced courses, Conversation Practice, and IELTS preparation to suit every level."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "We offer flexible payment plans and special discounts for early sign-ups, groups, and referrals. Contact our support team to learn more about available options."
+msgstr "We offer flexible payment plans and special discounts for early sign-ups, groups, and referrals. Contact our support team to learn more about available options."
+
+#: src/pages/about/faq/index.tsx
+msgid "We provide flexible options for both online live classes and in-person sessions depending on your location and preference."
+msgstr "We provide flexible options for both online live classes and in-person sessions depending on your location and preference."
+
+#: src/pages/about/mission/index.tsx
+msgid "We understand that every learner is unique. Our experienced instructors design tailored lesson plans that meet individual goals, pace, and learning styles for optimal progress."
+msgstr "We understand that every learner is unique. Our experienced instructors design tailored lesson plans that meet individual goals, pace, and learning styles for optimal progress."
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "We've sent a code to {email}"
+msgstr "We've sent a code to {email}"
+
+#: src/pages/manage/dashboard/index.tsx
+msgid "Welcome back,"
+msgstr "Welcome back,"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Welcome Back!"
+msgstr "Welcome Back!"
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "Welcome to our English class, where you will embark on a fun and engaging journey to improve your language skills. Join us today to discover new ways to speak, read, and write English confidently!"
+msgstr "Welcome to our English class, where you will embark on a fun and engaging journey to improve your language skills. Join us today to discover new ways to speak, read, and write English confidently!"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "What does IELTS stand for?"
+msgstr "What does IELTS stand for?"
+
+#: src/pages/about/faq/index.tsx
+msgid "What if I have trouble accessing online classes?"
+msgstr "What if I have trouble accessing online classes?"
+
+#: src/modules/IeltsPage/IeltsFAQs/index.tsx
+msgid "What is the duration of the IELTS Preparation course?"
+msgstr "What is the duration of the IELTS Preparation course?"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "What is the refund policy?"
+msgstr "What is the refund policy?"
+
+#: src/pages/about/faq/index.tsx
+msgid "What levels of English courses do you offer?"
+msgstr "What levels of English courses do you offer?"
+
+#: src/modules/LandingPage/TestimonialsSection/index.tsx src/pages/testimonials/index.tsx
+msgid "What Our Students Say"
+msgstr "What Our Students Say"
+
+#: src/pages/about/faq/index.tsx
+msgid "What payment methods are accepted?"
+msgstr "What payment methods are accepted?"
+
+#: src/modules/LandingPage/FeaturesSection/index.tsx
+msgid "Why Choose Us?"
+msgstr "Why Choose Us?"
+
+#: src/pages/testimonials/index.tsx
+msgid "Working Professional"
+msgstr "Working Professional"
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Writing"
+msgstr "Writing"
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Writing Tasks"
+msgstr "Writing Tasks"
+
+#: src/pages/about/faq/index.tsx
+msgid "Yes, upon successful completion you will receive a certificate recognized by our institution."
+msgstr "Yes, upon successful completion you will receive a certificate recognized by our institution."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Yes, upon successful course completion, you will receive an official certificate."
+msgstr "Yes, upon successful course completion, you will receive an official certificate."
+
+#: src/modules/IeltsPage/IeltsFAQs/index.tsx
+msgid "Yes, we provide up-to-date official practice tests and materials."
+msgstr "Yes, we provide up-to-date official practice tests and materials."
+
+#: src/pages/about/faq/index.tsx
+msgid "Yes! Early bird discounts, group rates, and referral bonuses are available. Contact support for details."
+msgstr "Yes! Early bird discounts, group rates, and referral bonuses are available. Contact support for details."
+
 #: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "Send Request"
-msgstr "Send Request"
+msgid "Yo! Forgot Your Password?"
+msgstr "Yo! Forgot Your Password?"
 
-#: src/constants/menu.ts
-msgid "Course Materials"
-msgstr "Course Materials"
+#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
+msgid "You can now use it to login to your account. Remember, always keep your password confidential and complex."
+msgstr "You can now use it to login to your account. Remember, always keep your password confidential and complex."
 
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Registration failed. Please try again."
-msgstr "Registration failed. Please try again."
+#: src/pages/about/faq/index.tsx
+msgid "You can register directly on our website by selecting your desired course and completing the enrollment form."
+msgstr "You can register directly on our website by selecting your desired course and completing the enrollment form."
 
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "MANAGEMENT"
-msgstr "MANAGEMENT"
+#: src/pages/pricing-fee/index.tsx
+msgid "You can request a full refund within the first two weeks of your course if you are not satisfied."
+msgstr "You can request a full refund within the first two weeks of your course if you are not satisfied."
 
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "I accept the <0>Terms and Conditions</0>"
-msgstr "I accept the <0>Terms and Conditions</0>"
+#: src/pages/403.tsx
+msgid "You don't have permission to access this page."
+msgstr "You don't have permission to access this page."
 
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Verification Code"
-msgstr "Verification Code"
+#: src/pages/pricing-fee/index.tsx
+msgid "You will get access to our online platform where you can message your instructor anytime."
+msgstr "You will get access to our online platform where you can message your instructor anytime."
 
-#: src/pages/manage/classes/index.tsx
-msgid "Search by class name, teacher..."
-msgstr "Search by class name, teacher..."
+#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
+msgid "You've updated the password"
+msgstr "You've updated the password"
 
-#: src/constants/menu.ts
-msgid "User Management"
-msgstr "User Management"
+#: src/modules/BasicCommunicationPage/DialogueSection/index.tsx src/modules/IeltsPage/IeltsAudio/index.tsx
+msgid "Your browser does not support the audio element."
+msgstr "Your browser does not support the audio element."
 
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Please accept Privacy Policy"
-msgstr "Please accept Privacy Policy"
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Your Score:"
+msgstr "Your Score:"
 
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Invalid verification code"
-msgstr "Invalid verification code"
-
-#: src/pages/manage/profile/index.tsx
-msgid "Something went wrong!"
-msgstr "Something went wrong!"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Close"
-msgstr "Close"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Login"
-msgstr "Login"
-
-#: src/constants/menu.ts
-msgid "System Settings"
-msgstr "System Settings"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "Assignments"
-msgstr "Assignments"
-
-#: src/modules/ManagementPage/Profile/BasicInfoForm/index.tsx
-msgid "Phone"
-msgstr "Phone"
+#: src/graphql/error.ts
+msgid "Your session has expired. Please sign in again."
+msgstr "Your session has expired. Please sign in again."

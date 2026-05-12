@@ -13,8 +13,2056 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "{title} course details"
+msgstr "Chi tiết khóa học {title}"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "1 month"
+msgstr "1 tháng"
+
+#: src/pages/courses/online/index.tsx
+msgid "2 months"
+msgstr "2 tháng"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "3 - 5 years"
+msgstr "3 - 5 tuổi"
+
+#: src/pages/courses/online/index.tsx src/pages/pricing-fee/index.tsx
+msgid "3 months"
+msgstr "3 tháng"
+
+#: src/pages/courses/online/index.tsx
+msgid "4 months"
+msgstr "4 tháng"
+
+#: src/pages/courses/online/index.tsx
+msgid "5 months"
+msgstr "5 tháng"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "6 - 8 years"
+msgstr "6 - 8 tuổi"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "9 - 12 years"
+msgstr "9 - 12 tuổi"
+
+#: src/modules/LandingPage/CoursesSection/index.tsx
+msgid "A cheerful young adult learning English basics, sitting with a notebook and pen, casual classroom background, bright and friendly atmosphere, warm colors, simple communication icons floating around"
+msgstr "Một người trẻ vui vẻ đang học tiếng Anh cơ bản, ngồi cùng sổ tay và bút, bối cảnh lớp học thoải mái, không khí tươi sáng và thân thiện, màu sắc ấm áp, các biểu tượng giao tiếp đơn giản xung quanh"
+
+#: src/modules/LandingPage/HeroSection/index.tsx
+msgid "A comprehensive English course that boosts your confidence in communication and certification exams."
+msgstr "Khóa học tiếng Anh toàn diện giúp bạn tự tin hơn trong giao tiếp và các kỳ thi chứng chỉ."
+
+#: src/modules/LandingPage/CoursesSection/index.tsx
+msgid "A confident young professional giving a presentation in English, standing in front of a small audience, business casual attire, modern office or seminar room, confident gestures, clear and bright lighting"
+msgstr "Một chuyên viên trẻ tự tin đang thuyết trình bằng tiếng Anh trước một nhóm khán giả nhỏ, mặc trang phục công sở thoải mái, trong văn phòng hoặc phòng hội thảo hiện đại, cử chỉ tự tin, ánh sáng rõ và tươi sáng"
+
+#: src/modules/LandingPage/CoursesSection/index.tsx
+msgid "A focused student studying for IELTS, surrounded by textbooks and laptop, calm and quiet library environment, serious and determined expression, academic atmosphere with charts and notes visible"
+msgstr "Một học viên tập trung ôn IELTS, xung quanh là sách giáo khoa và laptop, trong môi trường thư viện yên tĩnh, gương mặt nghiêm túc và quyết tâm, không khí học thuật với biểu đồ và ghi chú rõ ràng"
+
+#: src/modules/KidEnglishPage/Introduction/index.tsx
+msgid "A fun and interactive English course designed specifically for kids aged 3-12. Our program helps your child develop essential language skills with games, songs, stories, and activities."
+msgstr "Khóa học tiếng Anh vui nhộn và tương tác, được thiết kế riêng cho trẻ từ 3-12 tuổi. Chương trình giúp trẻ phát triển kỹ năng ngôn ngữ thiết yếu thông qua trò chơi, bài hát, câu chuyện và hoạt động."
+
+#: src/pages/about/mission/index.tsx
+msgid "A glimpse into our passion and dedication to quality English education."
+msgstr "Một góc nhìn về niềm đam mê và sự tận tâm của chúng tôi đối với giáo dục tiếng Anh chất lượng."
+
+#: src/pages/about/team/index.tsx
+msgid "A passionate group of educators, innovators, and leaders dedicated to empowering learners worldwide."
+msgstr "Một tập thể nhà giáo dục, nhà đổi mới và nhà lãnh đạo đầy nhiệt huyết, tận tâm trao quyền cho người học trên toàn thế giới."
+
+#: src/pages/about/faq/index.tsx
+msgid "A stable internet connection and a device with video/audio capability are required. Basic computer skills are recommended."
+msgstr "Cần có kết nối internet ổn định và thiết bị có khả năng video/âm thanh. Nên có kỹ năng máy tính cơ bản."
+
+#: src/pages/403.tsx
+msgid "Access Denied"
+msgstr "Truy cập bị từ chối"
+
+#: src/pages/about/mission/index.tsx
+msgid "Accessible Learning for Everyone"
+msgstr "Học tập dễ tiếp cận cho mọi người"
+
+#: src/modules/ManagementPage/Profile/PaymentInfoForm/index.tsx
+msgid "Account Holder Name"
+msgstr "Tên chủ tài khoản"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Account Name:"
+msgstr "Tên tài khoản:"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Account No"
+msgstr "Số tài khoản"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Account No:"
+msgstr "Số tài khoản:"
+
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
+msgid "Actions"
+msgstr "Thao tác"
+
+#: src/hooks/useStatusLabel.tsx src/pages/manage/classes/index.tsx
+msgid "Active"
+msgstr "Hoạt động"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Activities:"
+msgstr "Hoạt động:"
+
+#: src/modules/ManagementPage/Profile/BasicInfoForm/index.tsx
+msgid "Address"
+msgstr "Địa chỉ"
+
+#: src/pages/contact/index.tsx
+msgid "Address: 123 English St, Language City, USA"
+msgstr "Địa chỉ: 123 English St, Language City, Hoa Kỳ"
+
+#: src/constants/role.ts
+msgid "Admin"
+msgstr "Quản trị viên"
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Advanced"
+msgstr "Nâng cao"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Advanced (9-12 years)"
+msgstr "Nâng cao (9-12 tuổi)"
+
+#: src/modules/LandingPage/CoursesSection/index.tsx
+msgid "Advanced English"
+msgstr "Tiếng Anh nâng cao"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Advanced essay writing"
+msgstr "Viết luận nâng cao"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Age"
+msgstr "Tuổi"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Aim for band 7.0+"
+msgstr "Hướng tới band 7.0+"
+
+#: src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx src/modules/ManagementPage/Student/Materials/MaterialStatusFilter.tsx src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx src/pages/courses/online/index.tsx
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
+msgid "All"
+msgstr "Tất cả"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Already a member? Log in and enjoy your AI shopping experience with your personalized dashboard, rewards, and more."
+msgstr "Đã là thành viên? Đăng nhập để trải nghiệm mua sắm AI, dashboard cá nhân, nhận thưởng và nhiều tiện ích khác."
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Already have an account?"
+msgstr "Đã có tài khoản?"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "am"
+msgstr "là"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+msgid "Amount"
+msgstr "Số tiền"
+
+#: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
+msgid "Anna:"
+msgstr "Anna:"
+
+#: src/pages/about/faq/index.tsx
+msgid "Are classes online or in-person?"
+msgstr "Lớp học trực tuyến hay trực tiếp?"
+
+#: src/pages/about/faq/index.tsx
+msgid "Are there any discounts?"
+msgstr "Có ưu đãi nào không?"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Are there any prerequisites?"
+msgstr "Có yêu cầu đầu vào nào không?"
+
+#: src/pages/about/faq/index.tsx
+msgid "Are there prerequisites for online courses?"
+msgstr "Khóa học trực tuyến có yêu cầu đầu vào không?"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Arrange the words to form a correct sentence: 'fine / am / I'"
+msgstr "Sắp xếp các từ để tạo thành câu đúng: 'fine / am / I'"
+
+#: src/constants/menu.ts
+msgid "Assignment Management"
+msgstr "Quản lý bài tập"
+
+#: src/constants/menu.ts
+msgid "Assignments"
+msgstr "Bài tập"
+
+#: src/components/AvatarUploader/index.tsx
+msgid "Avatar updated!"
+msgstr "Đã cập nhật ảnh đại diện!"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Back"
+msgstr "Trở về"
+
+#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
+msgid "Back to Login"
+msgstr "Trở về trang đăng nhập"
+
+#: src/modules/ManagementPage/Profile/PaymentInfoForm/index.tsx
+msgid "Bank Name"
+msgstr "Tên ngân hàng"
+
+#: src/modules/ManagementPage/Profile/PaymentInfoForm/index.tsx
+msgid "Bank Number"
+msgstr "Số tài khoản ngân hàng"
+
+#: src/modules/BasicCommunicationPage/HeaderSection/index.tsx
+msgid "Basic Communication in English"
+msgstr "Giao tiếp tiếng Anh cơ bản"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Basic grammar, conversation skills, simple writing"
+msgstr "Ngữ pháp cơ bản, kỹ năng hội thoại, viết đơn giản"
+
+#: src/pages/manage/profile/index.tsx
+msgid "Basic Information"
+msgstr "Thông tin cơ bản"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Basic vocabulary, phonics, colors, numbers, simple sentences"
+msgstr "Từ vựng cơ bản, ngữ âm, màu sắc, số đếm, câu đơn giản"
+
+#: src/pages/about/team/index.tsx
+msgid "Become a part of our mission to make English education accessible to everyone."
+msgstr "Hãy trở thành một phần trong sứ mệnh đưa giáo dục tiếng Anh đến gần hơn với mọi người."
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Beginner"
+msgstr "Cơ bản"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Beginner (3-5 years)"
+msgstr "Cơ bản (3-5 tuổi)"
+
+#: src/modules/LandingPage/CoursesSection/index.tsx
+msgid "Beginner English"
+msgstr "Tiếng Anh cơ bản"
+
+#: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
+msgid "Ben:"
+msgstr "Ben:"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Blocked"
+msgstr "Bị khóa"
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "Brand Logo"
+msgstr "Logo thương hiệu"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Build confidence in daily communication"
+msgstr "Xây dựng sự tự tin trong giao tiếp hằng ngày"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Build English foundation and communication skills"
+msgstr "Xây dựng nền tảng tiếng Anh và kỹ năng giao tiếp"
+
+#: src/pages/courses/online/index.tsx
+msgid "Business English"
+msgstr "Tiếng Anh thương mại"
+
+#: src/pages/terms.tsx
+msgid "By using our website and services, you agree to comply with all our policies and regulations. Please read these terms carefully. If you have any questions, feel free to contact us."
+msgstr "Khi sử dụng trang web và dịch vụ của chúng tôi, bạn đồng ý tuân thủ mọi chính sách và quy định. Vui lòng đọc kỹ các điều khoản này. Nếu có bất kỳ câu hỏi nào, hãy liên hệ với chúng tôi."
+
+#: src/pages/about/faq/index.tsx
+msgid "Can I get a refund if I cancel?"
+msgstr "Tôi có thể được hoàn tiền nếu hủy không?"
+
+#: src/modules/IeltsPage/IeltsFAQs/index.tsx
+msgid "Can I retake the course if I am not satisfied with my score?"
+msgstr "Tôi có thể học lại nếu không hài lòng với điểm số không?"
+
+#: src/components/ProfileSection/index.tsx
+msgid "Cancel"
+msgstr "Hủy"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Canceled"
+msgstr "Đã huỷ bỏ"
+
+#: src/components/AvatarUploader/index.tsx
+msgid "Cannot convert HEIC image!"
+msgstr "Không thể chuyển đổi ảnh HEIC!"
+
+#: src/pages/manage/profile/index.tsx
+msgid "Change Password"
+msgstr "Thay đổi mật khẩu"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Child's Age"
+msgstr "Tuổi của trẻ"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Child's Name"
+msgstr "Tên của trẻ"
+
+#: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx src/modules/ManagementPage/Student/Payments/PaymentTable.tsx src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
+msgid "Class"
+msgstr "Lớp học"
+
+#: src/constants/menu.ts
+msgid "Class Management"
+msgstr "Quản lý lớp học"
+
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
+msgid "Class Name"
+msgstr "Tên lớp"
+
+#: src/constants/menu.ts
+msgid "Classes"
+msgstr "Lớp học"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Classes 3 times a week"
+msgstr "Học 3 buổi mỗi tuần"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Classes 4 times a week"
+msgstr "Học 4 buổi mỗi tuần"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Classes 5 times a week"
+msgstr "Học 5 buổi mỗi tuần"
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Click start and practice speaking the sample dialogue above. Record your voice and listen back to improve your pronunciation."
+msgstr "Nhấn bắt đầu và luyện nói theo đoạn hội thoại mẫu ở trên. Ghi âm giọng nói và nghe lại để cải thiện phát âm."
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Click words to build the correct sentence in order."
+msgstr "Nhấp vào các từ để sắp xếp thành câu đúng theo thứ tự."
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx src/modules/EnglishOnlinePage/OnlineCourseCard/index.tsx src/modules/ManagementPage/Student/Payments/PaymentSuccessStep.tsx src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
+msgid "Close"
+msgstr "Đóng"
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Close live chat"
+msgstr "Đóng trò chuyện trực tuyến"
+
+#: src/components/Header/MobileMenu.tsx
+msgid "Close menu"
+msgstr "Đóng menu"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Closed"
+msgstr "Đã đóng"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Code verified successfully!"
+msgstr "Mã đã được xác minh thành công!"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Combine art and language skills by drawing and describing pictures related to lessons."
+msgstr "Kết hợp nghệ thuật và kỹ năng ngôn ngữ bằng cách vẽ và mô tả tranh liên quan đến bài học."
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Comment"
+msgstr "Ghi chú"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Comment:"
+msgstr "Ghi chú:"
+
+#: src/pages/about/mission/index.tsx
+msgid "Community and Support"
+msgstr "Cộng đồng và hỗ trợ"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Complete the sentence: 'I ____ fine, thank you.'"
+msgstr "Hoàn thành câu: 'I ____ fine, thank you.'"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Completed"
+msgstr "Đã hoàn thành"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#: src/components/LoginModal/RegisterForm.tsx src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "Confirm Password"
+msgstr "Xác nhận mật khẩu"
+
+#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "Confirm your password"
+msgstr "Xác nhận mật khẩu của bạn"
+
+#: src/pages/contact/index.tsx
+msgid "Contact Information"
+msgstr "Thông tin liên hệ"
+
+#: src/pages/about/faq/index.tsx
+msgid "Contact Page"
+msgstr "Trang liên hệ"
+
+#: src/pages/contact/index.tsx
+msgid "Contact Us"
+msgstr "Liên hệ với chúng tôi"
+
+#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
+msgid "Continue to login"
+msgstr "Tiếp tục đăng nhập"
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Conversation Practice"
+msgstr "Luyện giao tiếp"
+
+#: src/pages/courses/online/index.tsx
+msgid "Conversational English"
+msgstr "Tiếng Anh giao tiếp"
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Core Skills & Topics"
+msgstr "Kỹ năng và chủ đề cốt lõi"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "Correct! IELTS stands for International English Language Testing System."
+msgstr "Chính xác! IELTS là viết tắt của International English Language Testing System."
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Could not access microphone"
+msgstr "Không thể truy cập micro"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Course"
+msgstr "Khóa học"
+
+#: src/pages/about/faq/index.tsx
+msgid "Course Information"
+msgstr "Thông tin khóa học"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Course Level"
+msgstr "Cấp độ khóa học"
+
+#: src/constants/menu.ts
+msgid "Course Management"
+msgstr "Quản lý khóa học"
+
+#: src/constants/menu.ts
+msgid "Course Materials"
+msgstr "Tài liệu khóa học"
+
+#: src/pages/about/faq/index.tsx
+msgid "Course Overview"
+msgstr "Tổng quan khóa học"
+
+#: src/pages/about/faq/index.tsx
+msgid "Course Policies"
+msgstr "Chính sách khóa học"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Course Roadmaps"
+msgstr "Lộ trình khóa học"
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Course Topics"
+msgstr "Chủ đề khóa học"
+
+#: src/constants/menu.ts
+msgid "Courses"
+msgstr "Khóa học"
+
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
+msgid "Created"
+msgstr "Đã tạo"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Creative Drawing"
+msgstr "Vẽ sáng tạo"
+
+#: src/pages/about/team/index.tsx
+msgid "Creative strategist bringing our message to students worldwide and growing our community."
+msgstr "Nhà chiến lược sáng tạo đưa thông điệp của chúng tôi đến học viên trên toàn thế giới và phát triển cộng đồng."
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Creative writing, debates, presentations"
+msgstr "Viết sáng tạo, tranh luận, thuyết trình"
+
+#: src/pages/testimonials/index.tsx
+msgid "Curious what our students think? Here's what they say after transforming their English skills!"
+msgstr "Bạn tò mò học viên nghĩ gì? Đây là chia sẻ của họ sau khi cải thiện kỹ năng tiếng Anh!"
+
+#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "Current Password"
+msgstr "Mật khẩu hiện tại"
+
+#: src/constants/menu.ts src/pages/403.tsx
+msgid "Dashboard"
+msgstr "Bảng điều khiển"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+msgid "Date"
+msgstr "Ngày"
+
 #: src/pages/manage/assignments/index.tsx
+msgid "Deadline"
+msgstr "Hạn chót"
+
+#: src/pages/about/team/index.tsx
+msgid "Dedicated teacher focused on helping students gain confidence and fluency through real-world practice."
+msgstr "Giáo viên tận tâm, tập trung giúp học viên tự tin và lưu loát hơn thông qua luyện tập thực tế."
+
+#: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx src/pages/manage/classes/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Description"
+msgstr "Mô tả"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Develop academic writing skills"
+msgstr "Phát triển kỹ năng viết học thuật"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Develop basic writing and reading skills"
+msgstr "Phát triển kỹ năng viết và đọc cơ bản"
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Develop basic writing skills with fun activities like drawing, labeling, and short sentences."
+msgstr "Phát triển kỹ năng viết cơ bản qua các hoạt động vui như vẽ, gắn nhãn và viết câu ngắn."
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Develop confidence and fluency with mock speaking tests and feedback."
+msgstr "Phát triển sự tự tin và độ lưu loát qua các bài thi nói thử và phản hồi."
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Develop essay writing skills"
+msgstr "Phát triển kỹ năng viết luận"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Didn't receive anything?"
+msgstr "Bạn không nhận được mã otp?"
+
+#: src/pages/about/faq/index.tsx
+msgid "Do I get a certificate after course completion?"
+msgstr "Tôi có nhận được chứng chỉ sau khi hoàn thành khóa học không?"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Do you offer certificates?"
+msgstr "Bạn có cấp chứng chỉ không?"
+
+#: src/modules/IeltsPage/IeltsFAQs/index.tsx
+msgid "Do you provide official IELTS practice materials?"
+msgstr "Bạn có cung cấp tài liệu luyện thi IELTS chính thức không?"
+
+#: src/modules/ManagementPage/Student/Materials/MaterialStatusFilter.tsx
+msgid "Doc"
+msgstr "Tài liệu"
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "Don't have an account?"
+msgstr "Chưa có tài khoản?"
+
+#: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx
+msgid "Download/View"
+msgstr "Tải xuống/Xem"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Draft"
+msgstr "Nháp"
+
+#: src/pages/about/team/index.tsx
+msgid "Driving product innovation and user experience for seamless and effective learning journeys."
+msgstr "Thúc đẩy đổi mới sản phẩm và trải nghiệm người dùng để tạo hành trình học tập liền mạch, hiệu quả."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Duration"
+msgstr "Thời lượng"
+
+#: src/modules/EnglishOnlinePage/OnlineCourseCard/index.tsx
+msgid "Duration:"
+msgstr "Thời lượng:"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Duration: 3 months"
+msgstr "Thời lượng: 3 tháng"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Duration: 4 months"
+msgstr "Thời lượng: 4 tháng"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Duration: 5 months"
+msgstr "Thời lượng: 5 tháng"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Duration: 6 months"
+msgstr "Thời lượng: 6 tháng"
+
+#: src/pages/about/faq/index.tsx
+msgid "Each course typically lasts 3 months with weekly sessions. Conversation Practice is usually 1 month."
+msgstr "Mỗi khóa học thường kéo dài 3 tháng với các buổi học hằng tuần. Luyện giao tiếp thường kéo dài 1 tháng."
+
+#: src/components/ProfileSection/index.tsx src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
+msgid "Edit"
+msgstr "Chỉnh sửa"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
+#: src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Email"
+msgstr "Thư điện tử"
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx
+msgid "Email Address"
+msgstr "Địa chỉ email"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Email is invalid"
+msgstr "Email không hợp lệ"
+
+#: src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Email is required"
+msgstr "Vui lòng nhập email"
+
+#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
+msgid "Email required"
+msgstr "Email là bắt buộc"
+
+#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
+msgid "Email sent successfully!"
+msgstr "Email đã được gửi thành công!"
+
+#: src/pages/contact/index.tsx
+msgid "Email:"
+msgstr "Thư điện tử:"
+
+#: src/pages/about/mission/index.tsx
+msgid "Empowering every learner to achieve their full potential through quality English education."
+msgstr "Trao quyền cho mọi người học phát huy tối đa tiềm năng thông qua giáo dục tiếng Anh chất lượng."
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Encourage confident speaking with role plays, dialogues, and pronunciation games."
+msgstr "Khuyến khích nói tự tin qua đóng vai, hội thoại và trò chơi phát âm."
+
+#: src/helpers/locales.ts
+msgid "English"
+msgstr "Tiếng Anh"
+
+#: src/components/Footer/index.tsx
+msgid "English Class All Rights Reserved"
+msgstr "English Class bảo lưu mọi quyền"
+
+#: src/pages/courses/online/index.tsx
+msgid "English for Beginners"
+msgstr "Tiếng Anh cho người mới bắt đầu"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Enjoy captivating stories with colorful illustrations and simple text, perfect for young learners."
+msgstr "Thưởng thức những câu chuyện hấp dẫn với hình minh họa đầy màu sắc và văn bản đơn giản, rất phù hợp với người học nhỏ tuổi."
+
+#: src/pages/about/team/index.tsx
+msgid "Ensuring a robust, secure, and scalable platform supporting millions of learners worldwide."
+msgstr "Đảm bảo một nền tảng mạnh mẽ, bảo mật và có khả năng mở rộng để hỗ trợ hàng triệu người học trên toàn thế giới."
+
+#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "Enter current password"
+msgstr "Nhập mật khẩu hiện tại"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Enter Email Code"
+msgstr "Nhập mã email"
+
+#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "Enter new password"
+msgstr "Nhập mật khẩu mới"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
+msgid "Enter your email"
+msgstr "Nhập email của bạn"
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "Enter your password"
+msgstr "Nhập mật khẩu của bạn"
+
+#: src/pages/testimonials/index.tsx
+msgid "Entrepreneur"
+msgstr "Doanh nhân"
+
+#: src/constants/menu.ts
+msgid "Event Management"
+msgstr "Quản lý sự kiện"
+
+#: src/constants/menu.ts
+msgid "Events"
+msgstr "Sự kiện"
+
+#: src/pages/courses/online/index.tsx
+msgid "Exam"
+msgstr "Kỳ thi"
+
+#: src/pages/about/team/index.tsx
+msgid "Experienced educator designing innovative, practical, and engaging English learning programs."
+msgstr "Nhà giáo dục giàu kinh nghiệm, thiết kế các chương trình học tiếng Anh sáng tạo, thực tế và hấp dẫn."
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Expert-level essay and speaking skills"
+msgstr "Kỹ năng viết luận và nói ở cấp độ chuyên sâu"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Failed"
+msgstr "Không đạt"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Failed to resend code"
+msgstr "Gửi lại mã thất bại"
+
+#: src/pages/contact/index.tsx
+msgid "Failed to send message. Please try again later."
+msgstr "Gửi tin nhắn thất bại. Vui lòng thử lại sau."
+
+#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
+msgid "Failed to send reset email"
+msgstr "Gửi email đặt lại mật khẩu thất bại"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Failed to update password"
+msgstr "Cập nhật mật khẩu thất bại"
+
 #: src/pages/manage/classes/index.tsx
+msgid "Fee"
+msgstr "Học phí"
+
+#: src/components/AvatarUploader/index.tsx
+msgid "File type must be JPG, PNG, GIF or HEIC."
+msgstr "Loại tệp phải là JPG, PNG, GIF hoặc HEIC."
+
+#: src/pages/about/faq/index.tsx
+msgid "Find answers to common questions about courses, registration, policies, and support."
+msgstr "Tìm câu trả lời cho các câu hỏi thường gặp về khóa học, đăng ký, chính sách và hỗ trợ."
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "fine"
+msgstr "ổn"
+
+#: src/modules/LandingPage/FeaturesSection/index.tsx
+msgid "Flexible Schedule"
+msgstr "Lịch học linh hoạt"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Focus on all 4 skills: reading, writing, listening, speaking"
+msgstr "Tập trung vào cả 4 kỹ năng: đọc, viết, nghe, nói"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Focus on listening and speaking skills"
+msgstr "Tập trung vào kỹ năng nghe và nói"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Focus:"
+msgstr "Trọng tâm:"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Focused speaking practice to improve fluency and confidence in daily conversations."
+msgstr "Luyện nói tập trung để cải thiện độ lưu loát và sự tự tin trong giao tiếp hằng ngày."
+
+#: src/pages/courses/online/index.tsx
+msgid "Focused training on IELTS Listening, Reading, Writing and Speaking with test strategies."
+msgstr "Luyện tập tập trung vào Nghe, Đọc, Viết và Nói IELTS cùng chiến lược làm bài."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "For learners aiming for fluency, advanced grammar, idioms, and professional English usage."
+msgstr "Dành cho người học hướng tới sự lưu loát, ngữ pháp nâng cao, thành ngữ và cách dùng tiếng Anh chuyên nghiệp."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "For learners starting from scratch, focusing on basic grammar, vocabulary, and speaking skills."
+msgstr "Dành cho người học bắt đầu từ con số không, tập trung vào ngữ pháp, từ vựng và kỹ năng nói cơ bản."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "For those who know the basics and want to improve conversation, writing, and comprehension."
+msgstr "Dành cho người đã nắm kiến thức cơ bản và muốn cải thiện hội thoại, viết và khả năng hiểu."
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "Forgot password?"
+msgstr "Quên mật khẩu?"
+
+#: src/pages/about/team/index.tsx
+msgid "Founder & CEO"
+msgstr "Nhà sáng lập & CEO"
+
+#: src/pages/testimonials/index.tsx
+msgid "Freelancer"
+msgstr "Người làm tự do"
+
+#: src/modules/IeltsPage/IeltsFAQs/index.tsx src/pages/about/faq/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Frequently Asked Questions"
+msgstr "Câu hỏi thường gặp"
+
+#: src/components/LoginModal/RegisterForm.tsx src/modules/IeltsPage/IeltsRegister/index.tsx src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Full Name"
+msgstr "Họ và tên"
+
+#: src/pages/about/faq/index.tsx
+msgid "Full refunds are available within the first week of class. Partial refunds are prorated based on attendance thereafter."
+msgstr "Bạn có thể được hoàn tiền đầy đủ trong tuần đầu tiên của lớp học. Sau đó, hoàn tiền một phần sẽ được tính theo tỷ lệ dựa trên số buổi tham gia."
+
+#: src/pages/testimonials/index.tsx
+msgid "Fun and engaging lessons with a great community. Highly recommend to anyone learning English!"
+msgstr "Bài học vui nhộn, hấp dẫn cùng một cộng đồng tuyệt vời. Rất khuyến khích cho bất kỳ ai đang học tiếng Anh!"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Fun Learning Activities"
+msgstr "Hoạt động học tập vui nhộn"
+
+#: src/pages/courses/online/index.tsx
+msgid "General"
+msgstr "Tổng quát"
+
+#: src/modules/IeltsPage/IeltsIntro/index.tsx
+msgid "Get ready for your IELTS exam with comprehensive lessons, real test strategies, and expert coaching to boost your score."
+msgstr "Sẵn sàng cho kỳ thi IELTS với bài học toàn diện, chiến lược làm bài thực tế và sự hướng dẫn chuyên môn để nâng cao điểm số."
+
+#: src/pages/about/team/index.tsx
+msgid "Get Started"
+msgstr "Bắt đầu"
+
+#: src/pages/about/mission/index.tsx
+msgid "Global Opportunities"
+msgstr "Cơ hội toàn cầu"
+
+#: src/pages/403.tsx src/pages/404.tsx
+msgid "Go back"
+msgstr "Quay lại"
+
+#: src/pages/404.tsx
+msgid "Go home"
+msgstr "Về trang chủ"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Good evening"
+msgstr "Chào buổi tối"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Good morning"
+msgstr "Chào buổi sáng"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Good night"
+msgstr "Chúc ngủ ngon"
+
+#: src/hooks/useStatusLabel.tsx src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx src/pages/manage/assignments/index.tsx
+msgid "Graded"
+msgstr "Đã chấm điểm"
+
+#: src/pages/testimonials/index.tsx
+msgid "Graduate Student"
+msgstr "Học viên sau đại học"
+
+#: src/modules/LandingPage/FeaturesSection/index.tsx
+msgid "Guaranteed Results"
+msgstr "Cam kết kết quả"
+
+#: src/pages/contact/index.tsx
+msgid "Have questions or feedback? Send us a message and we will get back to you soon."
+msgstr "Bạn có câu hỏi hoặc góp ý? Hãy gửi tin nhắn và chúng tôi sẽ phản hồi sớm."
+
+#: src/pages/about/team/index.tsx
+msgid "Head of Curriculum"
+msgstr "Trưởng bộ phận chương trình học"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Hello night"
+msgstr "Chào buổi tối"
+
+#: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
+msgid "Hello! How are you today?"
+msgstr "Xin chào! Hôm nay bạn thế nào?"
+
+#: src/pages/manage/dashboard/index.tsx
+msgid "Here's your dashboard overview."
+msgstr "Đây là tổng quan bảng điều khiển của bạn."
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Hi! How can we assist you today?"
+msgstr "Xin chào! Hôm nay chúng tôi có thể hỗ trợ gì cho bạn?"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Hide password"
+msgstr "Ẩn mật khẩu"
+
+#: src/pages/testimonials/index.tsx
+msgid "Highly recommend! The course helped me prepare for my international job interviews."
+msgstr "Rất đáng giới thiệu! Khóa học đã giúp tôi chuẩn bị cho các buổi phỏng vấn việc làm quốc tế."
+
+#: src/components/PageHeader/index.tsx src/pages/403.tsx
+msgid "Home"
+msgstr "Trang chủ"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "How can I contact my instructor?"
+msgstr "Tôi có thể liên hệ giảng viên bằng cách nào?"
+
+#: src/pages/about/faq/index.tsx
+msgid "How do I register for a course?"
+msgstr "Tôi đăng ký khóa học như thế nào?"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "How do you greet someone in the morning?"
+msgstr "Bạn chào ai đó vào buổi sáng như thế nào?"
+
+#: src/pages/about/faq/index.tsx
+msgid "How long is each course?"
+msgstr "Mỗi khóa học kéo dài bao lâu?"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "I"
+msgstr "Tôi"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "I accept the <0>Terms and Conditions</0>"
+msgstr "Tôi đồng ý với <0>Điều khoản dịch vụ</0>"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "I agree to the <0>Privacy Policy</0>"
+msgstr "Tôi đồng ý với <0>Chính sách bảo mật</0>"
+
+#: src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
+msgid "I have paid"
+msgstr "Tôi đã thanh toán"
+
+#: src/pages/testimonials/index.tsx
+msgid "I improved my business English tremendously. The classes fit well into my busy schedule."
+msgstr "Tiếng Anh thương mại của tôi đã cải thiện rất nhiều. Các lớp học rất phù hợp với lịch trình bận rộn của tôi."
+
+#: src/pages/testimonials/index.tsx
+msgid "I loved the interactive classes and the friendly environment. Learning English became fun!"
+msgstr "Tôi rất thích các lớp học tương tác và môi trường thân thiện. Việc học tiếng Anh trở nên thật vui!"
+
+#: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
+msgid "I'm fine, thank you. And you?"
+msgstr "Tôi khỏe, cảm ơn bạn. Còn bạn?"
+
+#: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
+msgid "I'm great, thanks for asking!"
+msgstr "Tôi rất khỏe, cảm ơn bạn đã hỏi!"
+
+#: src/pages/courses/online/index.tsx
+msgid "IELTS Preparation"
+msgstr "Luyện thi IELTS"
+
+#: src/modules/IeltsPage/IeltsIntro/index.tsx
+msgid "IELTS Preparation Course"
+msgstr "Khóa luyện thi IELTS"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Improve grammar and vocabulary to B1 level"
+msgstr "Cải thiện ngữ pháp và từ vựng lên trình độ B1"
+
+#: src/pages/courses/online/index.tsx
+msgid "Improve your speaking skills through practical conversation practice."
+msgstr "Cải thiện kỹ năng nói thông qua luyện hội thoại thực tế."
+
+#: src/hooks/useStatusLabel.tsx src/pages/manage/classes/index.tsx
+msgid "Inactive"
+msgstr "Ngừng hoạt động"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "Incorrect. Please try again."
+msgstr "Chưa đúng. Vui lòng thử lại."
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Individualized feedback and coaching"
+msgstr "Phản hồi và hướng dẫn cá nhân hóa"
+
+#: src/pages/about/mission/index.tsx
+msgid "Innovative Teaching Methods"
+msgstr "Phương pháp giảng dạy đổi mới"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Interactive Games"
+msgstr "Trò chơi tương tác"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Interactive Quiz"
+msgstr "Bài kiểm tra tương tác"
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Intermediate"
+msgstr "Trung cấp"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Intermediate (6-8 years)"
+msgstr "Trung cấp (6-8 tuổi)"
+
+#: src/modules/LandingPage/CoursesSection/index.tsx
+msgid "Intermediate English"
+msgstr "Tiếng Anh trung cấp"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "International English Language Teaching Service"
+msgstr "Dịch vụ giảng dạy tiếng Anh quốc tế"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "International English Language Testing System"
+msgstr "Hệ thống kiểm tra Anh ngữ quốc tế"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "International English Learning Test Standard"
+msgstr "Tiêu chuẩn bài kiểm tra học tiếng Anh quốc tế"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "International Exam of Language Testing System"
+msgstr "Kỳ thi quốc tế của hệ thống kiểm tra ngôn ngữ"
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Introduce simple stories, picture books, and reading comprehension activities."
+msgstr "Giới thiệu truyện đơn giản, sách tranh và các hoạt động đọc hiểu."
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
+#: src/pages/contact/index.tsx
+msgid "Invalid email"
+msgstr "Email không hợp lệ"
+
+#: src/pages/contact/index.tsx
+msgid "Invalid phone number"
+msgstr "Số điện thoại không hợp lệ"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Invalid verification code"
+msgstr "Mã xác minh không hợp lệ"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
+msgid "Invoice"
+msgstr "Hóa đơn"
+
+#: src/pages/about/mission/index.tsx
+msgid "Join now"
+msgstr "Tham gia ngay"
+
+#: src/modules/KidEnglishPage/Introduction/index.tsx src/pages/testimonials/index.tsx
+msgid "Join Now"
+msgstr "Tham gia ngay"
+
+#: src/pages/about/team/index.tsx
+msgid "Join Our Community"
+msgstr "Tham gia cộng đồng của chúng tôi"
+
+#: src/pages/about/mission/index.tsx
+msgid "Join thousands of successful learners and start your journey today!"
+msgstr "Tham gia cùng hàng nghìn học viên thành công và bắt đầu hành trình của bạn hôm nay!"
+
+#: src/modules/KidEnglishPage/Introduction/index.tsx
+msgid "Kid English Learning Program"
+msgstr "Chương trình tiếng Anh cho trẻ em"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Late"
+msgstr "Nộp muộn"
+
+#: src/pages/about/team/index.tsx
+msgid "Lead Instructor"
+msgstr "Giảng viên chính"
+
+#: src/modules/LandingPage/FeaturesSection/index.tsx
+msgid "Learn anytime, anywhere"
+msgstr "Học mọi lúc, mọi nơi"
+
+#: src/pages/courses/online/index.tsx
+msgid "Learn business vocabulary, email writing, presentations, negotiations, and more."
+msgstr "Học từ vựng kinh doanh, viết email, thuyết trình, đàm phán và nhiều kỹ năng khác."
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Learn English naturally through fun songs and rhymes that improve pronunciation and rhythm."
+msgstr "Học tiếng Anh tự nhiên qua các bài hát và vần điệu vui nhộn giúp cải thiện phát âm và nhịp điệu."
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Learn essential vocabulary and grammar structures through interactive lessons and games."
+msgstr "Học từ vựng và cấu trúc ngữ pháp thiết yếu qua bài học và trò chơi tương tác."
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Learn skimming, scanning, and time management for the reading test."
+msgstr "Học kỹ năng đọc lướt, đọc quét và quản lý thời gian cho bài thi đọc."
+
+#: src/pages/courses/online/index.tsx
+msgid "Learn the basics of English grammar, vocabulary, and pronunciation."
+msgstr "Học các kiến thức cơ bản về ngữ pháp, từ vựng và phát âm tiếng Anh."
+
+#: src/modules/LandingPage/FeaturesSection/index.tsx
+msgid "Learn with 100% American and British instructors"
+msgstr "Học với 100% giảng viên Mỹ và Anh"
+
+#: src/constants/menu.ts
+msgid "LEARNING"
+msgstr "HỌC TẬP"
+
+#: src/pages/about/mission/index.tsx
+msgid "Learning is more fun and effective in a supportive community. We foster a welcoming environment where students connect, practice, and grow together with mentorship and guidance at every step."
+msgstr "Việc học sẽ vui hơn và hiệu quả hơn trong một cộng đồng hỗ trợ. Chúng tôi xây dựng môi trường thân thiện để học viên kết nối, luyện tập và cùng phát triển với sự cố vấn, hướng dẫn ở từng bước."
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Learning Path & Stages"
+msgstr "Lộ trình và giai đoạn học tập"
+
+#: src/pages/manage/classes/index.tsx
+msgid "Level"
+msgstr "Trình độ"
+
+#: src/modules/ManagementPage/Student/Materials/MaterialStatusFilter.tsx
+msgid "Link"
+msgstr "Liên kết"
+
+#: src/modules/IeltsPage/IeltsAudio/index.tsx
+msgid "Listen to the audio below and try to answer related questions."
+msgstr "Hãy nghe đoạn âm thanh bên dưới và thử trả lời các câu hỏi liên quan."
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Listening"
+msgstr "Nghe"
+
+#: src/modules/IeltsPage/IeltsAudio/index.tsx
+msgid "Listening Practice"
+msgstr "Luyện nghe"
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Listening Skills"
+msgstr "Kỹ năng nghe"
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Live chat support"
+msgstr "Hỗ trợ trò chuyện trực tuyến"
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Live Support"
+msgstr "Hỗ trợ trực tuyến"
+
+#: src/layouts/admin-layout/AdminSidebarMenu.tsx
+msgid "Loading..."
+msgstr "Đang tải..."
+
+#: src/components/Header/DesktopMenu.tsx src/components/Header/MobileMenu.tsx src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx
+msgid "Login"
+msgstr "Đăng nhập"
+
+#: src/stores/auth/actions.ts
+msgid "Login successfully"
+msgstr "Đăng nhập thành công"
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "Login to your Account"
+msgstr "Đăng nhập vào tài khoản của bạn"
+
+#: src/components/Header/DesktopMenu.tsx src/components/Header/MobileMenu.tsx src/components/ProfileDropdown/index.tsx
+msgid "Logout"
+msgstr "Đăng xuất"
+
+#: src/constants/menu.ts
+msgid "MANAGEMENT"
+msgstr "QUẢN LÝ"
+
+#: src/components/Header/DesktopMenu.tsx src/components/Header/MobileMenu.tsx
+msgid "Management Site"
+msgstr "Trang quản lý"
+
+#: src/pages/about/team/index.tsx
+msgid "Marketing Manager"
+msgstr "Quản lý marketing"
+
+#: src/pages/testimonials/index.tsx
+msgid "Marketing Specialist"
+msgstr "Chuyên viên marketing"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Master all IELTS question types"
+msgstr "Làm chủ mọi dạng câu hỏi IELTS"
+
+#: src/pages/courses/online/index.tsx
+msgid "Master English skills tailored for professional and business contexts."
+msgstr "Làm chủ kỹ năng tiếng Anh phù hợp với môi trường chuyên nghiệp và kinh doanh."
+
+#: src/modules/LandingPage/HeroSection/index.tsx
+msgid "Master English with Ease"
+msgstr "Làm chủ tiếng Anh dễ dàng"
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Master essay writing and report descriptions with clear structures."
+msgstr "Làm chủ kỹ năng viết luận và mô tả báo cáo với cấu trúc rõ ràng."
+
+#: src/modules/BasicCommunicationPage/HeaderSection/index.tsx
+msgid "Master essential phrases, greetings, and polite expressions to kickstart your English conversation skills."
+msgstr "Làm chủ các cụm từ thiết yếu, lời chào và cách diễn đạt lịch sự để khởi động kỹ năng giao tiếp tiếng Anh của bạn."
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Master intermediate grammar and vocabulary"
+msgstr "Làm chủ ngữ pháp và từ vựng trung cấp"
+
+#: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx
+msgid "Material Name"
+msgstr "Tên tài liệu"
+
+#: src/constants/menu.ts src/pages/manage/student/materials/index.tsx
+msgid "Materials"
+msgstr "Tài liệu"
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Media Devices API not supported"
+msgstr "Trình duyệt không hỗ trợ Media Devices API"
+
+#: src/pages/about/team/index.tsx
+msgid "Meet Our Team"
+msgstr "Gặp gỡ đội ngũ của chúng tôi"
+
+#: src/pages/contact/index.tsx
+msgid "Message"
+msgstr "Tin nhắn"
+
+#: src/pages/contact/index.tsx
+msgid "Message is required"
+msgstr "Vui lòng nhập tin nhắn"
+
+#: src/pages/contact/index.tsx
+msgid "Message sent successfully!"
+msgstr "Đã gửi tin nhắn thành công!"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+msgid "Method"
+msgstr "Phương thức"
+
+#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "Min 6 chars"
+msgstr "Tối thiểu 6 kí tự"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Mock exams with detailed analysis"
+msgstr "Thi thử kèm phân tích chi tiết"
+
+#: src/modules/LandingPage/FeaturesSection/index.tsx
+msgid "Money-back if you dont achieve your goals"
+msgstr "Hoàn tiền nếu bạn không đạt mục tiêu"
+
+#: src/constants/menu.ts
+msgid "My Assignments"
+msgstr "Bài tập của tôi"
+
+#: src/constants/menu.ts
+msgid "My Class Scores"
+msgstr "Điểm các lớp của tôi"
+
+#: src/constants/menu.ts
+msgid "My Classes"
+msgstr "Lớp của tôi"
+
+#: src/components/ProfileDropdown/index.tsx
+msgid "My profile"
+msgstr "Hồ sơ của tôi"
+
+#: src/constants/menu.ts
+msgid "My Scores"
+msgstr "Điểm của tôi"
+
+#: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx
+msgid "N/A"
+msgstr "Không áp dụng"
+
+#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
+msgid "Name"
+msgstr "Tên"
+
+#: src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Name is required"
+msgstr "Vui lòng nhập tên"
+
+#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
+msgid "Name required"
+msgstr "Tên là bắt buộc"
+
+#: src/modules/LandingPage/FeaturesSection/index.tsx
+msgid "Native Teachers"
+msgstr "Giáo viên bản ngữ"
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "New Here?"
+msgstr "Người mới?"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "New Password"
+msgstr "Mật khẩu mới"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Next"
+msgstr "Tiếp tục"
+
+#: src/components/AvatarUploader/index.tsx
+msgid "No image url returned!"
+msgstr "Không nhận được URL hình ảnh!"
+
+#: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx
+msgid "No materials found"
+msgstr "Không tìm thấy tài liệu"
+
+#: src/pages/manage/profile/index.tsx
+msgid "No Name"
+msgstr "Không có tên"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+msgid "No payments found."
+msgstr "Không tìm thấy khoản thanh toán."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "No prerequisites. We welcome all levels from beginners to advanced learners."
+msgstr "Không yêu cầu điều kiện tiên quyết. Chúng tôi chào đón mọi trình độ, từ người mới bắt đầu đến nâng cao."
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "No QR available for this payment method."
+msgstr "Không có mã QR cho phương thức thanh toán này."
+
+#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
+msgid "No worries! Enter your email and we will send you a reset"
+msgstr "Đừng lo! Nhập email của bạn và chúng tôi sẽ gửi cho bạn liên kết đặt lại mật khẩu"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+msgid "Note"
+msgstr "Ghi chú"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Objectives"
+msgstr "Mục tiêu"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "One-on-one coaching sessions"
+msgstr "Các buổi hướng dẫn một kèm một"
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Open live chat"
+msgstr "Mở trò chuyện trực tuyến"
+
+#: src/pages/contact/index.tsx
+msgid "Optional"
+msgstr "Không bắt buộc"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx
+msgid "or"
+msgstr "hoặc"
+
+#: src/modules/LandingPage/CoursesSection/index.tsx
+msgid "Our courses"
+msgstr "Các khóa học của chúng tôi"
+
+#: src/pages/about/mission/index.tsx
+msgid "Our courses use the latest pedagogical research, incorporating interactive activities, technology, and real-world communication practice to create an engaging and effective learning environment."
+msgstr "Các khóa học của chúng tôi áp dụng nghiên cứu sư phạm mới nhất, kết hợp hoạt động tương tác, công nghệ và luyện giao tiếp thực tế để tạo môi trường học tập hấp dẫn và hiệu quả."
+
+#: src/modules/IeltsPage/IeltsFAQs/index.tsx
+msgid "Our IELTS course typically runs for 3 months with flexible scheduling options."
+msgstr "Khóa IELTS của chúng tôi thường kéo dài 3 tháng với các lựa chọn lịch học linh hoạt."
+
+#: src/pages/about/mission/index.tsx
+msgid "Our Mission"
+msgstr "Sứ mệnh của chúng tôi"
+
+#: src/pages/about/mission/index.tsx
+msgid "Our mission extends beyond language skills. We aim to open doors to global academic, professional, and cultural opportunities by empowering learners with English proficiency."
+msgstr "Sứ mệnh của chúng tôi vượt ra ngoài kỹ năng ngôn ngữ. Chúng tôi mong muốn mở ra cơ hội học thuật, nghề nghiệp và văn hóa toàn cầu bằng cách trao cho người học năng lực tiếng Anh."
+
+#: src/pages/courses/online/index.tsx
+msgid "Our Online Courses"
+msgstr "Các khóa học trực tuyến của chúng tôi"
+
+#: src/pages/about/faq/index.tsx
+msgid "Our tech support team is available 24/7. Contact us via chat or email and we'll assist you promptly."
+msgstr "Đội ngũ hỗ trợ kỹ thuật của chúng tôi luôn sẵn sàng 24/7. Hãy liên hệ qua trò chuyện hoặc email, chúng tôi sẽ hỗ trợ bạn nhanh chóng."
+
+#: src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx src/pages/manage/assignments/index.tsx
+msgid "Overdue"
+msgstr "Quá hạn"
+
+#: src/constants/menu.ts
+msgid "Overview Dashboard"
+msgstr "Tổng quan"
+
+#: src/components/PageHeader/index.tsx
+msgid "Page"
+msgstr "Trang"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx src/modules/ManagementPage/Student/Payments/PaymentSummary.tsx
+msgid "Paid"
+msgstr "Đã thanh toán"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Parent Email"
+msgstr "Email phụ huynh"
+
+#: src/hooks/useStatusLabel.tsx
+msgid "Passed"
+msgstr "Đạt"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: src/pages/manage/profile/index.tsx
+msgid "Password changed successfully!"
+msgstr "Mật khẩu đã thay đổi thành công!"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Password is required"
+msgstr "Mật khẩu là bắt buộc"
+
+#: src/components/LoginModal/RegisterForm.tsx src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Password must be at least 6 characters"
+msgstr "Mật khẩu tối thiểu 6 ký tự"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Password updated successfully!"
+msgstr "Mật khẩu đã được cập nhật thành công!"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Passwords do not match"
+msgstr "Mật khẩu nhập lại không khớp"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx src/modules/ManagementPage/Profile/PasswordForm/index.tsx
+msgid "Passwords must match"
+msgstr "Mật khẩu phải khớp nhau"
+
+#: src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
+msgid "Pay Invoice"
+msgstr "Thanh toán hóa đơn"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+msgid "Pay now"
+msgstr "Thanh toán ngay"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Pay tuition {invoiceNo}"
+msgstr "Thanh toán học phí {invoiceNo}"
+
+#: src/constants/menu.ts
+msgid "PAYMENT"
+msgstr "THANH TOÁN"
+
+#: src/constants/menu.ts src/pages/manage/student/payment/index.tsx
+msgid "Payment History"
+msgstr "Lịch sử thanh toán"
+
+#: src/constants/menu.ts
+msgid "Payment Management"
+msgstr "Quản lý thanh toán"
+
+#: src/pages/manage/profile/index.tsx
+msgid "Payment Method"
+msgstr "Phương thức thanh toán"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentSuccessStep.tsx
+msgid "Payment Sent!"
+msgstr "Đã gửi thanh toán!"
+
+#: src/constants/menu.ts
+msgid "Payments"
+msgstr "Thanh toán"
+
+#: src/hooks/useStatusLabel.tsx src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx src/pages/manage/assignments/index.tsx
+msgid "Pending"
+msgstr "Đang chờ"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Perfect advanced grammar and vocabulary"
+msgstr "Hoàn thiện ngữ pháp và từ vựng nâng cao"
+
+#: src/pages/manage/profile/index.tsx
+msgid "Personal Information"
+msgstr "Thông tin cá nhân"
+
+#: src/pages/about/mission/index.tsx
+msgid "Personalized Learning Paths"
+msgstr "Lộ trình học cá nhân hóa"
+
+#: src/modules/ManagementPage/Profile/BasicInfoForm/index.tsx src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Phone"
+msgstr "Số điện thoại"
+
+#: src/pages/contact/index.tsx
+msgid "Phone Number"
+msgstr "Số điện thoại"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx src/pages/contact/index.tsx
+msgid "Phone:"
+msgstr "Điện thoại:"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Play games that reinforce vocabulary and grammar while keeping kids engaged and entertained."
+msgstr "Chơi các trò chơi củng cố từ vựng và ngữ pháp, đồng thời giúp trẻ hứng thú và vui vẻ."
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Please accept Privacy Policy"
+msgstr "Vui lòng chấp nhận Chính sách bảo mật"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Please accept Terms and Conditions"
+msgstr "Vui lòng chấp nhận Điều khoản dịch vụ"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Please answer the question before proceeding."
+msgstr "Vui lòng trả lời câu hỏi trước khi tiếp tục."
+
+#: src/components/LoginModal/RegisterForm.tsx src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Please confirm your password"
+msgstr "Vui lòng xác nhận mật khẩu"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Please enter only numbers"
+msgstr "Vui lòng chỉ nhập số"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Please enter your email"
+msgstr "Vui lòng nhập email"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Please enter your name"
+msgstr "Vui lòng chỉ nhập tên"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Please enter your password"
+msgstr "Vui lòng nhập mật khẩu"
+
+#: src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Please select a course"
+msgstr "Vui lòng chọn khóa học"
+
+#: src/pages/testimonials/index.tsx
+msgid "Practical approach and lots of speaking practice. My English skills have never been better!"
+msgstr "Phương pháp thực tế và nhiều bài luyện nói. Kỹ năng tiếng Anh của tôi chưa bao giờ tốt hơn!"
+
+#: src/pages/courses/online/index.tsx
+msgid "Practical lessons focused on everyday conversations, idioms, and expressions for fluency."
+msgstr "Các bài học thực tế tập trung vào hội thoại hằng ngày, thành ngữ và cách diễn đạt để tăng độ lưu loát."
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Practice active listening through stories, songs, and audio exercises tailored for kids."
+msgstr "Luyện nghe chủ động qua câu chuyện, bài hát và bài tập âm thanh phù hợp với trẻ em."
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Practice Speaking - Voice Recorder"
+msgstr "Luyện nói - Ghi âm giọng nói"
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Practice with authentic IELTS listening materials to improve comprehension."
+msgstr "Luyện tập với tài liệu nghe IELTS thực tế để cải thiện khả năng hiểu."
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Practice with mock exams"
+msgstr "Luyện tập với đề thi thử"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Practice with real IELTS exam materials"
+msgstr "Luyện tập với tài liệu thi IELTS thực tế"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Prepare basic English grammar and vocabulary"
+msgstr "Chuẩn bị ngữ pháp và từ vựng tiếng Anh cơ bản"
+
+#: src/pages/courses/online/index.tsx
+msgid "Prepare effectively for the IELTS exam with experienced instructors."
+msgstr "Chuẩn bị hiệu quả cho kỳ thi IELTS cùng giảng viên giàu kinh nghiệm."
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Prepare for A1-A2 level exams"
+msgstr "Chuẩn bị cho các kỳ thi trình độ A1-A2"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Prepare for IELTS band 5.0"
+msgstr "Chuẩn bị cho IELTS band 5.0"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Prepare for IELTS band 6.0"
+msgstr "Chuẩn bị cho IELTS band 6.0"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Prepare for IELTS Junior exam"
+msgstr "Chuẩn bị cho kỳ thi IELTS Junior"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Prepare for real test conditions"
+msgstr "Chuẩn bị cho điều kiện thi thực tế"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Previous"
+msgstr "Trước"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Price (USD)"
+msgstr "Giá (USD)"
+
+#: src/modules/EnglishOnlinePage/OnlineCourseCard/index.tsx
+msgid "Price:"
+msgstr "Giá:"
+
+#: src/pages/privacy.tsx
+msgid "Privacy Policy"
+msgstr "Chính sách bảo mật"
+
+#: src/pages/about/team/index.tsx
+msgid "Product Manager"
+msgstr "Quản lý sản phẩm"
+
+#: src/pages/courses/online/index.tsx
+msgid "Professional"
+msgstr "Chuyên nghiệp"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "Quiz Sample"
+msgstr "Bài kiểm tra mẫu"
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Reading"
+msgstr "Đọc"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Reading comprehension, writing skills, oral presentation"
+msgstr "Đọc hiểu, kỹ năng viết, thuyết trình nói"
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Reading Techniques"
+msgstr "Kỹ thuật đọc"
+
+#: src/modules/LandingPage/CallToActionSection/index.tsx
+msgid "Ready to Get Started?"
+msgstr "Sẵn sàng bắt đầu chưa?"
+
+#: src/pages/testimonials/index.tsx
+msgid "Ready to start your own success story?"
+msgstr "Sẵn sàng bắt đầu câu chuyện thành công của riêng bạn?"
+
+#: src/pages/about/mission/index.tsx
+msgid "Ready to transform your English skills?"
+msgstr "Sẵn sàng thay đổi kỹ năng tiếng Anh của bạn?"
+
+#: src/pages/testimonials/index.tsx
+msgid "Real feedback from students who have achieved outstanding results with our English courses."
+msgstr "Phản hồi thực tế từ những học viên đã đạt kết quả nổi bật với các khóa học tiếng Anh của chúng tôi."
+
+#: src/modules/ManagementPage/Profile/BasicInfoForm/index.tsx
+msgid "Referral Code"
+msgstr "Mã giới thiệu"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Refine listening and speaking skills"
+msgstr "Trau dồi kỹ năng nghe và nói"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx
+msgid "Refunded"
+msgstr "Đã hoàn tiền"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx src/pages/pricing-fee/index.tsx
+msgid "Register"
+msgstr "Đăng ký"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Register for a Course"
+msgstr "Đăng ký khóa học"
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx
+msgid "Register for IELTS Course"
+msgstr "Đăng ký khóa IELTS"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Register for Kid English Course"
+msgstr "Đăng ký khóa tiếng Anh cho trẻ em"
+
+#: src/modules/EnglishOnlinePage/OnlineCourseCard/index.tsx src/modules/IeltsPage/IeltsIntro/index.tsx src/modules/LandingPage/CallToActionSection/index.tsx src/modules/LandingPage/HeroSection/index.tsx
+msgid "Register Now"
+msgstr "Đăng ký ngay"
+
+#: src/modules/LandingPage/CallToActionSection/index.tsx
+msgid "Register now to receive tuition discounts today"
+msgstr "Đăng ký ngay hôm nay để nhận ưu đãi học phí"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Registering..."
+msgstr "Đang đăng ký..."
+
+#: src/pages/about/faq/index.tsx
+msgid "Registration & Payment"
+msgstr "Đăng ký & Thanh toán"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Registration failed. Please try again."
+msgstr "Đăng ký thất bại. Vui lòng thử lại."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Registration successful for {0}, thank you {1}!"
+msgstr "Đăng ký thành công khóa {0}, cảm ơn {1}!"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Registration successful! Welcome to English Class!"
+msgstr "Đăng ký thành công! Chào mừng bạn đến với English Class!"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Resend code"
+msgstr "Gửi lại mã"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Resend code ({countdown})"
+msgstr "Gửi lại mã ({countdown})"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Reset Password"
+msgstr "Đặt lại mật khẩu"
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Reset recording"
+msgstr "Ghi âm lại"
+
+#: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
+msgid "Sample Dialogue"
+msgstr "Đoạn hội thoại mẫu"
+
+#: src/components/ProfileSection/index.tsx
+msgid "Save"
+msgstr "Lưu"
+
+#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Saving..."
+msgstr "Đang lưu..."
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Scan Momo QR to pay."
+msgstr "Quét mã QR Momo để thanh toán."
+
+#: src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
+msgid "Scan the QR or copy info below to pay"
+msgstr "Quét mã QR hoặc sao chép thông tin bên dưới để thanh toán"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Scan VietQR code with your banking app."
+msgstr "Quét mã VietQR bằng ứng dụng ngân hàng của bạn."
+
+#: src/pages/manage/classes/index.tsx
+msgid "Schedule"
+msgstr "Thời khoá biểu"
+
+#: src/constants/menu.ts
+msgid "Score Management"
+msgstr "Quản lý điểm số"
+
+#: src/constants/menu.ts
+msgid "Scores"
+msgstr "Điểm số"
+
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: src/pages/manage/assignments/index.tsx
+msgid "Search by assignment, class..."
+msgstr "Tìm theo bài tập, lớp học..."
+
+#: src/pages/manage/classes/index.tsx
+msgid "Search by class name, teacher..."
+msgstr "Tìm theo tên lớp, giáo viên..."
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Select {0} roadmap"
+msgstr "Chọn lộ trình {0}"
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx src/pages/contact/index.tsx src/pages/pricing-fee/index.tsx
+msgid "Select Course"
+msgstr "Chọn khóa học"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Select Course Level"
+msgstr "Chọn cấp độ khóa học"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Select the course that best suits your English learning journey. Each course is carefully designed to help you progress step-by-step with experienced instructors and proven methods."
+msgstr "Chọn khóa học phù hợp nhất với hành trình học tiếng Anh của bạn. Mỗi khóa học được thiết kế cẩn thận để giúp bạn tiến bộ từng bước cùng giảng viên giàu kinh nghiệm và phương pháp đã được chứng minh."
+
+#: src/pages/courses/online/index.tsx
+msgid "Select the course that fits your learning goals. Click \"View Details\" for more info."
+msgstr "Chọn khóa học phù hợp với mục tiêu học tập của bạn. Nhấp \"Xem chi tiết\" để biết thêm thông tin."
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Send"
+msgstr "Gửi"
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Send message"
+msgstr "Gửi tin nhắn"
+
+#: src/pages/contact/index.tsx
+msgid "Send Message"
+msgstr "Gửi tin nhắn"
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Send Recording"
+msgstr "Gửi bản ghi âm"
+
+#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
+msgid "Send Request"
+msgstr "Gửi yêu cầu"
+
+#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx src/pages/contact/index.tsx
+msgid "Sending..."
+msgstr "Đang gửi..."
+
+#: src/constants/menu.ts
+msgid "Settings"
+msgstr "Cài đặt"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
+msgid "Show password"
+msgstr "Hiện mật khẩu"
+
+#: src/components/LoginModal/LoginForm.tsx src/components/LoginModal/RegisterForm.tsx
+msgid "Sign in With Google"
+msgstr "Đăng nhập với Google"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Sign up to create an Account"
+msgstr "Đăng ký tài khoản mới"
+
+#: src/components/Footer/index.tsx
+msgid "Social icon"
+msgstr "Biểu tượng mạng xã hội"
+
+#: src/pages/testimonials/index.tsx
+msgid "Software Engineer"
+msgstr "Kỹ sư phần mềm"
+
+#: src/pages/manage/profile/index.tsx
+msgid "Something went wrong!"
+msgstr "Đã xảy ra lỗi!"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Songs & Rhymes"
+msgstr "Bài hát & vần điệu"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Songs, picture books, interactive games"
+msgstr "Bài hát, sách tranh, trò chơi tương tác"
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "Sorry, your password must be at least 8 characters"
+msgstr "Mật khẩu phải có ít nhất 8 ký tự"
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Speaking"
+msgstr "Nói"
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Speaking Practice"
+msgstr "Luyện nói"
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Start Recording"
+msgstr "Bắt đầu ghi âm"
+
+#: src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx src/pages/manage/scores/index.tsx
+msgid "Status"
+msgstr "Trạng thái"
+
+#: src/pages/about/faq/index.tsx
+msgid "Still have questions? Reach out to our support team via"
+msgstr "Vẫn còn câu hỏi? Hãy liên hệ đội ngũ hỗ trợ của chúng tôi qua"
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Stop Recording"
+msgstr "Dừng ghi âm"
+
+#: src/modules/KidEnglishPage/FunActivities/index.tsx
+msgid "Story Time"
+msgstr "Giờ kể chuyện"
+
+#: src/modules/KidEnglishPage/EnglishPath/index.tsx
+msgid "Storytelling, role-play, group activities"
+msgstr "Kể chuyện, đóng vai, hoạt động nhóm"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Strategies for high band score"
+msgstr "Chiến lược đạt band điểm cao"
+
+#: src/constants/role.ts src/pages/testimonials/index.tsx
+msgid "Student"
+msgstr "Học viên"
+
+#: src/modules/DashboardPage/DashboardChart.tsx
+msgid "Student Growth (6 months)"
+msgstr "Tăng trưởng học viên (6 tháng)"
+
+#: src/pages/manage/classes/index.tsx
+msgid "Students"
+msgstr "Học viên"
+
+#: src/modules/DashboardPage/DashboardChart.tsx
+msgid "Students vs Teachers"
+msgstr "Học viên so với giáo viên"
+
+#: src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "Study Info"
+msgstr "Thông tin học tập"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx src/modules/IeltsPage/IeltsQuiz/index.tsx src/modules/IeltsPage/IeltsRegister/index.tsx
+msgid "Submit"
+msgstr "Gửi"
+
+#: src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Submit Registration"
+msgstr "Gửi đăng ký"
+
+#: src/hooks/useStatusLabel.tsx src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx src/pages/manage/assignments/index.tsx
+msgid "Submitted"
+msgstr "Đã nộp"
+
+#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
+msgid "successfully"
+msgstr "thành công"
+
+#: src/constants/menu.ts
+msgid "SYSTEM"
+msgstr "HỆ THỐNG"
+
+#: src/graphql/error.ts
+msgid "System error! Please try again later."
+msgstr "Lỗi hệ thống! Vui lòng thử lại sau."
+
+#: src/constants/menu.ts
+msgid "System Settings"
+msgstr "Cài đặt hệ thống"
+
+#: src/constants/role.ts src/pages/manage/classes/index.tsx
+msgid "Teacher"
+msgstr "Giáo viên"
+
+#: src/constants/menu.ts
+msgid "TEACHING"
+msgstr "GIẢNG DẠY"
+
+#: src/constants/menu.ts
+msgid "Teaching Materials"
+msgstr "Tài liệu giảng dạy"
+
+#: src/pages/about/team/index.tsx
+msgid "Technical Lead"
+msgstr "Trưởng nhóm kỹ thuật"
+
+#: src/pages/about/faq/index.tsx
+msgid "Technical Support"
+msgstr "Hỗ trợ kỹ thuật"
+
+#: src/pages/terms.tsx
+msgid "Terms of Service"
+msgstr "Điều khoản dịch vụ"
+
+#: src/modules/IeltsPage/IeltsRegister/index.tsx src/modules/KidEnglishPage/Registration/index.tsx
+msgid "Thank you for registering! We will contact you soon."
+msgstr "Cảm ơn bạn đã đăng ký! Chúng tôi sẽ sớm liên hệ với bạn."
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Thank you for your message. Our support team will get back to you shortly."
+msgstr "Cảm ơn tin nhắn của bạn. Đội ngũ hỗ trợ sẽ phản hồi bạn sớm."
+
+#: src/modules/ManagementPage/Student/Payments/PaymentSuccessStep.tsx
+msgid "Thank you. We will verify your transaction and update your status soon."
+msgstr "Cảm ơn bạn. Chúng tôi sẽ xác minh giao dịch và cập nhật trạng thái của bạn sớm."
+
+#: src/pages/testimonials/index.tsx
+msgid "Thanks to these courses, my English communication at work has improved significantly."
+msgstr "Nhờ các khóa học này, khả năng giao tiếp tiếng Anh của tôi trong công việc đã cải thiện đáng kể."
+
+#: src/pages/testimonials/index.tsx
+msgid "The course content is clear and practical, and the teachers really care about students' progress."
+msgstr "Nội dung khóa học rõ ràng và thực tế, giáo viên thật sự quan tâm đến tiến bộ của học viên."
+
+#: src/modules/LandingPage/TestimonialsSection/index.tsx
+msgid "The flexible schedule perfectly fits working students."
+msgstr "Lịch học linh hoạt rất phù hợp với học viên đang đi làm."
+
+#: src/modules/LandingPage/TestimonialsSection/index.tsx
+msgid "The teachers are incredibly dedicated; I scored IELTS 6.5 after 6 months!"
+msgstr "Giáo viên vô cùng tận tâm; tôi đã đạt IELTS 6.5 sau 6 tháng!"
+
+#: src/pages/courses/online/index.tsx
+msgid "This course covers fundamental grammar, basic vocabulary and pronunciation to start your English journey confidently."
+msgstr "Khóa học này bao gồm ngữ pháp nền tảng, từ vựng cơ bản và phát âm để bạn tự tin bắt đầu hành trình học tiếng Anh."
+
+#: src/pages/testimonials/index.tsx
+msgid "This English course transformed my confidence. The instructors are amazing and the curriculum is very practical."
+msgstr "Khóa học tiếng Anh này đã thay đổi sự tự tin của tôi. Giảng viên rất tuyệt vời và chương trình học rất thực tế."
+
+#: src/pages/manage/assignments/index.tsx
+msgid "Title"
+msgstr "Tiêu đề"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentSummary.tsx
+msgid "Total"
+msgstr "Tổng cộng"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Transfer Info"
+msgstr "Nội dung chuyển khoản"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
+msgid "Transfer Info:"
+msgstr "Nội dung chuyển khoản:"
+
+#: src/pages/403.tsx
+msgid "Try going back to dashboard."
+msgstr "Hãy thử quay lại bảng điều khiển."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Tuition Fees"
+msgstr "Học phí"
+
+#: src/modules/ManagementPage/Student/Materials/MaterialStatusFilter.tsx src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx src/pages/manage/classes/index.tsx
+msgid "Type"
+msgstr "Loại"
+
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Type your answer here..."
+msgstr "Nhập câu trả lời của bạn tại đây..."
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Type your message"
+msgstr "Nhập tin nhắn của bạn"
+
+#: src/components/LiveChatSupport/index.tsx
+msgid "Type your message..."
+msgstr "Nhập tin nhắn của bạn..."
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Unable to verify?"
+msgstr "Không thể xác minh?"
+
+#: src/pages/testimonials/index.tsx
+msgid "University Student"
+msgstr "Sinh viên đại học"
+
+#: src/constants/role.ts src/hooks/useStatusLabel.tsx
+msgid "Unknown"
+msgstr "Không xác định"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx
+msgid "Unpaid"
+msgstr "Chưa thanh toán"
+
+#: src/modules/ManagementPage/Student/Payments/PaymentSummary.tsx
+msgid "Unpaid / Overdue"
+msgstr "Chưa thanh toán / Quá hạn"
+
+#: src/components/AvatarUploader/index.tsx
+msgid "Update avatar failed!"
+msgstr "Cập nhật ảnh đại diện thất bại!"
+
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
 msgid "Updated"
 msgstr "Đã cập nhật"
 
@@ -22,768 +2070,226 @@ msgstr "Đã cập nhật"
 msgid "Updated basic information!"
 msgstr "Cập nhật thông tin cơ bản thành công!"
 
-#: src/pages/manage/classes/index.tsx
-msgid "Type"
-msgstr "Loại"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Full Name"
-msgstr "Họ và tên"
-
-#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
-msgid "Continue to login"
-msgstr "Tiếp tục đăng nhập"
-
-#: src/components/LoginModal/LoginForm.tsx
-msgid "Welcome to our English class, where you will embark on a fun and engaging journey to improve your language skills. Join us today to discover new ways to speak, read, and write English confidently!"
-msgstr "Chào mừng đến với lớp học tiếng Anh của chúng tôi, nơi bạn sẽ bắt đầu hành trình nâng cao kỹ năng ngôn ngữ một cách thú vị và hiệu quả. Hãy tham gia ngay hôm nay để khám phá những cách mới để nói, đọc và viết tiếng Anh tự tin hơn!"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Password updated successfully!"
-msgstr "Mật khẩu đã được cập nhật thành công!"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Sign up to create an Account"
-msgstr "Đăng ký tài khoản mới"
-
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "View details"
-msgstr "Xem chi tiết"
-
-#: src/constants/menu.ts
-msgid "Classes"
-msgstr "Lớp học"
-
-#: src/components/LoginModal/LoginForm.tsx
-msgid "New Here?"
-msgstr "Người mới?"
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Blocked"
-msgstr "Bị khóa"
-
-#: src/hooks/useStatusLabel.tsx
-#: src/pages/manage/assignments/index.tsx
-msgid "Graded"
-msgstr "Đã chấm điểm"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "Assignment Management"
-msgstr "Quản lý bài tập"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Resend code ({countdown})"
-msgstr "Gửi lại mã ({countdown})"
-
-#: src/modules/ManagementPage/Profile/BasicInfoForm/index.tsx
-msgid "Referral Code"
-msgstr "Mã giới thiệu"
-
-#: src/components/PageHeader/index.tsx
-msgid "Page"
-msgstr "Trang"
-
-#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
-msgid "Name"
-msgstr "Tên"
-
 #: src/pages/manage/profile/index.tsx
-msgid "Personal Information"
-msgstr "Thông tin cá nhân"
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Failed"
-msgstr "Không đạt"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Show password"
-msgstr "Hiện mật khẩu"
-
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "Actions"
-msgstr "Thao tác"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Confirm"
-msgstr "Xác nhận"
-
-#: src/constants/menu.ts
-msgid "Dashboard"
-msgstr "Bảng điều khiển"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "New Password"
-msgstr "Mật khẩu mới"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Verification code resent!"
-msgstr "Mã xác thực đã được gửi lại!"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Password"
-msgstr "Mật khẩu"
-
-#: src/constants/menu.ts
-msgid "SYSTEM"
-msgstr "HỆ THỐNG"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Already have an account?"
-msgstr "Đã có tài khoản?"
-
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "Search"
-msgstr "Tìm kiếm"
-
-#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
-msgid "You can now use it to login to your account. Remember, always keep your password confidential and complex."
-msgstr "Bây giờ bạn có thể sử dụng mật khẩu này để đăng nhập vào tài khoản. Hãy luôn giữ mật khẩu bí mật và đủ phức tạp."
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Failed to resend code"
-msgstr "Gửi lại mã thất bại"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
-msgid "Invalid email"
-msgstr "Email không hợp lệ"
-
-#: src/components/LoginModal/RegisterForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Password must be at least 6 characters"
-msgstr "Mật khẩu tối thiểu 6 ký tự"
-
-#: src/constants/menu.ts
-msgid "Teaching Materials"
-msgstr "Tài liệu giảng dạy"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "or"
-msgstr "hoặc"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "Enter your email"
-msgstr "Nhập email của bạn"
-
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "Enter current password"
-msgstr "Nhập mật khẩu hiện tại"
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Closed"
-msgstr "Đã đóng"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Enter Email Code"
-msgstr "Nhập mã email"
-
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "Current Password"
-msgstr "Mật khẩu hiện tại"
-
-#: src/constants/menu.ts
-msgid "Course Management"
-msgstr "Quản lý khóa học"
-
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "No worries! Enter your email and we will send you a reset"
-msgstr "Đừng lo! Nhập email của bạn và chúng tôi sẽ gửi cho bạn liên kết đặt lại mật khẩu"
-
-#: src/modules/ManagementPage/Profile/BasicInfoForm/index.tsx
-msgid "Address"
-msgstr "Địa chỉ"
-
-#: src/constants/role.ts
-#: src/hooks/useStatusLabel.tsx
-msgid "Unknown"
-msgstr "Không xác định"
-
-#: src/hooks/useStatusLabel.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "Active"
-msgstr "Hoạt động"
+msgid "Updated payment method!"
+msgstr "Đã cập nhật phương thức thanh toán!"
 
 #: src/pages/manage/profile/index.tsx
 msgid "Updated personal info!"
 msgstr "Đã cập nhật thông tin cá nhân!"
 
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "I agree to the <0>Privacy Policy</0>"
-msgstr "Tôi đồng ý với <0>Chính sách bảo mật</0>"
-
 #: src/constants/menu.ts
-msgid "Class Management"
-msgstr "Quản lý lớp học"
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Canceled"
-msgstr "Đã huỷ bỏ"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "Payments"
-msgstr "Thanh toán"
-
-#: src/constants/menu.ts
-msgid "My Scores"
-msgstr "Điểm của tôi"
-
-#: src/modules/ManagementPage/Profile/PaymentInfoForm/index.tsx
-msgid "Bank Name"
-msgstr "Tên ngân hàng"
-
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "Yo! Forgot Your Password?"
-msgstr "Bạn quên mật khẩu à?"
-
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "Sending..."
-msgstr "Đang gửi..."
-
-#: src/constants/menu.ts
-msgid "My Assignments"
-msgstr "Bài tập của tôi"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Please enter your password"
-msgstr "Vui lòng nhập mật khẩu"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Reset Password"
-msgstr "Đặt lại mật khẩu"
-
-#: src/modules/ManagementPage/Profile/PaymentInfoForm/index.tsx
-msgid "Bank Number"
-msgstr "Số tài khoản ngân hàng"
-
-#: src/pages/manage/assignments/index.tsx
-msgid "Title"
-msgstr "Tiêu đề"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "My Classes"
-msgstr "Lớp của tôi"
-
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "All"
-msgstr "Tất cả"
-
-#: src/components/LoginModal/LoginForm.tsx
-msgid "Enter your password"
-msgstr "Nhập mật khẩu của bạn"
-
-#: src/hooks/useStatusLabel.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "Inactive"
-msgstr "Ngừng hoạt động"
-
-#: src/pages/manage/classes/index.tsx
-msgid "Description"
-msgstr "Mô tả"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
-msgid "Email"
-msgstr "Email"
-
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "Back to Login"
-msgstr "Trở về trang đăng nhập"
-
-#: src/pages/manage/classes/index.tsx
-msgid "Fee"
-msgstr "Học phí"
-
-#: src/components/LoginModal/LoginForm.tsx
-msgid "Login to your Account"
-msgstr "Đăng nhập vào tài khoản của bạn"
-
-#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
-msgid "You've updated the password"
-msgstr "Bạn đã cập nhật mật khẩu"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Hide password"
-msgstr "Ẩn mật khẩu"
-
-#: src/pages/manage/profile/index.tsx
-msgid "No Name"
-msgstr "Không có tên"
-
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "Email sent successfully!"
-msgstr "Email đã được gửi thành công!"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Code verified successfully!"
-msgstr "Mã đã được xác minh thành công!"
-
-#: src/constants/menu.ts
-msgid "Payment Management"
-msgstr "Quản lý thanh toán"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Registration successful! Welcome to English Class!"
-msgstr "Đăng ký thành công! Chào mừng bạn đến với English Class!"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Please accept Terms and Conditions"
-msgstr "Vui lòng chấp nhận Điều khoản dịch vụ"
-
-#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
-msgid "Name required"
-msgstr "Tên là bắt buộc"
+msgid "User Management"
+msgstr "Quản lý người dùng"
 
 #: src/constants/menu.ts
 msgid "Users"
 msgstr "Người dùng"
 
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "Class Name"
-msgstr "Tên lớp"
-
-#: src/constants/menu.ts
-msgid "Settings"
-msgstr "Cài đặt"
-
-#: src/constants/role.ts
-msgid "Admin"
-msgstr "Quản trị viên"
-
-#: src/components/LoginModal/LoginForm.tsx
-msgid "Forgot password?"
-msgstr "Quên mật khẩu?"
-
-#: src/hooks/useStatusLabel.tsx
-#: src/pages/manage/assignments/index.tsx
-msgid "Pending"
-msgstr "Đang chờ"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "Passwords must match"
-msgstr "Mật khẩu phải khớp nhau"
-
-#: src/pages/manage/profile/index.tsx
-msgid "Change Password"
-msgstr "Thay đổi mật khẩu"
-
 #: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Please enter only numbers"
-msgstr "Vui lòng chỉ nhập số"
-
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "Enter new password"
-msgstr "Nhập mật khẩu mới"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Failed to update password"
-msgstr "Cập nhật mật khẩu thất bại"
-
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "Min 6 chars"
-msgstr "Tối thiểu 6 kí tự"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Saving..."
-msgstr "Đang lưu..."
-
-#: src/modules/ManagementPage/Profile/PaymentInfoForm/index.tsx
-msgid "Account Holder Name"
-msgstr "Tên chủ tài khoản"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Sign in With Google"
-msgstr "Đăng nhập với Google"
-
-#: src/pages/manage/assignments/index.tsx
-#~ msgid "Due Date"
-#~ msgstr "Hạn chót"
-
-#: src/constants/menu.ts
-msgid "Score Management"
-msgstr "Quản lý điểm số"
-
-#: src/hooks/useStatusLabel.tsx
-#: src/pages/manage/assignments/index.tsx
-msgid "Submitted"
-msgstr "Đã nộp"
-
-#: src/pages/manage/assignments/index.tsx
-#~ msgid "Grade"
-#~ msgstr "Điểm"
-
-#: src/constants/role.ts
-msgid "Student"
-msgstr "Học viên"
-
-#: src/constants/menu.ts
-#: src/pages/manage/student/payment/index.tsx
-msgid "Payment History"
-msgstr "Lịch sử thanh toán"
-
-#: src/constants/menu.ts
-msgid "Event Management"
-msgstr "Quản lý sự kiện"
-
-#: src/components/ProfileDropdown/index.tsx
-msgid "My profile"
-msgstr "Hồ sơ của tôi"
-
-#: src/components/LoginModal/RegisterForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Please confirm your password"
-msgstr "Vui lòng xác nhận mật khẩu"
-
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Password is required"
-msgstr "Mật khẩu là bắt buộc"
-
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "Created"
-msgstr "Đã tạo"
-
-#: src/components/ProfileSection/index.tsx
-msgid "Cancel"
-msgstr "Hủy"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Verification code must be 6 digits"
-msgstr "Mã xác minh phải gồm 6 chữ số"
-
-#: src/pages/manage/assignments/index.tsx
-msgid "Overdue"
-msgstr "Quá hạn"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Unable to verify?"
-msgstr "Không thể xác minh?"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Verifying..."
-msgstr "Đang xác minh..."
-
-#: src/components/ProfileSection/index.tsx
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-msgid "Edit"
-msgstr "Chỉnh sửa"
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Draft"
-msgstr "Nháp"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Please enter your email"
-msgstr "Vui lòng nhập email"
-
-#: src/pages/manage/assignments/index.tsx
-msgid "Deadline"
-msgstr "Hạn chót"
-
-#: src/helpers/locales.ts
-msgid "Vietnamese"
-msgstr "Tiếng Việt"
-
-#: src/constants/menu.ts
-msgid "My Class Scores"
-msgstr "Điểm các lớp của tôi"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Register"
-msgstr "Đăng ký"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/pages/manage/student/materials/index.tsx
-msgid "Materials"
-msgstr "Tài liệu"
-
-#: src/pages/manage/classes/index.tsx
-msgid "Schedule"
-msgstr "Thời khoá biểu"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Welcome Back!"
-msgstr "Chào mừng quay lại!"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Next"
-msgstr "Tiếp tục"
-
-#: src/components/PageHeader/index.tsx
-msgid "Home"
-msgstr "Trang chủ"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Back"
-msgstr "Trở về"
-
-#: src/pages/manage/profile/index.tsx
-msgid "Basic Information"
-msgstr "Thông tin cơ bản"
-
-#: src/pages/manage/classes/index.tsx
-msgid "Students"
-msgstr "Học viên"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Didn't receive anything?"
-msgstr "Bạn không nhận được mã otp?"
-
-#: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
-msgid "Email required"
-msgstr "Email là bắt buộc"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/LoginForm.tsx
-msgid "Brand Logo"
-msgstr "Logo thương hiệu"
-
-#: src/pages/manage/assignments/index.tsx
-msgid "Search by assignment, class..."
-msgstr "Tìm theo bài tập, lớp học..."
-
-#: src/constants/menu.ts
-msgid "PAYMENT"
-msgstr "THANH TOÁN"
-
-#: src/constants/menu.ts
-msgid "Overview Dashboard"
-msgstr "Tổng quan"
-
-#: src/helpers/locales.ts
-msgid "English"
-msgstr "Tiếng Anh"
-
-#: src/components/LoginModal/LoginForm.tsx
-msgid "Don't have an account?"
-msgstr "Chưa có tài khoản?"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Passwords do not match"
-msgstr "Mật khẩu nhập lại không khớp"
-
-#: src/constants/role.ts
-#: src/pages/manage/classes/index.tsx
-msgid "Teacher"
-msgstr "Giáo viên"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Resend code"
-msgstr "Gửi lại mã"
-
-#: src/components/ProfileDropdown/index.tsx
-msgid "Logout"
-msgstr "Đăng xuất"
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Passed"
-msgstr "Đạt"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "TEACHING"
-msgstr "GIẢNG DẠY"
-
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "We've sent a code to {email}"
-msgstr "Chúng tôi đã gửi mã đến {email}"
-
-#: src/pages/manage/classes/index.tsx
-msgid "Level"
-msgstr "Trình độ"
-
-#: src/components/LoginModal/LoginForm.tsx
-msgid "Sorry, your password must be at least 8 characters"
-msgstr "Mật khẩu phải có ít nhất 8 ký tự"
-
-#: src/components/LoginModal/RegisterForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "Confirm Password"
-msgstr "Xác nhận mật khẩu"
-
-#: src/constants/menu.ts
-msgid "Courses"
-msgstr "Khóa học"
-
-#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
-msgid "successfully"
-msgstr "thành công"
-
-#: src/pages/manage/profile/index.tsx
-msgid "Updated payment method!"
-msgstr "Đã cập nhật phương thức thanh toán!"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Already a member? Log in and enjoy your AI shopping experience with your personalized dashboard, rewards, and more."
-msgstr "Đã là thành viên? Đăng nhập để trải nghiệm mua sắm AI, dashboard cá nhân, nhận thưởng và nhiều tiện ích khác."
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Late"
-msgstr "Nộp muộn"
-
-#: src/hooks/useStatusLabel.tsx
-msgid "Completed"
-msgstr "Đã hoàn thành"
-
-#: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "Failed to send reset email"
-msgstr "Gửi email đặt lại mật khẩu thất bại"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Please enter your name"
-msgstr "Vui lòng chỉ nhập tên"
-
-#: src/pages/manage/profile/index.tsx
-msgid "Payment Method"
-msgstr "Phương thức thanh toán"
-
-#: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
-msgid "Confirm your password"
-msgstr "Xác nhận mật khẩu của bạn"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "Scores"
-msgstr "Điểm số"
-
-#: src/components/ProfileSection/index.tsx
-msgid "Save"
-msgstr "Lưu"
-
-#: src/constants/menu.ts
-msgid "Events"
-msgstr "Sự kiện"
-
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Registering..."
-msgstr "Đang đăng ký..."
-
-#: src/pages/manage/profile/index.tsx
-msgid "Password changed successfully!"
-msgstr "Mật khẩu đã thay đổi thành công!"
-
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/assignments/index.tsx
-#: src/pages/manage/classes/index.tsx
-#: src/pages/manage/classes/index.tsx
-#: src/pages/manage/scores/index.tsx
-msgid "Status"
-msgstr "Trạng thái"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "LEARNING"
-msgstr "HỌC TẬP"
+msgid "Verification Code"
+msgstr "Mã xác minh"
 
 #: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
 msgid "Verification code is required"
 msgstr "Mã xác minh là bắt buộc"
 
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Verification code must be 6 digits"
+msgstr "Mã xác minh phải gồm 6 chữ số"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Verification code resent!"
+msgstr "Mã xác thực đã được gửi lại!"
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "Verifying..."
+msgstr "Đang xác minh..."
+
+#: src/modules/ManagementPage/Student/Materials/MaterialStatusFilter.tsx
+msgid "Video"
+msgstr "Tệp video"
+
+#: src/helpers/locales.ts
+msgid "Vietnamese"
+msgstr "Tiếng Việt"
+
+#: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+msgid "View"
+msgstr "Xem"
+
+#: src/pages/manage/assignments/index.tsx src/pages/manage/classes/index.tsx
+msgid "View details"
+msgstr "Xem chi tiết"
+
+#: src/modules/EnglishOnlinePage/OnlineCourseCard/index.tsx src/modules/LandingPage/CourseRoadmap/index.tsx
+msgid "View Details"
+msgstr "Xem chi tiết"
+
+#: src/pages/about/team/index.tsx
+msgid "Visionary leader passionate about education and technology, guiding our mission with commitment and heart."
+msgstr "Nhà lãnh đạo có tầm nhìn, đam mê giáo dục và công nghệ, dẫn dắt sứ mệnh của chúng tôi bằng sự tận tâm và nhiệt huyết."
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Vocabulary & Grammar"
+msgstr "Từ vựng & Ngữ pháp"
+
+#: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
+msgid "Voice sent! (simulate send)"
+msgstr "Đã gửi giọng nói! (mô phỏng gửi)"
+
+#: src/pages/about/faq/index.tsx
+msgid "Watch Our Course Overview Video"
+msgstr "Xem video tổng quan khóa học"
+
+#: src/pages/about/mission/index.tsx
+msgid "Watch Our Story"
+msgstr "Xem câu chuyện của chúng tôi"
+
+#: src/pages/about/faq/index.tsx
+msgid "We accept all major credit/debit cards, bank transfers, and popular e-wallets."
+msgstr "Chúng tôi chấp nhận các loại thẻ tín dụng/ghi nợ phổ biến, chuyển khoản ngân hàng và ví điện tử thông dụng."
+
+#: src/pages/about/mission/index.tsx
+msgid "We are committed to making English education accessible to learners from all backgrounds and skill levels. Through flexible schedules, online and offline classes, and affordable pricing, we ensure no one is left behind."
+msgstr "Chúng tôi cam kết giúp giáo dục tiếng Anh trở nên dễ tiếp cận với người học ở mọi hoàn cảnh và trình độ. Thông qua lịch học linh hoạt, lớp học trực tuyến và trực tiếp cùng mức phí hợp lý, chúng tôi đảm bảo không ai bị bỏ lại phía sau."
+
+#: src/pages/privacy.tsx
+msgid "We are committed to protecting your personal information and will not share it with third parties. All data is used solely to improve user experience and enhance our services."
+msgstr "Chúng tôi cam kết bảo vệ thông tin cá nhân của bạn và sẽ không chia sẻ với bên thứ ba. Tất cả dữ liệu chỉ được sử dụng để cải thiện trải nghiệm người dùng và nâng cao dịch vụ."
+
+#: src/modules/IeltsPage/IeltsFAQs/index.tsx
+msgid "We offer a free retake within 6 months for students who meet course requirements."
+msgstr "Chúng tôi cung cấp một lần học lại miễn phí trong vòng 6 tháng cho học viên đáp ứng yêu cầu khóa học."
+
+#: src/pages/about/faq/index.tsx
+msgid "We offer Beginner, Intermediate, Advanced courses, Conversation Practice, and IELTS preparation to suit every level."
+msgstr "Chúng tôi cung cấp các khóa Cơ bản, Trung cấp, Nâng cao, Luyện giao tiếp và Luyện thi IELTS phù hợp với mọi trình độ."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "We offer flexible payment plans and special discounts for early sign-ups, groups, and referrals. Contact our support team to learn more about available options."
+msgstr "Chúng tôi cung cấp kế hoạch thanh toán linh hoạt và ưu đãi đặc biệt cho đăng ký sớm, nhóm và giới thiệu bạn bè. Hãy liên hệ đội ngũ hỗ trợ để biết thêm các lựa chọn hiện có."
+
+#: src/pages/about/faq/index.tsx
+msgid "We provide flexible options for both online live classes and in-person sessions depending on your location and preference."
+msgstr "Chúng tôi cung cấp các lựa chọn linh hoạt cho cả lớp trực tuyến trực tiếp và lớp học trực tiếp tùy theo địa điểm và nhu cầu của bạn."
+
+#: src/pages/about/mission/index.tsx
+msgid "We understand that every learner is unique. Our experienced instructors design tailored lesson plans that meet individual goals, pace, and learning styles for optimal progress."
+msgstr "Chúng tôi hiểu rằng mỗi người học đều khác biệt. Giảng viên giàu kinh nghiệm của chúng tôi thiết kế giáo án riêng phù hợp với mục tiêu, nhịp độ và phong cách học của từng cá nhân để đạt tiến bộ tối ưu."
+
+#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
+msgid "We've sent a code to {email}"
+msgstr "Chúng tôi đã gửi mã đến {email}"
+
+#: src/pages/manage/dashboard/index.tsx
+msgid "Welcome back,"
+msgstr "Chào mừng trở lại,"
+
+#: src/components/LoginModal/RegisterForm.tsx
+msgid "Welcome Back!"
+msgstr "Chào mừng quay lại!"
+
+#: src/components/LoginModal/LoginForm.tsx
+msgid "Welcome to our English class, where you will embark on a fun and engaging journey to improve your language skills. Join us today to discover new ways to speak, read, and write English confidently!"
+msgstr "Chào mừng đến với lớp học tiếng Anh của chúng tôi, nơi bạn sẽ bắt đầu hành trình nâng cao kỹ năng ngôn ngữ một cách thú vị và hiệu quả. Hãy tham gia ngay hôm nay để khám phá những cách mới để nói, đọc và viết tiếng Anh tự tin hơn!"
+
+#: src/modules/IeltsPage/IeltsQuiz/index.tsx
+msgid "What does IELTS stand for?"
+msgstr "IELTS là viết tắt của cụm từ gì?"
+
+#: src/pages/about/faq/index.tsx
+msgid "What if I have trouble accessing online classes?"
+msgstr "Nếu tôi gặp khó khăn khi truy cập lớp học trực tuyến thì sao?"
+
+#: src/modules/IeltsPage/IeltsFAQs/index.tsx
+msgid "What is the duration of the IELTS Preparation course?"
+msgstr "Khóa luyện thi IELTS kéo dài bao lâu?"
+
+#: src/pages/pricing-fee/index.tsx
+msgid "What is the refund policy?"
+msgstr "Chính sách hoàn tiền là gì?"
+
+#: src/pages/about/faq/index.tsx
+msgid "What levels of English courses do you offer?"
+msgstr "Bạn cung cấp các cấp độ khóa học tiếng Anh nào?"
+
+#: src/modules/LandingPage/TestimonialsSection/index.tsx src/pages/testimonials/index.tsx
+msgid "What Our Students Say"
+msgstr "Học viên nói gì về chúng tôi"
+
+#: src/pages/about/faq/index.tsx
+msgid "What payment methods are accepted?"
+msgstr "Những phương thức thanh toán nào được chấp nhận?"
+
+#: src/modules/LandingPage/FeaturesSection/index.tsx
+msgid "Why Choose Us?"
+msgstr "Vì sao chọn chúng tôi?"
+
+#: src/pages/testimonials/index.tsx
+msgid "Working Professional"
+msgstr "Người đi làm"
+
+#: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+msgid "Writing"
+msgstr "Viết"
+
+#: src/modules/IeltsPage/IeltsTopics/index.tsx
+msgid "Writing Tasks"
+msgstr "Bài viết"
+
+#: src/pages/about/faq/index.tsx
+msgid "Yes, upon successful completion you will receive a certificate recognized by our institution."
+msgstr "Có, sau khi hoàn thành thành công, bạn sẽ nhận được chứng chỉ được tổ chức của chúng tôi công nhận."
+
+#: src/pages/pricing-fee/index.tsx
+msgid "Yes, upon successful course completion, you will receive an official certificate."
+msgstr "Có, sau khi hoàn thành khóa học thành công, bạn sẽ nhận được chứng chỉ chính thức."
+
+#: src/modules/IeltsPage/IeltsFAQs/index.tsx
+msgid "Yes, we provide up-to-date official practice tests and materials."
+msgstr "Có, chúng tôi cung cấp đề luyện tập và tài liệu chính thức được cập nhật."
+
+#: src/pages/about/faq/index.tsx
+msgid "Yes! Early bird discounts, group rates, and referral bonuses are available. Contact support for details."
+msgstr "Có! Chúng tôi có ưu đãi đăng ký sớm, mức phí theo nhóm và thưởng giới thiệu. Hãy liên hệ hỗ trợ để biết chi tiết."
+
 #: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
-msgid "Send Request"
-msgstr "Gửi yêu cầu"
+msgid "Yo! Forgot Your Password?"
+msgstr "Bạn quên mật khẩu à?"
 
-#: src/constants/menu.ts
-msgid "Course Materials"
-msgstr "Tài liệu khóa học"
+#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
+msgid "You can now use it to login to your account. Remember, always keep your password confidential and complex."
+msgstr "Bây giờ bạn có thể sử dụng mật khẩu này để đăng nhập vào tài khoản. Hãy luôn giữ mật khẩu bí mật và đủ phức tạp."
 
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Registration failed. Please try again."
-msgstr "Đăng ký thất bại. Vui lòng thử lại."
+#: src/pages/about/faq/index.tsx
+msgid "You can register directly on our website by selecting your desired course and completing the enrollment form."
+msgstr "Bạn có thể đăng ký trực tiếp trên trang web bằng cách chọn khóa học mong muốn và hoàn thành biểu mẫu ghi danh."
 
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "MANAGEMENT"
-msgstr "QUẢN LÝ"
+#: src/pages/pricing-fee/index.tsx
+msgid "You can request a full refund within the first two weeks of your course if you are not satisfied."
+msgstr "Bạn có thể yêu cầu hoàn tiền đầy đủ trong hai tuần đầu của khóa học nếu không hài lòng."
 
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "I accept the <0>Terms and Conditions</0>"
-msgstr "Tôi đồng ý với <0>Điều khoản dịch vụ</0>"
+#: src/pages/403.tsx
+msgid "You don't have permission to access this page."
+msgstr "Bạn không có quyền truy cập trang này."
 
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Verification Code"
-msgstr "Mã xác minh"
+#: src/pages/pricing-fee/index.tsx
+msgid "You will get access to our online platform where you can message your instructor anytime."
+msgstr "Bạn sẽ được truy cập nền tảng trực tuyến của chúng tôi, nơi bạn có thể nhắn tin cho giảng viên bất cứ lúc nào."
 
-#: src/pages/manage/classes/index.tsx
-msgid "Search by class name, teacher..."
-msgstr "Tìm theo tên lớp, giáo viên..."
+#: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
+msgid "You've updated the password"
+msgstr "Bạn đã cập nhật mật khẩu"
 
-#: src/constants/menu.ts
-msgid "User Management"
-msgstr "Quản lý người dùng"
+#: src/modules/BasicCommunicationPage/DialogueSection/index.tsx src/modules/IeltsPage/IeltsAudio/index.tsx
+msgid "Your browser does not support the audio element."
+msgstr "Trình duyệt của bạn không hỗ trợ phần tử âm thanh."
 
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Please accept Privacy Policy"
-msgstr "Vui lòng chấp nhận Chính sách bảo mật"
+#: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+msgid "Your Score:"
+msgstr "Điểm của bạn:"
 
-#: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
-msgid "Invalid verification code"
-msgstr "Mã xác minh không hợp lệ"
-
-#: src/pages/manage/profile/index.tsx
-msgid "Something went wrong!"
-msgstr "Đã xảy ra lỗi!"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-#: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
-msgid "Close"
-msgstr "Đóng"
-
-#: src/components/LoginModal/LoginForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-#: src/components/LoginModal/RegisterForm.tsx
-msgid "Login"
-msgstr "Đăng nhập"
-
-#: src/constants/menu.ts
-msgid "System Settings"
-msgstr "Cài đặt hệ thống"
-
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-msgid "Assignments"
-msgstr "Bài tập"
-
-#: src/modules/ManagementPage/Profile/BasicInfoForm/index.tsx
-msgid "Phone"
-msgstr "Số điện thoại"
+#: src/graphql/error.ts
+msgid "Your session has expired. Please sign in again."
+msgstr "Phiên đăng nhập của bạn đã hết hạn. Vui lòng đăng nhập lại."

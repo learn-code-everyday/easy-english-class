@@ -1,3 +1,4 @@
+import { t } from "@lingui/macro";
 import { onError } from "apollo-link-error";
 import Router from "next/router";
 
@@ -8,7 +9,7 @@ import { expireAuthSession, isAuthSessionError } from "./session";
 export const ErrorLink = onError(({ graphQLErrors, networkError }) => {
   try {
     if (isAuthSessionError({ graphQLErrors, networkError })) {
-      toast.error("Your session has expired. Please sign in again.");
+      toast.error(t`Your session has expired. Please sign in again.`);
       expireAuthSession("/");
       return;
     }
@@ -43,6 +44,6 @@ export const ErrorLink = onError(({ graphQLErrors, networkError }) => {
       toast.error(`[Network error]: ${networkError.message || networkError}`);
     }
   } catch (error) {
-    toast.error("System error! Please try again later.");
+    toast.error(t`System error! Please try again later.`);
   }
 });

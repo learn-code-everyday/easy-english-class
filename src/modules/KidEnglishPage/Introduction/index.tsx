@@ -1,4 +1,5 @@
 "use client";
+import { Trans } from "@lingui/macro";
 import { Box, Typography, Button } from "@mui/material";
 import React from "react";
 
@@ -18,15 +19,17 @@ export default function KidEnglishIntro() {
         variant="h2"
         sx={{ fontWeight: "bold", mb: 2, color: "#6d4c41" }}
       >
-        Kid English Learning Program
+        <Trans>Kid English Learning Program</Trans>
       </Typography>
       <Typography
         variant="h6"
         sx={{ maxWidth: 700, mx: "auto", mb: 4, color: "#4e342e" }}
       >
-        A fun and interactive English course designed specifically for kids aged
-        3-12. Our program helps your child develop essential language skills
-        with games, songs, stories, and activities.
+        <Trans>
+          A fun and interactive English course designed specifically for kids
+          aged 3-12. Our program helps your child develop essential language
+          skills with games, songs, stories, and activities.
+        </Trans>
       </Typography>
       <Button
         variant="contained"
@@ -34,7 +37,7 @@ export default function KidEnglishIntro() {
         sx={{ fontWeight: "bold", fontSize: "1.1rem", px: 6, py: 1.5 }}
         href="#register"
       >
-        Join Now
+        <Trans>Join Now</Trans>
       </Button>
     </Box>
   );

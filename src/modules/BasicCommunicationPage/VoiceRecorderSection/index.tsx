@@ -1,5 +1,6 @@
 "use client";
 
+import { t, Trans } from "@lingui/macro";
 import MicIcon from "@mui/icons-material/Mic";
 import ReplayIcon from "@mui/icons-material/Replay";
 import SendIcon from "@mui/icons-material/Send";
@@ -15,7 +16,7 @@ const VoiceRecorderSection = () => {
 
   const startRecording = () => {
     if (!navigator.mediaDevices) {
-      alert("Media Devices API not supported");
+      alert(t`Media Devices API not supported`);
       return;
     }
     audioChunks.current = [];
@@ -35,7 +36,7 @@ const VoiceRecorderSection = () => {
           setIsRecording(false);
         };
       })
-      .catch(() => alert("Could not access microphone"));
+      .catch(() => alert(t`Could not access microphone`));
   };
 
   const stopRecording = () => {
@@ -60,11 +61,13 @@ const VoiceRecorderSection = () => {
       }}
     >
       <Typography variant="h5" fontWeight="bold" color="#035a8e" mb={3}>
-        Practice Speaking - Voice Recorder
+        <Trans>Practice Speaking - Voice Recorder</Trans>
       </Typography>
       <Typography mb={2} color="text.secondary">
-        Click start and practice speaking the sample dialogue above. Record your
-        voice and listen back to improve your pronunciation.
+        <Trans>
+          Click start and practice speaking the sample dialogue above. Record
+          your voice and listen back to improve your pronunciation.
+        </Trans>
       </Typography>
       <Box
         sx={{ display: "flex", alignItems: "center", gap: 2, flexWrap: "wrap" }}
@@ -76,7 +79,7 @@ const VoiceRecorderSection = () => {
             startIcon={<MicIcon />}
             onClick={startRecording}
           >
-            Start Recording
+            <Trans>Start Recording</Trans>
           </Button>
         )}
         {isRecording && (
@@ -86,7 +89,7 @@ const VoiceRecorderSection = () => {
             startIcon={<StopIcon />}
             onClick={stopRecording}
           >
-            Stop Recording
+            <Trans>Stop Recording</Trans>
           </Button>
         )}
         {audioURL && (
@@ -95,7 +98,7 @@ const VoiceRecorderSection = () => {
             <IconButton
               color="primary"
               onClick={resetRecording}
-              aria-label="Reset recording"
+              aria-label={t`Reset recording`}
             >
               <ReplayIcon />
             </IconButton>
@@ -103,9 +106,9 @@ const VoiceRecorderSection = () => {
               variant="contained"
               color="success"
               startIcon={<SendIcon />}
-              onClick={() => alert("Voice sent! (simulate send)")}
+              onClick={() => alert(t`Voice sent! (simulate send)`)}
             >
-              Send Recording
+              <Trans>Send Recording</Trans>
             </Button>
           </>
         )}

@@ -1,3 +1,4 @@
+import { t, Trans } from "@lingui/macro";
 import { Chip, Link } from "@mui/material";
 import React from "react";
 
@@ -17,11 +18,11 @@ type Props = {
 };
 
 const columns: Column<StudentMaterial>[] = [
-  { field: "name", label: "Material Name" },
-  { field: "className", label: "Class" },
+  { field: "name", label: t`Material Name` },
+  { field: "className", label: t`Class` },
   {
     field: "type",
-    label: "Type",
+    label: t`Type`,
     align: "center",
     render: (row) => (
       <Chip
@@ -38,10 +39,10 @@ const columns: Column<StudentMaterial>[] = [
       />
     ),
   },
-  { field: "description", label: "Description" },
+  { field: "description", label: t`Description` },
   {
     field: "status",
-    label: "Status",
+    label: t`Status`,
     align: "center",
     render: (row) => (
       <Chip
@@ -59,7 +60,7 @@ const columns: Column<StudentMaterial>[] = [
   },
   {
     field: "url",
-    label: "Download/View",
+    label: t`Download/View`,
     align: "center",
     render: (row) =>
       row.status === "AVAILABLE" ? (
@@ -69,10 +70,12 @@ const columns: Column<StudentMaterial>[] = [
           rel="noopener noreferrer"
           underline="hover"
         >
-          View
+          <Trans>View</Trans>
         </Link>
       ) : (
-        <span style={{ color: "#aaa" }}>N/A</span>
+        <span style={{ color: "#aaa" }}>
+          <Trans>N/A</Trans>
+        </span>
       ),
   },
 ];
@@ -81,7 +84,7 @@ const StudentMaterialTable: React.FC<Props> = ({ data }) => (
   <CommonTable<StudentMaterial>
     columns={columns}
     data={data}
-    emptyText="No materials found"
+    emptyText={t`No materials found`}
   />
 );
 

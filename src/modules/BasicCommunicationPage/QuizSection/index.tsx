@@ -1,5 +1,6 @@
 "use client";
 
+import { t, Trans } from "@lingui/macro";
 import {
   Box,
   Typography,
@@ -17,21 +18,21 @@ const quizQuestions = [
   {
     id: 1,
     type: "multiple-choice",
-    question: "How do you greet someone in the morning?",
-    options: ["Good evening", "Good morning", "Good night", "Hello night"],
+    question: t`How do you greet someone in the morning?`,
+    options: [t`Good evening`, t`Good morning`, t`Good night`, t`Hello night`],
     answer: "Good morning",
   },
   {
     id: 2,
     type: "fill-blank",
-    question: "Complete the sentence: 'I ____ fine, thank you.'",
+    question: t`Complete the sentence: 'I ____ fine, thank you.'`,
     answer: ["am", "am."],
   },
   {
     id: 3,
     type: "order-sentence",
-    question: "Arrange the words to form a correct sentence: 'fine / am / I'",
-    words: ["fine", "am", "I"],
+    question: t`Arrange the words to form a correct sentence: 'fine / am / I'`,
+    words: [t`fine`, t`am`, t`I`],
     answer: ["I", "am", "fine"],
   },
 ];
@@ -96,7 +97,7 @@ const QuizSection: React.FC<Props> = ({ setErrorMsg }) => {
     const question = quizQuestions[currentQuestion];
     const userAnswer = answers[question.id ?? currentQuestion];
     if (!userAnswer || (Array.isArray(userAnswer) && userAnswer.length === 0)) {
-      setErrorMsg("Please answer the question before proceeding.");
+      setErrorMsg(t`Please answer the question before proceeding.`);
       return false;
     }
     return true;
@@ -154,7 +155,7 @@ const QuizSection: React.FC<Props> = ({ setErrorMsg }) => {
       }}
     >
       <Typography variant="h5" fontWeight="bold" mb={4} color="#035a8e">
-        Interactive Quiz
+        <Trans>Interactive Quiz</Trans>
       </Typography>
 
       <AnimatePresence mode="wait">
@@ -198,7 +199,7 @@ const QuizSection: React.FC<Props> = ({ setErrorMsg }) => {
                     <TextField
                       fullWidth
                       variant="outlined"
-                      placeholder="Type your answer here..."
+                      placeholder={t`Type your answer here...`}
                       value={answers[q.id] || ""}
                       onChange={(e) =>
                         handleChangeFillBlank(q.id, e.target.value)
@@ -238,7 +239,9 @@ const QuizSection: React.FC<Props> = ({ setErrorMsg }) => {
                       })}
                     </Box>
                     <Typography variant="body2" color="text.secondary">
-                      Click words to build the correct sentence in order.
+                      <Trans>
+                        Click words to build the correct sentence in order.
+                      </Trans>
                     </Typography>
                   </>
                 );
@@ -264,16 +267,16 @@ const QuizSection: React.FC<Props> = ({ setErrorMsg }) => {
           disabled={currentQuestion === 0}
           onClick={handlePrev}
         >
-          Previous
+          <Trans>Previous</Trans>
         </Button>
         {currentQuestion < quizQuestions.length - 1 && (
           <Button variant="contained" color="primary" onClick={handleNext}>
-            Next
+            <Trans>Next</Trans>
           </Button>
         )}
         {currentQuestion === quizQuestions.length - 1 && (
           <Button variant="contained" color="success" onClick={handleNext}>
-            Submit
+            <Trans>Submit</Trans>
           </Button>
         )}
       </Box>
@@ -285,7 +288,7 @@ const QuizSection: React.FC<Props> = ({ setErrorMsg }) => {
             fontWeight="bold"
             color={score >= quizQuestions.length / 2 ? "green" : "error"}
           >
-            Your Score: {score} / {quizQuestions.length}
+            <Trans>Your Score:</Trans> {score} / {quizQuestions.length}
           </Typography>
         </Box>
       )}

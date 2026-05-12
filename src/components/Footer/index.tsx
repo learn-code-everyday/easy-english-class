@@ -1,3 +1,4 @@
+import { t, Trans } from "@lingui/macro";
 import { Typography } from "@mui/material";
 import { getYear } from "date-fns";
 import Image from "next/image";
@@ -25,7 +26,9 @@ function Footer() {
       <div className="flex flex-col items-center justify-between gap-3 md:flex-row">
         <Image width={80} height={80} src="/favicon.png" alt="logo" />
 
-        <Typography>©{year} English Class All Rights Reserved</Typography>
+        <Typography>
+          ©{year} <Trans>English Class All Rights Reserved</Trans>
+        </Typography>
 
         <div className="flex flex-wrap gap-5">
           {listSocialNetwork.map((item) => (
@@ -35,7 +38,7 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-700 hover:text-blue-600 transition"
-              aria-label="social icon"
+              aria-label={t`Social icon`}
             >
               {item.icon}
             </a>

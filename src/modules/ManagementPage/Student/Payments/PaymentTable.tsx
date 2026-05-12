@@ -1,3 +1,4 @@
+import { t, Trans } from "@lingui/macro";
 import PaymentIcon from "@mui/icons-material/Payment";
 import { Chip, Stack, Link } from "@mui/material";
 import { useState } from "react";
@@ -20,18 +21,18 @@ export type StudentPayment = {
 const paymentColumns: Column<StudentPayment>[] = [
   {
     field: "invoiceNo",
-    label: "Invoice",
+    label: t`Invoice`,
     render: (row: StudentPayment) => (
       <Stack direction="row" alignItems="center" gap={1}>
         <PaymentIcon fontSize="small" /> {row.invoiceNo}
       </Stack>
     ),
   },
-  { field: "date", label: "Date" },
-  { field: "className", label: "Class" },
+  { field: "date", label: t`Date` },
+  { field: "className", label: t`Class` },
   {
     field: "amount",
-    label: "Amount",
+    label: t`Amount`,
     align: "right",
     render: (row: StudentPayment) => (
       <span style={{ fontWeight: 600, color: "#055" }}>
@@ -41,7 +42,7 @@ const paymentColumns: Column<StudentPayment>[] = [
   },
   {
     field: "status",
-    label: "Status",
+    label: t`Status`,
     render: (row: StudentPayment) => (
       <Chip
         size="small"
@@ -68,7 +69,7 @@ const paymentColumns: Column<StudentPayment>[] = [
   },
   {
     field: "method",
-    label: "Method",
+    label: t`Method`,
     render: (row: StudentPayment) => (
       <Chip
         size="small"
@@ -79,14 +80,14 @@ const paymentColumns: Column<StudentPayment>[] = [
       />
     ),
   },
-  { field: "note", label: "Note" },
+  { field: "note", label: t`Note` },
   {
     render: (row: StudentPayment) =>
       row.status !== "PAID" ? (
         <PayNowActionButton payment={row} />
       ) : (
         <Link href="#" underline="hover" fontWeight={500}>
-          View
+          <Trans>View</Trans>
         </Link>
       ),
   },
@@ -104,7 +105,7 @@ function PayNowActionButton({ payment }: { payment: StudentPayment }) {
         fontWeight={500}
         onClick={() => setOpen(true)}
       >
-        Pay now
+        <Trans>Pay now</Trans>
       </Link>
 
       <PayNowModal
@@ -136,7 +137,7 @@ export default function StudentPaymentTable({
       loading={loading}
       pagination={pagination}
       onPageChange={onPageChange}
-      emptyText="No payments found."
+      emptyText={t`No payments found.`}
     />
   );
 }

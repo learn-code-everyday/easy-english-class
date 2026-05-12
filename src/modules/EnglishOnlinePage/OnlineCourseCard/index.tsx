@@ -1,5 +1,6 @@
 "use client";
 
+import { Trans } from "@lingui/macro";
 import {
   Box,
   Typography,
@@ -82,7 +83,7 @@ export default function OnlineCourseCard({ course }: Props) {
               }}
             >
               <Typography variant="body2" fontWeight="medium" color="#035a8e">
-                Duration: {course.duration}
+                <Trans>Duration:</Trans> {course.duration}
               </Typography>
               <Typography variant="body2" fontWeight="bold" color="#fc9a14">
                 ${course.price}
@@ -94,7 +95,7 @@ export default function OnlineCourseCard({ course }: Props) {
               sx={{ mt: 3, fontWeight: "bold" }}
               onClick={handleOpen}
             >
-              View Details
+              <Trans>View Details</Trans>
             </Button>
           </Box>
         </Paper>
@@ -107,12 +108,13 @@ export default function OnlineCourseCard({ course }: Props) {
             {course.detail || course.description}
           </Typography>
           <Typography variant="subtitle2" color="text.secondary" mt={2}>
-            Duration: {course.duration} | Price: ${course.price}
+            <Trans>Duration:</Trans> {course.duration} | <Trans>Price:</Trans> $
+            {course.price}
           </Typography>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="secondary">
-            Close
+            <Trans>Close</Trans>
           </Button>
           <Button
             variant="contained"
@@ -120,7 +122,7 @@ export default function OnlineCourseCard({ course }: Props) {
             href={`/register?course=${course.id}`}
             onClick={handleClose}
           >
-            Register Now
+            <Trans>Register Now</Trans>
           </Button>
         </DialogActions>
       </Dialog>

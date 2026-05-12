@@ -1,5 +1,6 @@
 "use client";
 
+import { Trans } from "@lingui/macro";
 import { Typography } from "@mui/material";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React from "react";
@@ -36,7 +37,7 @@ const HeaderSection = () => {
           gutterBottom
           sx={{ mb: 3, position: "relative", zIndex: 1 }}
         >
-          Basic Communication in English
+          <Trans>Basic Communication in English</Trans>
         </Typography>
         <Typography
           variant="h6"
@@ -52,8 +53,10 @@ const HeaderSection = () => {
             zIndex: 1,
           }}
         >
-          Master essential phrases, greetings, and polite expressions to
-          kickstart your English conversation skills.
+          <Trans>
+            Master essential phrases, greetings, and polite expressions to
+            kickstart your English conversation skills.
+          </Trans>
         </Typography>
       </motion.div>
     </>

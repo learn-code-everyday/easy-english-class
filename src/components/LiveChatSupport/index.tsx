@@ -1,5 +1,6 @@
 "use client";
 
+import { t, Trans } from "@lingui/macro";
 import ChatIcon from "@mui/icons-material/Chat";
 import CloseIcon from "@mui/icons-material/Close";
 import {
@@ -17,7 +18,7 @@ import React, { useState, useEffect, useRef } from "react";
 const LiveChatSupport = () => {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { from: "bot", text: "Hi! How can we assist you today?" },
+    { from: "bot", text: t`Hi! How can we assist you today?` },
   ]);
   const [input, setInput] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -40,7 +41,7 @@ const LiveChatSupport = () => {
         ...prev,
         {
           from: "bot",
-          text: "Thank you for your message. Our support team will get back to you shortly.",
+          text: t`Thank you for your message. Our support team will get back to you shortly.`,
         },
       ]);
     }, 1500);
@@ -62,7 +63,7 @@ const LiveChatSupport = () => {
           zIndex: 1500,
           boxShadow: 3,
         }}
-        aria-label={open ? "Close live chat" : "Open live chat"}
+        aria-label={open ? t`Close live chat` : t`Open live chat`}
       >
         {open ? <CloseIcon /> : <ChatIcon />}
       </IconButton>
@@ -86,7 +87,7 @@ const LiveChatSupport = () => {
           }}
           role="region"
           aria-live="polite"
-          aria-label="Live chat support"
+          aria-label={t`Live chat support`}
         >
           <Box
             sx={{
@@ -99,7 +100,7 @@ const LiveChatSupport = () => {
             }}
           >
             <Typography variant="h6" fontWeight="bold">
-              Live Support
+              <Trans>Live Support</Trans>
             </Typography>
           </Box>
 
@@ -144,7 +145,7 @@ const LiveChatSupport = () => {
             <TextField
               variant="outlined"
               size="small"
-              placeholder="Type your message..."
+              placeholder={t`Type your message...`}
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => {
@@ -154,16 +155,16 @@ const LiveChatSupport = () => {
                 }
               }}
               fullWidth
-              aria-label="Type your message"
+              aria-label={t`Type your message`}
             />
             <Button
               variant="contained"
               color="primary"
               onClick={sendMessage}
-              aria-label="Send message"
+              aria-label={t`Send message`}
               disabled={!input.trim()}
             >
-              Send
+              <Trans>Send</Trans>
             </Button>
           </Stack>
         </Paper>

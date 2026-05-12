@@ -1,5 +1,6 @@
 "use client";
 
+import { t, Trans } from "@lingui/macro";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
   Box,
@@ -28,55 +29,47 @@ import MainLayout from "@/layouts/MainLayout";
 
 const courses = [
   {
-    level: "Beginner",
-    duration: "3 months",
+    level: t`Beginner`,
+    duration: t`3 months`,
     price: 150,
-    description:
-      "For learners starting from scratch, focusing on basic grammar, vocabulary, and speaking skills.",
+    description: t`For learners starting from scratch, focusing on basic grammar, vocabulary, and speaking skills.`,
   },
   {
-    level: "Intermediate",
-    duration: "3 months",
+    level: t`Intermediate`,
+    duration: t`3 months`,
     price: 200,
-    description:
-      "For those who know the basics and want to improve conversation, writing, and comprehension.",
+    description: t`For those who know the basics and want to improve conversation, writing, and comprehension.`,
   },
   {
-    level: "Advanced",
-    duration: "3 months",
+    level: t`Advanced`,
+    duration: t`3 months`,
     price: 250,
-    description:
-      "For learners aiming for fluency, advanced grammar, idioms, and professional English usage.",
+    description: t`For learners aiming for fluency, advanced grammar, idioms, and professional English usage.`,
   },
   {
-    level: "Conversation Practice",
-    duration: "1 month",
+    level: t`Conversation Practice`,
+    duration: t`1 month`,
     price: 100,
-    description:
-      "Focused speaking practice to improve fluency and confidence in daily conversations.",
+    description: t`Focused speaking practice to improve fluency and confidence in daily conversations.`,
   },
 ];
 
 const faqs = [
   {
-    question: "What is the refund policy?",
-    answer:
-      "You can request a full refund within the first two weeks of your course if you are not satisfied.",
+    question: t`What is the refund policy?`,
+    answer: t`You can request a full refund within the first two weeks of your course if you are not satisfied.`,
   },
   {
-    question: "Are there any prerequisites?",
-    answer:
-      "No prerequisites. We welcome all levels from beginners to advanced learners.",
+    question: t`Are there any prerequisites?`,
+    answer: t`No prerequisites. We welcome all levels from beginners to advanced learners.`,
   },
   {
-    question: "How can I contact my instructor?",
-    answer:
-      "You will get access to our online platform where you can message your instructor anytime.",
+    question: t`How can I contact my instructor?`,
+    answer: t`You will get access to our online platform where you can message your instructor anytime.`,
   },
   {
-    question: "Do you offer certificates?",
-    answer:
-      "Yes, upon successful course completion, you will receive an official certificate.",
+    question: t`Do you offer certificates?`,
+    answer: t`Yes, upon successful course completion, you will receive an official certificate.`,
   },
 ];
 
@@ -100,11 +93,11 @@ const PricingFeePage = () => {
 
   const validate = () => {
     const errors: { [key: string]: string } = {};
-    if (!formData.name.trim()) errors.name = "Name is required";
-    if (!formData.email.trim()) errors.email = "Email is required";
+    if (!formData.name.trim()) errors.name = t`Name is required`;
+    if (!formData.email.trim()) errors.email = t`Email is required`;
     else if (!/\S+@\S+\.\S+/.test(formData.email))
-      errors.email = "Email is invalid";
-    if (!formData.course) errors.course = "Please select a course";
+      errors.email = t`Email is invalid`;
+    if (!formData.course) errors.course = t`Please select a course`;
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
   };
@@ -122,7 +115,7 @@ const PricingFeePage = () => {
     // TODO: Gửi data lên API đăng ký
     setSnackbar({
       open: true,
-      message: `Registration successful for ${formData.course}, thank you ${formData.name}!`,
+      message: t`Registration successful for ${formData.course}, thank you ${formData.name}!`,
       severity: "success",
     });
     setFormData({ name: "", email: "", course: "" });
@@ -145,7 +138,7 @@ const PricingFeePage = () => {
           fontWeight="bold"
           sx={{ mb: 2 }}
         >
-          Tuition Fees
+          <Trans>Tuition Fees</Trans>
         </Typography>
         <Typography
           variant="body1"
@@ -153,9 +146,11 @@ const PricingFeePage = () => {
           mb={6}
           sx={{ fontSize: "1.1rem", color: "#333" }}
         >
-          Select the course that best suits your English learning journey. Each
-          course is carefully designed to help you progress step-by-step with
-          experienced instructors and proven methods.
+          <Trans>
+            Select the course that best suits your English learning journey.
+            Each course is carefully designed to help you progress step-by-step
+            with experienced instructors and proven methods.
+          </Trans>
         </Typography>
 
         <TableContainer component={Paper} elevation={3}>
@@ -163,22 +158,22 @@ const PricingFeePage = () => {
             <TableHead sx={{ backgroundColor: "#035a8e" }}>
               <TableRow>
                 <TableCell sx={{ color: "white", fontWeight: "bold" }}>
-                  Course Level
+                  <Trans>Course Level</Trans>
                 </TableCell>
                 <TableCell
                   sx={{ color: "white", fontWeight: "bold" }}
                   align="center"
                 >
-                  Duration
+                  <Trans>Duration</Trans>
                 </TableCell>
                 <TableCell
                   sx={{ color: "white", fontWeight: "bold" }}
                   align="center"
                 >
-                  Price (USD)
+                  <Trans>Price (USD)</Trans>
                 </TableCell>
                 <TableCell sx={{ color: "white", fontWeight: "bold" }}>
-                  Description
+                  <Trans>Description</Trans>
                 </TableCell>
               </TableRow>
             </TableHead>
@@ -207,7 +202,7 @@ const PricingFeePage = () => {
           textAlign="center"
           sx={{ mb: 3 }}
         >
-          Frequently Asked Questions
+          <Trans>Frequently Asked Questions</Trans>
         </Typography>
         {faqs.map(({ question, answer }, idx) => (
           <Accordion key={idx} sx={{ mb: 2 }}>
@@ -234,7 +229,7 @@ const PricingFeePage = () => {
           textAlign="center"
           sx={{ mb: 3 }}
         >
-          Register for a Course
+          <Trans>Register for a Course</Trans>
         </Typography>
 
         <Box
@@ -249,7 +244,7 @@ const PricingFeePage = () => {
           }}
         >
           <TextField
-            label="Full Name"
+            label={t`Full Name`}
             name="name"
             value={formData.name}
             onChange={handleChange}
@@ -259,7 +254,7 @@ const PricingFeePage = () => {
             required
           />
           <TextField
-            label="Email"
+            label={t`Email`}
             name="email"
             type="email"
             value={formData.email}
@@ -270,7 +265,7 @@ const PricingFeePage = () => {
             required
           />
           <TextField
-            label="Select Course"
+            label={t`Select Course`}
             name="course"
             select
             value={formData.course}
@@ -296,7 +291,7 @@ const PricingFeePage = () => {
               "&:hover": { backgroundColor: "#023e5f" },
             }}
           >
-            Register
+            <Trans>Register</Trans>
           </Button>
         </Box>
 
@@ -308,9 +303,11 @@ const PricingFeePage = () => {
           color="text.secondary"
           sx={{ fontStyle: "italic", fontSize: "1rem" }}
         >
-          We offer flexible payment plans and special discounts for early
-          sign-ups, groups, and referrals. Contact our support team to learn
-          more about available options.
+          <Trans>
+            We offer flexible payment plans and special discounts for early
+            sign-ups, groups, and referrals. Contact our support team to learn
+            more about available options.
+          </Trans>
         </Typography>
       </Container>
 

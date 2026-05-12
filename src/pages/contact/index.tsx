@@ -1,5 +1,6 @@
 "use client";
 
+import { t, Trans } from "@lingui/macro";
 import {
   Box,
   Container,
@@ -17,10 +18,10 @@ import React, { useState } from "react";
 import MainLayout from "@/layouts/MainLayout";
 
 const courses = [
-  "Beginner",
-  "Intermediate",
-  "Advanced",
-  "Conversation Practice",
+  t`Beginner`,
+  t`Intermediate`,
+  t`Advanced`,
+  t`Conversation Practice`,
 ];
 
 const ContactPage = () => {
@@ -42,14 +43,14 @@ const ContactPage = () => {
 
   const validate = () => {
     const errors: { [key: string]: string } = {};
-    if (!formData.name.trim()) errors.name = "Name is required";
-    if (!formData.email.trim()) errors.email = "Email is required";
+    if (!formData.name.trim()) errors.name = t`Name is required`;
+    if (!formData.email.trim()) errors.email = t`Email is required`;
     else if (!/\S+@\S+\.\S+/.test(formData.email))
-      errors.email = "Invalid email";
+      errors.email = t`Invalid email`;
     if (formData.phone && !/^\+?[\d\s-]{7,15}$/.test(formData.phone))
-      errors.phone = "Invalid phone number";
-    if (!formData.course) errors.course = "Please select a course";
-    if (!formData.message.trim()) errors.message = "Message is required";
+      errors.phone = t`Invalid phone number`;
+    if (!formData.course) errors.course = t`Please select a course`;
+    if (!formData.message.trim()) errors.message = t`Message is required`;
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
   };
@@ -75,7 +76,7 @@ const ContactPage = () => {
 
       setSnackbar({
         open: true,
-        message: "Message sent successfully!",
+        message: t`Message sent successfully!`,
         severity: "success",
       });
 
@@ -83,7 +84,7 @@ const ContactPage = () => {
     } catch (error) {
       setSnackbar({
         open: true,
-        message: "Failed to send message. Please try again later.",
+        message: t`Failed to send message. Please try again later.`,
         severity: "error",
       });
     } finally {
@@ -115,11 +116,13 @@ const ContactPage = () => {
           textAlign="center"
           gutterBottom
         >
-          Contact Us
+          <Trans>Contact Us</Trans>
         </Typography>
         <Typography variant="body1" textAlign="center" mb={6}>
-          Have questions or feedback? Send us a message and we will get back to
-          you soon.
+          <Trans>
+            Have questions or feedback? Send us a message and we will get back
+            to you soon.
+          </Trans>
         </Typography>
 
         <Grid container spacing={6}>
@@ -131,7 +134,7 @@ const ContactPage = () => {
               noValidate
             >
               <TextField
-                label="Full Name"
+                label={t`Full Name`}
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
@@ -153,7 +156,7 @@ const ContactPage = () => {
                 }}
               />
               <TextField
-                label="Email"
+                label={t`Email`}
                 name="email"
                 type="email"
                 value={formData.email}
@@ -176,12 +179,12 @@ const ContactPage = () => {
                 }}
               />
               <TextField
-                label="Phone Number"
+                label={t`Phone Number`}
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
                 error={!!formErrors.phone}
-                helperText={formErrors.phone || "Optional"}
+                helperText={formErrors.phone || t`Optional`}
                 fullWidth
                 InputProps={{
                   sx: {
@@ -198,7 +201,7 @@ const ContactPage = () => {
               />
               <TextField
                 select
-                label="Select Course"
+                label={t`Select Course`}
                 name="course"
                 value={formData.course}
                 onChange={handleChange}
@@ -226,7 +229,7 @@ const ContactPage = () => {
                 ))}
               </TextField>
               <TextField
-                label="Message"
+                label={t`Message`}
                 name="message"
                 multiline
                 minRows={4}
@@ -258,7 +261,7 @@ const ContactPage = () => {
                   "&:hover": { backgroundColor: "#e38b0a" },
                 }}
               >
-                {loading ? "Sending..." : "Send Message"}
+                {loading ? t`Sending...` : t`Send Message`}
               </Button>
             </Box>
           </Grid>
@@ -283,10 +286,10 @@ const ContactPage = () => {
                 mb={2}
                 textAlign="center"
               >
-                Contact Information
+                <Trans>Contact Information</Trans>
               </Typography>
               <Typography variant="body1" mb={1}>
-                📞 Phone:{" "}
+                📞 <Trans>Phone:</Trans>{" "}
                 <a
                   href="tel:+1234567890"
                   style={{ color: "#fc9a14", textDecoration: "none" }}
@@ -295,7 +298,7 @@ const ContactPage = () => {
                 </a>
               </Typography>
               <Typography variant="body1" mb={1}>
-                📧 Email:{" "}
+                📧 <Trans>Email:</Trans>{" "}
                 <a
                   href="mailto:info@englishclass.com"
                   style={{ color: "#fc9a14", textDecoration: "none" }}
@@ -304,7 +307,7 @@ const ContactPage = () => {
                 </a>
               </Typography>
               <Typography variant="body1" mb={1}>
-                📍 Address: 123 English St, Language City, USA
+                📍 <Trans>Address: 123 English St, Language City, USA</Trans>
               </Typography>
             </Box>
           </Grid>

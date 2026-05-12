@@ -1,3 +1,4 @@
+import { Trans } from "@lingui/macro";
 import PaymentIcon from "@mui/icons-material/Payment";
 import {
   Dialog,
@@ -45,10 +46,10 @@ export default function PayNowModal({ open, onClose, payment }: Props) {
           <PaymentIcon color="primary" fontSize="large" />
           <Box>
             <Typography variant="h6" fontWeight={700}>
-              Pay Invoice
+              <Trans>Pay Invoice</Trans>
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Scan the QR or copy info below to pay
+              <Trans>Scan the QR or copy info below to pay</Trans>
             </Typography>
           </Box>
         </Stack>
@@ -65,7 +66,9 @@ export default function PayNowModal({ open, onClose, payment }: Props) {
               justifyContent="space-between"
               alignItems="center"
             >
-              <Typography color="text.secondary">Invoice</Typography>
+              <Typography color="text.secondary">
+                <Trans>Invoice</Trans>
+              </Typography>
               <Typography fontWeight={500}>{payment.invoiceNo}</Typography>
             </Box>
             <Box
@@ -73,7 +76,9 @@ export default function PayNowModal({ open, onClose, payment }: Props) {
               justifyContent="space-between"
               alignItems="center"
             >
-              <Typography color="text.secondary">Class</Typography>
+              <Typography color="text.secondary">
+                <Trans>Class</Trans>
+              </Typography>
               <Typography fontWeight={500}>{payment.className}</Typography>
             </Box>
           </Stack>
@@ -90,10 +95,10 @@ export default function PayNowModal({ open, onClose, payment }: Props) {
           variant="contained"
           color="primary"
         >
-          I have paid
+          <Trans>I have paid</Trans>
         </Button>
         <Button onClick={onClose} variant="outlined" color="inherit">
-          Close
+          <Trans>Close</Trans>
         </Button>
       </DialogActions>
     </Dialog>

@@ -1,3 +1,4 @@
+import { Trans } from "@lingui/macro";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -34,13 +35,13 @@ function Error404Content({ isAdminPage }: { isAdminPage: boolean }) {
           onClick={() => router.back()}
           className="px-5 py-2 rounded-lg bg-[#d6dffd] text-[#8583f5] font-medium shadow hover:bg-[#b3bafc] transition"
         >
-          Go back
+          <Trans>Go back</Trans>
         </button>
         <Link
           href={isAdminPage ? "/manage/dashboard" : "/"}
           className="px-5 py-2 rounded-lg bg-[#8583f5] text-white font-medium shadow hover:bg-[#6b74e5] transition"
         >
-          Go home
+          <Trans>Go home</Trans>
         </Link>
       </div>
     </div>

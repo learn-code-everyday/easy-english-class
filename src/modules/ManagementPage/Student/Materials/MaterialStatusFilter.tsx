@@ -1,11 +1,12 @@
+import { t, Trans } from "@lingui/macro";
 import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 
 const typeOptions = [
-  { label: "All", value: "ALL" },
+  { label: t`All`, value: "ALL" },
   { label: "PDF", value: "PDF" },
-  { label: "Video", value: "Video" },
-  { label: "Link", value: "Link" },
-  { label: "Doc", value: "Doc" },
+  { label: t`Video`, value: "Video" },
+  { label: t`Link`, value: "Link" },
+  { label: t`Doc`, value: "Doc" },
 ];
 
 type Props = {
@@ -16,9 +17,11 @@ type Props = {
 export default function MaterialTypeFilter({ value, onChange }: Props) {
   return (
     <FormControl size="small" sx={{ minWidth: 140 }}>
-      <InputLabel>Type</InputLabel>
+      <InputLabel>
+        <Trans>Type</Trans>
+      </InputLabel>
       <Select
-        label="Type"
+        label={t`Type`}
         value={value}
         onChange={(e) => onChange(e.target.value)}
       >

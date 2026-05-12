@@ -1,3 +1,4 @@
+import { Trans } from "@lingui/macro";
 import React, { useMemo } from "react";
 
 import { ROLE_LABELS } from "@/constants/role";
@@ -22,9 +23,11 @@ const DashboardAdmin = () => {
     <div className="p-8 bg-gray-50 min-h-screen">
       <div className="flex flex-wrap-reverse items-center justify-center sm:justify-between mb-8">
         <h1 className="text-2xl font-bold">
-          Welcome back, {renderUserRole} 👋
+          <Trans>Welcome back,</Trans> {renderUserRole} 👋
         </h1>
-        <p className="text-gray-500 mt-1">Here’s your dashboard overview.</p>
+        <p className="text-gray-500 mt-1">
+          <Trans>Here&apos;s your dashboard overview.</Trans>
+        </p>
       </div>
 
       <DashboardStats />

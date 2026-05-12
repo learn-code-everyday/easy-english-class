@@ -1,4 +1,5 @@
 "use client";
+import { t, Trans } from "@lingui/macro";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
   Box,
@@ -11,18 +12,16 @@ import React from "react";
 
 const faqs = [
   {
-    question: "What is the duration of the IELTS Preparation course?",
-    answer:
-      "Our IELTS course typically runs for 3 months with flexible scheduling options.",
+    question: t`What is the duration of the IELTS Preparation course?`,
+    answer: t`Our IELTS course typically runs for 3 months with flexible scheduling options.`,
   },
   {
-    question: "Do you provide official IELTS practice materials?",
-    answer: "Yes, we provide up-to-date official practice tests and materials.",
+    question: t`Do you provide official IELTS practice materials?`,
+    answer: t`Yes, we provide up-to-date official practice tests and materials.`,
   },
   {
-    question: "Can I retake the course if I am not satisfied with my score?",
-    answer:
-      "We offer a free retake within 6 months for students who meet course requirements.",
+    question: t`Can I retake the course if I am not satisfied with my score?`,
+    answer: t`We offer a free retake within 6 months for students who meet course requirements.`,
   },
 ];
 
@@ -33,7 +32,7 @@ export default function IeltsFAQs() {
         variant="h4"
         sx={{ mb: 3, fontWeight: "bold", color: "#004d40" }}
       >
-        Frequently Asked Questions
+        <Trans>Frequently Asked Questions</Trans>
       </Typography>
       {faqs.map(({ question, answer }, idx) => (
         <Accordion key={idx} disableGutters>

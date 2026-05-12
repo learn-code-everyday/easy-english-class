@@ -1,3 +1,4 @@
+import { t } from "@lingui/macro";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 import { Avatar, IconButton, Box, CircularProgress } from "@mui/material";
 import { useRef, useState } from "react";
@@ -34,7 +35,7 @@ export default function AvatarUploader({ user, onUploaded }: Props) {
       !allowedTypes.includes(processedFile.type) &&
       !file.name.toLowerCase().endsWith(".heic")
     ) {
-      toast.error("File type must be JPG, PNG, GIF or HEIC.");
+      toast.error(t`File type must be JPG, PNG, GIF or HEIC.`);
       return;
     }
 
@@ -57,7 +58,7 @@ export default function AvatarUploader({ user, onUploaded }: Props) {
           { type: "image/jpeg" }
         );
       } catch (err: any) {
-        toast.error(err?.message || "Cannot convert HEIC image!");
+        toast.error(err?.message || t`Cannot convert HEIC image!`);
         return;
       }
     }
@@ -69,14 +70,14 @@ export default function AvatarUploader({ user, onUploaded }: Props) {
         oldAvatarUrl: String(user?.avatar || ""),
       });
       setIsUploading(false);
-      if (!result?.url) throw new Error("No image url returned!");
+      if (!result?.url) throw new Error(t`No image url returned!`);
 
       await UserService.updateProfile({ avatar: result.url });
-      toast.success("Avatar updated!");
+      toast.success(t`Avatar updated!`);
       onUploaded?.(result.url);
     } catch (err: any) {
       setIsUploading(false);
-      toast.error(err?.message || "Update avatar failed!");
+      toast.error(err?.message || t`Update avatar failed!`);
     }
   }
 
