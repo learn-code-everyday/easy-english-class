@@ -9,6 +9,11 @@ out/
 build/
 dist/
 
+# claude
+CLAUDE.local.md
+.claude/settings.local.json
+*.local.*
+
 # env
 .env
 .env.*

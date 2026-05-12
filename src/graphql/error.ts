@@ -3,8 +3,16 @@ import Router from "next/router";
 
 import { toast } from "@/helpers/toast";
 
+import { expireAuthSession, isAuthSessionError } from "./session";
+
 export const ErrorLink = onError(({ graphQLErrors, networkError }) => {
   try {
+    if (isAuthSessionError({ graphQLErrors, networkError })) {
+      toast.error("Your session has expired. Please sign in again.");
+      expireAuthSession("/");
+      return;
+    }
+
     if (graphQLErrors) {
       graphQLErrors.forEach(({ message, locations, path, extensions }) => {
         console.error({ message, locations, path });

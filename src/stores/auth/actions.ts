@@ -1,4 +1,5 @@
-import { ClearAuthToken, GetAuthToken, SetAuthToken } from "@/graphql/auth";
+import { GetAuthToken, SetAuthToken } from "@/graphql/auth";
+import { clearAuthSession, isAuthSessionError } from "@/graphql/session";
 import { toast } from "@/helpers/toast";
 import { UserService } from "@/services/user/user.repo";
 
@@ -24,6 +25,11 @@ export async function loadProfile() {
     setAuthStatus(AuthStatuses.LOADED);
   } catch (error) {
     console.error(error);
+    if (isAuthSessionError(error)) {
+      clearAuthSession();
+      setAuth(undefined);
+    }
+    setAuthStatus(AuthStatuses.LOADED);
   } finally {
     setLoading(false);
   }
@@ -60,6 +66,6 @@ export async function login(email: string, password: string) {
 }
 
 export function logout() {
-  ClearAuthToken();
+  clearAuthSession();
   window.location.assign("/");
 }

@@ -1,0 +1,6 @@
+{
+  "project": "easy-english-class",
+  "defaultAgent": "code-reviewer",
+  "preferredOutputStyle": "terse",
+  "skills": ["english-tutor"]
+}
