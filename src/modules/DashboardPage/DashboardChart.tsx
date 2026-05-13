@@ -19,19 +19,19 @@ const userRatio = [
 
 const DashboardCharts = () => {
   return (
-    <div className="flex flex-col lg:flex-row w-full justify-between gap-8">
-      <div className="bg-white rounded-2xl shadow p-6 w-full">
-        <h2 className="text-lg font-semibold mb-4">
+    <div className="grid w-full grid-cols-1 gap-5 xl:grid-cols-2">
+      <section className="w-full rounded-[var(--app-radius)] border border-slate-200 bg-white p-5 shadow-[var(--app-shadow-sm)] sm:p-6">
+        <h2 className="mb-4 text-base font-semibold text-slate-950 sm:text-lg">
           <Trans>Student Growth (6 months)</Trans>
         </h2>
         <StudentGrowthBarChart data={studentGrowth} />
-      </div>
-      <div className="bg-white rounded-2xl shadow p-6 w-full">
-        <h2 className="text-lg font-semibold mb-4">
+      </section>
+      <section className="w-full rounded-[var(--app-radius)] border border-slate-200 bg-white p-5 shadow-[var(--app-shadow-sm)] sm:p-6">
+        <h2 className="mb-4 text-base font-semibold text-slate-950 sm:text-lg">
           <Trans>Students vs Teachers</Trans>
         </h2>
         <UserRatioPieChart data={userRatio} />
-      </div>
+      </section>
     </div>
   );
 };

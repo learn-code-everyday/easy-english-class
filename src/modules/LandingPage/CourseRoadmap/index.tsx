@@ -23,7 +23,7 @@ type CourseGroup = {
   steps: Step[];
 };
 
-const courseGroups: CourseGroup[] = [
+const getCourseGroups = (): CourseGroup[] => [
   {
     groupTitle: "IELTS Junior",
     steps: [
@@ -153,26 +153,26 @@ const courseGroups: CourseGroup[] = [
 ];
 
 export default function CourseRoadmap() {
-  const [selectedGroup, setSelectedGroup] = useState<CourseGroup>(
-    courseGroups[0]
-  );
+  const courseGroups = getCourseGroups();
+  const [selectedGroupIndex, setSelectedGroupIndex] = useState(0);
+  const selectedGroup = courseGroups[selectedGroupIndex] ?? courseGroups[0];
 
   return (
-    <section className="max-w-7xl mx-auto p-6">
-      <h2 className="text-center text-4xl font-bold mb-12">
+    <section className="mx-auto max-w-7xl px-5 py-16 sm:px-6">
+      <h2 className="mb-10 text-center text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
         <Trans>Course Roadmaps</Trans>
       </h2>
 
       {/* Group selector */}
-      <div className="flex justify-center gap-6 mb-10 flex-wrap">
-        {courseGroups.map((group) => (
+      <div className="mb-10 flex flex-wrap justify-center gap-3">
+        {courseGroups.map((group, index) => (
           <button
             key={group.groupTitle}
-            onClick={() => setSelectedGroup(group)}
-            className={`px-6 py-2 rounded-full font-semibold transition ${
+            onClick={() => setSelectedGroupIndex(index)}
+            className={`rounded-full px-5 py-2.5 text-sm font-semibold shadow-sm transition focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${
               selectedGroup.groupTitle === group.groupTitle
-                ? "bg-[#4f46e5] text-white"
-                : "bg-gray-200 text-gray-700 hover:bg-indigo-500 hover:text-white"
+                ? "bg-blue-600 text-white"
+                : "border border-slate-200 bg-white text-slate-700 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
             }`}
             aria-label={t`Select ${group.groupTitle} roadmap`}
           >
@@ -182,33 +182,35 @@ export default function CourseRoadmap() {
       </div>
 
       {/* Roadmap steps */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {selectedGroup.steps.map(
           ({ step, title, objectives, studyInfo, ctaLabel, ctaHref }) => (
             <div
               key={step}
-              className="relative rounded-lg border border-transparent p-8 shadow-md hover:shadow-lg transition transform hover:-translate-y-1 group bg-white hover:animate-border-fade"
+              className="group rounded-[var(--app-radius)] border border-slate-200 bg-white p-6 shadow-[var(--app-shadow-sm)] transition hover:-translate-y-1 hover:border-blue-100 hover:shadow-[var(--app-shadow-md)] sm:p-7"
             >
               {/* Step Number */}
-              <div className="absolute -top-6 left-8 flex items-center gap-2 rounded-lg border border-indigo-300 bg-indigo-50 px-4 py-2 shadow-sm text-[#4f46e5] font-bold text-lg select-none group-hover:border-[#4f46e5] group-hover:bg-indigo-100 transition">
-                <span className="rounded-full bg-indigo-100 w-8 h-8 flex items-center justify-center">
+              <div className="mb-6 flex flex-wrap items-center gap-2 rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-blue-700 shadow-sm transition group-hover:border-blue-200 group-hover:bg-blue-100">
+                <span className="flex size-8 items-center justify-center rounded-full bg-white text-sm font-bold shadow-sm">
                   {step}
                 </span>
-                <span className="text-sm">
+                <span className="text-xs font-semibold uppercase tracking-[0.16em]">
                   <Trans>Course</Trans>
                 </span>
-                <span className="text-lg font-semibold">{title}</span>
+                <span className="min-w-0 text-base font-semibold sm:text-lg">
+                  {title}
+                </span>
               </div>
 
               {/* Objectives */}
-              <div className="mb-6 pt-8">
-                <h4 className="mb-3 font-semibold text-gray-700 uppercase">
+              <div className="mb-6">
+                <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
                   <Trans>Objectives</Trans>
                 </h4>
-                <ul className="space-y-2 text-gray-700 text-sm">
+                <ul className="space-y-2 text-sm leading-6 text-slate-700">
                   {objectives.map((obj, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <FaCheckCircle className="text-[#4f46e5] mt-1" />
+                      <FaCheckCircle className="mt-1 text-blue-600" />
                       <span>{obj}</span>
                     </li>
                   ))}
@@ -217,15 +219,15 @@ export default function CourseRoadmap() {
 
               {/* Study Info */}
               <div className="mb-6">
-                <h4 className="mb-3 font-semibold text-gray-700 uppercase">
+                <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-slate-500">
                   <Trans>Study Info</Trans>
                 </h4>
-                <ul className="space-y-3 text-gray-600 text-sm">
+                <ul className="space-y-3 text-sm leading-6 text-slate-600">
                   {studyInfo.map((info, i) => (
                     <li key={i} className="flex items-center gap-3">
-                      {i === 0 && <FaCalendarAlt className="text-[#4f46e5]" />}
-                      {i === 1 && <FaUserGraduate className="text-[#4f46e5]" />}
-                      {i === 2 && <FaLink className="text-[#4f46e5]" />}
+                      {i === 0 && <FaCalendarAlt className="text-blue-600" />}
+                      {i === 1 && <FaUserGraduate className="text-blue-600" />}
+                      {i === 2 && <FaLink className="text-blue-600" />}
                       <span>{info}</span>
                     </li>
                   ))}
@@ -235,7 +237,7 @@ export default function CourseRoadmap() {
               {/* CTA */}
               <a
                 href={ctaHref}
-                className="inline-flex items-center gap-2 rounded border border-[#4f46e5] px-6 py-2 font-semibold text-[#4f46e5] shadow-sm transition hover:bg-[#4f46e5] hover:text-white"
+                className="inline-flex items-center gap-2 rounded-full border border-blue-200 px-5 py-2.5 text-sm font-semibold text-blue-700 shadow-sm transition hover:border-blue-600 hover:bg-blue-600 hover:text-white focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                 aria-label={t`${title} course details`}
               >
                 <FaLink />

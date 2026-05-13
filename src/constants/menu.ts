@@ -1,5 +1,10 @@
 import { t } from "@lingui/macro";
 
+import {
+  isAdminUser,
+  isStudentUser,
+  isTeacherUser,
+} from "@/helpers/auth-access";
 import { UserRoles, UserTypes } from "@/services/user/user.model";
 
 // --- ADMIN MENU ---
@@ -45,38 +50,6 @@ export const getAdminMenu = () => [
     url: "/manage/course",
   },
   {
-    categoryCode: t`MANAGEMENT`,
-    code: "assignment",
-    icon: "assignment",
-    title: t`Assignments`,
-    header: t`Assignment Management`,
-    url: "/manage/assignments",
-  },
-  {
-    categoryCode: t`MANAGEMENT`,
-    code: "score",
-    icon: "score",
-    title: t`Scores`,
-    header: t`Score Management`,
-    url: "/manage/scores",
-  },
-  {
-    categoryCode: t`MANAGEMENT`,
-    code: "payment",
-    icon: "payment",
-    title: t`Payments`,
-    header: t`Payment Management`,
-    url: "/manage/payment",
-  },
-  {
-    categoryCode: t`MANAGEMENT`,
-    code: "event",
-    icon: "event",
-    title: t`Events`,
-    header: t`Event Management`,
-    url: "/manage/event",
-  },
-  {
     categoryCode: t`SYSTEM`,
     code: "setting",
     icon: "setting",
@@ -90,35 +63,35 @@ export const getAdminMenu = () => [
 export const getTeacherMenu = () => [
   {
     categoryCode: t`TEACHING`,
-    code: "my-classes",
-    icon: "class",
-    title: t`My Classes`,
-    header: t`My Classes`,
-    url: "/manage/teacher/classes",
-  },
-  {
-    categoryCode: t`TEACHING`,
-    code: "assignments",
-    icon: "assignment",
-    title: t`Assignments`,
-    header: t`Assignment Management`,
-    url: "/manage/teacher/assignments",
-  },
-  {
-    categoryCode: t`TEACHING`,
-    code: "scores",
-    icon: "score",
-    title: t`Scores`,
-    header: t`My Class Scores`,
-    url: "/manage/teacher/scores",
-  },
-  {
-    categoryCode: t`TEACHING`,
-    code: "materials",
+    code: "lesson-management",
     icon: "course",
-    title: t`Materials`,
-    header: t`Teaching Materials`,
-    url: "/manage/teacher/materials",
+    title: t`Lesson Management`,
+    header: t`Lesson Management`,
+    url: "/manage/teacher/lessons",
+  },
+  {
+    categoryCode: t`TEACHING`,
+    code: "create-exercise",
+    icon: "assignment",
+    title: t`Create Exercise`,
+    header: t`Create Exercise`,
+    url: "/manage/teacher/exercises/create",
+  },
+  {
+    categoryCode: t`TEACHING`,
+    code: "student-submissions",
+    icon: "assignment",
+    title: t`Student Submissions`,
+    header: t`Student Submissions`,
+    url: "/manage/teacher/submissions",
+  },
+  {
+    categoryCode: t`TEACHING`,
+    code: "student-progress",
+    icon: "score",
+    title: t`Student Progress`,
+    header: t`Student Progress`,
+    url: "/manage/teacher/progress",
   },
 ];
 
@@ -126,43 +99,27 @@ export const getTeacherMenu = () => [
 export const getStudentMenu = () => [
   {
     categoryCode: t`LEARNING`,
-    code: "my-classes",
+    code: "my-lessons",
     icon: "class",
-    title: t`My Classes`,
-    header: t`My Classes`,
-    url: "/manage/classes",
+    title: t`Lessons`,
+    header: t`Lessons`,
+    url: "/lessons",
   },
   {
     categoryCode: t`LEARNING`,
-    code: "assignments",
-    icon: "assignment",
-    title: t`Assignments`,
-    header: t`My Assignments`,
-    url: "/manage/assignments",
-  },
-  {
-    categoryCode: t`LEARNING`,
-    code: "scores",
+    code: "my-progress",
     icon: "score",
-    title: t`Scores`,
-    header: t`My Scores`,
-    url: "/manage/scores",
+    title: t`My Progress`,
+    header: t`My Progress`,
+    url: "/manage/student/progress",
   },
   {
     categoryCode: t`LEARNING`,
-    code: "materials",
-    icon: "course",
-    title: t`Materials`,
-    header: t`Course Materials`,
-    url: "/manage/student/materials",
-  },
-  {
-    categoryCode: t`PAYMENT`,
-    code: "payment",
-    icon: "payment",
-    title: t`Payments`,
-    header: t`Payment History`,
-    url: "/manage/student/payment",
+    code: "submissions-scores",
+    icon: "assignment",
+    title: t`Submissions/Scores`,
+    header: t`Submissions/Scores`,
+    url: "/manage/student/submissions",
   },
 ];
 
@@ -180,13 +137,14 @@ export const getDashboardOnlyMenu = () => [
 
 // --GET MENU BY ROLE--
 export function getMenuByRoleAndType(role: UserRoles, userType?: UserTypes) {
-  if (role === UserRoles.ADMIN) {
+  const user = { role, userType };
+  if (isAdminUser(user)) {
     return [...getDashboardOnlyMenu(), ...getAdminMenu()];
   }
-  if (role === UserRoles.USER && userType === UserTypes.TEACHER) {
+  if (isTeacherUser(user)) {
     return [...getDashboardOnlyMenu(), ...getTeacherMenu()];
   }
-  if (role === UserRoles.USER && userType === UserTypes.STUDENT) {
+  if (isStudentUser(user)) {
     return [...getDashboardOnlyMenu(), ...getStudentMenu()];
   }
   return getDashboardOnlyMenu();

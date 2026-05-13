@@ -20,14 +20,19 @@ const DashboardAdmin = () => {
   }, [auth]);
 
   return (
-    <div className="p-8 bg-gray-50 min-h-screen">
-      <div className="flex flex-wrap-reverse items-center justify-center sm:justify-between mb-8">
-        <h1 className="text-2xl font-bold">
-          <Trans>Welcome back,</Trans> {renderUserRole} 👋
-        </h1>
-        <p className="text-gray-500 mt-1">
-          <Trans>Here&apos;s your dashboard overview.</Trans>
+    <div className="min-h-screen">
+      <div className="mb-8 rounded-[var(--app-radius)] border border-slate-200 bg-white p-5 shadow-[var(--app-shadow-sm)] sm:p-6">
+        <p className="mb-2 text-sm font-medium uppercase tracking-[0.18em] text-blue-600">
+          <Trans>Dashboard</Trans>
         </p>
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <h1 className="text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl">
+            <Trans>Welcome back,</Trans> {renderUserRole} 👋
+          </h1>
+          <p className="text-sm text-slate-500 sm:text-base">
+            <Trans>Here&apos;s your dashboard overview.</Trans>
+          </p>
+        </div>
       </div>
 
       <DashboardStats />

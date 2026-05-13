@@ -1,7 +1,7 @@
 /* eslint-disable import/named */
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
-import { en, ko, PluralCategory } from "make-plural/plurals";
+import { en, PluralCategory, vi } from "make-plural/plurals";
 import { ReactNode, useEffect, useState } from "react";
 
 import { DEFAULT_LOCALE, SupportedLocale } from "@/helpers/locales";
@@ -12,7 +12,7 @@ type LocalePlural = {
 
 const plurals: LocalePlural = {
   "en-US": en,
-  "ko-KR": ko,
+  "vi-VN": vi,
   pseudo: en,
 };
 

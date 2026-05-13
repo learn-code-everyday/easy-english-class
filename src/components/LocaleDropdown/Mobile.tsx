@@ -25,15 +25,11 @@ export default function LocaleDropdownMobile() {
       {/* Button */}
       <button
         className={clsx(
-          "w-full flex items-center justify-between px-6 py-3 rounded-xl shadow-md",
-          "font-semibold text-white text-xl leading-tight",
-          "bg-[#1976d2] transition focus:outline-none",
-          "mb-3"
+          "mb-2 flex w-full items-center justify-between rounded-2xl px-3 py-2.5",
+          "text-sm font-medium text-slate-700 transition",
+          "hover:bg-blue-50 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500",
+          isOpen && "bg-blue-50 text-blue-700 font-semibold shadow-sm"
         )}
-        style={{
-          minHeight: 60,
-          boxShadow: "0 4px 12px 0 rgba(25,118,210,0.08)",
-        }}
         onClick={() => setIsOpen((v) => !v)}
       >
         <span className="font-semibold">{LOCALE_LABEL(activeLocale)}</span>
@@ -54,29 +50,17 @@ export default function LocaleDropdownMobile() {
       </button>
       {/* Dropdown */}
       {isOpen && (
-        <div
-          className="w-full rounded-xl px-4 py-2"
-          style={{
-            background: "#2196f3", // nhẹ hơn chút khi dropdown (hoặc đổi sang #1976d2 luôn cũng được)
-            minHeight: 90,
-            boxShadow: "0 4px 12px 0 rgba(25,118,210,0.09)",
-          }}
-        >
+        <div className="ml-3 flex w-auto flex-col gap-1 border-l border-slate-200 pl-3">
           {SUPPORTED_LOCALES.map((locale) => (
             <button
               key={locale}
               onClick={() => handleLocaleChange(locale)}
               className={clsx(
-                "flex items-center justify-between w-full px-4 py-3 rounded-lg transition",
-                "mb-1",
+                "flex w-full items-center justify-between rounded-2xl px-3 py-2.5 text-sm transition",
                 locale === activeLocale
-                  ? "font-bold text-white bg-[#1976d2] shadow"
-                  : "font-normal text-white/90 hover:bg-[#1976d2] hover:text-white"
+                  ? "bg-blue-50 font-semibold text-blue-700"
+                  : "text-slate-600 hover:bg-blue-50 hover:text-blue-700"
               )}
-              style={{
-                minHeight: 48,
-                textAlign: "left",
-              }}
             >
               <span>{LOCALE_LABEL(locale)}</span>
               <img

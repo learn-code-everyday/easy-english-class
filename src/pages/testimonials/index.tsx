@@ -1,316 +1,395 @@
 "use client";
 
 import { t, Trans } from "@lingui/macro";
-import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
+import AutoStoriesRoundedIcon from "@mui/icons-material/AutoStoriesRounded";
+import FormatQuoteRoundedIcon from "@mui/icons-material/FormatQuoteRounded";
+import StarRoundedIcon from "@mui/icons-material/StarRounded";
+import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
 import {
-  Box,
-  Container,
-  Typography,
   Avatar,
-  Paper,
+  Box,
   Button,
-  useTheme,
+  Chip,
+  Container,
+  Grid,
+  Paper,
+  Stack,
+  Typography,
 } from "@mui/material";
 import NextLink from "next/link";
 import React from "react";
-import { Autoplay, EffectCoverflow } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { toast } from "react-toastify";
 
 import MainLayout from "@/layouts/MainLayout";
 
-const testimonials = [
-  {
-    name: "Emily Nguyen",
-    position: t`Student`,
-    avatar: "/avatars/emily.jpg",
-    feedback: t`This English course transformed my confidence. The instructors are amazing and the curriculum is very practical.`,
-  },
-  {
-    name: "James Lee",
-    position: t`Working Professional`,
-    avatar: "/avatars/james.jpg",
-    feedback: t`I improved my business English tremendously. The classes fit well into my busy schedule.`,
-  },
-  {
-    name: "Sophia Tran",
-    position: t`University Student`,
-    avatar: "/avatars/sophia.jpg",
-    feedback: t`Fun and engaging lessons with a great community. Highly recommend to anyone learning English!`,
-  },
-  {
-    name: "Michael Pham",
-    position: t`Freelancer`,
-    avatar: "/avatars/michael.jpg",
-    feedback: t`Practical approach and lots of speaking practice. My English skills have never been better!`,
-  },
-  {
-    name: "Anna Le",
-    position: t`Entrepreneur`,
-    avatar: "/avatars/anna.jpg",
-    feedback: t`The course content is clear and practical, and the teachers really care about students' progress.`,
-  },
-  {
-    name: "David Hoang",
-    position: t`Marketing Specialist`,
-    avatar: "/avatars/david.jpg",
-    feedback: t`Thanks to these courses, my English communication at work has improved significantly.`,
-  },
-  {
-    name: "Linda Phan",
-    position: t`Graduate Student`,
-    avatar: "/avatars/linda.jpg",
-    feedback: t`I loved the interactive classes and the friendly environment. Learning English became fun!`,
-  },
-  {
-    name: "Tommy Vu",
-    position: t`Software Engineer`,
-    avatar: "/avatars/tommy.jpg",
-    feedback: t`Highly recommend! The course helped me prepare for my international job interviews.`,
-  },
-];
-
-const gradientBg =
-  "linear-gradient(135deg, #dbeafe 0%, #e0e7ff 40%, #fff7e5 100%)";
-
 const TestimonialsPage = () => {
-  const theme = useTheme();
+  const testimonials = [
+    {
+      name: "Emily Nguyen",
+      position: t`Student`,
+      avatar: "/avatars/emily.jpg",
+      metric: t`Speaking confidence`,
+      feedback: t`This English course transformed my confidence. The instructors are amazing and the curriculum is very practical.`,
+    },
+    {
+      name: "James Lee",
+      position: t`Working Professional`,
+      avatar: "/avatars/james.jpg",
+      metric: t`Business communication`,
+      feedback: t`I improved my business English tremendously. The classes fit well into my busy schedule.`,
+    },
+    {
+      name: "Sophia Tran",
+      position: t`University Student`,
+      avatar: "/avatars/sophia.jpg",
+      metric: t`Class engagement`,
+      feedback: t`Fun and engaging lessons with a great community. Highly recommend to anyone learning English!`,
+    },
+    {
+      name: "Michael Pham",
+      position: t`Freelancer`,
+      avatar: "/avatars/michael.jpg",
+      metric: t`Daily speaking`,
+      feedback: t`Practical approach and lots of speaking practice. My English skills have never been better!`,
+    },
+    {
+      name: "Anna Le",
+      position: t`Entrepreneur`,
+      avatar: "/avatars/anna.jpg",
+      metric: t`Clear learning path`,
+      feedback: t`The course content is clear and practical, and the teachers really care about students' progress.`,
+    },
+    {
+      name: "David Hoang",
+      position: t`Marketing Specialist`,
+      avatar: "/avatars/david.jpg",
+      metric: t`Workplace English`,
+      feedback: t`Thanks to these courses, my English communication at work has improved significantly.`,
+    },
+  ];
+
+  const stats = [
+    { value: "4.9/5", label: t`Average learner rating` },
+    { value: "92%", label: t`Students feel more confident` },
+    { value: "8K+", label: t`Practice sessions completed` },
+  ];
+
+  const handleJoinClick = () => {
+    toast.info(t`Opening registration page...`);
+  };
 
   return (
     <Box
       sx={{
-        py: { xs: 4, sm: 7, md: 9 },
-        background: gradientBg,
         minHeight: { xs: "100vh", md: "calc(100vh - 152px)" },
-        position: "relative",
+        background:
+          "linear-gradient(180deg, #f8fafc 0%, #eef6ff 48%, #ffffff 100%)",
+        color: "#0f172a",
+        overflow: "hidden",
+        py: { xs: 5, md: 8 },
       }}
     >
-      <Container maxWidth="md" sx={{ px: { xs: 0, sm: 2 } }}>
-        <Typography
-          variant="h3"
-          color="primary"
-          fontWeight={800}
-          textAlign="center"
-          gutterBottom
-          sx={{
-            mb: 2,
-            fontSize: { xs: 24, sm: 30, md: 38 },
-            letterSpacing: "-1.2px",
-            textShadow: "0 2px 16px rgba(0,64,128,0.08)",
-            fontFamily: "Montserrat, Roboto, Arial, sans-serif",
-          }}
-        >
-          <Trans>What Our Students Say</Trans>
-        </Typography>
-
-        <Typography
-          variant="h5"
-          color="primary"
-          fontWeight={500}
-          textAlign="center"
-          mb={4}
-          sx={{
-            fontStyle: "italic",
-            maxWidth: 700,
-            mx: "auto",
-            fontSize: { xs: 15, sm: 18, md: 21 },
-            letterSpacing: 0,
-            opacity: 0.9,
-          }}
-        >
-          <Trans>
-            Curious what our students think? Here&apos;s what they say after
-            transforming their English skills!
-          </Trans>
-        </Typography>
-
-        <Typography
-          variant="body1"
-          textAlign="center"
-          mb={7}
-          color="text.secondary"
-          sx={{ fontSize: { xs: 14, sm: 15.5 }, letterSpacing: 0.1 }}
-        >
-          <Trans>
-            Real feedback from students who have achieved outstanding results
-            with our English courses.
-          </Trans>
-        </Typography>
-
-        <Swiper
-          modules={[Autoplay, EffectCoverflow]}
-          spaceBetween={14}
-          slidesPerView={1}
-          loop
-          speed={6500}
-          autoplay={{
-            delay: 0,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
-          }}
-          grabCursor
-          breakpoints={{
-            0: { slidesPerView: 1 },
-            600: { slidesPerView: 1 },
-            900: { slidesPerView: 2 },
-            1200: { slidesPerView: 3 },
-            1536: { slidesPerView: 4 },
-          }}
-          style={{
-            paddingBottom: "40px",
-            transitionTimingFunction: "ease-in-out",
-          }}
-        >
-          {testimonials.map(({ name, position, avatar, feedback }) => (
-            <SwiperSlide key={name}>
-              <Paper
-                elevation={0}
+      <Container maxWidth="xl">
+        <Grid container spacing={{ xs: 4, lg: 6 }} alignItems="center">
+          <Grid item xs={12} lg={5}>
+            <Stack spacing={3}>
+              <Chip
+                icon={<StarRoundedIcon />}
+                label={t`Learner outcomes`}
                 sx={{
-                  backdropFilter: "blur(8px)",
-                  background: "rgba(255,255,255,0.92)",
-                  border: `1.5px solid ${theme.palette.primary.light}`,
-                  boxShadow:
-                    "0 8px 28px 0 rgba(3,90,142,0.10), 0 1.5px 7px 0 #b6e2ff50",
-                  p: { xs: 2.5, sm: 3.2, md: 4.5 },
-                  minHeight: { xs: 260, sm: 270, md: 300 },
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                  borderRadius: 4,
-                  position: "relative",
-                  transition:
-                    "transform 0.25s cubic-bezier(.4,2,.3,1), box-shadow 0.25s",
-                  mx: { xs: 1, sm: 2, md: 2.5 },
-                  "&:hover": {
-                    transform: "translateY(-8px) scale(1.03)",
-                    boxShadow:
-                      "0 14px 42px 0 rgba(3,90,142,0.18), 0 2px 10px 0 #b6e2ff77",
-                  },
+                  alignSelf: "flex-start",
+                  borderRadius: "8px",
+                  border: "1px solid #bfdbfe",
+                  backgroundColor: "#eff6ff",
+                  color: "#1d4ed8",
+                  fontWeight: 800,
+                  letterSpacing: 0,
+                  px: 0.5,
                 }}
-              >
-                <Box
+              />
+
+              <Box>
+                <Typography
+                  component="h1"
                   sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    mb: { xs: 1.5, md: 2.5 },
+                    maxWidth: 620,
+                    fontSize: { xs: 34, sm: 44, md: 58 },
+                    fontWeight: 900,
+                    letterSpacing: 0,
+                    lineHeight: 1.02,
                   }}
                 >
-                  <Avatar
-                    src={avatar}
-                    alt={name}
-                    sx={{
-                      width: { xs: 52, sm: 56, md: 62 },
-                      height: { xs: 52, sm: 56, md: 62 },
-                      mr: 2.5,
-                      border: "3px solid #ffb23f",
-                      boxShadow: "0 2px 12px 0 #ffddab, 0 0 0 3px #fff",
-                      background:
-                        "linear-gradient(135deg, #ffe6c6 0%, #fc9a14 100%)",
-                    }}
-                  />
-                  <Box>
-                    <Typography
-                      fontWeight={700}
-                      fontSize={{ xs: 16.5, md: 18.5 }}
-                      color="primary"
-                      sx={{
-                        fontFamily: "Montserrat, Roboto, Arial, sans-serif",
-                      }}
-                    >
-                      {name}
-                    </Typography>
-                    <Typography
-                      variant="caption"
-                      color="#fc9a14"
-                      fontWeight={600}
-                      fontSize={{ xs: 12.5, md: 13.5 }}
-                      sx={{
-                        letterSpacing: 0.2,
-                        background:
-                          "linear-gradient(90deg, #fc9a14 30%, #ffe6c6 100%)",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                        fontFamily: "Montserrat, Roboto, Arial, sans-serif",
-                      }}
-                    >
-                      {position}
-                    </Typography>
-                  </Box>
-                </Box>
+                  <Trans>Real English progress, told by real students.</Trans>
+                </Typography>
                 <Typography
                   sx={{
-                    fontStyle: "italic",
-                    color: "#383a47",
-                    flexGrow: 1,
-                    fontSize: { xs: 15.5, md: 16.5 },
-                    lineHeight: 1.7,
-                    position: "relative",
-                    paddingLeft: "1.75rem",
-                    fontWeight: 500,
+                    mt: 2.5,
+                    maxWidth: 590,
+                    color: "#475569",
+                    fontSize: { xs: 16, md: 18 },
+                    lineHeight: 1.75,
                     letterSpacing: 0,
-                    textShadow: "0 1px 8px #ffe6c660",
-                    "&::before": {
-                      content: "'“'",
-                      position: "absolute",
-                      left: 0,
-                      top: -6,
-                      fontSize: 40,
-                      color:
-                        "linear-gradient(135deg, #fc9a14 70%, #ffe6c6 100%)",
-                      fontWeight: "bold",
-                      lineHeight: 1,
-                      fontFamily: "serif",
-                      opacity: 0.7,
+                  }}
+                >
+                  <Trans>
+                    See how learners build confidence through guided lessons,
+                    speaking practice, and teacher feedback that fits their
+                    schedule.
+                  </Trans>
+                </Typography>
+              </Box>
+
+              <Stack direction={{ xs: "column", sm: "row" }} spacing={1.5}>
+                <Button
+                  component={NextLink}
+                  href="/register"
+                  variant="contained"
+                  endIcon={<ArrowForwardRoundedIcon />}
+                  onClick={handleJoinClick}
+                  sx={{
+                    borderRadius: "8px",
+                    backgroundColor: "#2563eb",
+                    boxShadow: "0 14px 28px rgba(37, 99, 235, 0.22)",
+                    fontWeight: 800,
+                    px: 3,
+                    py: 1.4,
+                    textTransform: "none",
+                    "&:hover": {
+                      backgroundColor: "#1d4ed8",
+                      boxShadow: "0 18px 34px rgba(37, 99, 235, 0.28)",
+                      transform: "translateY(-1px)",
                     },
                   }}
                 >
-                  {feedback}
-                </Typography>
-              </Paper>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+                  <Trans>Join Now</Trans>
+                </Button>
+                <Button
+                  component={NextLink}
+                  href="/courses/basic"
+                  variant="outlined"
+                  sx={{
+                    borderRadius: "8px",
+                    borderColor: "#cbd5e1",
+                    color: "#0f172a",
+                    fontWeight: 800,
+                    px: 3,
+                    py: 1.4,
+                    textTransform: "none",
+                    "&:hover": {
+                      borderColor: "#2563eb",
+                      backgroundColor: "#eff6ff",
+                    },
+                  }}
+                >
+                  <Trans>Explore lessons</Trans>
+                </Button>
+              </Stack>
+            </Stack>
+          </Grid>
 
-        <Box textAlign="center" mt={8}>
-          <Typography
-            variant="h6"
-            fontWeight={800}
-            color="primary"
-            mb={2}
-            sx={{
-              fontSize: { xs: 17, md: 20 },
-              letterSpacing: 0.2,
-              fontFamily: "Montserrat, Roboto, Arial, sans-serif",
-            }}
+          <Grid item xs={12} lg={7}>
+            <Paper
+              elevation={0}
+              sx={{
+                borderRadius: "8px",
+                border: "1px solid rgba(148, 163, 184, 0.28)",
+                backgroundColor: "rgba(255, 255, 255, 0.86)",
+                boxShadow: "0 24px 70px rgba(15, 23, 42, 0.10)",
+                p: { xs: 2, sm: 3 },
+              }}
+            >
+              <Grid container spacing={2}>
+                {stats.map((item) => (
+                  <Grid item xs={12} sm={4} key={item.value}>
+                    <Box
+                      sx={{
+                        borderRadius: "8px",
+                        backgroundColor: "#f8fafc",
+                        border: "1px solid #e2e8f0",
+                        p: 2.25,
+                        minHeight: 118,
+                      }}
+                    >
+                      <Typography
+                        sx={{
+                          color: "#2563eb",
+                          fontSize: { xs: 28, md: 34 },
+                          fontWeight: 900,
+                          letterSpacing: 0,
+                          lineHeight: 1,
+                        }}
+                      >
+                        {item.value}
+                      </Typography>
+                      <Typography
+                        sx={{
+                          mt: 1,
+                          color: "#475569",
+                          fontWeight: 700,
+                          lineHeight: 1.45,
+                        }}
+                      >
+                        {item.label}
+                      </Typography>
+                    </Box>
+                  </Grid>
+                ))}
+              </Grid>
+            </Paper>
+          </Grid>
+        </Grid>
+
+        <Box sx={{ mt: { xs: 5, md: 8 } }}>
+          <Stack
+            direction={{ xs: "column", md: "row" }}
+            justifyContent="space-between"
+            alignItems={{ xs: "flex-start", md: "flex-end" }}
+            spacing={2}
+            sx={{ mb: 3 }}
           >
-            <Trans>Ready to start your own success story?</Trans>
-          </Typography>
-          <Button
-            variant="contained"
-            component={NextLink}
-            href="/register"
-            endIcon={
-              <ArrowForwardIosRoundedIcon sx={{ fontSize: 21, ml: 0.5 }} />
-            }
-            sx={{
-              borderRadius: 999,
-              background: "linear-gradient(92deg, #fc9a14 30%, #ffe6c6 100%)",
-              color: "white",
-              fontWeight: 700,
-              fontSize: { xs: 15.5, md: 16.5 },
-              px: 4.5,
-              py: 1.4,
-              boxShadow: "0 2px 14px #ffc67260",
-              transition: "background 0.2s, box-shadow 0.2s, transform 0.2s",
-              textTransform: "none",
-              "&:hover": {
-                background: "linear-gradient(90deg, #e2940f 30%, #ffe6c6 100%)",
-                boxShadow: "0 3px 20px #ffc67290",
-                transform: "scale(1.05)",
-              },
-            }}
-          >
-            <Trans>Join Now</Trans>
-          </Button>
+            <Box>
+              <Typography
+                component="h2"
+                sx={{
+                  fontSize: { xs: 26, md: 36 },
+                  fontWeight: 900,
+                  letterSpacing: 0,
+                }}
+              >
+                <Trans>What our students say</Trans>
+              </Typography>
+              <Typography
+                sx={{
+                  mt: 1,
+                  maxWidth: 650,
+                  color: "#64748b",
+                  fontSize: { xs: 15, md: 16 },
+                  lineHeight: 1.7,
+                }}
+              >
+                <Trans>
+                  Practical wins from students learning for work, school,
+                  interviews, and everyday conversations.
+                </Trans>
+              </Typography>
+            </Box>
+
+            <Stack direction="row" spacing={1}>
+              <Chip
+                icon={<TrendingUpRoundedIcon />}
+                label={t`Confidence`}
+                sx={{ borderRadius: "8px", fontWeight: 800 }}
+              />
+              <Chip
+                icon={<AutoStoriesRoundedIcon />}
+                label={t`Practice`}
+                sx={{ borderRadius: "8px", fontWeight: 800 }}
+              />
+            </Stack>
+          </Stack>
+
+          <Grid container spacing={2.5}>
+            {testimonials.map(
+              ({ name, position, avatar, feedback, metric }) => (
+                <Grid item xs={12} sm={6} lg={4} key={name}>
+                  <Paper
+                    elevation={0}
+                    sx={{
+                      height: "100%",
+                      borderRadius: "8px",
+                      border: "1px solid #e2e8f0",
+                      backgroundColor: "#ffffff",
+                      boxShadow: "0 14px 38px rgba(15, 23, 42, 0.06)",
+                      p: { xs: 2.5, md: 3 },
+                      transition:
+                        "transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease",
+                      "&:hover": {
+                        borderColor: "#bfdbfe",
+                        boxShadow: "0 20px 48px rgba(37, 99, 235, 0.12)",
+                        transform: "translateY(-4px)",
+                      },
+                    }}
+                  >
+                    <Stack spacing={2.5} sx={{ height: "100%" }}>
+                      <Stack
+                        direction="row"
+                        alignItems="center"
+                        justifyContent="space-between"
+                        spacing={2}
+                      >
+                        <Stack
+                          direction="row"
+                          alignItems="center"
+                          spacing={1.5}
+                        >
+                          <Avatar
+                            src={avatar}
+                            alt={name}
+                            sx={{
+                              width: 54,
+                              height: 54,
+                              border: "3px solid #ffffff",
+                              boxShadow: "0 0 0 1px #bfdbfe",
+                            }}
+                          />
+                          <Box>
+                            <Typography sx={{ fontWeight: 900 }}>
+                              {name}
+                            </Typography>
+                            <Typography
+                              sx={{
+                                color: "#64748b",
+                                fontSize: 13,
+                                fontWeight: 700,
+                              }}
+                            >
+                              {position}
+                            </Typography>
+                          </Box>
+                        </Stack>
+                        <FormatQuoteRoundedIcon
+                          sx={{ color: "#bfdbfe", fontSize: 34 }}
+                        />
+                      </Stack>
+
+                      <Typography
+                        sx={{
+                          color: "#1e293b",
+                          flexGrow: 1,
+                          fontSize: { xs: 15, md: 16 },
+                          lineHeight: 1.75,
+                          letterSpacing: 0,
+                        }}
+                      >
+                        {feedback}
+                      </Typography>
+
+                      <Box
+                        sx={{
+                          borderRadius: "8px",
+                          backgroundColor: "#f8fafc",
+                          border: "1px solid #e2e8f0",
+                          px: 1.5,
+                          py: 1,
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            color: "#2563eb",
+                            fontSize: 13,
+                            fontWeight: 900,
+                          }}
+                        >
+                          {metric}
+                        </Typography>
+                      </Box>
+                    </Stack>
+                  </Paper>
+                </Grid>
+              )
+            )}
+          </Grid>
         </Box>
       </Container>
     </Box>

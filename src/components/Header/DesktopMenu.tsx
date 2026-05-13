@@ -45,7 +45,7 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
 
   return (
     <>
-      <nav className="hidden items-center gap-4 md:flex lg:gap-8">
+      <nav className="hidden items-center gap-1 lg:flex xl:gap-2">
         {menu.map((item) =>
           item.children ? (
             <Dropdown
@@ -62,8 +62,10 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
               key={item.href}
               href={String(item.href)}
               className={
-                "transition hover:text-blue-600" +
-                (pathname === item.href ? " text-blue-700 font-bold" : "")
+                "rounded-full px-3 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2" +
+                (pathname === item.href
+                  ? " bg-blue-50 text-blue-700 font-semibold"
+                  : "")
               }
               prefetch
             >
@@ -73,12 +75,12 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
         )}
         <LocaleDropdown />
       </nav>
-      <div className="md:block hidden">
+      <div className="hidden lg:block">
         {!auth ? (
           <>
             <Button
               onClick={() => setOpenModal(true)}
-              className="ml-4 rounded-full bg-blue-600 px-5 py-2 font-semibold text-white transition hover:bg-blue-700 md:inline-block"
+              className="ml-3 rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 lg:inline-block"
             >
               <Trans>Login</Trans>
             </Button>
@@ -91,7 +93,14 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
               aria-controls={open ? "user-menu" : undefined}
               aria-haspopup="true"
               aria-expanded={open ? "true" : undefined}
-              className="ml-4 hidden md:flex items-center gap-2 text-blue-700"
+              className="ml-4 hidden items-center gap-2 text-blue-700 lg:flex"
+              sx={{
+                borderRadius: 999,
+                px: 1.5,
+                py: 0.75,
+                textTransform: "none",
+                "&:hover": { backgroundColor: "#eff6ff" },
+              }}
             >
               <Avatar
                 alt={auth.name || auth.email}
@@ -116,7 +125,14 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
                 horizontal: "right",
               }}
               PaperProps={{
-                sx: { minWidth: 150, py: 1 },
+                sx: {
+                  minWidth: 190,
+                  py: 1,
+                  mt: 1,
+                  borderRadius: 3,
+                  border: "1px solid #e2e8f0",
+                  boxShadow: "0 18px 45px rgba(15, 23, 42, 0.12)",
+                },
               }}
             >
               <MenuItem
@@ -125,7 +141,7 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
                 onClick={handleClose}
                 sx={{ fontWeight: "bold" }}
               >
-                <Trans>Management Site</Trans>
+                <Trans>Go to Dashboard</Trans>
               </MenuItem>
               <MenuItem onClick={handleLogout} sx={{ color: "red" }}>
                 <Trans>Logout</Trans>

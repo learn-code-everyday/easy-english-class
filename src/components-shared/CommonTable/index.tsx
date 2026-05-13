@@ -1,3 +1,4 @@
+import { t } from "@lingui/macro";
 import {
   Table,
   TableContainer,
@@ -75,7 +76,7 @@ export default function CommonTable<T extends object>({
   rowsPerPageOptions = [5, 10, 25, 50, 100],
   defaultRowsPerPage = 10,
   dense = false,
-  emptyText = "No data",
+  emptyText = t`No data`,
 }: CommonTableProps<T>) {
   const [page, setPage] = useState<number>(0);
   const [rowsPerPage, setRowsPerPage] = useState(defaultRowsPerPage);
@@ -137,20 +138,27 @@ export default function CommonTable<T extends object>({
       sx={{
         width: "100%",
         overflow: "hidden",
-        p: 2,
-        borderRadius: 3,
-        boxShadow: 3,
-        bgcolor: "#fafbfc",
-        border: "1px solid #f0f1f4",
+        p: { xs: 1.5, sm: 2 },
+        borderRadius: "var(--app-radius)",
+        boxShadow: "var(--app-shadow-sm)",
+        bgcolor: "#fff",
+        border: "1px solid var(--app-border)",
       }}
     >
-      <Stack direction="row" spacing={2} alignItems="center" mb={2}>
+      <Stack
+        direction={{ xs: "column", sm: "row" }}
+        spacing={1.5}
+        alignItems={{ xs: "stretch", sm: "center" }}
+        mb={2}
+        useFlexGap
+        flexWrap="wrap"
+      >
         {filters.map((filter) =>
           filter.type === "search" ? (
             <FormControl
               size="small"
               key={String(filter.field)}
-              sx={{ minWidth: 220, bgcolor: "#fff" }}
+              sx={{ minWidth: { xs: "100%", sm: 220 }, bgcolor: "#fff" }}
               variant="outlined"
             >
               <OutlinedInput
@@ -159,17 +167,24 @@ export default function CommonTable<T extends object>({
                 value={filter.value}
                 onChange={(e) => filter.onChange(e.target.value)}
                 placeholder={filter.placeholder || filter.label}
-                sx={{ borderRadius: 2, boxShadow: "0 1px 2px #0001" }}
+                sx={{
+                  borderRadius: 3,
+                  boxShadow: "0 1px 2px rgba(15, 23, 42, 0.06)",
+                }}
               />
             </FormControl>
           ) : (
-            <FormControl size="small" key={String(filter.field)}>
+            <FormControl
+              size="small"
+              key={String(filter.field)}
+              sx={{ minWidth: { xs: "100%", sm: 150 } }}
+            >
               <InputLabel>{filter.label}</InputLabel>
               <Select
                 label={filter.label}
                 value={filter.value || "ALL"}
                 onChange={(e) => filter.onChange(e.target.value)}
-                sx={{ minWidth: 130, borderRadius: 2, bgcolor: "#fff" }}
+                sx={{ borderRadius: 3, bgcolor: "#fff" }}
               >
                 {filter.options?.map((opt) => (
                   <MenuItem value={opt.value} key={opt.value}>
@@ -182,7 +197,13 @@ export default function CommonTable<T extends object>({
         )}
       </Stack>
 
-      <TableContainer sx={{ borderRadius: 3 }}>
+      <TableContainer
+        sx={{
+          borderRadius: 3,
+          border: "1px solid #eef2f7",
+          overflowX: "auto",
+        }}
+      >
         <Table
           size={dense ? "small" : "medium"}
           sx={{
@@ -193,7 +214,7 @@ export default function CommonTable<T extends object>({
               borderBottom: "2px solid #e2e8f0",
             },
             "& tbody tr:hover": {
-              bgcolor: "#f6f9fd",
+              bgcolor: "#f8fafc",
               transition: "background 0.2s",
             },
             "& tbody td": {
@@ -224,7 +245,7 @@ export default function CommonTable<T extends object>({
         page={useServerPaging ? pagination!.page - 1 : page}
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
-        labelRowsPerPage="Rows per page:"
+        labelRowsPerPage={t`Rows per page:`}
         sx={{
           mt: 1,
           ".MuiTablePagination-toolbar": { minHeight: 50 },

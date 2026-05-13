@@ -30,7 +30,7 @@ function MenuIcon({
         size={props.size ?? 20}
         className={clsx(
           "transition",
-          active ? "text-[#FF7125]" : "text-gray-700",
+          active ? "text-blue-600" : "text-slate-500",
           props.className
         )}
       />
@@ -42,7 +42,7 @@ function MenuIcon({
       size={props.size ?? 20}
       className={clsx(
         "transition",
-        active ? "text-[#FF7125]" : "text-gray-700",
+        active ? "text-blue-600" : "text-slate-500",
         props.className
       )}
     />
@@ -67,12 +67,12 @@ const AdminSidebarMenu: React.FC<AdminSidebarMenuProps> = ({
           href={menuData.url}
           onClick={() => setCollapseShow(false)}
           className={clsx(
-            "rounded-md px-3 py-2 transition",
-            "hover:bg-primary hover:bg-opacity-50 hover:bg-[#FAEEE1]",
-            "flex items-center gap-4",
+            "rounded-2xl px-3 py-2.5 transition",
+            "hover:bg-blue-50 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500",
+            "flex items-center gap-3 text-sm",
             active
-              ? "border-l-4 border-[#FF7125] bg-[#FAEEE1] text-[#FF7125] font-semibold"
-              : "text-gray-800"
+              ? "bg-blue-50 text-blue-700 font-semibold shadow-sm"
+              : "text-slate-700"
           )}
         >
           <MenuIcon icon={menuData.icon} active={active} />
@@ -90,8 +90,8 @@ const AdminSidebarMenu: React.FC<AdminSidebarMenuProps> = ({
   ) {
     return (
       <>
-        <hr className="my-3 md:min-w-full" />
-        <h6 className="block py-1 text-xs font-bold uppercase text-primary-dark no-underline md:min-w-full">
+        <hr className="my-4 border-slate-200 md:min-w-full" />
+        <h6 className="block rounded-xl bg-slate-100 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-500 no-underline md:min-w-full">
           <Trans>Loading...</Trans>
         </h6>
       </>
@@ -107,11 +107,11 @@ const AdminSidebarMenu: React.FC<AdminSidebarMenuProps> = ({
         return (
           cateMenu.length > 0 && (
             <Fragment key={i}>
-              <hr className="my-3 md:min-w-full" />
-              <h6 className="block py-1 text-sm uppercase text-[#848484] no-underline md:min-w-full">
+              <hr className="my-4 border-slate-200 md:min-w-full" />
+              <h6 className="block px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-400 no-underline md:min-w-full">
                 {cate}
               </h6>
-              <ul className="flex list-none flex-col md:min-w-full md:flex-col">
+              <ul className="mt-2 flex list-none flex-col gap-1 md:min-w-full md:flex-col">
                 {cateMenu.map((item) => (
                   <MenuItem menuData={item} key={item.code} />
                 ))}

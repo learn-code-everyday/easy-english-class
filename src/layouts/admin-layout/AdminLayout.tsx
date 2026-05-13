@@ -14,22 +14,26 @@ interface LayoutProps {
 }
 
 export default function AdminLayout({ children }: LayoutProps) {
-  const { auth, authStatus, logout } = useAuthStore();
+  const { auth, authStatus, logout, verifiedToken } = useAuthStore();
   const token = GetAuthToken();
   const router = useRouter();
   const [collapseShow, setCollapseShow] = useState<boolean>(false);
 
   useEffect(() => {
     if (!token) {
-      router.push("/");
+      router.push("/login");
     }
 
     if (authStatus === AuthStatuses.LOADED) {
-      if (!auth) {
+      if (!auth || verifiedToken !== token) {
         logout?.();
       }
     }
-  }, [authStatus, auth, router.pathname, router.isReady]);
+  }, [authStatus, auth, logout, router, token, verifiedToken]);
+
+  if (!token || verifiedToken !== token || authStatus !== AuthStatuses.LOADED) {
+    return null;
+  }
 
   return (
     <>
@@ -37,12 +41,12 @@ export default function AdminLayout({ children }: LayoutProps) {
         collapseShow={collapseShow}
         setCollapseShow={setCollapseShow}
       />
-      <div className="flex flex-col min-h-screen md:ml-64 lg:ml-72">
+      <div className="flex min-h-screen flex-col bg-[var(--app-bg)] md:ml-64 lg:ml-72">
         <AdminHeaderBar setCollapseShow={setCollapseShow} />
-        <div className="mt-[61px] flex-1 p-5">
+        <main className="mt-[72px] flex-1 p-4 sm:p-6 lg:p-8">
           <PageHeader />
           {children}
-        </div>
+        </main>
       </div>
     </>
   );

@@ -79,7 +79,7 @@ export function clearAuthSession() {
   window.sessionStorage.removeItem(AUTH_STORAGE_KEY);
 }
 
-export function expireAuthSession(redirectTo = "/") {
+export function expireAuthSession(redirectTo = "/login") {
   if (typeof window === "undefined") return;
 
   clearAuthSession();

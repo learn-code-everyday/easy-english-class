@@ -1,4 +1,5 @@
-import { TableBody, TableRow, TableCell, Skeleton } from "@mui/material";
+import { Trans } from "@lingui/macro";
+import { TableBody, TableRow, TableCell, Skeleton, Box } from "@mui/material";
 import React from "react";
 
 import { Column, getNestedValue } from ".";
@@ -18,7 +19,7 @@ export default function TableBodyContent<T>({
   columns,
   data,
   loading = false,
-  emptyText = "No data",
+  emptyText,
   skeletonRows = 5,
 }: TableBodyContentProps<T>) {
   if (loading) {
@@ -28,7 +29,11 @@ export default function TableBodyContent<T>({
           <TableRow key={idx}>
             {columns.map((col, colIdx) => (
               <TableCell key={colIdx}>
-                <Skeleton />
+                <Skeleton
+                  variant="rounded"
+                  height={34}
+                  sx={{ borderRadius: 2 }}
+                />
               </TableCell>
             ))}
           </TableRow>
@@ -41,8 +46,15 @@ export default function TableBodyContent<T>({
     return (
       <TableBody>
         <TableRow>
-          <TableCell colSpan={columns.length} align="center">
-            {emptyText}
+          <TableCell colSpan={columns.length} align="center" sx={{ py: 8 }}>
+            <Box className="mx-auto flex max-w-sm flex-col items-center rounded-3xl border border-dashed border-slate-200 bg-slate-50 px-6 py-8 text-center">
+              <div className="mb-3 flex size-12 items-center justify-center rounded-full bg-white text-xl shadow-sm">
+                —
+              </div>
+              <div className="text-sm font-semibold text-slate-700">
+                {emptyText || <Trans>No data</Trans>}
+              </div>
+            </Box>
           </TableCell>
         </TableRow>
       </TableBody>

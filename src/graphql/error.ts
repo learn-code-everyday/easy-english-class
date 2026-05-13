@@ -10,7 +10,7 @@ export const ErrorLink = onError(({ graphQLErrors, networkError }) => {
   try {
     if (isAuthSessionError({ graphQLErrors, networkError })) {
       toast.error(t`Your session has expired. Please sign in again.`);
-      expireAuthSession("/");
+      expireAuthSession("/login");
       return;
     }
 

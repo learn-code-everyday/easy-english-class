@@ -1,43 +1,47 @@
 import { t, Trans } from "@lingui/macro";
 
-const courses = [
+const getCourses = () => [
   {
     name: t`Beginner English`,
-    desc: t`A cheerful young adult learning English basics, sitting with a notebook and pen, casual classroom background, bright and friendly atmosphere, warm colors, simple communication icons floating around`,
+    desc: t`Build everyday vocabulary, pronunciation, and simple conversations with guided practice from day one.`,
     image: "/images/english/beginner.jpg",
   },
   {
     name: t`Intermediate English`,
-    desc: t`A confident young professional giving a presentation in English, standing in front of a small audience, business casual attire, modern office or seminar room, confident gestures, clear and bright lighting`,
+    desc: t`Strengthen fluency for work, study, and travel through structured speaking, listening, and presentation tasks.`,
     image: "/images/english/intermediate.jpg",
   },
   {
     name: t`Advanced English`,
-    desc: t`A focused student studying for IELTS, surrounded by textbooks and laptop, calm and quiet library environment, serious and determined expression, academic atmosphere with charts and notes visible`,
+    desc: t`Refine academic writing, test strategies, and confident discussion skills for higher-level English goals.`,
     image: "/images/english/advanced.jpg",
   },
 ];
 
 export default function CoursesSection() {
+  const courses = getCourses();
+
   return (
-    <section className="bg-white px-6 py-16">
-      <h2 className="mb-12 text-center text-3xl font-bold">
+    <section className="bg-white px-5 py-16 sm:px-6">
+      <h2 className="mb-10 text-center text-3xl font-bold tracking-tight text-slate-950">
         <Trans>Our courses</Trans>
       </h2>
       <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-3">
         {courses.map((c, idx) => (
           <div
             key={idx}
-            className="overflow-hidden rounded-lg shadow-lg transition hover:scale-105"
+            className="overflow-hidden rounded-[var(--app-radius)] border border-slate-200 bg-white shadow-[var(--app-shadow-sm)] transition hover:-translate-y-1 hover:shadow-[var(--app-shadow-md)]"
           >
             <img
               src={c.image}
               alt={c.name}
               className="h-48 w-full object-cover"
             />
-            <div className="p-4">
-              <h3 className="mb-2 text-xl font-semibold">{c.name}</h3>
-              <p className="text-gray-600">{c.desc}</p>
+            <div className="p-5">
+              <h3 className="mb-2 text-xl font-semibold text-slate-950">
+                {c.name}
+              </h3>
+              <p className="line-clamp-4 leading-7 text-slate-600">{c.desc}</p>
             </div>
           </div>
         ))}

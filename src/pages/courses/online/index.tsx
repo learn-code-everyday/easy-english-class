@@ -1,112 +1,72 @@
 "use client";
 
-import { t, Trans } from "@lingui/macro";
-import { Container, Typography } from "@mui/material";
-import React, { useState } from "react";
+import { t } from "@lingui/macro";
+import React from "react";
 
 import MainLayout from "@/layouts/MainLayout";
-import CourseFilter from "@/modules/EnglishOnlinePage/CourseFilter";
-import OnlineCourseCard from "@/modules/EnglishOnlinePage/OnlineCourseCard";
-
-const allCourses = [
-  {
-    id: "english-beginner",
-    title: t`English for Beginners`,
-    description: t`Learn the basics of English grammar, vocabulary, and pronunciation.`,
-    duration: t`3 months`,
-    price: 120,
-    image: "/courses/beginner.jpg",
-    category: "General",
-    detail: t`This course covers fundamental grammar, basic vocabulary and pronunciation to start your English journey confidently.`,
-  },
-  {
-    id: "conversational-english",
-    title: t`Conversational English`,
-    description: t`Improve your speaking skills through practical conversation practice.`,
-    duration: t`2 months`,
-    price: 150,
-    image: "/courses/conversation.jpg",
-    category: "General",
-    detail: t`Practical lessons focused on everyday conversations, idioms, and expressions for fluency.`,
-  },
-  {
-    id: "business-english",
-    title: t`Business English`,
-    description: t`Master English skills tailored for professional and business contexts.`,
-    duration: t`4 months`,
-    price: 200,
-    image: "/courses/business.jpg",
-    category: "Professional",
-    detail: t`Learn business vocabulary, email writing, presentations, negotiations, and more.`,
-  },
-  {
-    id: "ielts-preparation",
-    title: t`IELTS Preparation`,
-    description: t`Prepare effectively for the IELTS exam with experienced instructors.`,
-    duration: t`5 months`,
-    price: 300,
-    image: "/courses/ielts.jpg",
-    category: "Exam",
-    detail: t`Focused training on IELTS Listening, Reading, Writing and Speaking with test strategies.`,
-  },
-];
-
-const categories = [
-  { label: t`All`, value: "All" },
-  { label: t`General`, value: "General" },
-  { label: t`Professional`, value: "Professional" },
-  { label: t`Exam`, value: "Exam" },
-];
+import CourseLandingPage from "@/modules/CourseLandingPage";
 
 export default function OnlineCoursesPage() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const filteredCourses =
-    selectedCategory === "All"
-      ? allCourses
-      : allCourses.filter((course) => course.category === selectedCategory);
-
   return (
-    <Container maxWidth="lg" sx={{ py: 8 }}>
-      <Typography
-        variant="h3"
-        fontWeight="bold"
-        color="#035a8e"
-        textAlign="center"
-        gutterBottom
-      >
-        <Trans>Our Online Courses</Trans>
-      </Typography>
-      <Typography
-        variant="body1"
-        color="text.secondary"
-        textAlign="center"
-        mb={6}
-      >
-        <Trans>
-          Select the course that fits your learning goals. Click &quot;View
-          Details&quot; for more info.
-        </Trans>
-      </Typography>
-
-      <CourseFilter
-        selected={selectedCategory}
-        options={categories}
-        onChange={setSelectedCategory}
-      />
-
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-          gap: "24px",
-        }}
-      >
-        {filteredCourses.map((course) => (
-          <OnlineCourseCard key={course.id} course={course} />
-        ))}
-      </div>
-    </Container>
+    <CourseLandingPage
+      course={{
+        accent: "#0f766e",
+        eyebrow: t`Online Course`,
+        title: t`Flexible online English lessons that fit your week.`,
+        description: t`Study live and self-paced lessons from anywhere with structured modules, practice tasks, and support for speaking, business, and exam goals.`,
+        targetLearners: [
+          t`Remote learners who need a flexible schedule`,
+          t`Working adults balancing study with a busy week`,
+          t`Students who want guided online practice`,
+        ],
+        roadmap: [
+          t`Choose a learning track that matches your goal`,
+          t`Complete weekly video lessons and practice tasks`,
+          t`Join live speaking sessions for real interaction`,
+          t`Track progress and adjust your study plan`,
+        ],
+        outcomes: [
+          t`Maintain a consistent English practice routine`,
+          t`Improve speaking and listening from home`,
+          t`Access lessons on desktop and mobile`,
+          t`Get clear next steps after every module`,
+        ],
+        modules: [
+          {
+            title: t`Live speaking lab`,
+            description: t`Practice conversations with teacher-guided prompts.`,
+            meta: t`Online · 30 min`,
+          },
+          {
+            title: t`Self-paced grammar`,
+            description: t`Review grammar patterns with short exercises.`,
+            meta: t`Online · 25 min`,
+          },
+          {
+            title: t`Business track`,
+            description: t`Prepare for meetings, emails, and presentations.`,
+            meta: t`Online · 35 min`,
+          },
+          {
+            title: t`Progress review`,
+            description: t`Check completed tasks and plan your next lesson.`,
+            meta: t`Online · 15 min`,
+          },
+        ],
+        packages: [
+          {
+            name: t`Online Flex`,
+            price: t`$79`,
+            description: t`Self-paced access with weekly live practice options.`,
+          },
+          {
+            name: t`Online Plus`,
+            price: t`$159`,
+            description: t`Live coaching, feedback, and a personalized study plan.`,
+          },
+        ],
+      }}
+    />
   );
 }
 

@@ -10,9 +10,9 @@ interface LayoutProps {
 
 export default function MainLayout({ children }: LayoutProps) {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex min-h-screen flex-col bg-[var(--app-bg)] text-slate-950">
       <Header />
-      <div className="pt-[61px] flex-1">{children}</div>
+      <div className="flex-1 pt-[72px]">{children}</div>
       <LiveChatSupport />
       <Footer />
     </div>

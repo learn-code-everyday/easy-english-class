@@ -1,3 +1,4 @@
+import { t } from "@lingui/macro";
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
 import { FiMenu } from "react-icons/fi";
@@ -15,14 +16,16 @@ const AdminHeaderBar: React.FC<Props> = ({ setCollapseShow }) => {
   const headerText = useCurrentHeader();
 
   return (
-    <div className="fixed inset-x-0 z-30 ml-0 bg-white px-5 lg:px-10 py-3 shadow md:ml-64 lg:ml-72 mt-0">
+    <header className="fixed inset-x-0 z-30 ml-0 mt-0 border-b border-slate-200 bg-white/90 px-4 py-3 shadow-sm backdrop-blur-xl md:ml-64 lg:ml-72 lg:px-8">
       <div className="flex w-full items-center justify-between">
         <Link href="/" className="block md:hidden">
           <img src={"/logo.png"} alt="logo" width={46} height={46} />
         </Link>
 
         {/* Show Header in center */}
-        <div className="font-semibold text-lg text-center ">{headerText}</div>
+        <div className="text-center text-lg font-semibold text-slate-900">
+          {headerText}
+        </div>
 
         <div className="hidden md:flex items-center">
           {auth && <LocaleDropdown />}
@@ -30,14 +33,15 @@ const AdminHeaderBar: React.FC<Props> = ({ setCollapseShow }) => {
 
         {/* Mobile Toggle button */}
         <button
-          className="cursor-pointer text-black bg-white rounded p-2 shadow md:hidden"
+          className="cursor-pointer rounded-full border border-slate-200 bg-white p-2 text-slate-700 shadow-sm transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500 md:hidden"
           type="button"
           onClick={() => setCollapseShow(true)}
+          aria-label={t`Open menu`}
         >
           <FiMenu size={26} />
         </button>
       </div>
-    </div>
+    </header>
   );
 };
 

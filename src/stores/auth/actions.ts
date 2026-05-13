@@ -1,7 +1,7 @@
 import { t } from "@lingui/macro";
 
 import { GetAuthToken, SetAuthToken } from "@/graphql/auth";
-import { clearAuthSession, isAuthSessionError } from "@/graphql/session";
+import { clearAuthSession, expireAuthSession } from "@/graphql/session";
 import { toast } from "@/helpers/toast";
 import { UserService } from "@/services/user/user.repo";
 
@@ -13,6 +13,7 @@ export async function loadProfile() {
   const setLoading = useLoadingStore.getState().setLoading;
   const setAuth = useAuthStore.getState().setAuth;
   const setAuthStatus = useAuthStore.getState().setAuthStatus;
+  const setVerifiedToken = useAuthStore.getState().setVerifiedToken;
 
   try {
     setLoading(true);
@@ -22,16 +23,20 @@ export async function loadProfile() {
     if (token) {
       const result = await UserService.userGetMe(token);
       setAuth(result.data.userGetMe);
+      setVerifiedToken(token);
+    } else {
+      setAuth(undefined);
+      setVerifiedToken(undefined);
     }
 
     setAuthStatus(AuthStatuses.LOADED);
   } catch (error) {
     console.error(error);
-    if (isAuthSessionError(error)) {
-      clearAuthSession();
-      setAuth(undefined);
-    }
+    clearAuthSession();
+    setAuth(undefined);
+    setVerifiedToken(undefined);
     setAuthStatus(AuthStatuses.LOADED);
+    expireAuthSession("/login");
   } finally {
     setLoading(false);
   }
@@ -41,6 +46,7 @@ export async function login(email: string, password: string) {
   const setLoading = useLoadingStore.getState().setLoading;
   const setAuth = useAuthStore.getState().setAuth;
   const setAuthStatus = useAuthStore.getState().setAuthStatus;
+  const setVerifiedToken = useAuthStore.getState().setVerifiedToken;
 
   try {
     setLoading(true);
@@ -53,6 +59,7 @@ export async function login(email: string, password: string) {
     const profileResult = await UserService.userGetMe();
     const user = profileResult.data.userGetMe;
     setAuth(user);
+    setVerifiedToken(token);
 
     window.location.assign("/manage/dashboard");
 
@@ -60,7 +67,10 @@ export async function login(email: string, password: string) {
     setAuthStatus(AuthStatuses.LOADED);
     return user;
   } catch (error: any) {
-    toast.error(error?.message ?? "Login failed");
+    clearAuthSession();
+    setAuth(undefined);
+    setVerifiedToken(undefined);
+    toast.error(error?.message ?? t`Login failed`);
     setAuthStatus(AuthStatuses.LOADED);
   } finally {
     setLoading(false);
@@ -69,5 +79,5 @@ export async function login(email: string, password: string) {
 
 export function logout() {
   clearAuthSession();
-  window.location.assign("/");
+  window.location.assign("/login");
 }

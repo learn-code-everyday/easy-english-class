@@ -1,50 +1,75 @@
 "use client";
 
-import { Box, Container } from "@mui/material";
-import React, { useState } from "react";
+import { t } from "@lingui/macro";
+import React from "react";
 
 import MainLayout from "@/layouts/MainLayout";
-import DialogueSection from "@/modules/BasicCommunicationPage/DialogueSection";
-import ErrorSnackbar from "@/modules/BasicCommunicationPage/ErrorSnackbar";
-import HeaderSection from "@/modules/BasicCommunicationPage/HeaderSection";
-import QuizSection from "@/modules/BasicCommunicationPage/QuizSection";
-import VoiceRecorderSection from "@/modules/BasicCommunicationPage/VoiceRecorderSection";
+import CourseLandingPage from "@/modules/CourseLandingPage";
 
-const BasicCommunicationPage = () => {
-  // Lift error message to parent to show Snackbar globally
-  const [errorMsg, setErrorMsg] = useState("");
-
+export default function BasicCommunicationCoursePage() {
   return (
-    <Box
-      sx={{
-        minHeight: "calc(100vh - 152px)",
-        background: "linear-gradient(135deg, #e0e7ff 0%, #f0f4ff 100%)",
-        py: { xs: 4, md: 8 },
-        position: "relative",
-        overflowX: "hidden",
+    <CourseLandingPage
+      course={{
+        accent: "#2563eb",
+        eyebrow: t`Basic Communication`,
+        title: t`Speak English clearly in everyday situations.`,
+        description: t`Build practical listening, speaking, and response skills with guided lessons for greetings, classroom talk, shopping, travel, and daily conversation.`,
+        targetLearners: [
+          t`New learners who want a confident foundation`,
+          t`Students preparing for daily English conversations`,
+          t`Busy adults who need short, guided practice`,
+        ],
+        roadmap: [
+          t`Learn core phrases and sentence patterns`,
+          t`Practice short dialogues with guided prompts`,
+          t`Record speaking tasks and review pronunciation`,
+          t`Apply the language in real-life scenarios`,
+        ],
+        outcomes: [
+          t`Start and respond to common conversations`,
+          t`Use polite complete sentences naturally`,
+          t`Improve pronunciation through repeated practice`,
+          t`Build confidence for everyday English`,
+        ],
+        modules: [
+          {
+            title: t`Greetings and introductions`,
+            description: t`Practice names, small talk, and polite first conversations.`,
+            meta: t`Beginner · 18 min`,
+          },
+          {
+            title: t`Classroom English`,
+            description: t`Ask questions, request help, and respond to teachers clearly.`,
+            meta: t`Beginner · 22 min`,
+          },
+          {
+            title: t`Daily routines`,
+            description: t`Talk about schedules, habits, and simple plans.`,
+            meta: t`Beginner · 20 min`,
+          },
+          {
+            title: t`Travel basics`,
+            description: t`Use essential phrases for directions, tickets, and hotels.`,
+            meta: t`Beginner · 25 min`,
+          },
+        ],
+        packages: [
+          {
+            name: t`Starter`,
+            price: t`$49`,
+            description: t`Self-paced lessons with essential practice tasks.`,
+          },
+          {
+            name: t`Coached`,
+            price: t`$99`,
+            description: t`Guided learning with teacher feedback and speaking review.`,
+          },
+        ],
       }}
-    >
-      <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
-        <HeaderSection />
-
-        <DialogueSection />
-
-        <QuizSection setErrorMsg={setErrorMsg} />
-
-        <VoiceRecorderSection />
-
-        <ErrorSnackbar
-          open={Boolean(errorMsg)}
-          message={errorMsg}
-          onClose={() => setErrorMsg("")}
-        />
-      </Container>
-    </Box>
+    />
   );
-};
+}
 
-export default BasicCommunicationPage;
-
-BasicCommunicationPage.getLayout = function getLayout(page: any) {
+BasicCommunicationCoursePage.getLayout = function getLayout(page: any) {
   return <MainLayout>{page}</MainLayout>;
 };

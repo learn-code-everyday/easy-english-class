@@ -6,6 +6,73 @@
 @import "swiper/css/pagination";
 @import "nprogress/nprogress.css";
 
+:root {
+  --app-bg: #f7f8fb;
+  --app-surface: #ffffff;
+  --app-surface-soft: #f8fafc;
+  --app-border: #e2e8f0;
+  --app-text: #0f172a;
+  --app-muted: #64748b;
+  --app-primary: #2557d6;
+  --app-primary-dark: #1f46ad;
+  --app-primary-soft: #eaf1ff;
+  --app-accent: #f59e0b;
+  --app-focus: #3b82f6;
+  --app-radius: 18px;
+  --app-shadow-sm: 0 8px 24px rgba(15, 23, 42, 0.06);
+  --app-shadow-md: 0 18px 45px rgba(15, 23, 42, 0.1);
+  --app-shadow-lg: 0 28px 70px rgba(15, 23, 42, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--app-bg);
+  color: var(--app-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  outline-color: var(--app-primary);
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.16);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eef2f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border: 2px solid #eef2f7;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+#nprogress .bar {
+  background: var(--app-primary);
+  height: 3px;
+}
+
 .swal2-container {
   z-index: 3000 !important;
 }
