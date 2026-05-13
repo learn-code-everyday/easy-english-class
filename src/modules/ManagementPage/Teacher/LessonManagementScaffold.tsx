@@ -229,11 +229,18 @@ function LessonListScaffold() {
     }
   };
 
-  const updateLessonStatus = async (lesson: Lesson, status: Lesson["status"]) => {
+  const updateLessonStatus = async (
+    lesson: Lesson,
+    status: Lesson["status"]
+  ) => {
     if (!lesson.id) return;
 
     try {
-      await LessonService.lessonUpdate(lesson.id, { status });
+      if (status === "published") {
+        await LessonService.lessonPublish(lesson.id);
+      } else if (status === "archived") {
+        await LessonService.lessonArchive(lesson.id);
+      }
       toast.success(t`Lesson updated successfully`);
       loadLessons();
     } catch (error: any) {
@@ -448,9 +455,10 @@ function LessonEditorScaffold() {
 
 function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) {
   const [form, setForm] = useState<LessonInput>({
+    assignedToClassIds: [],
     estimatedMinutes: 30,
     level: "beginner",
-    objectives: "",
+    objectives: [],
     skillType: "",
     slug: "",
     status: "draft",
@@ -468,6 +476,45 @@ function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) {
       options: ["", "", "", ""],
     },
   ]);
+
+  useEffect(() => {
+    if (!lessonId) return;
+
+    LessonService.teacherLessonList()
+      .then((lessons) => {
+        const lesson = lessons.find((item) => item.id === lessonId);
+
+        if (!lesson) return;
+
+        setForm({
+          assignedToClassIds: lesson.assignedToClassIds || [],
+          estimatedMinutes: lesson.estimatedMinutes || 0,
+          level: lesson.level || "beginner",
+          objectives: lesson.objectives || [],
+          skillType: lesson.skillType || "",
+          slug: lesson.slug,
+          status: lesson.status || "draft",
+          title: lesson.title,
+        });
+
+        if (lesson.questions?.length) {
+          setQuestions(
+            lesson.questions.map((question, index) => ({
+              correctAnswer: question.correctAnswer || "",
+              explanation: question.explanation || "",
+              id: question.id || `question-${index + 1}`,
+              options: (question.options || []).map((option) => option.value),
+              prompt: question.prompt,
+              score: question.score || 0,
+              type: question.type,
+            }))
+          );
+        }
+      })
+      .catch((error) => {
+        toast.error(error?.message || t`Failed to load lesson`);
+      });
+  }, [lessonId]);
 
   const addQuestion = () => {
     setQuestions((current) => [
@@ -547,7 +594,9 @@ function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) {
           explanation: question.explanation,
           options:
             question.type === "multiple_choice"
-              ? question.options.filter(Boolean)
+              ? question.options
+                  .filter(Boolean)
+                  .map((option) => ({ label: option, value: option }))
               : [],
           prompt: question.prompt,
           score: Number(question.score || 0),
@@ -557,9 +606,19 @@ function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) {
 
       if (lessonId) {
         await LessonService.lessonUpdate(lessonId, payload);
+        if (form.status === "published")
+          await LessonService.lessonPublish(lessonId);
+        if (form.status === "archived")
+          await LessonService.lessonArchive(lessonId);
         toast.success(t`Lesson updated successfully`);
       } else {
-        await LessonService.lessonCreate(payload);
+        const lesson = await LessonService.lessonCreate(payload);
+        if (lesson?.id && form.status === "published") {
+          await LessonService.lessonPublish(lesson.id);
+        }
+        if (lesson?.id && form.status === "archived") {
+          await LessonService.lessonArchive(lesson.id);
+        }
         toast.success(t`Lesson created successfully`);
       }
     } catch (error: any) {
@@ -671,11 +730,14 @@ function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) {
             </FormControl>
             <TextField
               label={<Trans>Objectives</Trans>}
-              value={form.objectives}
+              value={(form.objectives || []).join("\n")}
               onChange={(event) =>
                 setForm((current) => ({
                   ...current,
-                  objectives: event.target.value,
+                  objectives: event.target.value
+                    .split("\n")
+                    .map((item) => item.trim())
+                    .filter(Boolean),
                 }))
               }
               multiline
@@ -689,6 +751,20 @@ function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) {
                 setForm((current) => ({
                   ...current,
                   skillType: event.target.value,
+                }))
+              }
+              fullWidth
+            />
+            <TextField
+              label={<Trans>Assigned class IDs</Trans>}
+              value={(form.assignedToClassIds || []).join(", ")}
+              onChange={(event) =>
+                setForm((current) => ({
+                  ...current,
+                  assignedToClassIds: event.target.value
+                    .split(",")
+                    .map((item) => item.trim())
+                    .filter(Boolean),
                 }))
               }
               fullWidth
@@ -772,10 +848,11 @@ function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) {
                               value={question.options[optionIndex]}
                               onChange={(event) =>
                                 updateQuestion(question.id, {
-                                  options: question.options.map((option, index) =>
-                                    index === optionIndex
-                                      ? event.target.value
-                                      : option
+                                  options: question.options.map(
+                                    (option, index) =>
+                                      index === optionIndex
+                                        ? event.target.value
+                                        : option
                                   ),
                                 })
                               }
@@ -841,7 +918,7 @@ function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) {
                 onClick={addQuestion}
                 sx={{ alignSelf: "flex-start", borderRadius: 2 }}
               >
-              <Trans>Add question</Trans>
+                <Trans>Add question</Trans>
               </Button>
               <Button
                 disabled={saving}
@@ -849,7 +926,11 @@ function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) {
                 onClick={saveLesson}
                 sx={{ alignSelf: "flex-start", borderRadius: 2 }}
               >
-                {lessonId ? <Trans>Update lesson</Trans> : <Trans>Create lesson</Trans>}
+                {lessonId ? (
+                  <Trans>Update lesson</Trans>
+                ) : (
+                  <Trans>Create lesson</Trans>
+                )}
               </Button>
             </Stack>
           </Stack>
@@ -982,13 +1063,13 @@ function StudentProgressScaffold() {
     {
       label: t`Average completion`,
       value: `${Math.round(
-        progressRows.reduce((total, row) => total + (row.progress || 0), 0) /
+        progressRows.reduce((total, row) => total + (row.bestScore || 0), 0) /
           Math.max(progressRows.length, 1)
       )}%`,
     },
     {
       label: t`Needs feedback`,
-      value: String(progressRows.filter((row) => (row.progress || 0) < 70).length),
+      value: String(progressRows.filter((row) => !row.passed).length),
     },
   ];
 
@@ -1043,27 +1124,30 @@ function StudentProgressScaffold() {
                       <Trans>Student</Trans>
                     </TableCell>
                     <TableCell>
-                      <Trans>Completed lessons</Trans>
+                      <Trans>Submissions</Trans>
                     </TableCell>
                     <TableCell>
                       <Trans>Average score</Trans>
                     </TableCell>
                     <TableCell>
-                      <Trans>Progress</Trans>
+                      <Trans>Status</Trans>
                     </TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
                   {progressRows.map((row) => (
-                    <TableRow key={row.student?.id || row.student?.email} hover>
+                    <TableRow
+                      key={`${row.studentId || "student"}-${row.lessonId || "lesson"}`}
+                      hover
+                    >
                       <TableCell sx={{ fontWeight: 800 }}>
-                        {row.student?.name || row.student?.email}
+                        {row.studentId}
                       </TableCell>
+                      <TableCell>{row.submissionCount || 0}</TableCell>
+                      <TableCell>{row.bestScore || 0}%</TableCell>
                       <TableCell>
-                        {row.completedLessons || 0}/{row.totalLessons || 0}
+                        {row.passed ? t`Completed` : t`Needs review`}
                       </TableCell>
-                      <TableCell>{row.averageScore || 0}%</TableCell>
-                      <TableCell>{row.progress || 0}%</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>

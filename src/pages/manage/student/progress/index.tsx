@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 import { isStudentUser } from "@/helpers/auth-access";
 import AdminLayout from "@/layouts/admin-layout/AdminLayout";
-import type { Lesson } from "@/services/lesson/lesson.model";
+import type { StudentProgress } from "@/services/lesson/lesson.model";
 import { LessonService } from "@/services/lesson/lesson.repo";
 import { AuthStatuses } from "@/stores/auth/types";
 import { useAuthStore } from "@/stores/auth/useAuthStore";
@@ -14,7 +14,7 @@ import { useAuthStore } from "@/stores/auth/useAuthStore";
 export default function StudentProgressPage() {
   const router = useRouter();
   const { auth, authStatus } = useAuthStore();
-  const [lessons, setLessons] = useState<Lesson[]>([]);
+  const [progressRows, setProgressRows] = useState<StudentProgress[]>([]);
   const canViewProgress = isStudentUser(auth);
 
   useEffect(() => {
@@ -26,28 +26,29 @@ export default function StudentProgressPage() {
   useEffect(() => {
     if (authStatus !== AuthStatuses.LOADED || !canViewProgress) return;
 
-    LessonService.lessonList()
-      .then(setLessons)
+    LessonService.myProgress()
+      .then(setProgressRows)
       .catch((error) => {
         toast.error(error?.message || t`Failed to load progress`);
       });
   }, [authStatus, canViewProgress]);
 
   const stats = useMemo(() => {
-    const completed = lessons.filter(
-      (lesson) => (lesson.progress || 0) >= 100
-    ).length;
+    const completed = progressRows.filter((row) => row.passed).length;
     const averageProgress = Math.round(
-      lessons.reduce((total, lesson) => total + (lesson.progress || 0), 0) /
-        Math.max(lessons.length, 1)
+      progressRows.reduce((total, row) => total + (row.bestScore || 0), 0) /
+        Math.max(progressRows.length, 1)
     );
 
     return [
       { label: <Trans>Completed lessons</Trans>, value: String(completed) },
-      { label: <Trans>Total lessons</Trans>, value: String(lessons.length) },
+      {
+        label: <Trans>Total lessons</Trans>,
+        value: String(progressRows.length),
+      },
       { label: <Trans>Average progress</Trans>, value: `${averageProgress}%` },
     ];
-  }, [lessons]);
+  }, [progressRows]);
 
   if (authStatus !== AuthStatuses.LOADED || !canViewProgress) return null;
 

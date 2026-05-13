@@ -17,7 +17,7 @@ import { toast } from "react-toastify";
 
 import { isStudentUser } from "@/helpers/auth-access";
 import AdminLayout from "@/layouts/admin-layout/AdminLayout";
-import type { Lesson } from "@/services/lesson/lesson.model";
+import type { TeacherSubmission } from "@/services/lesson/lesson.model";
 import { LessonService } from "@/services/lesson/lesson.repo";
 import { AuthStatuses } from "@/stores/auth/types";
 import { useAuthStore } from "@/stores/auth/useAuthStore";
@@ -25,7 +25,7 @@ import { useAuthStore } from "@/stores/auth/useAuthStore";
 export default function StudentSubmissionsPage() {
   const router = useRouter();
   const { auth, authStatus } = useAuthStore();
-  const [rows, setRows] = useState<Lesson[]>([]);
+  const [rows, setRows] = useState<TeacherSubmission[]>([]);
   const canViewSubmissions = isStudentUser(auth);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function StudentSubmissionsPage() {
   useEffect(() => {
     if (authStatus !== AuthStatuses.LOADED || !canViewSubmissions) return;
 
-    LessonService.lessonList()
+    LessonService.mySubmissions()
       .then(setRows)
       .catch((error) => {
         toast.error(error?.message || t`Failed to load submissions`);
@@ -80,17 +80,19 @@ export default function StudentSubmissionsPage() {
             </TableHead>
             <TableBody>
               {rows.map((row) => (
-                <TableRow key={row.id || row.slug} hover>
-                  <TableCell sx={{ fontWeight: 800 }}>{row.title}</TableCell>
-                  <TableCell>{row.progress || 0}%</TableCell>
+                <TableRow key={row.id || row.lesson?.slug} hover>
+                  <TableCell sx={{ fontWeight: 800 }}>
+                    {row.lesson?.title || "-"}
+                  </TableCell>
+                  <TableCell>{row.score || 0}%</TableCell>
                   <TableCell>
                     <Chip
-                      label={row.completionStatus || t`Not started`}
+                      label={row.passed ? t`Passed` : t`Needs review`}
                       size="small"
                       sx={{ borderRadius: 2, fontWeight: 800 }}
                     />
                   </TableCell>
-                  <TableCell>{row.updatedAt || "-"}</TableCell>
+                  <TableCell>{row.submittedAt || "-"}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

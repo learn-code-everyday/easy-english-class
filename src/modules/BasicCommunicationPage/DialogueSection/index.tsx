@@ -23,7 +23,10 @@ const DialogueSection = () => (
     >
       <Trans>Step 1</Trans>
     </Typography>
-    <Typography variant="h5" sx={{ mt: 0.5, mb: 1, color: "#0f172a", fontWeight: 900 }}>
+    <Typography
+      variant="h5"
+      sx={{ mt: 0.5, mb: 1, color: "#0f172a", fontWeight: 900 }}
+    >
       <Trans>Sample Dialogue</Trans>
     </Typography>
     <Typography sx={{ mb: 3, color: "#64748b", lineHeight: 1.7 }}>

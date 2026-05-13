@@ -26,6 +26,7 @@ const LESSON_FIELDS = `
   title
   slug
   level
+  assignedToClassIds
   estimatedMinutes
   skillType
   status
@@ -39,7 +40,10 @@ const QUESTION_FIELDS_FOR_STUDENT = `
   id
   type
   prompt
-  options
+  options {
+    label
+    value
+  }
   score
 `;
 
@@ -54,7 +58,18 @@ const SUBMISSION_FIELDS = `
   score
   passed
   submittedAt
+  totalQuestions
+  correctCount
+  answers {
+    questionId
+    answer
+    correct
+    correctAnswer
+    explanation
+    score
+  }
   lesson {
+    id
     title
     slug
   }
@@ -66,16 +81,13 @@ const SUBMISSION_FIELDS = `
 `;
 
 const PROGRESS_FIELDS = `
-  averageScore
-  completedLessons
+  studentId
+  lessonId
   lessonTitle
-  progress
-  totalLessons
-  student {
-    id
-    name
-    email
-  }
+  submissionCount
+  bestScore
+  passed
+  lastSubmittedAt
 `;
 
 class LessonRepository {
@@ -84,9 +96,10 @@ class LessonRepository {
   }
 
   async lessonList() {
-    const result = await this.apollo.query<{ lessonList: ListResponse<Lesson> }>(
-      {
-        query: gql`
+    const result = await this.apollo.query<{
+      lessonList: ListResponse<Lesson>;
+    }>({
+      query: gql`
           query LessonList {
             lessonList {
               data {
@@ -96,9 +109,8 @@ class LessonRepository {
             }
           }
         `,
-        fetchPolicy: "network-only",
-      }
-    );
+      fetchPolicy: "network-only",
+    });
 
     return normalizeList(result.data.lessonList);
   }
@@ -122,27 +134,30 @@ class LessonRepository {
     return result.data.lessonGetBySlug;
   }
 
-  async lessonSubmitAnswers(slug: string, answers: LessonAnswerInput[]) {
+  async lessonSubmitAnswers(lessonId: string, answers: LessonAnswerInput[]) {
     const result = await this.apollo.mutate<{
       lessonSubmitAnswers: LessonSubmissionResult;
     }>({
       mutation: gql`
-        mutation LessonSubmitAnswers(
-          $data: LessonSubmitAnswersInput!
-        ) {
-          lessonSubmitAnswers(data: $data) {
+        mutation LessonSubmitAnswers($input: LessonSubmitAnswersInput!) {
+          lessonSubmitAnswers(input: $input) {
             score
             passed
-            progress
-            explanations {
+            totalQuestions
+            correctCount
+            submittedAt
+            answers {
               questionId
+              answer
+              correct
               correctAnswer
               explanation
+              score
             }
           }
         }
       `,
-      variables: { data: { slug, answers } },
+      variables: { input: { lessonId, answers } },
       fetchPolicy: "no-cache",
     });
 
@@ -175,13 +190,13 @@ class LessonRepository {
   async lessonCreate(data: LessonInput) {
     const result = await this.apollo.mutate<{ lessonCreate: Lesson }>({
       mutation: gql`
-        mutation LessonCreate($data: LessonCreateInput!) {
-          lessonCreate(data: $data) {
+        mutation LessonCreate($input: LessonSaveInput!) {
+          lessonCreate(input: $input) {
             ${LESSON_FIELDS}
           }
         }
       `,
-      variables: { data },
+      variables: { input: data },
       fetchPolicy: "no-cache",
     });
 
@@ -191,13 +206,13 @@ class LessonRepository {
   async lessonUpdate(id: string, data: Partial<LessonInput>) {
     const result = await this.apollo.mutate<{ lessonUpdate: Lesson }>({
       mutation: gql`
-        mutation LessonUpdate($id: String!, $data: LessonUpdateInput!) {
-          lessonUpdate(id: $id, data: $data) {
+        mutation LessonUpdate($id: ID!, $input: LessonSaveInput!) {
+          lessonUpdate(id: $id, input: $input) {
             ${LESSON_FIELDS}
           }
         }
       `,
-      variables: { id, data },
+      variables: { id, input: data },
       fetchPolicy: "no-cache",
     });
 
@@ -207,7 +222,7 @@ class LessonRepository {
   async lessonDelete(id: string) {
     const result = await this.apollo.mutate<{ lessonDelete: { id: string } }>({
       mutation: gql`
-        mutation LessonDelete($id: String!) {
+        mutation LessonDelete($id: ID!) {
           lessonDelete(id: $id) {
             id
           }
@@ -220,44 +235,102 @@ class LessonRepository {
     return result.data?.lessonDelete;
   }
 
+  async lessonPublish(id: string) {
+    const result = await this.apollo.mutate<{ lessonPublish: Lesson }>({
+      mutation: gql`
+        mutation LessonPublish($id: ID!) {
+          lessonPublish(id: $id) {
+            ${LESSON_FIELDS}
+          }
+        }
+      `,
+      variables: { id },
+      fetchPolicy: "no-cache",
+    });
+
+    return result.data?.lessonPublish;
+  }
+
+  async lessonArchive(id: string) {
+    const result = await this.apollo.mutate<{ lessonArchive: Lesson }>({
+      mutation: gql`
+        mutation LessonArchive($id: ID!) {
+          lessonArchive(id: $id) {
+            ${LESSON_FIELDS}
+          }
+        }
+      `,
+      variables: { id },
+      fetchPolicy: "no-cache",
+    });
+
+    return result.data?.lessonArchive;
+  }
+
   async teacherSubmissionList() {
     const result = await this.apollo.query<{
-      teacherSubmissionList: ListResponse<TeacherSubmission>;
+      teacherSubmissionList: TeacherSubmission[];
     }>({
       query: gql`
         query TeacherSubmissionList {
           teacherSubmissionList {
-            data {
-              ${SUBMISSION_FIELDS}
-            }
-            total
+            ${SUBMISSION_FIELDS}
           }
         }
       `,
       fetchPolicy: "network-only",
     });
 
-    return normalizeList(result.data.teacherSubmissionList);
+    return result.data.teacherSubmissionList || [];
   }
 
   async teacherStudentProgress() {
     const result = await this.apollo.query<{
-      teacherStudentProgress: ListResponse<StudentProgress>;
+      teacherStudentProgress: StudentProgress[];
     }>({
       query: gql`
         query TeacherStudentProgress {
           teacherStudentProgress {
-            data {
-              ${PROGRESS_FIELDS}
-            }
-            total
+            ${PROGRESS_FIELDS}
           }
         }
       `,
       fetchPolicy: "network-only",
     });
 
-    return normalizeList(result.data.teacherStudentProgress);
+    return result.data.teacherStudentProgress || [];
+  }
+
+  async mySubmissions() {
+    const result = await this.apollo.query<{
+      mySubmissions: TeacherSubmission[];
+    }>({
+      query: gql`
+        query MySubmissions {
+          mySubmissions {
+            ${SUBMISSION_FIELDS}
+          }
+        }
+      `,
+      fetchPolicy: "network-only",
+    });
+
+    return result.data.mySubmissions || [];
+  }
+
+  async myProgress() {
+    const result = await this.apollo.query<{ myProgress: StudentProgress[] }>({
+      query: gql`
+        query MyProgress {
+          myProgress {
+            ${PROGRESS_FIELDS}
+          }
+        }
+      `,
+      fetchPolicy: "network-only",
+    });
+
+    return result.data.myProgress || [];
   }
 }
 

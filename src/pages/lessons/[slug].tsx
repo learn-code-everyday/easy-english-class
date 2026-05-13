@@ -108,12 +108,12 @@ const LessonDetailPage = () => {
   }, [authStatus, canOpenPage, hasVerifiedToken, router.isReady, slug]);
 
   const handleSubmit = async () => {
-    if (!lesson) return;
+    if (!lesson?.id) return;
 
     setSubmitting(true);
     try {
       const result = await LessonService.lessonSubmitAnswers(
-        lesson.slug,
+        lesson.id || "",
         Object.entries(answers).map(([questionId, answer]) => ({
           questionId,
           answer,
@@ -217,7 +217,7 @@ const LessonDetailPage = () => {
 
         <Stack spacing={2.5}>
           {(lesson.questions || []).map((question, index) => {
-            const explanation = submitResult?.explanations?.find(
+            const explanation = submitResult?.answers?.find(
               (item) => item.questionId === question.id
             );
 
@@ -259,10 +259,10 @@ const LessonDetailPage = () => {
                       >
                         {question.options?.map((option) => (
                           <FormControlLabel
-                            key={option}
-                            value={option}
+                            key={option.value}
+                            value={option.value}
                             control={<Radio />}
-                            label={option}
+                            label={option.label || option.value}
                           />
                         ))}
                       </RadioGroup>
@@ -301,7 +301,8 @@ const LessonDetailPage = () => {
                         {explanation?.correctAnswer || t`Review required`}
                       </Typography>
                       <Typography sx={{ mt: 0.75, color: "#334155" }}>
-                        {explanation?.explanation || t`Teacher feedback pending.`}
+                        {explanation?.explanation ||
+                          t`Teacher feedback pending.`}
                       </Typography>
                     </Box>
                   )}

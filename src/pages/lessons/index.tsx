@@ -49,7 +49,11 @@ const LessonsPage = () => {
       router.replace("/login");
       return;
     }
-    if (authStatus === AuthStatuses.LOADED && hasVerifiedToken && !canOpenPage) {
+    if (
+      authStatus === AuthStatuses.LOADED &&
+      hasVerifiedToken &&
+      !canOpenPage
+    ) {
       router.replace("/403");
     }
   }, [
@@ -62,7 +66,11 @@ const LessonsPage = () => {
   ]);
 
   useEffect(() => {
-    if (authStatus !== AuthStatuses.LOADED || !hasVerifiedToken || !canOpenPage) {
+    if (
+      authStatus !== AuthStatuses.LOADED ||
+      !hasVerifiedToken ||
+      !canOpenPage
+    ) {
       return;
     }
 
@@ -269,7 +277,11 @@ const LessonsPage = () => {
                     }
                     variant={canStart || canPreview ? "contained" : "outlined"}
                     startIcon={
-                      canStart ? <ArrowForwardRoundedIcon /> : <LockOpenRoundedIcon />
+                      canStart ? (
+                        <ArrowForwardRoundedIcon />
+                      ) : (
+                        <LockOpenRoundedIcon />
+                      )
                     }
                     sx={{
                       borderRadius: "8px",

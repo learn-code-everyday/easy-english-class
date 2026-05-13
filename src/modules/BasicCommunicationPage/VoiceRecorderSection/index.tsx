@@ -70,7 +70,10 @@ const VoiceRecorderSection: React.FC<VoiceRecorderSectionProps> = ({
       >
         <Trans>Step 3</Trans>
       </Typography>
-      <Typography variant="h5" sx={{ mt: 0.5, color: "#0f172a", fontWeight: 900 }}>
+      <Typography
+        variant="h5"
+        sx={{ mt: 0.5, color: "#0f172a", fontWeight: 900 }}
+      >
         <Trans>Practice Speaking - Voice Recorder</Trans>
       </Typography>
       <Typography sx={{ mt: 1, mb: 3, color: "#64748b", lineHeight: 1.7 }}>
@@ -119,7 +122,9 @@ const VoiceRecorderSection: React.FC<VoiceRecorderSectionProps> = ({
             <Trans>Pronunciation tip</Trans>
           </Typography>
           <Typography variant="body2" sx={{ mt: 0.75, color: "#475569" }}>
-            <Trans>Pause after each speaker line before recording your reply.</Trans>
+            <Trans>
+              Pause after each speaker line before recording your reply.
+            </Trans>
           </Typography>
         </Box>
       </Box>
