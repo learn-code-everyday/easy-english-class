@@ -498,6 +498,10 @@ msgstr "Page"
 msgid "Name"
 msgstr "Name"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Retry"
+msgstr "Retry"
+
 #: src/modules/IeltsPage/IeltsQuiz/index.tsx
 msgid "International English Learning Test Standard"
 msgstr "International English Learning Test Standard"
@@ -823,6 +827,7 @@ msgstr "or"
 msgid "About Us"
 msgstr "About Us"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "{0} min"
 msgstr "{0} min"
@@ -1333,6 +1338,7 @@ msgid "Speak English clearly in everyday situations."
 msgstr "Speak English clearly in everyday situations."
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "No matching lessons found"
 msgstr "No matching lessons found"
 
@@ -1385,6 +1391,7 @@ msgstr "Reset Password"
 msgid "Note"
 msgstr "Note"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
@@ -1692,6 +1699,10 @@ msgstr "Maintain a consistent English practice routine"
 #: src/components/LiveChatSupport/index.tsx
 msgid "Live chat support"
 msgstr "Live chat support"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Please try again later."
+msgstr "Please try again later."
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
@@ -2310,6 +2321,7 @@ msgid "Guided speaking practice"
 msgstr "Guided speaking practice"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "No lessons created yet"
 msgstr "No lessons created yet"
 
@@ -2619,6 +2631,7 @@ msgstr "Yes, upon successful completion you will receive a certificate recognize
 #: src/hooks/useStatusLabel.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "Draft"
 msgstr "Draft"
 
@@ -2647,8 +2660,8 @@ msgid "What Our Students Say"
 msgstr "What Our Students Say"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "We could not load your teacher lessons right now. Please try again."
-msgstr "We could not load your teacher lessons right now. Please try again."
+#~ msgid "We could not load your teacher lessons right now. Please try again."
+#~ msgstr "We could not load your teacher lessons right now. Please try again."
 
 #: src/modules/KidEnglishPage/FunActivities/index.tsx
 msgid "Interactive Games"
@@ -3255,6 +3268,7 @@ msgstr "Coached"
 msgid "Improve pronunciation through repeated practice"
 msgstr "Improve pronunciation through repeated practice"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "Loading lessons..."
 msgstr "Loading lessons..."

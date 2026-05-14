@@ -498,6 +498,10 @@ msgstr "Trang"
 msgid "Name"
 msgstr "Tên"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Retry"
+msgstr "Thử lại"
+
 #: src/modules/IeltsPage/IeltsQuiz/index.tsx
 msgid "International English Learning Test Standard"
 msgstr "Tiêu chuẩn bài kiểm tra học tiếng Anh quốc tế"
@@ -823,6 +827,7 @@ msgstr "hoặc"
 msgid "About Us"
 msgstr "Về chúng tôi"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "{0} min"
 msgstr "{0} phút"
@@ -1333,6 +1338,7 @@ msgid "Speak English clearly in everyday situations."
 msgstr "Nói tiếng Anh rõ ràng trong các tình huống hằng ngày."
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "No matching lessons found"
 msgstr "Không tìm thấy bài học phù hợp"
 
@@ -1385,6 +1391,7 @@ msgstr "Đặt lại mật khẩu"
 msgid "Note"
 msgstr "Ghi chú"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
@@ -1692,6 +1699,10 @@ msgstr "Duy trì thói quen luyện tiếng Anh đều đặn"
 #: src/components/LiveChatSupport/index.tsx
 msgid "Live chat support"
 msgstr "Hỗ trợ trò chuyện trực tuyến"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Please try again later."
+msgstr "Vui lòng thử lại sau."
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
@@ -2310,6 +2321,7 @@ msgid "Guided speaking practice"
 msgstr "Luyện nói có hướng dẫn"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "No lessons created yet"
 msgstr "Chưa có bài học nào"
 
@@ -2619,6 +2631,7 @@ msgstr "Có, sau khi hoàn thành thành công, bạn sẽ nhận được chứ
 #: src/hooks/useStatusLabel.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "Draft"
 msgstr "Nháp"
 
@@ -2647,8 +2660,8 @@ msgid "What Our Students Say"
 msgstr "Học viên nói gì về chúng tôi"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "We could not load your teacher lessons right now. Please try again."
-msgstr "Hiện tại chúng tôi không thể tải bài học của giáo viên. Vui lòng thử lại."
+#~ msgid "We could not load your teacher lessons right now. Please try again."
+#~ msgstr "Hiện tại chúng tôi không thể tải bài học của giáo viên. Vui lòng thử lại."
 
 #: src/modules/KidEnglishPage/FunActivities/index.tsx
 msgid "Interactive Games"
@@ -3255,6 +3268,7 @@ msgstr "Có huấn luyện"
 msgid "Improve pronunciation through repeated practice"
 msgstr "Cải thiện phát âm qua luyện tập lặp lại"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "Loading lessons..."
 msgstr "Đang tải bài học..."

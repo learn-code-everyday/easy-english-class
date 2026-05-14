@@ -166,7 +166,7 @@ const LessonManagementScaffold: React.FC<LessonManagementScaffoldProps> = ({
   }
 
   return (
-    <Box>
+    <Box sx={{ maxWidth: "100%", minWidth: 0, overflowX: "hidden" }}>
       <Paper
         elevation={0}
         sx={{
@@ -178,6 +178,8 @@ const LessonManagementScaffold: React.FC<LessonManagementScaffoldProps> = ({
             "linear-gradient(135deg, rgba(15,23,42,0.96), rgba(37,99,235,0.88))",
           color: "#ffffff",
           boxShadow: "0 18px 45px rgba(15, 23, 42, 0.12)",
+          maxWidth: "100%",
+          overflow: "hidden",
         }}
       >
         <Typography
@@ -190,13 +192,29 @@ const LessonManagementScaffold: React.FC<LessonManagementScaffoldProps> = ({
           direction={{ xs: "column", sm: "row" }}
           justifyContent="space-between"
           gap={2}
-          sx={{ mt: 1 }}
+          sx={{ mt: 1, minWidth: 0 }}
         >
-          <Box>
-            <Typography variant="h4" sx={{ fontWeight: 900 }}>
+          <Box sx={{ minWidth: 0 }}>
+            <Typography
+              variant="h4"
+              sx={{
+                fontSize: { xs: 28, md: 34 },
+                fontWeight: 900,
+                letterSpacing: 0,
+                lineHeight: 1.15,
+                overflowWrap: "anywhere",
+              }}
+            >
               {meta.title}
             </Typography>
-            <Typography sx={{ mt: 1, maxWidth: 680, color: "#dbeafe" }}>
+            <Typography
+              sx={{
+                mt: 1,
+                maxWidth: 680,
+                color: "#dbeafe",
+                overflowWrap: "anywhere",
+              }}
+            >
               {meta.description}
             </Typography>
           </Box>
@@ -211,6 +229,7 @@ const LessonManagementScaffold: React.FC<LessonManagementScaffoldProps> = ({
                 borderRadius: 999,
                 backgroundColor: "#ffffff",
                 color: "#1d4ed8",
+                flexShrink: 0,
                 textTransform: "none",
                 "&:hover": { backgroundColor: "#eff6ff" },
               }}
@@ -314,6 +333,46 @@ function LessonListScaffold() {
     return matchesSearch && matchesStatus && matchesLevel;
   });
 
+  const renderLessonActions = (lesson: Lesson) => (
+    <Stack
+      direction="row"
+      justifyContent={{ xs: "flex-start", md: "flex-end" }}
+      sx={{ flexWrap: "wrap", gap: 1 }}
+    >
+      <Button
+        component={Link}
+        href={`/manage/teacher/lessons/${lesson.id}/edit`}
+        size="small"
+        startIcon={<EditIcon />}
+      >
+        <Trans>Edit</Trans>
+      </Button>
+      <Button
+        size="small"
+        startIcon={<PublishIcon />}
+        onClick={() => updateLessonStatus(lesson, "published")}
+      >
+        <Trans>Publish</Trans>
+      </Button>
+      <Button
+        size="small"
+        color="inherit"
+        startIcon={<ArchiveIcon />}
+        onClick={() => updateLessonStatus(lesson, "archived")}
+      >
+        <Trans>Archive</Trans>
+      </Button>
+      <Button
+        size="small"
+        color="error"
+        startIcon={<DeleteIcon />}
+        onClick={() => deleteLesson(lesson)}
+      >
+        <Trans>Delete</Trans>
+      </Button>
+    </Stack>
+  );
+
   const renderEmptyRow = () => {
     const isEmptyDataset = lessons.length === 0;
 
@@ -397,11 +456,193 @@ function LessonListScaffold() {
     );
   };
 
+  const renderCompactError = () => (
+    <Paper
+      elevation={0}
+      sx={{
+        backgroundColor: "#f8fafc",
+        border: "1px solid #e2e8f0",
+        borderRadius: 3,
+        p: { xs: 2, md: 2.5 },
+      }}
+    >
+      <Stack
+        direction={{ xs: "column", sm: "row" }}
+        spacing={1.5}
+        alignItems={{ xs: "flex-start", sm: "center" }}
+        justifyContent="space-between"
+      >
+        <Box sx={{ minWidth: 0 }}>
+          <Typography sx={{ color: "#0f172a", fontWeight: 900 }}>
+            <Trans>Lessons could not be loaded</Trans>
+          </Typography>
+          <Typography sx={{ color: "#64748b", mt: 0.5 }}>
+            <Trans>Please try again later.</Trans>
+          </Typography>
+        </Box>
+        <Button
+          onClick={loadLessons}
+          variant="outlined"
+          sx={{
+            borderRadius: 2,
+            flexShrink: 0,
+            fontWeight: 800,
+            textTransform: "none",
+            width: { xs: "100%", sm: "auto" },
+          }}
+        >
+          <Trans>Retry</Trans>
+        </Button>
+      </Stack>
+    </Paper>
+  );
+
+  const renderMobileLessonCards = () => (
+    <Stack spacing={1.5} sx={{ display: { xs: "flex", md: "none" } }}>
+      {loading && (
+        <Paper
+          elevation={0}
+          sx={{
+            border: "1px solid #e2e8f0",
+            borderRadius: 3,
+            p: 2,
+          }}
+        >
+          <Typography sx={{ color: "#64748b" }}>
+            <Trans>Loading lessons...</Trans>
+          </Typography>
+        </Paper>
+      )}
+      {!loading &&
+        filteredLessons.map((lesson) => (
+          <Paper
+            key={lesson.id || lesson.slug}
+            elevation={0}
+            sx={{
+              border: "1px solid #e2e8f0",
+              borderRadius: 3,
+              p: 2,
+            }}
+          >
+            <Stack spacing={1.5}>
+              <Box>
+                <Typography
+                  sx={{
+                    color: "#0f172a",
+                    fontWeight: 900,
+                    overflowWrap: "anywhere",
+                  }}
+                >
+                  {lesson.title}
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "#64748b",
+                    fontSize: 13,
+                    mt: 0.25,
+                    overflowWrap: "anywhere",
+                  }}
+                >
+                  {lesson.slug}
+                </Typography>
+              </Box>
+              <Stack direction="row" sx={{ flexWrap: "wrap", gap: 1 }}>
+                <Chip
+                  label={lesson.level || "-"}
+                  size="small"
+                  sx={{ borderRadius: 2, fontWeight: 800 }}
+                />
+                <Chip
+                  label={lesson.skillType || "-"}
+                  size="small"
+                  sx={{
+                    backgroundColor: "#eff6ff",
+                    borderRadius: 2,
+                    color: "#1d4ed8",
+                    fontWeight: 800,
+                  }}
+                />
+                <Chip
+                  label={lesson.status || t`Draft`}
+                  size="small"
+                  color={
+                    lesson.status === "published"
+                      ? "success"
+                      : lesson.status === "archived"
+                        ? "default"
+                        : "warning"
+                  }
+                  sx={{ borderRadius: 2, fontWeight: 800 }}
+                />
+              </Stack>
+              <Stack
+                direction="row"
+                justifyContent="space-between"
+                spacing={1}
+                sx={{ color: "#64748b", fontSize: 13 }}
+              >
+                <Typography sx={{ color: "inherit", fontSize: "inherit" }}>
+                  {lesson.estimatedMinutes ? (
+                    <Trans>{lesson.estimatedMinutes} min</Trans>
+                  ) : (
+                    "-"
+                  )}
+                </Typography>
+                <Typography sx={{ color: "inherit", fontSize: "inherit" }}>
+                  {lesson.updatedAt || "-"}
+                </Typography>
+              </Stack>
+              {renderLessonActions(lesson)}
+            </Stack>
+          </Paper>
+        ))}
+      {!loading && filteredLessons.length === 0 && (
+        <Paper
+          elevation={0}
+          sx={{
+            backgroundColor: "#f8fafc",
+            border: "1px solid #dbeafe",
+            borderRadius: 3,
+            p: 2.5,
+          }}
+        >
+          <Stack spacing={1.5}>
+            <Typography sx={{ color: "#0f172a", fontWeight: 900 }}>
+              {lessons.length === 0 ? (
+                <Trans>No lessons created yet</Trans>
+              ) : (
+                <Trans>No matching lessons found</Trans>
+              )}
+            </Typography>
+            {lessons.length === 0 && (
+              <Button
+                component={Link}
+                href="/manage/teacher/lessons/create"
+                startIcon={<AddIcon />}
+                variant="contained"
+                sx={{
+                  borderRadius: 2,
+                  fontWeight: 900,
+                  textTransform: "none",
+                }}
+              >
+                <Trans>Create Lesson</Trans>
+              </Button>
+            )}
+          </Stack>
+        </Paper>
+      )}
+    </Stack>
+  );
+
   return (
     <Paper
       elevation={0}
       sx={{
-        p: { xs: 2.5, md: 3 },
+        maxWidth: "100%",
+        minWidth: 0,
+        overflow: "hidden",
+        p: { xs: 2, md: 3 },
         borderRadius: 4,
         border: "1px solid #e2e8f0",
         boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
@@ -411,9 +652,9 @@ function LessonListScaffold() {
         direction={{ xs: "column", md: "row" }}
         justifyContent="space-between"
         gap={2}
-        sx={{ mb: 3 }}
+        sx={{ mb: 3, minWidth: 0 }}
       >
-        <Box>
+        <Box sx={{ minWidth: 0 }}>
           <Typography variant="h6" sx={{ fontWeight: 800 }}>
             <Trans>Lesson workspace</Trans>
           </Typography>
@@ -424,9 +665,14 @@ function LessonListScaffold() {
         <Stack
           direction={{ xs: "column", sm: "row" }}
           spacing={1.5}
-          sx={{ width: { xs: "100%", md: "auto" } }}
+          sx={{
+            flexWrap: { sm: "wrap", lg: "nowrap" },
+            maxWidth: "100%",
+            width: { xs: "100%", md: "auto" },
+          }}
         >
           <TextField
+            fullWidth
             size="small"
             value={search}
             onChange={(event) => setSearch(event.target.value)}
@@ -438,9 +684,19 @@ function LessonListScaffold() {
                 </InputAdornment>
               ),
             }}
-            sx={{ minWidth: { md: 280 } }}
+            sx={{
+              minWidth: { xs: 0, md: 240, lg: 280 },
+              width: { xs: "100%", sm: 260, lg: 300 },
+            }}
           />
-          <FormControl size="small" sx={{ minWidth: 150 }}>
+          <FormControl
+            fullWidth
+            size="small"
+            sx={{
+              minWidth: { xs: 0, sm: 140 },
+              width: { xs: "100%", sm: 150 },
+            }}
+          >
             <InputLabel>
               <Trans>Status</Trans>
             </InputLabel>
@@ -465,7 +721,14 @@ function LessonListScaffold() {
               </MenuItem>
             </Select>
           </FormControl>
-          <FormControl size="small" sx={{ minWidth: 140 }}>
+          <FormControl
+            fullWidth
+            size="small"
+            sx={{
+              minWidth: { xs: 0, sm: 130 },
+              width: { xs: "100%", sm: 140 },
+            }}
+          >
             <InputLabel>
               <Trans>Level</Trans>
             </InputLabel>
@@ -498,8 +761,9 @@ function LessonListScaffold() {
             sx={{
               borderRadius: 2,
               fontWeight: 900,
-              minWidth: 150,
+              minWidth: { xs: 0, sm: 150 },
               textTransform: "none",
+              width: { xs: "100%", sm: "auto" },
             }}
           >
             <Trans>Create Lesson</Trans>
@@ -507,140 +771,102 @@ function LessonListScaffold() {
         </Stack>
       </Stack>
       {loadError ? (
-        <ErrorState
-          title={<Trans>Lessons could not be loaded</Trans>}
-          description={
-            <Trans>
-              We could not load your teacher lessons right now. Please try
-              again.
-            </Trans>
-          }
-          onRetry={loadLessons}
-        />
+        renderCompactError()
       ) : (
-        <TableContainer>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell>
-                  <Trans>Lesson</Trans>
-                </TableCell>
-                <TableCell>
-                  <Trans>Level</Trans>
-                </TableCell>
-                <TableCell>
-                  <Trans>Skill Type</Trans>
-                </TableCell>
-                <TableCell>
-                  <Trans>Status</Trans>
-                </TableCell>
-                <TableCell>
-                  <Trans>Estimated Time</Trans>
-                </TableCell>
-                <TableCell>
-                  <Trans>Updated At</Trans>
-                </TableCell>
-                <TableCell align="right">
-                  <Trans>Actions</Trans>
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {loading && (
+        <>
+          <TableContainer
+            sx={{
+              display: { xs: "none", md: "block" },
+              maxWidth: "100%",
+              overflowX: "auto",
+            }}
+          >
+            <Table sx={{ minWidth: 860 }}>
+              <TableHead>
                 <TableRow>
-                  <TableCell colSpan={7} sx={{ color: "#64748b", py: 4 }}>
-                    <Trans>Loading lessons...</Trans>
+                  <TableCell>
+                    <Trans>Lesson</Trans>
+                  </TableCell>
+                  <TableCell>
+                    <Trans>Level</Trans>
+                  </TableCell>
+                  <TableCell>
+                    <Trans>Skill Type</Trans>
+                  </TableCell>
+                  <TableCell>
+                    <Trans>Status</Trans>
+                  </TableCell>
+                  <TableCell>
+                    <Trans>Estimated Time</Trans>
+                  </TableCell>
+                  <TableCell>
+                    <Trans>Updated At</Trans>
+                  </TableCell>
+                  <TableCell align="right">
+                    <Trans>Actions</Trans>
                   </TableCell>
                 </TableRow>
-              )}
-              {!loading && filteredLessons.length === 0 && renderEmptyRow()}
-              {!loading &&
-                filteredLessons.map((lesson) => (
-                  <TableRow key={lesson.id || lesson.slug} hover>
-                    <TableCell sx={{ fontWeight: 800 }}>
-                      {lesson.title}
-                    </TableCell>
-                    <TableCell>{lesson.level}</TableCell>
-                    <TableCell>
-                      <Chip
-                        label={lesson.skillType || "-"}
-                        size="small"
-                        sx={{
-                          backgroundColor: "#eff6ff",
-                          borderRadius: 2,
-                          color: "#1d4ed8",
-                          fontWeight: 800,
-                        }}
-                      />
-                    </TableCell>
-                    <TableCell>
-                      <Chip
-                        label={lesson.status || t`Draft`}
-                        size="small"
-                        color={
-                          lesson.status === "published"
-                            ? "success"
-                            : lesson.status === "archived"
-                              ? "default"
-                              : "warning"
-                        }
-                        sx={{ borderRadius: 2, fontWeight: 800 }}
-                      />
-                    </TableCell>
-                    <TableCell>
-                      {lesson.estimatedMinutes ? (
-                        <Trans>{lesson.estimatedMinutes} min</Trans>
-                      ) : (
-                        "-"
-                      )}
-                    </TableCell>
-                    <TableCell>{lesson.updatedAt || "-"}</TableCell>
-                    <TableCell align="right">
-                      <Stack
-                        direction="row"
-                        justifyContent="flex-end"
-                        spacing={1}
-                      >
-                        <Button
-                          component={Link}
-                          href={`/manage/teacher/lessons/${lesson.id}/edit`}
-                          size="small"
-                          startIcon={<EditIcon />}
-                        >
-                          <Trans>Edit</Trans>
-                        </Button>
-                        <Button
-                          size="small"
-                          startIcon={<PublishIcon />}
-                          onClick={() =>
-                            updateLessonStatus(lesson, "published")
-                          }
-                        >
-                          <Trans>Publish</Trans>
-                        </Button>
-                        <Button
-                          size="small"
-                          color="inherit"
-                          startIcon={<ArchiveIcon />}
-                          onClick={() => updateLessonStatus(lesson, "archived")}
-                        >
-                          <Trans>Archive</Trans>
-                        </Button>
-                        <Button
-                          size="small"
-                          color="error"
-                          startIcon={<DeleteIcon />}
-                          onClick={() => deleteLesson(lesson)}
-                        >
-                          <Trans>Delete</Trans>
-                        </Button>
-                      </Stack>
+              </TableHead>
+              <TableBody>
+                {loading && (
+                  <TableRow>
+                    <TableCell colSpan={7} sx={{ color: "#64748b", py: 4 }}>
+                      <Trans>Loading lessons...</Trans>
                     </TableCell>
                   </TableRow>
-                ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+                )}
+                {!loading && filteredLessons.length === 0 && renderEmptyRow()}
+                {!loading &&
+                  filteredLessons.map((lesson) => (
+                    <TableRow key={lesson.id || lesson.slug} hover>
+                      <TableCell sx={{ fontWeight: 800 }}>
+                        {lesson.title}
+                      </TableCell>
+                      <TableCell>{lesson.level}</TableCell>
+                      <TableCell>
+                        <Chip
+                          label={lesson.skillType || "-"}
+                          size="small"
+                          sx={{
+                            backgroundColor: "#eff6ff",
+                            borderRadius: 2,
+                            color: "#1d4ed8",
+                            fontWeight: 800,
+                          }}
+                        />
+                      </TableCell>
+                      <TableCell>
+                        <Chip
+                          label={lesson.status || t`Draft`}
+                          size="small"
+                          color={
+                            lesson.status === "published"
+                              ? "success"
+                              : lesson.status === "archived"
+                                ? "default"
+                                : "warning"
+                          }
+                          sx={{ borderRadius: 2, fontWeight: 800 }}
+                        />
+                      </TableCell>
+                      <TableCell>
+                        {lesson.estimatedMinutes ? (
+                          <Trans>{lesson.estimatedMinutes} min</Trans>
+                        ) : (
+                          "-"
+                        )}
+                      </TableCell>
+                      <TableCell>{lesson.updatedAt || "-"}</TableCell>
+                      <TableCell align="right">
+                        {renderLessonActions(lesson)}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          {renderMobileLessonCards()}
+        </>
       )}
     </Paper>
   );
