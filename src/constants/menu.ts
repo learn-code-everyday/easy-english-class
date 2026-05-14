@@ -1,10 +1,6 @@
 import { t } from "@lingui/macro";
 
-import {
-  isAdminUser,
-  isStudentUser,
-  isTeacherUser,
-} from "@/helpers/auth-access";
+import { isAdmin, isStudent, isTeacher } from "@/helpers/auth-access";
 import { UserRoles, UserTypes } from "@/services/user/user.model";
 
 // --- ADMIN MENU ---
@@ -71,11 +67,11 @@ export const getTeacherMenu = () => [
   },
   {
     categoryCode: t`TEACHING`,
-    code: "create-assignment",
-    icon: "assignment",
-    title: t`Create Assignment`,
-    header: t`Create Assignment`,
-    url: "/manage/teacher/assignments/create",
+    code: "lessons-assignments",
+    icon: "class",
+    title: t`Lessons / Assignments`,
+    header: t`Lessons / Assignments`,
+    url: "/manage/teacher/lessons",
   },
   {
     categoryCode: t`TEACHING`,
@@ -139,13 +135,13 @@ export const getDashboardOnlyMenu = () => [
 export function getMenuByRoleAndType(role: UserRoles, userType?: UserTypes) {
   const user = { role, userType };
 
-  if (isAdminUser(user)) {
+  if (isAdmin(user)) {
     return [...getDashboardOnlyMenu(), ...getAdminMenu()];
   }
-  if (isTeacherUser(user)) {
+  if (isTeacher(user)) {
     return [...getDashboardOnlyMenu(), ...getTeacherMenu()];
   }
-  if (isStudentUser(user)) {
+  if (isStudent(user)) {
     return [...getDashboardOnlyMenu(), ...getStudentMenu()];
   }
 

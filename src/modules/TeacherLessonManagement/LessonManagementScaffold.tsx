@@ -1,10 +1,11 @@
 import { Trans } from "@lingui/macro";
-import { Box, Paper, Typography } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useState } from "react";
 
+import { DashboardPage } from "@/components/Dashboard";
 import ErrorState from "@/components/ErrorState";
-import { isTeacherUser } from "@/helpers/auth-access";
+import { isTeacher } from "@/helpers/auth-access";
 import type { Lesson } from "@/services/lesson/lesson.model";
 import { LessonService } from "@/services/lesson/lesson.repo";
 import { AuthStatuses } from "@/stores/auth/types";
@@ -85,7 +86,7 @@ export default function LessonManagementScaffold({
 }: LessonManagementScaffoldProps) {
   const router = useRouter();
   const { auth, authStatus } = useAuthStore();
-  const canManageTeacherLessons = isTeacherUser(auth);
+  const canManageTeacherLessons = isTeacher(auth);
 
   useEffect(() => {
     if (authStatus === AuthStatuses.LOADED && !canManageTeacherLessons) {
@@ -98,7 +99,7 @@ export default function LessonManagementScaffold({
   }
 
   return (
-    <Box sx={{ maxWidth: "100%", minWidth: 0, overflowX: "hidden" }}>
+    <DashboardPage>
       <TeacherHero mode={mode} />
       {mode === "lesson-management" && <LessonListTable />}
       {(mode === "create-lesson" || mode === "edit-lesson") && (
@@ -113,6 +114,6 @@ export default function LessonManagementScaffold({
       {mode === "create-exercise" && <ExerciseBuilderScaffold />}
       {mode === "student-submissions" && <StudentSubmissionsTable />}
       {mode === "student-progress" && <StudentProgressPanel />}
-    </Box>
+    </DashboardPage>
   );
 }

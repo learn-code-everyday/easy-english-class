@@ -8,12 +8,23 @@ import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 
 import { GetAuthToken } from "@/graphql/auth";
+import {
+  canAccessAssignments,
+  isAdmin,
+  isTeacher,
+} from "@/helpers/auth-access";
 import { useAuthStore } from "@/stores/auth/useAuthStore";
 
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 
-const getPublicMenu = (hasToken: boolean) => {
+const getPublicMenu = ({
+  showDashboard,
+  showLearning,
+}: {
+  showDashboard: boolean;
+  showLearning: boolean;
+}) => {
   const courses = [
     { label: t`Basic Communication`, href: "/courses/basic" },
     { label: t`IELTS Preparation`, href: "/courses/ielts" },
@@ -30,18 +41,30 @@ const getPublicMenu = (hasToken: boolean) => {
   return [
     { label: t`Home`, href: "/" },
     { label: t`Courses`, children: courses },
-    ...(hasToken ? [{ label: t`Lessons`, href: "/lessons" }] : []),
+    ...(showLearning
+      ? [
+          { label: t`Lessons`, href: "/lessons" },
+          { label: t`Assignments`, href: "/assignments" },
+        ]
+      : []),
     { label: t`Testimonials`, href: "/testimonials" },
     { label: t`About Us`, children: aboutUs },
     { label: t`Contact`, href: "/contact" },
+    ...(showDashboard
+      ? [{ label: t`Go to Dashboard`, href: "/manage/dashboard" }]
+      : []),
   ];
 };
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { verifiedToken } = useAuthStore();
+  const { auth, verifiedToken } = useAuthStore();
   const token = GetAuthToken();
-  const menu = getPublicMenu(Boolean(token || verifiedToken));
+  const hasSession = Boolean(token || verifiedToken);
+  const menu = getPublicMenu({
+    showDashboard: hasSession && (isAdmin(auth) || isTeacher(auth)),
+    showLearning: hasSession && canAccessAssignments(auth),
+  });
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 bg-white/90 px-4 shadow-sm backdrop-blur-xl sm:px-6 lg:px-10">

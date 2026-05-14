@@ -97,6 +97,43 @@ const PROGRESS_FIELDS = `
   lastSubmittedAt
 `;
 
+const TEACHER_PROGRESS_FIELDS = `
+  studentId
+  assignmentId
+  assignmentTitle
+  submissionCount
+  bestScore
+  status
+  lastSubmittedAt
+`;
+
+const HOMEWORK_SUBMISSION_FIELDS = `
+  id
+  assignmentId
+  studentId
+  uploadedFiles
+  note
+  score
+  feedback
+  status
+  reviewedAt
+  submittedAt
+  assignment {
+    id
+    title
+    type
+    description
+    dueDate
+    status
+    attachments
+  }
+  student {
+    id
+    name
+    email
+  }
+`;
+
 class LessonRepository {
   private get apollo() {
     return initializeApollo();
@@ -278,7 +315,7 @@ class LessonRepository {
       query: gql`
         query TeacherSubmissionList {
           teacherSubmissionList {
-            ${SUBMISSION_FIELDS}
+            ${HOMEWORK_SUBMISSION_FIELDS}
           }
         }
       `,
@@ -295,7 +332,7 @@ class LessonRepository {
       query: gql`
         query TeacherStudentProgress {
           teacherStudentProgress {
-            ${PROGRESS_FIELDS}
+            ${TEACHER_PROGRESS_FIELDS}
           }
         }
       `,

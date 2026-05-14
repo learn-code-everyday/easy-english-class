@@ -43,7 +43,7 @@ export default function AdminLayout({ children }: LayoutProps) {
       />
       <div className="flex min-h-screen flex-col bg-[var(--app-bg)] md:ml-64 lg:ml-72">
         <AdminHeaderBar setCollapseShow={setCollapseShow} />
-        <main className="mt-[72px] flex-1 p-4 sm:p-6 lg:p-8">
+        <main className="mt-[72px] flex-1 overflow-x-hidden p-4 sm:p-6 lg:p-8">
           <PageHeader />
           {children}
         </main>

@@ -33,7 +33,9 @@ export function useTeacherProgress() {
       },
       {
         label: t`Needs feedback`,
-        value: String(progressRows.filter((row) => !row.passed).length),
+        value: String(
+          progressRows.filter((row) => row.status !== "reviewed").length
+        ),
       },
     ],
     [progressRows]

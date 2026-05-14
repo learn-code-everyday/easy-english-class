@@ -12,7 +12,7 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 
 import { GetAuthToken } from "@/graphql/auth";
-import { canOpenBasicCommunicationPage } from "@/helpers/auth-access";
+import { isAdmin, isStudent, isTeacher } from "@/helpers/auth-access";
 import MainLayout from "@/layouts/MainLayout";
 import DialogueSection from "@/modules/BasicCommunicationPage/DialogueSection";
 import ErrorSnackbar from "@/modules/BasicCommunicationPage/ErrorSnackbar";
@@ -29,7 +29,8 @@ const BasicLessonPage = () => {
   const { auth, authStatus, verifiedToken } = useAuthStore();
   const preview =
     router.query.preview === "1" || router.query.preview === "true";
-  const canOpenPage = canOpenBasicCommunicationPage(auth, preview);
+  const canOpenPage =
+    isStudent(auth) || (preview && (isAdmin(auth) || isTeacher(auth)));
   const hasVerifiedToken = Boolean(token && verifiedToken === token);
   const quickStats = [
     {

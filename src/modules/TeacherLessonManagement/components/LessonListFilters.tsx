@@ -8,10 +8,11 @@ import {
   InputLabel,
   MenuItem,
   Select,
-  Stack,
   TextField,
 } from "@mui/material";
 import Link from "next/link";
+
+import { DashboardToolbar } from "@/components/Dashboard";
 
 import {
   CREATE_LESSON_PATH,
@@ -38,16 +39,7 @@ export default function LessonListFilters({
   statusFilter,
 }: LessonListFiltersProps) {
   return (
-    <Stack
-      direction={{ xs: "column", md: "row" }}
-      spacing={1.5}
-      sx={{
-        alignItems: { xs: "stretch", md: "center" },
-        flexWrap: "nowrap",
-        maxWidth: "100%",
-        width: "100%",
-      }}
-    >
+    <DashboardToolbar>
       <TextField
         fullWidth
         size="small"
@@ -148,6 +140,6 @@ export default function LessonListFilters({
       >
         <Trans>Create Lesson</Trans>
       </Button>
-    </Stack>
+    </DashboardToolbar>
   );
 }

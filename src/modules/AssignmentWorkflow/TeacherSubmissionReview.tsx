@@ -12,11 +12,15 @@ import {
 import { useCallback, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
-import ErrorState from "@/components/ErrorState";
+import {
+  DashboardContentCard,
+  DashboardEmptyState,
+  DashboardErrorState,
+  DashboardPage,
+  DashboardPageHeader,
+} from "@/components/Dashboard";
 import { AssignmentService } from "@/services/assignment/assignment.repo";
 import type { AssignmentSubmission } from "@/services/assignment-submission/assignment-submission.model";
-
-import AssignmentEmptyState from "./AssignmentEmptyState";
 
 function ReviewControls({
   onReviewed,
@@ -29,7 +33,7 @@ function ReviewControls({
   const [score, setScore] = useState(String(submission.score || ""));
   const [saving, setSaving] = useState(false);
 
-  const submitReview = async (status: "need_retry" | "review") => {
+  const submitReview = async (status: "need_retry" | "reviewed") => {
     setSaving(true);
     try {
       await AssignmentService.teacherReviewSubmission({
@@ -66,7 +70,7 @@ function ReviewControls({
       <Stack direction={{ xs: "column", sm: "row" }} spacing={1}>
         <Button
           disabled={saving}
-          onClick={() => submitReview("review")}
+          onClick={() => submitReview("reviewed")}
           variant="contained"
           sx={{ borderRadius: 2, textTransform: "none" }}
         >
@@ -106,96 +110,139 @@ export default function TeacherSubmissionReview() {
 
   if (loadError) {
     return (
-      <ErrorState
-        title={<Trans>Submissions could not be loaded</Trans>}
-        description={<Trans>Please try again later.</Trans>}
-        onRetry={loadSubmissions}
-      />
+      <DashboardPage>
+        <DashboardPageHeader
+          eyebrow={<Trans>Teaching</Trans>}
+          title={<Trans>Student Submissions</Trans>}
+          description={
+            <Trans>
+              Preview submitted files, add feedback, and request retries.
+            </Trans>
+          }
+        />
+        <DashboardContentCard>
+          <DashboardErrorState
+            title={<Trans>Submissions could not be loaded</Trans>}
+            description={<Trans>Please try again later.</Trans>}
+            onRetry={loadSubmissions}
+          />
+        </DashboardContentCard>
+      </DashboardPage>
     );
   }
 
   if (!loading && submissions.length === 0) {
     return (
-      <AssignmentEmptyState
-        title={<Trans>No submissions yet</Trans>}
-        description={
-          <Trans>
-            Student homework submissions will appear here for review.
-          </Trans>
-        }
-      />
+      <DashboardPage>
+        <DashboardPageHeader
+          eyebrow={<Trans>Teaching</Trans>}
+          title={<Trans>Student Submissions</Trans>}
+          description={
+            <Trans>
+              Preview submitted files, add feedback, and request retries.
+            </Trans>
+          }
+        />
+        <DashboardContentCard>
+          <DashboardEmptyState
+            title={<Trans>No submissions yet</Trans>}
+            description={
+              <Trans>
+                Student homework submissions will appear here for review.
+              </Trans>
+            }
+          />
+        </DashboardContentCard>
+      </DashboardPage>
     );
   }
 
   return (
-    <Stack spacing={2}>
-      <Box>
-        <Typography variant="h5" sx={{ fontWeight: 900 }}>
-          <Trans>Student Submissions</Trans>
-        </Typography>
-        <Typography sx={{ color: "#64748b", mt: 0.5 }}>
+    <DashboardPage>
+      <DashboardPageHeader
+        eyebrow={<Trans>Teaching</Trans>}
+        title={<Trans>Student Submissions</Trans>}
+        description={
           <Trans>
             Preview submitted files, add feedback, and request retries.
           </Trans>
-        </Typography>
-      </Box>
-      {loading ? (
-        <Paper
-          elevation={0}
-          sx={{ border: "1px solid #e2e8f0", borderRadius: 3, p: 3 }}
-        >
-          <Trans>Loading submissions...</Trans>
-        </Paper>
-      ) : (
-        <Grid container spacing={2}>
-          {submissions.map((submission) => (
-            <Grid item xs={12} lg={6} key={submission.id}>
-              <Paper
-                elevation={0}
-                sx={{ border: "1px solid #e2e8f0", borderRadius: 3, p: 2.5 }}
-              >
-                <Stack spacing={2}>
-                  <Box>
-                    <Typography sx={{ fontWeight: 900 }}>
-                      {submission.assignment?.title || "-"}
-                    </Typography>
-                    <Typography sx={{ color: "#64748b" }}>
-                      {submission.student?.name ||
-                        submission.student?.email ||
-                        "-"}
-                    </Typography>
-                  </Box>
-                  <Stack direction="row" spacing={1} sx={{ flexWrap: "wrap" }}>
-                    <Chip
-                      label={submission.status || t`Submitted`}
-                      size="small"
-                    />
-                    <Chip label={`${submission.score || 0}%`} size="small" />
-                  </Stack>
-                  {submission.fileUrl && (
-                    <Button
-                      href={submission.fileUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      variant="outlined"
-                      sx={{ alignSelf: "flex-start", borderRadius: 2 }}
-                    >
-                      <Trans>Preview submission</Trans>
-                    </Button>
-                  )}
-                  <Typography sx={{ color: "#475569" }}>
-                    {submission.note || "-"}
-                  </Typography>
-                  <ReviewControls
-                    submission={submission}
-                    onReviewed={loadSubmissions}
-                  />
-                </Stack>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
-      )}
-    </Stack>
+        }
+      />
+      <DashboardContentCard>
+        {loading ? (
+          <Paper
+            elevation={0}
+            sx={{ border: "1px solid #e2e8f0", borderRadius: 3, p: 3 }}
+          >
+            <Trans>Loading submissions...</Trans>
+          </Paper>
+        ) : (
+          <Grid container spacing={2}>
+            {submissions.map((submission) => {
+              const previewUrl =
+                submission.uploadedFiles?.[0] || submission.fileUrl;
+
+              return (
+                <Grid item xs={12} lg={6} key={submission.id}>
+                  <Paper
+                    elevation={0}
+                    sx={{
+                      border: "1px solid #e2e8f0",
+                      borderRadius: 3,
+                      p: 2.5,
+                    }}
+                  >
+                    <Stack spacing={2}>
+                      <Box>
+                        <Typography sx={{ fontWeight: 900 }}>
+                          {submission.assignment?.title || "-"}
+                        </Typography>
+                        <Typography sx={{ color: "#64748b" }}>
+                          {submission.student?.name ||
+                            submission.student?.email ||
+                            "-"}
+                        </Typography>
+                      </Box>
+                      <Stack
+                        direction="row"
+                        spacing={1}
+                        sx={{ flexWrap: "wrap" }}
+                      >
+                        <Chip
+                          label={submission.status || t`Submitted`}
+                          size="small"
+                        />
+                        <Chip
+                          label={`${submission.score || 0}%`}
+                          size="small"
+                        />
+                      </Stack>
+                      {previewUrl && (
+                        <Button
+                          href={previewUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          variant="outlined"
+                          sx={{ alignSelf: "flex-start", borderRadius: 2 }}
+                        >
+                          <Trans>Preview submission</Trans>
+                        </Button>
+                      )}
+                      <Typography sx={{ color: "#475569" }}>
+                        {submission.note || "-"}
+                      </Typography>
+                      <ReviewControls
+                        submission={submission}
+                        onReviewed={loadSubmissions}
+                      />
+                    </Stack>
+                  </Paper>
+                </Grid>
+              );
+            })}
+          </Grid>
+        )}
+      </DashboardContentCard>
+    </DashboardPage>
   );
 }

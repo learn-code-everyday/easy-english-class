@@ -7,11 +7,13 @@ import Link from "next/link";
 export default function AssignmentEmptyState({
   actionHref,
   actionLabel,
+  onAction,
   description,
   title,
 }: {
   actionHref?: string;
   actionLabel?: React.ReactNode;
+  onAction?: () => void;
   description: React.ReactNode;
   title: React.ReactNode;
 }) {
@@ -49,7 +51,7 @@ export default function AssignmentEmptyState({
             {description}
           </Typography>
         </Box>
-        {actionHref && (
+        {actionHref ? (
           <Button
             component={Link}
             href={actionHref}
@@ -59,7 +61,16 @@ export default function AssignmentEmptyState({
           >
             {actionLabel || <Trans>Create Assignment</Trans>}
           </Button>
-        )}
+        ) : onAction ? (
+          <Button
+            onClick={onAction}
+            startIcon={<AddIcon />}
+            variant="contained"
+            sx={{ borderRadius: 2, fontWeight: 900, textTransform: "none" }}
+          >
+            {actionLabel || <Trans>Create Assignment</Trans>}
+          </Button>
+        ) : null}
       </Stack>
     </Paper>
   );

@@ -25,10 +25,7 @@ import { toast } from "react-toastify";
 
 import ErrorState from "@/components/ErrorState";
 import { GetAuthToken } from "@/graphql/auth";
-import {
-  canAccessStudentLessons,
-  canPreviewStudentLessons,
-} from "@/helpers/auth-access";
+import { isAdmin, isStudent, isTeacher } from "@/helpers/auth-access";
 import MainLayout from "@/layouts/MainLayout";
 import type {
   Lesson,
@@ -53,8 +50,8 @@ const LessonDetailPage = () => {
   const preview =
     router.query.preview === "1" || router.query.preview === "true";
   const slug = typeof router.query.slug === "string" ? router.query.slug : "";
-  const canSubmit = canAccessStudentLessons(auth);
-  const canPreview = canPreviewStudentLessons(auth);
+  const canSubmit = isStudent(auth);
+  const canPreview = isAdmin(auth) || isTeacher(auth);
   const canOpenPage = canSubmit || (preview && canPreview);
   const hasVerifiedToken = Boolean(token && verifiedToken === token);
 

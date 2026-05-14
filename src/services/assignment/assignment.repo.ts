@@ -30,6 +30,20 @@ const ASSIGNMENT_LIST_FIELDS = `
   status
 `;
 
+const HOMEWORK_ASSIGNMENT_LIST_FIELDS = `
+  id
+  title
+  type
+  description
+  instructions
+  dueDate
+  status
+  assignedToClassIds
+  attachments
+  createdAt
+  updatedAt
+`;
+
 const ASSIGNMENT_DETAIL_FIELDS = `
   ${ASSIGNMENT_LIST_FIELDS}
   class {
@@ -40,20 +54,23 @@ const ASSIGNMENT_DETAIL_FIELDS = `
 
 const SUBMISSION_FIELDS = `
   id
-  fileUrl
+  assignmentId
+  studentId
+  uploadedFiles
   note
-  submitTime
-  status
   score
   feedback
-  gradedAt
+  status
+  reviewedAt
+  submittedAt
   assignment {
     id
     title
-    content
-    attachmentUrl
-    deadline
+    type
+    description
+    dueDate
     status
+    attachments
   }
   student {
     id
@@ -61,11 +78,6 @@ const SUBMISSION_FIELDS = `
     email
   }
 `;
-
-function normalizeList<T>(value?: ListResponse<T> | T[]) {
-  if (!value) return [];
-  return Array.isArray(value) ? value : value.data || [];
-}
 
 function safeContent(content?: string): AssignmentContent {
   if (!content) return {};
@@ -89,12 +101,33 @@ function serializeContent(input: AssignmentCreateInput) {
   });
 }
 
-export function getAssignmentContent(assignment: Pick<Assignment, "content">) {
-  return safeContent(assignment.content);
+export function getAssignmentContent(
+  assignment: Pick<
+    Assignment,
+    | "assignedToClassIds"
+    | "content"
+    | "description"
+    | "externalUrl"
+    | "instructions"
+    | "type"
+  >
+) {
+  return {
+    assignedToClassIds: assignment.assignedToClassIds,
+    assignmentType: assignment.type,
+    description: assignment.description,
+    externalUrl: assignment.externalUrl,
+    instructions: assignment.instructions,
+    ...safeContent(assignment.content),
+  };
 }
 
-export function getAssignmentType(assignment: Pick<Assignment, "content">) {
-  return safeContent(assignment.content).assignmentType || "QUIZ";
+export function getAssignmentType(
+  assignment: Pick<Assignment, "content" | "type">
+) {
+  return (
+    assignment.type || safeContent(assignment.content).assignmentType || "QUIZ"
+  );
 }
 
 export class AssignmentRepository extends CrudRepository<Assignment> {
@@ -123,13 +156,13 @@ export class AssignmentRepository extends CrudRepository<Assignment> {
 
   async teacherAssignmentList() {
     const result = await this.client.query<{
-      getAllAssignment: ListResponse<Assignment>;
+      teacherAssignmentList?: ListResponse<Assignment> | null;
     }>({
       query: this.gql`
         query TeacherAssignmentList {
-          getAllAssignment(q: { limit: 1000 }) {
+          teacherAssignmentList(q: { limit: 1000 }) {
             data {
-              ${ASSIGNMENT_DETAIL_FIELDS}
+              ${HOMEWORK_ASSIGNMENT_LIST_FIELDS}
             }
             total
           }
@@ -138,7 +171,12 @@ export class AssignmentRepository extends CrudRepository<Assignment> {
       fetchPolicy: "network-only",
     });
 
-    return normalizeList(result.data.getAllAssignment);
+    const response = result.data;
+    const rows = response?.teacherAssignmentList?.data ?? [];
+    const total = response?.teacherAssignmentList?.total ?? 0;
+    void total;
+
+    return rows;
   }
 
   async assignmentList(classId?: string) {
@@ -230,64 +268,46 @@ export class AssignmentRepository extends CrudRepository<Assignment> {
     return result.data?.submitAssignment;
   }
 
-  async teacherSubmissionList(assignments?: Assignment[]) {
-    const sourceAssignments =
-      assignments || (await this.teacherAssignmentList());
-    const submissionGroups = await Promise.all(
-      sourceAssignments
-        .filter((assignment) => assignment.id)
-        .map((assignment) =>
-          this.client
-            .query<{ getAssignmentSubmissions: AssignmentSubmission[] }>({
-              query: this.gql`
-                query AssignmentSubmissions($assignmentId: ID!) {
-                  getAssignmentSubmissions(assignmentId: $assignmentId) {
-                    ${SUBMISSION_FIELDS}
-                  }
-                }
-              `,
-              variables: { assignmentId: assignment.id },
-              fetchPolicy: "network-only",
-            })
-            .then((result) => result.data.getAssignmentSubmissions || [])
-        )
-    );
+  async teacherSubmissionList() {
+    const result = await this.client.query<{
+      teacherSubmissionList?: AssignmentSubmission[] | null;
+    }>({
+      query: this.gql`
+        query TeacherSubmissionList {
+          teacherSubmissionList {
+            ${SUBMISSION_FIELDS}
+          }
+        }
+      `,
+      fetchPolicy: "network-only",
+    });
 
-    return submissionGroups.flat();
+    return result.data?.teacherSubmissionList ?? [];
   }
 
   async teacherReviewSubmission(input: TeacherReviewSubmissionInput) {
-    const feedback = JSON.stringify({
-      feedback: input.feedback || "",
-      status: input.status,
-    });
     const result = await this.client.mutate<{
-      gradeAssignmentSubmission: AssignmentSubmission;
+      teacherReviewSubmission: AssignmentSubmission;
     }>({
       mutation: this.gql`
-        mutation TeacherReviewSubmission(
-          $submissionId: ID!
-          $score: Float!
-          $feedback: String
-        ) {
-          gradeAssignmentSubmission(
-            submissionId: $submissionId
-            score: $score
-            feedback: $feedback
-          ) {
+        mutation TeacherReviewSubmission($input: TeacherReviewSubmissionInput!) {
+          teacherReviewSubmission(input: $input) {
             ${SUBMISSION_FIELDS}
           }
         }
       `,
       variables: {
-        feedback,
-        score: Number(input.score || 0),
-        submissionId: input.submissionId,
+        input: {
+          feedback: input.feedback || "",
+          score: Number(input.score || 0),
+          status: input.status,
+          submissionId: input.submissionId,
+        },
       },
       fetchPolicy: "no-cache",
     });
 
-    return result.data?.gradeAssignmentSubmission;
+    return result.data?.teacherReviewSubmission;
   }
 }
 

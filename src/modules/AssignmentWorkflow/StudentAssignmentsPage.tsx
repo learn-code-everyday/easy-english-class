@@ -16,7 +16,7 @@ import { useCallback, useEffect, useState } from "react";
 
 import ErrorState from "@/components/ErrorState";
 import { GetAuthToken } from "@/graphql/auth";
-import { isStudentUser } from "@/helpers/auth-access";
+import { canAccessAssignments } from "@/helpers/auth-access";
 import type { Assignment } from "@/services/assignment/assignment.model";
 import { AssignmentService } from "@/services/assignment/assignment.repo";
 import { AuthStatuses } from "@/stores/auth/types";
@@ -35,7 +35,7 @@ export default function StudentAssignmentsPage() {
   const [assignments, setAssignments] = useState<Assignment[]>([]);
   const [loadError, setLoadError] = useState(false);
   const [loading, setLoading] = useState(true);
-  const canOpenPage = isStudentUser(auth);
+  const canOpenPage = canAccessAssignments(auth);
   const hasVerifiedToken = Boolean(token && verifiedToken === token);
 
   useEffect(() => {

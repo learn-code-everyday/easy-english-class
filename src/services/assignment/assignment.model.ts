@@ -34,13 +34,20 @@ export type AssignmentContent = {
 
 export interface Assignment extends BaseModel {
   id: string;
+  assignedToClassIds?: string[];
+  attachments?: string[];
+  description?: string;
+  dueDate?: string;
+  externalUrl?: string;
+  instructions?: string;
   title: string;
-  content: string;
-  class: Class;
-  teacher: User;
-  deadline: string;
-  attachmentUrl: string;
-  submissions: [AssignmentSubmission];
+  type?: AssignmentType;
+  content?: string;
+  class?: Class;
+  teacher?: User;
+  deadline?: string;
+  attachmentUrl?: string;
+  submissions?: [AssignmentSubmission];
   status?: AssignmentWorkflowStatus | string;
 }
 
@@ -67,6 +74,6 @@ export type AssignmentSubmitInput = {
 export type TeacherReviewSubmissionInput = {
   feedback?: string;
   score?: number;
-  status: "need_retry" | "review";
+  status: "need_retry" | "reviewed";
   submissionId: string;
 };

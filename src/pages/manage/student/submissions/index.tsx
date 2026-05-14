@@ -1,21 +1,24 @@
 import { t, Trans } from "@lingui/macro";
 import {
-  Box,
   Chip,
-  Paper,
   Table,
   TableBody,
   TableCell,
-  TableContainer,
   TableHead,
   TableRow,
-  Typography,
 } from "@mui/material";
 import { useRouter } from "next/router";
 import React, { useCallback, useEffect, useState } from "react";
 
-import ErrorState from "@/components/ErrorState";
-import { isStudentUser } from "@/helpers/auth-access";
+import {
+  DashboardContentCard,
+  DashboardEmptyState,
+  DashboardErrorState,
+  DashboardPage,
+  DashboardPageHeader,
+  DashboardTable,
+} from "@/components/Dashboard";
+import { isStudent } from "@/helpers/auth-access";
 import AdminLayout from "@/layouts/admin-layout/AdminLayout";
 import type { TeacherSubmission } from "@/services/lesson/lesson.model";
 import { LessonService } from "@/services/lesson/lesson.repo";
@@ -27,7 +30,7 @@ export default function StudentSubmissionsPage() {
   const { auth, authStatus } = useAuthStore();
   const [loadError, setLoadError] = useState(false);
   const [rows, setRows] = useState<TeacherSubmission[]>([]);
-  const canViewSubmissions = isStudentUser(auth);
+  const canViewSubmissions = isStudent(auth);
 
   useEffect(() => {
     if (authStatus === AuthStatuses.LOADED && !canViewSubmissions) {
@@ -53,31 +56,27 @@ export default function StudentSubmissionsPage() {
   if (authStatus !== AuthStatuses.LOADED || !canViewSubmissions) return null;
 
   return (
-    <Box>
-      <Typography variant="h4" sx={{ mb: 3, fontWeight: 900 }}>
-        <Trans>Submissions/Scores</Trans>
-      </Typography>
+    <DashboardPage>
+      <DashboardPageHeader
+        eyebrow={<Trans>Learning</Trans>}
+        title={<Trans>Submissions/Scores</Trans>}
+        description={<Trans>Review your submitted lessons and scores.</Trans>}
+      />
       {loadError ? (
-        <ErrorState
-          title={<Trans>Submissions could not be loaded</Trans>}
-          description={
-            <Trans>
-              We could not load your submissions right now. Please try again.
-            </Trans>
-          }
-          onRetry={loadSubmissions}
-        />
+        <DashboardContentCard>
+          <DashboardErrorState
+            title={<Trans>Submissions could not be loaded</Trans>}
+            description={
+              <Trans>
+                We could not load your submissions right now. Please try again.
+              </Trans>
+            }
+            onRetry={loadSubmissions}
+          />
+        </DashboardContentCard>
       ) : (
-        <Paper
-          elevation={0}
-          sx={{
-            borderRadius: 4,
-            border: "1px solid #e2e8f0",
-            boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
-            overflow: "hidden",
-          }}
-        >
-          <TableContainer>
+        <DashboardContentCard>
+          <DashboardTable>
             <Table>
               <TableHead>
                 <TableRow>
@@ -96,6 +95,20 @@ export default function StudentSubmissionsPage() {
                 </TableRow>
               </TableHead>
               <TableBody>
+                {rows.length === 0 && (
+                  <TableRow>
+                    <TableCell colSpan={4}>
+                      <DashboardEmptyState
+                        title={<Trans>No submissions yet</Trans>}
+                        description={
+                          <Trans>
+                            Submitted lesson attempts will appear here.
+                          </Trans>
+                        }
+                      />
+                    </TableCell>
+                  </TableRow>
+                )}
                 {rows.map((row) => (
                   <TableRow key={row.id || row.lesson?.slug} hover>
                     <TableCell sx={{ fontWeight: 800 }}>
@@ -114,10 +127,10 @@ export default function StudentSubmissionsPage() {
                 ))}
               </TableBody>
             </Table>
-          </TableContainer>
-        </Paper>
+          </DashboardTable>
+        </DashboardContentCard>
       )}
-    </Box>
+    </DashboardPage>
   );
 }
 

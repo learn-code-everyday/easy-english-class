@@ -23,7 +23,7 @@ import React, { useCallback, useEffect, useState } from "react";
 
 import ErrorState from "@/components/ErrorState";
 import { GetAuthToken } from "@/graphql/auth";
-import { canAccessStudentLessons } from "@/helpers/auth-access";
+import { isStudent } from "@/helpers/auth-access";
 import MainLayout from "@/layouts/MainLayout";
 import type { Lesson } from "@/services/lesson/lesson.model";
 import { LessonService } from "@/services/lesson/lesson.repo";
@@ -37,7 +37,7 @@ const LessonsPage = () => {
   const [lessons, setLessons] = useState<Lesson[]>([]);
   const [loadError, setLoadError] = useState(false);
   const [loading, setLoading] = useState(true);
-  const canStart = canAccessStudentLessons(auth);
+  const canStart = isStudent(auth);
   const hasVerifiedToken = Boolean(token && verifiedToken === token);
   const canOpenPage = canStart;
   const showStudentEmptyState = !loading && canStart && lessons.length === 0;

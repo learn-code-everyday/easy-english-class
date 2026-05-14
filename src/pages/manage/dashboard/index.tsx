@@ -4,12 +4,18 @@ import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import SchoolIcon from "@mui/icons-material/School";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
-import { Box, Button, Grid, Paper, Stack, Typography } from "@mui/material";
+import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import Link from "next/link";
 import React, { useMemo } from "react";
 
+import {
+  DashboardContentCard,
+  DashboardHeroCard,
+  DashboardPage,
+  DashboardPageHeader,
+} from "@/components/Dashboard";
 import { ROLE_LABELS } from "@/constants/role";
-import { isStudentUser, isTeacherUser } from "@/helpers/auth-access";
+import { isAdmin, isStudent, isTeacher } from "@/helpers/auth-access";
 import AdminLayout from "@/layouts/admin-layout/AdminLayout";
 import DashboardCharts from "@/modules/DashboardPage/DashboardChart";
 import DashboardStats from "@/modules/DashboardPage/DashboardStats";
@@ -81,16 +87,7 @@ function DashboardActionGrid({ actions }: { actions: DashboardAction[] }) {
     <Grid container spacing={2.5}>
       {actions.map((action) => (
         <Grid item xs={12} md={6} xl={3} key={action.href}>
-          <Paper
-            elevation={0}
-            sx={{
-              border: "1px solid #e2e8f0",
-              borderRadius: "8px",
-              boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
-              height: "100%",
-              p: 3,
-            }}
-          >
+          <DashboardContentCard sx={{ height: "100%" }}>
             <Stack spacing={2} sx={{ height: "100%" }}>
               <Box
                 sx={{
@@ -130,7 +127,7 @@ function DashboardActionGrid({ actions }: { actions: DashboardAction[] }) {
                 <Trans>Open</Trans>
               </Button>
             </Stack>
-          </Paper>
+          </DashboardContentCard>
         </Grid>
       ))}
     </Grid>
@@ -140,15 +137,7 @@ function DashboardActionGrid({ actions }: { actions: DashboardAction[] }) {
 function TeacherDashboard() {
   return (
     <Stack spacing={3}>
-      <Paper
-        elevation={0}
-        sx={{
-          backgroundColor: "#f8fafc",
-          border: "1px solid #e2e8f0",
-          borderRadius: "8px",
-          p: { xs: 3, md: 4 },
-        }}
-      >
+      <DashboardHeroCard>
         <Typography variant="h5" sx={{ fontWeight: 900 }}>
           <Trans>Teacher workspace</Trans>
         </Typography>
@@ -158,7 +147,7 @@ function TeacherDashboard() {
             the teacher tools.
           </Trans>
         </Typography>
-      </Paper>
+      </DashboardHeroCard>
       <DashboardActionGrid actions={teacherActions} />
     </Stack>
   );
@@ -167,15 +156,7 @@ function TeacherDashboard() {
 function StudentDashboard() {
   return (
     <Stack spacing={3}>
-      <Paper
-        elevation={0}
-        sx={{
-          backgroundColor: "#f8fafc",
-          border: "1px solid #e2e8f0",
-          borderRadius: "8px",
-          p: { xs: 3, md: 4 },
-        }}
-      >
+      <DashboardHeroCard>
         <Typography variant="h5" sx={{ fontWeight: 900 }}>
           <Trans>Student dashboard</Trans>
         </Typography>
@@ -185,7 +166,7 @@ function StudentDashboard() {
             scores.
           </Trans>
         </Typography>
-      </Paper>
+      </DashboardHeroCard>
       <DashboardActionGrid actions={studentActions} />
     </Stack>
   );
@@ -193,36 +174,32 @@ function StudentDashboard() {
 
 const DashboardAdmin = () => {
   const { auth } = useAuthStore();
-  const isTeacher = isTeacherUser(auth);
-  const isStudent = isStudentUser(auth);
+  const showTeacherDashboard = isTeacher(auth);
+  const showStudentDashboard = isStudent(auth);
 
   const renderUserRole = useMemo(() => {
     if (!auth) return null;
-    if (auth.role === "ADMIN") return ROLE_LABELS().ADMIN;
+    if (isAdmin(auth)) return ROLE_LABELS().ADMIN;
     if (auth.userType && ROLE_LABELS()[auth.userType])
       return ROLE_LABELS()[auth.userType];
     return ROLE_LABELS().UNKNOWN;
   }, [auth]);
 
   return (
-    <div className="min-h-screen">
-      <div className="mb-8 rounded-[var(--app-radius)] border border-slate-200 bg-white p-5 shadow-[var(--app-shadow-sm)] sm:p-6">
-        <p className="mb-2 text-sm font-medium uppercase tracking-[0.18em] text-blue-600">
-          <Trans>Dashboard</Trans>
-        </p>
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <h1 className="text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl">
+    <DashboardPage>
+      <DashboardPageHeader
+        eyebrow={<Trans>Dashboard</Trans>}
+        title={
+          <>
             <Trans>Welcome back,</Trans> {renderUserRole}
-          </h1>
-          <p className="text-sm text-slate-500 sm:text-base">
-            <Trans>Here&apos;s your dashboard overview.</Trans>
-          </p>
-        </div>
-      </div>
+          </>
+        }
+        description={<Trans>Here&apos;s your dashboard overview.</Trans>}
+      />
 
-      {isTeacher ? (
+      {showTeacherDashboard ? (
         <TeacherDashboard />
-      ) : isStudent ? (
+      ) : showStudentDashboard ? (
         <StudentDashboard />
       ) : (
         <>
@@ -231,7 +208,7 @@ const DashboardAdmin = () => {
           <DashboardCharts />
         </>
       )}
-    </div>
+    </DashboardPage>
   );
 };
 

@@ -215,11 +215,22 @@ function QuestionBuilder({
   );
 }
 
-export default function TeacherAssignmentForm() {
+export type TeacherAssignmentFormProps = {
+  initialType?: AssignmentType;
+  onSuccess?: () => void;
+};
+
+export default function TeacherAssignmentForm({
+  initialType,
+  onSuccess,
+}: TeacherAssignmentFormProps) {
   const { auth } = useAuthStore();
   const [saving, setSaving] = useState(false);
   const { control, handleSubmit, reset } = useForm<AssignmentFormValues>({
-    defaultValues,
+    defaultValues: {
+      ...defaultValues,
+      assignmentType: initialType || defaultValues.assignmentType,
+    },
   });
   const assignmentType = useWatch({ control, name: "assignmentType" });
   const {
@@ -243,7 +254,11 @@ export default function TeacherAssignmentForm() {
         auth?.id
       );
       toast.success(t`Assignment created successfully`);
-      reset(defaultValues);
+      reset({
+        ...defaultValues,
+        assignmentType: initialType || defaultValues.assignmentType,
+      });
+      onSuccess?.();
     } catch {
       toast.error(t`Failed to create assignment`);
     } finally {

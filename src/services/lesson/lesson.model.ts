@@ -49,24 +49,38 @@ export type LessonSubmissionResult = {
 };
 
 export type TeacherSubmission = {
+  assignment?: {
+    id?: string;
+    title?: string;
+  };
+  assignmentId?: string;
+  feedback?: string;
   id?: string;
   lesson?: Pick<Lesson, "slug" | "title">;
+  note?: string;
   passed?: boolean;
+  reviewedAt?: string;
   score?: number;
+  status?: string;
   student?: {
     email?: string;
     id?: string;
     name?: string;
   };
+  studentId?: string;
   submittedAt?: string;
+  uploadedFiles?: string[];
 };
 
 export type StudentProgress = {
+  assignmentId?: string;
+  assignmentTitle?: string;
   bestScore?: number;
   lastSubmittedAt?: string;
   lessonId?: string;
   lessonTitle?: string;
   passed?: boolean;
+  status?: string;
   studentId?: string;
   submissionCount?: number;
 };

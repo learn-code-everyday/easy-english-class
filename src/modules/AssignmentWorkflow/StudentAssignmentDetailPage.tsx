@@ -15,8 +15,11 @@ import { toast } from "react-toastify";
 
 import ErrorState from "@/components/ErrorState";
 import { GetAuthToken } from "@/graphql/auth";
-import { isStudentUser } from "@/helpers/auth-access";
-import type { Assignment } from "@/services/assignment/assignment.model";
+import { canAccessAssignments } from "@/helpers/auth-access";
+import type {
+  Assignment,
+  AssignmentContent,
+} from "@/services/assignment/assignment.model";
 import {
   AssignmentService,
   getAssignmentContent,
@@ -44,7 +47,7 @@ export default function StudentAssignmentDetailPage() {
   const { control, handleSubmit, reset } = useForm<SubmitValues>({
     defaultValues: { answers: {}, fileUrl: "", note: "" },
   });
-  const canOpenPage = isStudentUser(auth);
+  const canOpenPage = canAccessAssignments(auth);
   const hasVerifiedToken = Boolean(token && verifiedToken === token);
 
   useEffect(() => {
@@ -116,7 +119,9 @@ export default function StudentAssignmentDetailPage() {
     return null;
   }
 
-  const content = assignment ? getAssignmentContent(assignment) : {};
+  const content: AssignmentContent = assignment
+    ? getAssignmentContent(assignment)
+    : {};
   const assignmentType = assignment ? getAssignmentType(assignment) : "QUIZ";
 
   return (

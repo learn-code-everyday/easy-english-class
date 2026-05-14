@@ -1,10 +1,17 @@
 import { Trans } from "@lingui/macro";
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import { useRouter } from "next/router";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 
-import ErrorState from "@/components/ErrorState";
-import { isStudentUser } from "@/helpers/auth-access";
+import {
+  DashboardContentCard,
+  DashboardEmptyState,
+  DashboardErrorState,
+  DashboardPage,
+  DashboardPageHeader,
+  DashboardStatCard,
+} from "@/components/Dashboard";
+import { isStudent } from "@/helpers/auth-access";
 import AdminLayout from "@/layouts/admin-layout/AdminLayout";
 import type { StudentProgress } from "@/services/lesson/lesson.model";
 import { LessonService } from "@/services/lesson/lesson.repo";
@@ -16,7 +23,7 @@ export default function StudentProgressPage() {
   const { auth, authStatus } = useAuthStore();
   const [loadError, setLoadError] = useState(false);
   const [progressRows, setProgressRows] = useState<StudentProgress[]>([]);
-  const canViewProgress = isStudentUser(auth);
+  const canViewProgress = isStudent(auth);
 
   useEffect(() => {
     if (authStatus === AuthStatuses.LOADED && !canViewProgress) {
@@ -59,45 +66,43 @@ export default function StudentProgressPage() {
   if (authStatus !== AuthStatuses.LOADED || !canViewProgress) return null;
 
   return (
-    <Box>
-      <Typography variant="h4" sx={{ mb: 3, fontWeight: 900 }}>
-        <Trans>My Progress</Trans>
-      </Typography>
+    <DashboardPage>
+      <DashboardPageHeader
+        eyebrow={<Trans>Learning</Trans>}
+        title={<Trans>My Progress</Trans>}
+        description={<Trans>Track your completion and best scores.</Trans>}
+      />
       {loadError ? (
-        <ErrorState
-          title={<Trans>Progress could not be loaded</Trans>}
-          description={
-            <Trans>
-              We could not load your progress right now. Please try again.
-            </Trans>
-          }
-          onRetry={loadProgress}
-        />
+        <DashboardContentCard>
+          <DashboardErrorState
+            title={<Trans>Progress could not be loaded</Trans>}
+            description={
+              <Trans>
+                We could not load your progress right now. Please try again.
+              </Trans>
+            }
+            onRetry={loadProgress}
+          />
+        </DashboardContentCard>
+      ) : progressRows.length === 0 ? (
+        <DashboardContentCard>
+          <DashboardEmptyState
+            title={<Trans>No progress yet</Trans>}
+            description={
+              <Trans>Your lesson progress will appear after submissions.</Trans>
+            }
+          />
+        </DashboardContentCard>
       ) : (
         <Grid container spacing={3}>
           {stats.map((item) => (
             <Grid item xs={12} md={4} key={String(item.value)}>
-              <Paper
-                elevation={0}
-                sx={{
-                  p: 3,
-                  borderRadius: 4,
-                  border: "1px solid #e2e8f0",
-                  boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
-                }}
-              >
-                <Typography sx={{ color: "#64748b", fontWeight: 700 }}>
-                  {item.label}
-                </Typography>
-                <Typography variant="h4" sx={{ mt: 1, fontWeight: 900 }}>
-                  {item.value}
-                </Typography>
-              </Paper>
+              <DashboardStatCard label={item.label} value={item.value} />
             </Grid>
           ))}
         </Grid>
       )}
-    </Box>
+    </DashboardPage>
   );
 }
 
