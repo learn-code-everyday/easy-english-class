@@ -28,9 +28,18 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
+import {
+  Control,
+  Controller,
+  UseFormRegister,
+  useFieldArray,
+  useForm,
+  useWatch,
+} from "react-hook-form";
 import { toast } from "react-toastify";
 
+import ErrorState from "@/components/ErrorState";
 import { isTeacherUser } from "@/helpers/auth-access";
 import type {
   Lesson,
@@ -53,14 +62,24 @@ type LessonManagementScaffoldProps = {
     | "student-submissions";
 };
 
-type QuestionDraft = {
+type TeacherLessonQuestionForm = {
   correctAnswer: string;
   explanation: string;
-  id: string;
-  options: string[];
+  options: Array<{ value: string }>;
   prompt: string;
   score: number;
-  type: "fill_blank" | "multiple_choice" | "speaking";
+  type: LessonQuestionType;
+};
+
+type TeacherLessonFormValues = {
+  assignedToClassIds: string;
+  estimatedMinutes: number;
+  level: string;
+  objectives: string;
+  questions: TeacherLessonQuestionForm[];
+  skillType: string;
+  slug: string;
+  title: string;
 };
 
 const pageMeta = {
@@ -217,18 +236,20 @@ const LessonManagementScaffold: React.FC<LessonManagementScaffoldProps> = ({
 
 function LessonListScaffold() {
   const [lessons, setLessons] = useState<Lesson[]>([]);
+  const [loadError, setLoadError] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const loadLessons = async () => {
+  const loadLessons = useCallback(async () => {
+    setLoadError(false);
     setLoading(true);
     try {
       setLessons(await LessonService.teacherLessonList());
-    } catch (error: any) {
-      toast.error(error?.message || t`Failed to load lessons`);
+    } catch {
+      setLoadError(true);
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   const updateLessonStatus = async (
     lesson: Lesson,
@@ -244,8 +265,8 @@ function LessonListScaffold() {
       }
       toast.success(t`Lesson updated successfully`);
       loadLessons();
-    } catch (error: any) {
-      toast.error(error?.message || t`Failed to update lesson`);
+    } catch {
+      toast.error(t`Failed to update lesson`);
     }
   };
 
@@ -256,14 +277,14 @@ function LessonListScaffold() {
       await LessonService.lessonDelete(lesson.id);
       toast.success(t`Lesson deleted successfully`);
       loadLessons();
-    } catch (error: any) {
-      toast.error(error?.message || t`Failed to delete lesson`);
+    } catch {
+      toast.error(t`Failed to delete lesson`);
     }
   };
 
   useEffect(() => {
     loadLessons();
-  }, []);
+  }, [loadLessons]);
 
   return (
     <Paper
@@ -296,7 +317,18 @@ function LessonListScaffold() {
           sx={{ minWidth: { md: 280 } }}
         />
       </Stack>
-      {!loading && lessons.length === 0 ? (
+      {loadError ? (
+        <ErrorState
+          title={<Trans>Lessons could not be loaded</Trans>}
+          description={
+            <Trans>
+              We could not load your teacher lessons right now. Please try
+              again.
+            </Trans>
+          }
+          onRetry={loadLessons}
+        />
+      ) : !loading && lessons.length === 0 ? (
         <Paper
           elevation={0}
           sx={{
@@ -449,238 +481,180 @@ function LessonListScaffold() {
   );
 }
 
-function LessonEditorScaffold() {
+const defaultQuestion = (): TeacherLessonQuestionForm => ({
+  correctAnswer: "",
+  explanation: "",
+  options: [{ value: "" }, { value: "" }],
+  prompt: "",
+  score: 10,
+  type: "multiple_choice",
+});
+
+const defaultLessonFormValues = (): TeacherLessonFormValues => ({
+  assignedToClassIds: "",
+  estimatedMinutes: 30,
+  level: "beginner",
+  objectives: "",
+  questions: [defaultQuestion()],
+  skillType: "",
+  slug: "",
+  title: "",
+});
+
+function lessonToFormValues(lesson: Lesson): TeacherLessonFormValues {
+  return {
+    assignedToClassIds: (lesson.assignedToClassIds || []).join(", "),
+    estimatedMinutes: lesson.estimatedMinutes || 0,
+    level: lesson.level || "beginner",
+    objectives: (lesson.objectives || []).join("\n"),
+    questions: lesson.questions?.length
+      ? lesson.questions.map((question) => ({
+          correctAnswer: question.correctAnswer || "",
+          explanation: question.explanation || "",
+          options: question.options?.length
+            ? question.options.map((option) => ({ value: option.value }))
+            : [{ value: "" }, { value: "" }],
+          prompt: question.prompt,
+          score: question.score || 0,
+          type: question.type,
+        }))
+      : [defaultQuestion()],
+    skillType: lesson.skillType || "",
+    slug: lesson.slug,
+    title: lesson.title,
+  };
+}
+
+function formValuesToLessonInput(values: TeacherLessonFormValues): LessonInput {
+  return {
+    assignedToClassIds: values.assignedToClassIds
+      .split(",")
+      .map((item) => item.trim())
+      .filter(Boolean),
+    estimatedMinutes: Number(values.estimatedMinutes || 0),
+    level: values.level,
+    objectives: values.objectives
+      .split("\n")
+      .map((item) => item.trim())
+      .filter(Boolean),
+    questions: values.questions.map((question) => ({
+      correctAnswer: question.correctAnswer,
+      explanation: question.explanation,
+      options:
+        question.type === "multiple_choice"
+          ? question.options
+              .map((option) => option.value.trim())
+              .filter(Boolean)
+              .map((option) => ({ label: option, value: option }))
+          : [],
+      prompt: question.prompt,
+      score: Number(question.score || 0),
+      type: question.type,
+    })),
+    skillType: values.skillType,
+    slug: values.slug,
+    title: values.title,
+  };
+}
+
+function QuestionOptionsFieldArray({
+  control,
+  questionIndex,
+  register,
+}: {
+  control: Control<TeacherLessonFormValues>;
+  questionIndex: number;
+  register: UseFormRegister<TeacherLessonFormValues>;
+}) {
+  const { append, fields, remove } = useFieldArray({
+    control,
+    name: `questions.${questionIndex}.options`,
+  });
+
   return (
-    <Grid container spacing={3}>
-      <Grid item xs={12} lg={8}>
-        <Paper
-          elevation={0}
-          sx={{
-            p: { xs: 2.5, md: 3 },
-            borderRadius: 4,
-            border: "1px solid #e2e8f0",
-            boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
-          }}
+    <Stack spacing={1.5}>
+      {fields.map((option, optionIndex) => (
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          key={option.id}
+          spacing={1}
         >
-          <Typography variant="h6" sx={{ mb: 2, fontWeight: 800 }}>
-            <Trans>Lesson details</Trans>
-          </Typography>
-          <Stack spacing={2.5}>
-            <TextField label={<Trans>Lesson title</Trans>} fullWidth />
-            <TextField label={<Trans>Learning objective</Trans>} fullWidth />
-            <TextField
-              label={<Trans>Lesson description</Trans>}
-              minRows={5}
-              multiline
-              fullWidth
-            />
-          </Stack>
-        </Paper>
-      </Grid>
-      <Grid item xs={12} lg={4}>
-        <Paper
-          elevation={0}
-          sx={{
-            p: { xs: 2.5, md: 3 },
-            borderRadius: 4,
-            border: "1px solid #e2e8f0",
-            boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
-          }}
-        >
-          <Typography variant="h6" sx={{ mb: 2, fontWeight: 800 }}>
-            <Trans>Publishing checklist</Trans>
-          </Typography>
-          <Stack spacing={1.5}>
-            {[
-              <Trans key="dialogue">Dialogue</Trans>,
-              <Trans key="quiz">Quiz</Trans>,
-              <Trans key="speaking">Speaking practice</Trans>,
-            ].map((item, index) => (
-              <Chip
-                key={index}
-                label={item}
-                color={index === 0 ? "primary" : "default"}
-                variant={index === 0 ? "filled" : "outlined"}
-                sx={{ justifyContent: "flex-start", borderRadius: 2 }}
-              />
-            ))}
-          </Stack>
-        </Paper>
-      </Grid>
-    </Grid>
+          <TextField
+            label={`${t`Option`} ${optionIndex + 1}`}
+            {...register(
+              `questions.${questionIndex}.options.${optionIndex}.value`
+            )}
+            fullWidth
+          />
+          <Button
+            color="error"
+            disabled={fields.length <= 2}
+            onClick={() => remove(optionIndex)}
+          >
+            <Trans>Remove</Trans>
+          </Button>
+        </Stack>
+      ))}
+      <Button
+        startIcon={<AddIcon />}
+        onClick={() => append({ value: "" })}
+        sx={{ alignSelf: "flex-start", borderRadius: 2 }}
+      >
+        <Trans>Add option</Trans>
+      </Button>
+    </Stack>
   );
 }
 
-function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) {
-  const [form, setForm] = useState<LessonInput>({
-    assignedToClassIds: [],
-    estimatedMinutes: 30,
-    level: "beginner",
-    objectives: [],
-    skillType: "",
-    slug: "",
-    status: "draft",
-    title: "",
-  });
+function TeacherLessonForm({
+  initialLesson,
+  lessonId,
+}: {
+  initialLesson?: Lesson;
+  lessonId?: string;
+}) {
   const [saving, setSaving] = useState(false);
-  const [questions, setQuestions] = useState<QuestionDraft[]>([
-    {
-      correctAnswer: "",
-      explanation: "",
-      id: "question-1",
-      prompt: "",
-      score: 10,
-      type: "multiple_choice",
-      options: ["", "", "", ""],
-    },
-  ]);
+  const {
+    control,
+    formState: { isSubmitting },
+    handleSubmit,
+    register,
+    reset,
+  } = useForm<TeacherLessonFormValues>({
+    defaultValues: defaultLessonFormValues(),
+  });
+  const {
+    append: appendQuestion,
+    fields: questionFields,
+    remove: removeQuestion,
+  } = useFieldArray({
+    control,
+    name: "questions",
+  });
 
   useEffect(() => {
-    if (!lessonId) return;
-
-    LessonService.teacherLessonList()
-      .then((lessons) => {
-        const lesson = lessons.find((item) => item.id === lessonId);
-
-        if (!lesson) return;
-
-        setForm({
-          assignedToClassIds: lesson.assignedToClassIds || [],
-          estimatedMinutes: lesson.estimatedMinutes || 0,
-          level: lesson.level || "beginner",
-          objectives: lesson.objectives || [],
-          skillType: lesson.skillType || "",
-          slug: lesson.slug,
-          status: lesson.status || "draft",
-          title: lesson.title,
-        });
-
-        if (lesson.questions?.length) {
-          setQuestions(
-            lesson.questions.map((question, index) => ({
-              correctAnswer: question.correctAnswer || "",
-              explanation: question.explanation || "",
-              id: question.id || `question-${index + 1}`,
-              options: (question.options || []).map((option) => option.value),
-              prompt: question.prompt,
-              score: question.score || 0,
-              type: question.type,
-            }))
-          );
-        }
-      })
-      .catch((error) => {
-        toast.error(error?.message || t`Failed to load lesson`);
-      });
-  }, [lessonId]);
-
-  const addQuestion = () => {
-    setQuestions((current) => [
-      ...current,
-      {
-        id: `question-${current.length + 1}`,
-        correctAnswer: "",
-        explanation: "",
-        prompt: "",
-        score: 10,
-        type: "multiple_choice",
-        options: ["", ""],
-      },
-    ]);
-  };
-
-  const removeQuestion = (id: string) => {
-    setQuestions((current) =>
-      current.length === 1 ? current : current.filter((item) => item.id !== id)
+    reset(
+      initialLesson
+        ? lessonToFormValues(initialLesson)
+        : defaultLessonFormValues()
     );
-  };
+  }, [initialLesson, reset]);
 
-  const updateQuestion = (
-    id: string,
-    data: Partial<Omit<QuestionDraft, "id">>
-  ) => {
-    setQuestions((current) =>
-      current.map((item) =>
-        item.id === id
-          ? {
-              ...item,
-              ...data,
-              options:
-                data.type && data.type !== "multiple_choice"
-                  ? []
-                  : data.type === "multiple_choice" && item.options.length === 0
-                    ? ["", ""]
-                    : data.options || item.options,
-            }
-          : item
-      )
-    );
-  };
-
-  const addOption = (id: string) => {
-    setQuestions((current) =>
-      current.map((item) =>
-        item.id === id ? { ...item, options: [...item.options, ""] } : item
-      )
-    );
-  };
-
-  const removeOption = (questionId: string, optionIndex: number) => {
-    setQuestions((current) =>
-      current.map((item) =>
-        item.id === questionId
-          ? {
-              ...item,
-              options:
-                item.options.length <= 2
-                  ? item.options
-                  : item.options.filter((_, index) => index !== optionIndex),
-            }
-          : item
-      )
-    );
-  };
-
-  const saveLesson = async () => {
+  const onSubmit = async (values: TeacherLessonFormValues) => {
     setSaving(true);
     try {
-      const payload: LessonInput = {
-        ...form,
-        estimatedMinutes: Number(form.estimatedMinutes || 0),
-        questions: questions.map((question) => ({
-          correctAnswer: question.correctAnswer,
-          explanation: question.explanation,
-          options:
-            question.type === "multiple_choice"
-              ? question.options
-                  .filter(Boolean)
-                  .map((option) => ({ label: option, value: option }))
-              : [],
-          prompt: question.prompt,
-          score: Number(question.score || 0),
-          type: question.type,
-        })),
-      };
+      const payload = formValuesToLessonInput(values);
 
       if (lessonId) {
         await LessonService.lessonUpdate(lessonId, payload);
-        if (form.status === "published")
-          await LessonService.lessonPublish(lessonId);
-        if (form.status === "archived")
-          await LessonService.lessonArchive(lessonId);
         toast.success(t`Lesson updated successfully`);
       } else {
-        const lesson = await LessonService.lessonCreate(payload);
-        if (lesson?.id && form.status === "published") {
-          await LessonService.lessonPublish(lesson.id);
-        }
-        if (lesson?.id && form.status === "archived") {
-          await LessonService.lessonArchive(lesson.id);
-        }
+        await LessonService.lessonCreate(payload);
         toast.success(t`Lesson created successfully`);
+        reset(defaultLessonFormValues());
       }
-    } catch (error: any) {
-      toast.error(error?.message || t`Failed to save lesson`);
+    } catch {
+      toast.error(t`Failed to save lesson`);
     } finally {
       setSaving(false);
     }
@@ -692,296 +666,99 @@ function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) {
         <Paper
           elevation={0}
           sx={{
-            p: { xs: 2.5, md: 3 },
-            borderRadius: 4,
             border: "1px solid #e2e8f0",
+            borderRadius: 4,
             boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
+            p: { xs: 2.5, md: 3 },
           }}
         >
           <Typography variant="h6" sx={{ mb: 2, fontWeight: 800 }}>
             <Trans>Exercise details</Trans>
           </Typography>
-          <Stack spacing={2.5}>
+          <Stack
+            component="form"
+            onSubmit={handleSubmit(onSubmit)}
+            spacing={2.5}
+          >
             <TextField
               label={<Trans>Title</Trans>}
-              value={form.title}
-              onChange={(event) =>
-                setForm((current) => ({
-                  ...current,
-                  title: event.target.value,
-                }))
-              }
+              {...register("title", { required: true })}
               fullWidth
             />
             <TextField
               label={<Trans>Slug</Trans>}
-              value={form.slug}
-              onChange={(event) =>
-                setForm((current) => ({
-                  ...current,
-                  slug: event.target.value,
-                }))
-              }
+              {...register("slug", { required: true })}
               fullWidth
             />
-            <FormControl fullWidth>
-              <InputLabel>
-                <Trans>Level</Trans>
-              </InputLabel>
-              <Select
-                label={t`Level`}
-                value={form.level}
-                onChange={(event) =>
-                  setForm((current) => ({
-                    ...current,
-                    level: event.target.value,
-                  }))
-                }
-              >
-                <MenuItem value="beginner">
-                  <Trans>Beginner</Trans>
-                </MenuItem>
-                <MenuItem value="intermediate">
-                  <Trans>Intermediate</Trans>
-                </MenuItem>
-                <MenuItem value="advanced">
-                  <Trans>Advanced</Trans>
-                </MenuItem>
-              </Select>
-            </FormControl>
+            <Controller
+              control={control}
+              name="level"
+              render={({ field }) => (
+                <FormControl fullWidth>
+                  <InputLabel>
+                    <Trans>Level</Trans>
+                  </InputLabel>
+                  <Select {...field} label={t`Level`}>
+                    <MenuItem value="beginner">
+                      <Trans>Beginner</Trans>
+                    </MenuItem>
+                    <MenuItem value="intermediate">
+                      <Trans>Intermediate</Trans>
+                    </MenuItem>
+                    <MenuItem value="advanced">
+                      <Trans>Advanced</Trans>
+                    </MenuItem>
+                  </Select>
+                </FormControl>
+              )}
+            />
             <TextField
-              label={<Trans>Estimated minutes</Trans>}
-              type="number"
-              value={form.estimatedMinutes}
-              onChange={(event) =>
-                setForm((current) => ({
-                  ...current,
-                  estimatedMinutes: Number(event.target.value),
-                }))
-              }
+              label={<Trans>Skill type</Trans>}
+              {...register("skillType")}
               fullWidth
             />
-            <FormControl fullWidth>
-              <InputLabel>
-                <Trans>Status</Trans>
-              </InputLabel>
-              <Select
-                label={t`Status`}
-                value={form.status}
-                onChange={(event) =>
-                  setForm((current) => ({
-                    ...current,
-                    status: event.target.value as LessonInput["status"],
-                  }))
-                }
-              >
-                <MenuItem value="draft">
-                  <Trans>Draft</Trans>
-                </MenuItem>
-                <MenuItem value="published">
-                  <Trans>Published</Trans>
-                </MenuItem>
-                <MenuItem value="archived">
-                  <Trans>Archived</Trans>
-                </MenuItem>
-              </Select>
-            </FormControl>
             <TextField
               label={<Trans>Objectives</Trans>}
-              value={(form.objectives || []).join("\n")}
-              onChange={(event) =>
-                setForm((current) => ({
-                  ...current,
-                  objectives: event.target.value
-                    .split("\n")
-                    .map((item) => item.trim())
-                    .filter(Boolean),
-                }))
-              }
+              {...register("objectives")}
               multiline
               minRows={3}
               fullWidth
             />
             <TextField
-              label={<Trans>Skill type</Trans>}
-              value={form.skillType}
-              onChange={(event) =>
-                setForm((current) => ({
-                  ...current,
-                  skillType: event.target.value,
-                }))
-              }
+              label={<Trans>Estimated minutes</Trans>}
+              type="number"
+              {...register("estimatedMinutes", { valueAsNumber: true })}
               fullWidth
             />
             <TextField
               label={<Trans>Assigned class IDs</Trans>}
-              value={(form.assignedToClassIds || []).join(", ")}
-              onChange={(event) =>
-                setForm((current) => ({
-                  ...current,
-                  assignedToClassIds: event.target.value
-                    .split(",")
-                    .map((item) => item.trim())
-                    .filter(Boolean),
-                }))
-              }
+              {...register("assignedToClassIds")}
               fullWidth
             />
+
             <Stack spacing={2}>
-              {questions.map((question, questionIndex) => (
-                <Paper
-                  elevation={0}
+              {questionFields.map((question, questionIndex) => (
+                <QuestionEditor
+                  control={control}
                   key={question.id}
-                  sx={{
-                    borderRadius: 3,
-                    border: "1px solid #e2e8f0",
-                    backgroundColor: "#f8fafc",
-                    p: 2,
-                  }}
-                >
-                  <Stack spacing={2}>
-                    <Stack
-                      direction={{ xs: "column", sm: "row" }}
-                      justifyContent="space-between"
-                      gap={2}
-                    >
-                      <Typography sx={{ fontWeight: 900 }}>
-                        <Trans>Question</Trans> {questionIndex + 1}
-                      </Typography>
-                      <Button
-                        color="error"
-                        size="small"
-                        startIcon={<DeleteIcon />}
-                        onClick={() => removeQuestion(question.id)}
-                      >
-                        <Trans>Remove question</Trans>
-                      </Button>
-                    </Stack>
-                    <FormControl fullWidth>
-                      <InputLabel>
-                        <Trans>Question type</Trans>
-                      </InputLabel>
-                      <Select
-                        label={t`Question type`}
-                        value={question.type}
-                        onChange={(event) =>
-                          updateQuestion(question.id, {
-                            type: event.target.value as LessonQuestionType,
-                          })
-                        }
-                      >
-                        <MenuItem value="multiple_choice">
-                          <Trans>Multiple choice</Trans>
-                        </MenuItem>
-                        <MenuItem value="fill_blank">
-                          <Trans>Fill blank</Trans>
-                        </MenuItem>
-                        <MenuItem value="speaking">
-                          <Trans>Speaking</Trans>
-                        </MenuItem>
-                      </Select>
-                    </FormControl>
-                    <TextField
-                      label={<Trans>Prompt</Trans>}
-                      value={question.prompt}
-                      onChange={(event) =>
-                        updateQuestion(question.id, {
-                          prompt: event.target.value,
-                        })
-                      }
-                      multiline
-                      minRows={3}
-                      fullWidth
-                    />
-                    {question.type === "multiple_choice" && (
-                      <Stack spacing={1.5}>
-                        {question.options.map((_, optionIndex) => (
-                          <Stack
-                            direction={{ xs: "column", sm: "row" }}
-                            spacing={1}
-                            key={`${question.id}-${optionIndex}`}
-                          >
-                            <TextField
-                              label={`${t`Option`} ${optionIndex + 1}`}
-                              value={question.options[optionIndex]}
-                              onChange={(event) =>
-                                updateQuestion(question.id, {
-                                  options: question.options.map(
-                                    (option, index) =>
-                                      index === optionIndex
-                                        ? event.target.value
-                                        : option
-                                  ),
-                                })
-                              }
-                              fullWidth
-                            />
-                            <Button
-                              color="error"
-                              onClick={() =>
-                                removeOption(question.id, optionIndex)
-                              }
-                            >
-                              <Trans>Remove</Trans>
-                            </Button>
-                          </Stack>
-                        ))}
-                        <Button
-                          startIcon={<AddIcon />}
-                          onClick={() => addOption(question.id)}
-                        >
-                          <Trans>Add option</Trans>
-                        </Button>
-                      </Stack>
-                    )}
-                    <TextField
-                      label={<Trans>Correct answer</Trans>}
-                      value={question.correctAnswer}
-                      onChange={(event) =>
-                        updateQuestion(question.id, {
-                          correctAnswer: event.target.value,
-                        })
-                      }
-                      fullWidth
-                    />
-                    <TextField
-                      label={<Trans>Explanation</Trans>}
-                      value={question.explanation}
-                      onChange={(event) =>
-                        updateQuestion(question.id, {
-                          explanation: event.target.value,
-                        })
-                      }
-                      multiline
-                      minRows={3}
-                      fullWidth
-                    />
-                    <TextField
-                      label={<Trans>Score</Trans>}
-                      type="number"
-                      value={question.score}
-                      onChange={(event) =>
-                        updateQuestion(question.id, {
-                          score: Number(event.target.value),
-                        })
-                      }
-                      fullWidth
-                    />
-                  </Stack>
-                </Paper>
+                  questionCount={questionFields.length}
+                  questionIndex={questionIndex}
+                  register={register}
+                  removeQuestion={() => removeQuestion(questionIndex)}
+                />
               ))}
               <Button
                 variant="outlined"
                 startIcon={<AddIcon />}
-                onClick={addQuestion}
+                onClick={() => appendQuestion(defaultQuestion())}
                 sx={{ alignSelf: "flex-start", borderRadius: 2 }}
               >
                 <Trans>Add question</Trans>
               </Button>
               <Button
-                disabled={saving}
+                disabled={saving || isSubmitting}
+                type="submit"
                 variant="contained"
-                onClick={saveLesson}
                 sx={{ alignSelf: "flex-start", borderRadius: 2 }}
               >
                 {lessonId ? (
@@ -998,27 +775,28 @@ function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) {
         <Paper
           elevation={0}
           sx={{
-            p: { xs: 2.5, md: 3 },
-            borderRadius: 4,
             border: "1px solid #e2e8f0",
+            borderRadius: 4,
             boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
+            p: { xs: 2.5, md: 3 },
           }}
         >
           <Typography variant="h6" sx={{ mb: 2, fontWeight: 800 }}>
-            <Trans>Assign homework</Trans>
+            <Trans>Publishing workflow</Trans>
           </Typography>
-          <Stack spacing={2}>
-            <TextField label={<Trans>Class or student</Trans>} fullWidth />
-            <TextField label={<Trans>Due date</Trans>} fullWidth />
-            <Button variant="contained" sx={{ borderRadius: 2 }}>
-              <Trans>Assign homework</Trans>
-            </Button>
-            <Typography sx={{ color: "#64748b", lineHeight: 1.6 }}>
-              <Trans>
-                Assign after publishing so students can submit answers from
-                their lesson detail page.
-              </Trans>
-            </Typography>
+          <Stack spacing={1.5}>
+            <Chip
+              label={<Trans>Save as draft</Trans>}
+              sx={{ borderRadius: 2, justifyContent: "flex-start" }}
+            />
+            <Chip
+              label={<Trans>Publish from lesson management</Trans>}
+              sx={{ borderRadius: 2, justifyContent: "flex-start" }}
+            />
+            <Chip
+              label={<Trans>Students submit from assigned lessons</Trans>}
+              sx={{ borderRadius: 2, justifyContent: "flex-start" }}
+            />
           </Stack>
         </Paper>
       </Grid>
@@ -1026,16 +804,195 @@ function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) {
   );
 }
 
-function StudentSubmissionsScaffold() {
-  const [submissions, setSubmissions] = useState<TeacherSubmission[]>([]);
+function QuestionEditor({
+  control,
+  questionCount,
+  questionIndex,
+  register,
+  removeQuestion,
+}: {
+  control: Control<TeacherLessonFormValues>;
+  questionCount: number;
+  questionIndex: number;
+  register: UseFormRegister<TeacherLessonFormValues>;
+  removeQuestion: () => void;
+}) {
+  const questionType = useWatch({
+    control,
+    name: `questions.${questionIndex}.type`,
+  });
+
+  return (
+    <Paper
+      elevation={0}
+      sx={{
+        backgroundColor: "#f8fafc",
+        border: "1px solid #e2e8f0",
+        borderRadius: 3,
+        p: 2,
+      }}
+    >
+      <Stack spacing={2}>
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          gap={2}
+          justifyContent="space-between"
+        >
+          <Typography sx={{ fontWeight: 900 }}>
+            <Trans>Question</Trans> {questionIndex + 1}
+          </Typography>
+          <Button
+            color="error"
+            disabled={questionCount <= 1}
+            size="small"
+            startIcon={<DeleteIcon />}
+            onClick={removeQuestion}
+          >
+            <Trans>Remove question</Trans>
+          </Button>
+        </Stack>
+        <Controller
+          control={control}
+          name={`questions.${questionIndex}.type`}
+          render={({ field }) => (
+            <FormControl fullWidth>
+              <InputLabel>
+                <Trans>Question type</Trans>
+              </InputLabel>
+              <Select {...field} label={t`Question type`}>
+                <MenuItem value="multiple_choice">
+                  <Trans>Multiple choice</Trans>
+                </MenuItem>
+                <MenuItem value="fill_blank">
+                  <Trans>Fill blank</Trans>
+                </MenuItem>
+                <MenuItem value="speaking">
+                  <Trans>Speaking</Trans>
+                </MenuItem>
+              </Select>
+            </FormControl>
+          )}
+        />
+        <TextField
+          label={<Trans>Prompt</Trans>}
+          {...register(`questions.${questionIndex}.prompt`, { required: true })}
+          multiline
+          minRows={3}
+          fullWidth
+        />
+        {questionType === "multiple_choice" && (
+          <QuestionOptionsFieldArray
+            control={control}
+            questionIndex={questionIndex}
+            register={register}
+          />
+        )}
+        <TextField
+          label={<Trans>Correct answer</Trans>}
+          {...register(`questions.${questionIndex}.correctAnswer`, {
+            required: true,
+          })}
+          fullWidth
+        />
+        <TextField
+          label={<Trans>Explanation</Trans>}
+          {...register(`questions.${questionIndex}.explanation`)}
+          multiline
+          minRows={3}
+          fullWidth
+        />
+        <TextField
+          label={<Trans>Score</Trans>}
+          type="number"
+          {...register(`questions.${questionIndex}.score`, {
+            valueAsNumber: true,
+          })}
+          fullWidth
+        />
+      </Stack>
+    </Paper>
+  );
+}
+
+function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) {
+  const [loadError, setLoadError] = useState(false);
+  const [lesson, setLesson] = useState<Lesson | undefined>();
+  const [loadingLesson, setLoadingLesson] = useState(Boolean(lessonId));
+
+  const loadLesson = useCallback(() => {
+    if (!lessonId) {
+      setLesson(undefined);
+      setLoadError(false);
+      setLoadingLesson(false);
+      return;
+    }
+
+    setLoadError(false);
+    setLoadingLesson(true);
+    LessonService.teacherLessonList()
+      .then((lessons) => {
+        setLesson(lessons.find((item) => item.id === lessonId));
+      })
+      .catch(() => {
+        setLoadError(true);
+      })
+      .finally(() => setLoadingLesson(false));
+  }, [lessonId]);
 
   useEffect(() => {
+    loadLesson();
+  }, [loadLesson]);
+
+  if (loadingLesson) {
+    return (
+      <Paper
+        elevation={0}
+        sx={{
+          border: "1px solid #e2e8f0",
+          borderRadius: 4,
+          p: { xs: 2.5, md: 3 },
+        }}
+      >
+        <Typography sx={{ color: "#64748b" }}>
+          <Trans>Loading lesson...</Trans>
+        </Typography>
+      </Paper>
+    );
+  }
+
+  if (loadError) {
+    return (
+      <ErrorState
+        title={<Trans>Lesson could not be loaded</Trans>}
+        description={
+          <Trans>
+            We could not load this lesson for editing. Please try again.
+          </Trans>
+        }
+        onRetry={loadLesson}
+      />
+    );
+  }
+
+  return <TeacherLessonForm initialLesson={lesson} lessonId={lessonId} />;
+}
+
+function StudentSubmissionsScaffold() {
+  const [loadError, setLoadError] = useState(false);
+  const [submissions, setSubmissions] = useState<TeacherSubmission[]>([]);
+
+  const loadSubmissions = useCallback(() => {
+    setLoadError(false);
     LessonService.teacherSubmissionList()
       .then(setSubmissions)
-      .catch((error) => {
-        toast.error(error?.message || t`Failed to load submissions`);
+      .catch(() => {
+        setLoadError(true);
       });
   }, []);
+
+  useEffect(() => {
+    loadSubmissions();
+  }, [loadSubmissions]);
 
   return (
     <Paper
@@ -1050,71 +1007,89 @@ function StudentSubmissionsScaffold() {
       <Typography variant="h6" sx={{ mb: 2, fontWeight: 800 }}>
         <Trans>Submission queue</Trans>
       </Typography>
-      <TableContainer>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>
-                <Trans>Student</Trans>
-              </TableCell>
-              <TableCell>
-                <Trans>Lesson</Trans>
-              </TableCell>
-              <TableCell>
-                <Trans>Score</Trans>
-              </TableCell>
-              <TableCell>
-                <Trans>Passed</Trans>
-              </TableCell>
-              <TableCell>
-                <Trans>Submitted time</Trans>
-              </TableCell>
-              <TableCell align="right">
-                <Trans>Actions</Trans>
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {submissions.map((submission) => (
-              <TableRow key={submission.id} hover>
-                <TableCell sx={{ fontWeight: 800 }}>
-                  {submission.student?.name || submission.student?.email}
-                </TableCell>
-                <TableCell>{submission.lesson?.title}</TableCell>
-                <TableCell>{submission.score}%</TableCell>
+      {loadError ? (
+        <ErrorState
+          title={<Trans>Submissions could not be loaded</Trans>}
+          description={
+            <Trans>
+              We could not load student submissions right now. Please try again.
+            </Trans>
+          }
+          onRetry={loadSubmissions}
+        />
+      ) : (
+        <TableContainer>
+          <Table>
+            <TableHead>
+              <TableRow>
                 <TableCell>
-                  <Chip
-                    label={submission.passed ? t`Passed` : t`Needs review`}
-                    size="small"
-                    color={submission.passed ? "success" : "warning"}
-                    sx={{ borderRadius: 2, fontWeight: 800 }}
-                  />
+                  <Trans>Student</Trans>
                 </TableCell>
-                <TableCell>{submission.submittedAt || "-"}</TableCell>
+                <TableCell>
+                  <Trans>Lesson</Trans>
+                </TableCell>
+                <TableCell>
+                  <Trans>Score</Trans>
+                </TableCell>
+                <TableCell>
+                  <Trans>Passed</Trans>
+                </TableCell>
+                <TableCell>
+                  <Trans>Submitted time</Trans>
+                </TableCell>
                 <TableCell align="right">
-                  <Button size="small">
-                    <Trans>Review</Trans>
-                  </Button>
+                  <Trans>Actions</Trans>
                 </TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+            </TableHead>
+            <TableBody>
+              {submissions.map((submission) => (
+                <TableRow key={submission.id} hover>
+                  <TableCell sx={{ fontWeight: 800 }}>
+                    {submission.student?.name || submission.student?.email}
+                  </TableCell>
+                  <TableCell>{submission.lesson?.title}</TableCell>
+                  <TableCell>{submission.score}%</TableCell>
+                  <TableCell>
+                    <Chip
+                      label={submission.passed ? t`Passed` : t`Needs review`}
+                      size="small"
+                      color={submission.passed ? "success" : "warning"}
+                      sx={{ borderRadius: 2, fontWeight: 800 }}
+                    />
+                  </TableCell>
+                  <TableCell>{submission.submittedAt || "-"}</TableCell>
+                  <TableCell align="right">
+                    <Button size="small">
+                      <Trans>Review</Trans>
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      )}
     </Paper>
   );
 }
 
 function StudentProgressScaffold() {
+  const [loadError, setLoadError] = useState(false);
   const [progressRows, setProgressRows] = useState<StudentProgress[]>([]);
 
-  useEffect(() => {
+  const loadProgress = useCallback(() => {
+    setLoadError(false);
     LessonService.teacherStudentProgress()
       .then(setProgressRows)
-      .catch((error) => {
-        toast.error(error?.message || t`Failed to load student progress`);
+      .catch(() => {
+        setLoadError(true);
       });
   }, []);
+
+  useEffect(() => {
+    loadProgress();
+  }, [loadProgress]);
 
   const progress = [
     { label: t`Active students`, value: String(progressRows.length) },
@@ -1133,87 +1108,103 @@ function StudentProgressScaffold() {
 
   return (
     <Grid container spacing={3}>
-      {progress.map((item) => (
-        <Grid item xs={12} md={4} key={item.label}>
-          <Paper
-            elevation={0}
-            sx={{
-              p: 3,
-              borderRadius: 4,
-              border: "1px solid #e2e8f0",
-              boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
-            }}
-          >
-            <Typography sx={{ color: "#64748b", fontWeight: 700 }}>
-              {item.label}
-            </Typography>
-            <Typography variant="h4" sx={{ mt: 1, fontWeight: 900 }}>
-              {item.value}
-            </Typography>
-          </Paper>
+      {loadError ? (
+        <Grid item xs={12}>
+          <ErrorState
+            title={<Trans>Student progress could not be loaded</Trans>}
+            description={
+              <Trans>
+                We could not load student progress right now. Please try again.
+              </Trans>
+            }
+            onRetry={loadProgress}
+          />
         </Grid>
-      ))}
-      <Grid item xs={12}>
-        <Paper
-          elevation={0}
-          sx={{
-            p: { xs: 2.5, md: 3 },
-            borderRadius: 4,
-            border: "1px solid #e2e8f0",
-            boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
-          }}
-        >
-          <Typography variant="h6" sx={{ mb: 2, fontWeight: 800 }}>
-            <Trans>Progress overview</Trans>
-          </Typography>
-          <Box
-            sx={{
-              minHeight: 220,
-              borderRadius: 3,
-              border: "1px solid #e2e8f0",
-              overflow: "hidden",
-            }}
-          >
-            <TableContainer>
-              <Table>
-                <TableHead>
-                  <TableRow>
-                    <TableCell>
-                      <Trans>Student</Trans>
-                    </TableCell>
-                    <TableCell>
-                      <Trans>Submissions</Trans>
-                    </TableCell>
-                    <TableCell>
-                      <Trans>Average score</Trans>
-                    </TableCell>
-                    <TableCell>
-                      <Trans>Status</Trans>
-                    </TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {progressRows.map((row) => (
-                    <TableRow
-                      key={`${row.studentId || "student"}-${row.lessonId || "lesson"}`}
-                      hover
-                    >
-                      <TableCell sx={{ fontWeight: 800 }}>
-                        {row.studentId}
-                      </TableCell>
-                      <TableCell>{row.submissionCount || 0}</TableCell>
-                      <TableCell>{row.bestScore || 0}%</TableCell>
-                      <TableCell>
-                        {row.passed ? t`Completed` : t`Needs review`}
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </Box>
-        </Paper>
-      </Grid>
+      ) : (
+        <>
+          {progress.map((item) => (
+            <Grid item xs={12} md={4} key={item.label}>
+              <Paper
+                elevation={0}
+                sx={{
+                  p: 3,
+                  borderRadius: 4,
+                  border: "1px solid #e2e8f0",
+                  boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
+                }}
+              >
+                <Typography sx={{ color: "#64748b", fontWeight: 700 }}>
+                  {item.label}
+                </Typography>
+                <Typography variant="h4" sx={{ mt: 1, fontWeight: 900 }}>
+                  {item.value}
+                </Typography>
+              </Paper>
+            </Grid>
+          ))}
+          <Grid item xs={12}>
+            <Paper
+              elevation={0}
+              sx={{
+                p: { xs: 2.5, md: 3 },
+                borderRadius: 4,
+                border: "1px solid #e2e8f0",
+                boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
+              }}
+            >
+              <Typography variant="h6" sx={{ mb: 2, fontWeight: 800 }}>
+                <Trans>Progress overview</Trans>
+              </Typography>
+              <Box
+                sx={{
+                  minHeight: 220,
+                  borderRadius: 3,
+                  border: "1px solid #e2e8f0",
+                  overflow: "hidden",
+                }}
+              >
+                <TableContainer>
+                  <Table>
+                    <TableHead>
+                      <TableRow>
+                        <TableCell>
+                          <Trans>Student</Trans>
+                        </TableCell>
+                        <TableCell>
+                          <Trans>Submissions</Trans>
+                        </TableCell>
+                        <TableCell>
+                          <Trans>Average score</Trans>
+                        </TableCell>
+                        <TableCell>
+                          <Trans>Status</Trans>
+                        </TableCell>
+                      </TableRow>
+                    </TableHead>
+                    <TableBody>
+                      {progressRows.map((row) => (
+                        <TableRow
+                          key={`${row.studentId || "student"}-${row.lessonId || "lesson"}`}
+                          hover
+                        >
+                          <TableCell sx={{ fontWeight: 800 }}>
+                            {row.studentId}
+                          </TableCell>
+                          <TableCell>{row.submissionCount || 0}</TableCell>
+                          <TableCell>{row.bestScore || 0}%</TableCell>
+                          <TableCell>
+                            {row.passed ? t`Completed` : t`Needs review`}
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </TableContainer>
+              </Box>
+            </Paper>
+          </Grid>
+        </>
+      )}
     </Grid>
   );
 }

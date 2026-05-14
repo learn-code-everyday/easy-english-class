@@ -4,7 +4,6 @@ import { t, Trans } from "@lingui/macro";
 import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import DashboardRoundedIcon from "@mui/icons-material/DashboardRounded";
 import LockOpenRoundedIcon from "@mui/icons-material/LockOpenRounded";
-import PreviewRoundedIcon from "@mui/icons-material/PreviewRounded";
 import SchoolRoundedIcon from "@mui/icons-material/SchoolRounded";
 import {
   Box,
@@ -20,14 +19,11 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
-import { toast } from "react-toastify";
+import React, { useCallback, useEffect, useState } from "react";
 
+import ErrorState from "@/components/ErrorState";
 import { GetAuthToken } from "@/graphql/auth";
-import {
-  canAccessStudentLessons,
-  canPreviewStudentLessons,
-} from "@/helpers/auth-access";
+import { canAccessStudentLessons } from "@/helpers/auth-access";
 import MainLayout from "@/layouts/MainLayout";
 import type { Lesson } from "@/services/lesson/lesson.model";
 import { LessonService } from "@/services/lesson/lesson.repo";
@@ -39,11 +35,11 @@ const LessonsPage = () => {
   const token = GetAuthToken();
   const { auth, authStatus, verifiedToken } = useAuthStore();
   const [lessons, setLessons] = useState<Lesson[]>([]);
+  const [loadError, setLoadError] = useState(false);
   const [loading, setLoading] = useState(true);
   const canStart = canAccessStudentLessons(auth);
-  const canPreview = canPreviewStudentLessons(auth);
   const hasVerifiedToken = Boolean(token && verifiedToken === token);
-  const canOpenPage = canStart || canPreview;
+  const canOpenPage = canStart;
   const showStudentEmptyState = !loading && canStart && lessons.length === 0;
 
   useEffect(() => {
@@ -68,7 +64,7 @@ const LessonsPage = () => {
     token,
   ]);
 
-  useEffect(() => {
+  const loadLessons = useCallback(() => {
     if (
       authStatus !== AuthStatuses.LOADED ||
       !hasVerifiedToken ||
@@ -77,23 +73,23 @@ const LessonsPage = () => {
       return;
     }
 
-    let mounted = true;
-
+    setLoadError(false);
+    setLoading(true);
     LessonService.lessonList()
       .then((data) => {
-        if (mounted) setLessons(data);
+        setLessons(data);
       })
-      .catch((error) => {
-        toast.error(error?.message || t`Failed to load lessons`);
+      .catch(() => {
+        setLoadError(true);
       })
       .finally(() => {
-        if (mounted) setLoading(false);
+        setLoading(false);
       });
-
-    return () => {
-      mounted = false;
-    };
   }, [authStatus, canOpenPage, hasVerifiedToken]);
+
+  useEffect(() => {
+    loadLessons();
+  }, [loadLessons]);
 
   if (
     !token ||
@@ -159,21 +155,20 @@ const LessonsPage = () => {
               </Trans>
             </Typography>
           </Box>
-          {canPreview && (
-            <Chip
-              icon={<PreviewRoundedIcon />}
-              label={t`Preview mode available`}
-              sx={{
-                borderRadius: "8px",
-                backgroundColor: "#f8fafc",
-                border: "1px solid #cbd5e1",
-                fontWeight: 900,
-              }}
-            />
-          )}
         </Stack>
 
-        {showStudentEmptyState ? (
+        {loadError ? (
+          <ErrorState
+            title={<Trans>Lessons could not be loaded</Trans>}
+            description={
+              <Trans>
+                We could not load your assigned lessons right now. Please try
+                again.
+              </Trans>
+            }
+            onRetry={loadLessons}
+          />
+        ) : showStudentEmptyState ? (
           <Paper
             elevation={0}
             sx={{
@@ -350,16 +345,8 @@ const LessonsPage = () => {
 
                     <Button
                       component={Link}
-                      href={
-                        canStart
-                          ? `/lessons/${lesson.slug}`
-                          : canPreview
-                            ? `/lessons/${lesson.slug}?preview=1`
-                            : "/login"
-                      }
-                      variant={
-                        canStart || canPreview ? "contained" : "outlined"
-                      }
+                      href={canStart ? `/lessons/${lesson.slug}` : "/login"}
+                      variant={canStart ? "contained" : "outlined"}
                       startIcon={
                         canStart ? (
                           <ArrowForwardRoundedIcon />
@@ -376,8 +363,6 @@ const LessonsPage = () => {
                     >
                       {canStart ? (
                         <Trans>Start lesson</Trans>
-                      ) : canPreview ? (
-                        <Trans>Preview lesson</Trans>
                       ) : (
                         <Trans>Login to start</Trans>
                       )}

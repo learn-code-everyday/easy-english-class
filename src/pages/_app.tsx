@@ -6,6 +6,7 @@ import { AppProps } from "next/app";
 import React, { Fragment, useEffect, useRef } from "react";
 import { ToastContainer } from "react-toastify";
 
+import ErrorBoundary from "@/components/ErrorBoundary";
 import SeoHead from "@/components/SeoHead";
 import { GetAuthToken } from "@/graphql/auth";
 import AppProviders from "@/providers/app-provider";
@@ -59,9 +60,11 @@ function MyApp(props: AppProps & { emotionCache?: EmotionCache }) {
       <AppProviders>
         <SeoHead />
 
-        <Layout {...layoutProps}>
-          {getLayout(<Component {...pageProps} />)}
-        </Layout>
+        <ErrorBoundary>
+          <Layout {...layoutProps}>
+            {getLayout(<Component {...pageProps} />)}
+          </Layout>
+        </ErrorBoundary>
 
         <ToastContainer position="top-right" autoClose={3000} />
       </AppProviders>

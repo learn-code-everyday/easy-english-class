@@ -20,9 +20,10 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
+import ErrorState from "@/components/ErrorState";
 import { GetAuthToken } from "@/graphql/auth";
 import {
   canAccessStudentLessons,
@@ -43,6 +44,7 @@ const LessonDetailPage = () => {
   const { auth, authStatus, verifiedToken } = useAuthStore();
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [lesson, setLesson] = useState<Lesson | null>(null);
+  const [loadError, setLoadError] = useState(false);
   const [loading, setLoading] = useState(true);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -78,7 +80,7 @@ const LessonDetailPage = () => {
     token,
   ]);
 
-  useEffect(() => {
+  const loadLesson = useCallback(() => {
     if (
       !router.isReady ||
       !slug ||
@@ -89,23 +91,23 @@ const LessonDetailPage = () => {
       return;
     }
 
-    let mounted = true;
-
+    setLoadError(false);
+    setLoading(true);
     LessonService.lessonGetBySlug(slug)
       .then((data) => {
-        if (mounted) setLesson(data);
+        setLesson(data);
       })
-      .catch((error) => {
-        toast.error(error?.message || t`Failed to load lesson`);
+      .catch(() => {
+        setLoadError(true);
       })
       .finally(() => {
-        if (mounted) setLoading(false);
+        setLoading(false);
       });
-
-    return () => {
-      mounted = false;
-    };
   }, [authStatus, canOpenPage, hasVerifiedToken, router.isReady, slug]);
+
+  useEffect(() => {
+    loadLesson();
+  }, [loadLesson]);
 
   const handleSubmit = async () => {
     if (!lesson?.id) return;
@@ -126,7 +128,7 @@ const LessonDetailPage = () => {
         toast.success(t`Answers submitted successfully`);
       }
     } catch (error: any) {
-      toast.error(error?.message || t`Failed to submit answers`);
+      toast.error(t`Failed to submit answers`);
     } finally {
       setSubmitting(false);
     }
@@ -157,6 +159,31 @@ const LessonDetailPage = () => {
             <Skeleton variant="rounded" height={220} sx={{ borderRadius: 4 }} />
             <Skeleton variant="rounded" height={220} sx={{ borderRadius: 4 }} />
           </Stack>
+        </Container>
+      </Box>
+    );
+  }
+
+  if (loadError) {
+    return (
+      <Box
+        sx={{
+          minHeight: "calc(100vh - 152px)",
+          background:
+            "linear-gradient(180deg, #f8fafc 0%, #eef6ff 46%, #ffffff 100%)",
+          py: { xs: 4, md: 7 },
+        }}
+      >
+        <Container maxWidth="lg">
+          <ErrorState
+            title={<Trans>Lesson could not be loaded</Trans>}
+            description={
+              <Trans>
+                We could not load this lesson right now. Please try again.
+              </Trans>
+            }
+            onRetry={loadLesson}
+          />
         </Container>
       </Box>
     );

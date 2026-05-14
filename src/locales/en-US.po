@@ -13,9 +13,22 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/pages/testimonials/index.tsx
+msgid "Average learner rating"
+msgstr "Average learner rating"
+
 #: src/modules/IeltsPage/IeltsQuiz/index.tsx
 msgid "International English Language Teaching Service"
 msgstr "International English Language Teaching Service"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Answer speaking prompts with better structure"
+msgstr "Answer speaking prompts with better structure"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/lessons/index.tsx
+#~ msgid "Failed to load lessons"
+#~ msgstr "Failed to load lessons"
 
 #: src/pages/about/team/index.tsx
 msgid "Experienced educator designing innovative, practical, and engaging English learning programs."
@@ -27,13 +40,20 @@ msgstr "Stop Recording"
 
 #: src/constants/menu.ts
 #: src/constants/menu.ts
+#: src/pages/manage/dashboard/index.tsx
+#: src/pages/manage/student/progress/index.tsx
 msgid "My Progress"
 msgstr "My Progress"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/manage/assignments/index.tsx
 #: src/pages/manage/classes/index.tsx
 msgid "Updated"
 msgstr "Updated"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Band Booster"
+msgstr "Band Booster"
 
 #: src/pages/manage/profile/index.tsx
 msgid "Updated basic information!"
@@ -54,10 +74,13 @@ msgstr "I'm great, thanks for asking!"
 msgid "Type"
 msgstr "Type"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Lesson deleted successfully"
+msgstr "Lesson deleted successfully"
+
 #: src/components/LoginModal/RegisterForm.tsx
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
 #: src/pages/contact/index.tsx
-#: src/pages/pricing-fee/index.tsx
 msgid "Full Name"
 msgstr "Full Name"
 
@@ -81,6 +104,14 @@ msgstr "Continue to login"
 msgid "Listen"
 msgstr "Listen"
 
+#: src/pages/courses/basic/index.tsx
+msgid "Guided learning with teacher feedback and speaking review."
+msgstr "Guided learning with teacher feedback and speaking review."
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Option A"
+#~ msgstr "Option A"
+
 #: src/pages/about/team/index.tsx
 msgid "Become a part of our mission to make English education accessible to everyone."
 msgstr "Become a part of our mission to make English education accessible to everyone."
@@ -89,25 +120,33 @@ msgstr "Become a part of our mission to make English education accessible to eve
 msgid "FAQ"
 msgstr "FAQ"
 
+#: src/pages/manage/dashboard/index.tsx
+msgid "Teacher workspace"
+msgstr "Teacher workspace"
+
 #: src/modules/BasicCommunicationPage/QuizSection/index.tsx
 msgid "Your Score:"
 msgstr "Your Score:"
 
 #: src/pages/courses/online/index.tsx
-msgid "This course covers fundamental grammar, basic vocabulary and pronunciation to start your English journey confidently."
-msgstr "This course covers fundamental grammar, basic vocabulary and pronunciation to start your English journey confidently."
+#~ msgid "This course covers fundamental grammar, basic vocabulary and pronunciation to start your English journey confidently."
+#~ msgstr "This course covers fundamental grammar, basic vocabulary and pronunciation to start your English journey confidently."
 
 #: src/modules/KidEnglishPage/FunActivities/index.tsx
 msgid "Fun Learning Activities"
 msgstr "Fun Learning Activities"
 
 #: src/pages/testimonials/index.tsx
-msgid "I loved the interactive classes and the friendly environment. Learning English became fun!"
-msgstr "I loved the interactive classes and the friendly environment. Learning English became fun!"
+#~ msgid "I loved the interactive classes and the friendly environment. Learning English became fun!"
+#~ msgstr "I loved the interactive classes and the friendly environment. Learning English became fun!"
 
 #: src/modules/ManagementPage/Student/Payments/PaymentSuccessStep.tsx
 msgid "Payment Sent!"
 msgstr "Payment Sent!"
+
+#: src/pages/manage/student/progress/index.tsx
+msgid "Completed lessons"
+msgstr "Completed lessons"
 
 #: src/components/LoginModal/LoginForm.tsx
 msgid "Welcome to our English class, where you will embark on a fun and engaging journey to improve your language skills. Join us today to discover new ways to speak, read, and write English confidently!"
@@ -121,7 +160,7 @@ msgstr "Parent Email"
 msgid "Global Opportunities"
 msgstr "Global Opportunities"
 
-#: src/pages/courses/basic/index.tsx
+#: src/pages/lessons/basic/index.tsx
 msgid "Lesson level"
 msgstr "Lesson level"
 
@@ -129,9 +168,24 @@ msgstr "Lesson level"
 msgid "Basic vocabulary, phonics, colors, numbers, simple sentences"
 msgstr "Basic vocabulary, phonics, colors, numbers, simple sentences"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Options"
+#~ msgstr "Options"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/lessons/[slug].tsx
+#: src/pages/manage/student/submissions/index.tsx
+msgid "Needs review"
+msgstr "Needs review"
+
 #: src/modules/BasicCommunicationPage/QuizSection/index.tsx
 msgid "Click words to build the correct sentence in order."
 msgstr "Click words to build the correct sentence in order."
+
+#: src/pages/lessons/[slug].tsx
+#~ msgid "Goodbye."
+#~ msgstr "Goodbye."
 
 #: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
 msgid "Password updated successfully!"
@@ -142,16 +196,36 @@ msgid "Type your message"
 msgstr "Type your message"
 
 #: src/pages/courses/online/index.tsx
-msgid "Learn business vocabulary, email writing, presentations, negotiations, and more."
-msgstr "Learn business vocabulary, email writing, presentations, negotiations, and more."
+#~ msgid "Learn business vocabulary, email writing, presentations, negotiations, and more."
+#~ msgstr "Learn business vocabulary, email writing, presentations, negotiations, and more."
 
 #: src/components/LoginModal/RegisterForm.tsx
 msgid "Sign up to create an Account"
 msgstr "Sign up to create an Account"
 
+#: src/pages/manage/dashboard/index.tsx
+msgid "Open"
+msgstr "Open"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Failed to delete lesson"
+msgstr "Failed to delete lesson"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Exam · 35 min"
+msgstr "Exam · 35 min"
+
 #: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
 msgid "Sample Dialogue"
 msgstr "Sample Dialogue"
+
+#: src/pages/lessons/[slug].tsx
+#~ msgid "Hello, my name is Lan. Nice to meet you."
+#~ msgstr "Hello, my name is Lan. Nice to meet you."
+
+#: src/pages/manage/student/progress/index.tsx
+#~ msgid "Practice streak"
+#~ msgstr "Practice streak"
 
 #: src/modules/KidEnglishPage/Introduction/index.tsx
 #: src/pages/testimonials/index.tsx
@@ -175,23 +249,41 @@ msgstr "I have paid"
 msgid "Intermediate English"
 msgstr "Intermediate English"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Create lesson"
+msgstr "Create lesson"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Exam · 45 min"
+msgstr "Exam · 45 min"
+
 #: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
 #: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
 msgid "Anna:"
 msgstr "Anna:"
 
-#: src/components/Header/index.tsx
 #: src/constants/menu.ts
 msgid "Classes"
 msgstr "Classes"
+
+#: src/constants/menu.ts
+#: src/constants/menu.ts
+#: src/pages/manage/dashboard/index.tsx
+#: src/pages/manage/student/submissions/index.tsx
+msgid "Submissions/Scores"
+msgstr "Submissions/Scores"
 
 #: src/components/LoginModal/LoginForm.tsx
 msgid "New Here?"
 msgstr "New Here?"
 
 #: src/pages/courses/online/index.tsx
-msgid "Master English skills tailored for professional and business contexts."
-msgstr "Master English skills tailored for professional and business contexts."
+#~ msgid "Master English skills tailored for professional and business contexts."
+#~ msgstr "Master English skills tailored for professional and business contexts."
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Student progress could not be loaded"
+msgstr "Student progress could not be loaded"
 
 #: src/hooks/useStatusLabel.tsx
 msgid "Blocked"
@@ -201,7 +293,7 @@ msgstr "Blocked"
 msgid "What payment methods are accepted?"
 msgstr "What payment methods are accepted?"
 
-#: src/pages/courses/basic/index.tsx
+#: src/pages/lessons/basic/index.tsx
 msgid "Activities"
 msgstr "Activities"
 
@@ -213,8 +305,8 @@ msgstr "Graded"
 
 #: src/components/Header/DesktopMenu.tsx
 #: src/components/Header/MobileMenu.tsx
-msgid "Management Site"
-msgstr "Management Site"
+#~ msgid "Management Site"
+#~ msgstr "Management Site"
 
 #: src/pages/about/mission/index.tsx
 msgid "We are committed to making English education accessible to learners from all backgrounds and skill levels. Through flexible schedules, online and offline classes, and affordable pricing, we ensure no one is left behind."
@@ -225,16 +317,24 @@ msgid "Prepare for IELTS band 6.0"
 msgstr "Prepare for IELTS band 6.0"
 
 #: src/pages/courses/online/index.tsx
-msgid "Prepare effectively for the IELTS exam with experienced instructors."
-msgstr "Prepare effectively for the IELTS exam with experienced instructors."
+#~ msgid "Prepare effectively for the IELTS exam with experienced instructors."
+#~ msgstr "Prepare effectively for the IELTS exam with experienced instructors."
 
 #: src/pages/courses/online/index.tsx
-msgid "Learn the basics of English grammar, vocabulary, and pronunciation."
-msgstr "Learn the basics of English grammar, vocabulary, and pronunciation."
+#~ msgid "Learn the basics of English grammar, vocabulary, and pronunciation."
+#~ msgstr "Learn the basics of English grammar, vocabulary, and pronunciation."
+
+#: src/pages/manage/student/submissions/index.tsx
+msgid "We could not load your submissions right now. Please try again."
+msgstr "We could not load your submissions right now. Please try again."
 
 #: src/pages/about/team/index.tsx
 msgid "Visionary leader passionate about education and technology, guiding our mission with commitment and heart."
 msgstr "Visionary leader passionate about education and technology, guiding our mission with commitment and heart."
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Failed to save lesson"
+msgstr "Failed to save lesson"
 
 #: src/stores/auth/actions.ts
 msgid "Login failed"
@@ -244,7 +344,12 @@ msgstr "Login failed"
 msgid "Ready to record"
 msgstr "Ready to record"
 
+#: src/pages/courses/basic/index.tsx
+msgid "Learn core phrases and sentence patterns"
+msgstr "Learn core phrases and sentence patterns"
+
 #: src/components/Header/index.tsx
+#: src/pages/courses/online/index.tsx
 msgid "Online Course"
 msgstr "Online Course"
 
@@ -258,8 +363,8 @@ msgid "Duration: 5 months"
 msgstr "Duration: 5 months"
 
 #: src/pages/courses/online/index.tsx
-msgid "Exam"
-msgstr "Exam"
+#~ msgid "Exam"
+#~ msgstr "Exam"
 
 #: src/modules/IeltsPage/IeltsFAQs/index.tsx
 msgid "Do you provide official IELTS practice materials?"
@@ -269,22 +374,76 @@ msgstr "Do you provide official IELTS practice materials?"
 msgid "Writing"
 msgstr "Writing"
 
+#: src/pages/courses/online/index.tsx
+msgid "Flexible online English lessons that fit your week."
+msgstr "Flexible online English lessons that fit your week."
+
+#: src/pages/courses/online/index.tsx
+msgid "Online · 30 min"
+msgstr "Online · 30 min"
+
+#: src/pages/lessons/[slug].tsx
+msgid "Your speaking response"
+msgstr "Your speaking response"
+
 #: src/components/Header/index.tsx
 #: src/pages/about/mission/index.tsx
 msgid "Our Mission"
 msgstr "Our Mission"
 
+#: src/pages/courses/online/index.tsx
+msgid "Review grammar patterns with short exercises."
+msgstr "Review grammar patterns with short exercises."
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "We could not load this lesson for editing. Please try again."
+msgstr "We could not load this lesson for editing. Please try again."
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/lessons/index.tsx
+msgid "Lessons could not be loaded"
+msgstr "Lessons could not be loaded"
+
 #: src/modules/BasicCommunicationPage/HeaderSection/index.tsx
 msgid "Basic Communication in English"
 msgstr "Basic Communication in English"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/manage/student/submissions/index.tsx
+msgid "Submitted time"
+msgstr "Submitted time"
+
 #: src/constants/menu.ts
-msgid "Assignment Management"
-msgstr "Assignment Management"
+#~ msgid "Assignment Management"
+#~ msgstr "Assignment Management"
+
+#: src/pages/manage/dashboard/index.tsx
+msgid "Continue assigned lessons, check progress, and review your submitted scores."
+msgstr "Continue assigned lessons, check progress, and review your submitted scores."
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Prepare for IELTS with a focused study system."
+msgstr "Prepare for IELTS with a focused study system."
+
+#: src/pages/courses/basic/index.tsx
+msgid "Beginner · 25 min"
+msgstr "Beginner · 25 min"
+
+#: src/pages/courses/online/index.tsx
+msgid "Business track"
+msgstr "Business track"
+
+#: src/pages/courses/kids/index.tsx
+msgid "Children starting English for the first time"
+msgstr "Children starting English for the first time"
 
 #: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
 msgid "Resend code ({countdown})"
 msgstr "Resend code ({countdown})"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Review"
+msgstr "Review"
 
 #: src/modules/ManagementPage/Profile/BasicInfoForm/index.tsx
 msgid "Referral Code"
@@ -293,6 +452,10 @@ msgstr "Referral Code"
 #: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
 msgid "Account No"
 msgstr "Account No"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Fill blank"
+msgstr "Fill blank"
 
 #: src/modules/KidEnglishPage/Registration/index.tsx
 msgid "Select Course Level"
@@ -303,9 +466,14 @@ msgid "am"
 msgstr "am"
 
 #: src/components/Header/index.tsx
-#: src/pages/courses/online/index.tsx
+#: src/pages/courses/ielts/index.tsx
 msgid "IELTS Preparation"
 msgstr "IELTS Preparation"
+
+#: src/pages/lessons/[slug].tsx
+#: src/pages/lessons/index.tsx
+msgid "Flexible"
+msgstr "Flexible"
 
 #: src/modules/BasicCommunicationPage/QuizSection/index.tsx
 msgid "Please answer the question before proceeding."
@@ -314,6 +482,10 @@ msgstr "Please answer the question before proceeding."
 #: src/modules/LandingPage/CallToActionSection/index.tsx
 msgid "Ready to Get Started?"
 msgstr "Ready to Get Started?"
+
+#: src/pages/manage/dashboard/index.tsx
+msgid "Student dashboard"
+msgstr "Student dashboard"
 
 #: src/components/PageHeader/index.tsx
 msgid "Page"
@@ -331,9 +503,17 @@ msgstr "International English Learning Test Standard"
 msgid "Personal Information"
 msgstr "Personal Information"
 
+#: src/pages/courses/ielts/index.tsx
+msgid "Intensive"
+msgstr "Intensive"
+
+#: src/pages/courses/kids/index.tsx
+msgid "Practice phonics and simple sentence patterns"
+msgstr "Practice phonics and simple sentence patterns"
+
 #: src/pages/courses/online/index.tsx
-msgid "Our Online Courses"
-msgstr "Our Online Courses"
+#~ msgid "Our Online Courses"
+#~ msgstr "Our Online Courses"
 
 #: src/modules/ManagementPage/Student/Payments/PaymentSummary.tsx
 msgid "Total"
@@ -349,6 +529,8 @@ msgstr "Failed"
 msgid "Show password"
 msgstr "Show password"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/manage/assignments/index.tsx
 #: src/pages/manage/classes/index.tsx
 msgid "Actions"
@@ -371,8 +553,10 @@ msgstr "Confirm"
 msgid "Ensuring a robust, secure, and scalable platform supporting millions of learners worldwide."
 msgstr "Ensuring a robust, secure, and scalable platform supporting millions of learners worldwide."
 
-#: src/components/Header/index.tsx
-#: src/components/Header/index.tsx
+#: src/pages/courses/kids/index.tsx
+msgid "Phonics friends"
+msgstr "Phonics friends"
+
 #: src/constants/menu.ts
 #: src/pages/403.tsx
 #: src/pages/manage/dashboard/index.tsx
@@ -388,7 +572,7 @@ msgstr "Strategies for high band score"
 msgid "New Password"
 msgstr "New Password"
 
-#: src/pages/courses/basic/index.tsx
+#: src/pages/lessons/basic/index.tsx
 msgid "Use natural greetings in everyday conversations"
 msgstr "Use natural greetings in everyday conversations"
 
@@ -396,8 +580,11 @@ msgstr "Use natural greetings in everyday conversations"
 msgid "Unpaid"
 msgstr "Unpaid"
 
+#: src/pages/courses/basic/index.tsx
+msgid "Beginner · 22 min"
+msgstr "Beginner · 22 min"
+
 #: src/pages/contact/index.tsx
-#: src/pages/pricing-fee/index.tsx
 msgid "Name is required"
 msgstr "Name is required"
 
@@ -410,12 +597,20 @@ msgid "Practice with real IELTS exam materials"
 msgstr "Practice with real IELTS exam materials"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "Tuition Fees"
-msgstr "Tuition Fees"
+#~ msgid "Tuition Fees"
+#~ msgstr "Tuition Fees"
+
+#: src/pages/lessons/[slug].tsx
+#~ msgid "I am twelve."
+#~ msgstr "I am twelve."
 
 #: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
 msgid "Transfer Info"
 msgstr "Transfer Info"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Option C"
+#~ msgstr "Option C"
 
 #: src/components/LiveChatSupport/index.tsx
 msgid "Hi! How can we assist you today?"
@@ -429,6 +624,10 @@ msgstr "Verification code resent!"
 msgid "Practice with mock exams"
 msgstr "Practice with mock exams"
 
+#: src/pages/manage/dashboard/index.tsx
+msgid "Check your completion and best lesson scores."
+msgstr "Check your completion and best lesson scores."
+
 #: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx
 msgid "Download/View"
 msgstr "Download/View"
@@ -439,8 +638,8 @@ msgid "Password"
 msgstr "Password"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "Price (USD)"
-msgstr "Price (USD)"
+#~ msgid "Price (USD)"
+#~ msgstr "Price (USD)"
 
 #: src/constants/menu.ts
 msgid "SYSTEM"
@@ -458,12 +657,19 @@ msgstr "Lead Instructor"
 msgid "Technical Support"
 msgstr "Technical Support"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Save as draft"
+msgstr "Save as draft"
+
 #: src/components/LoginModal/RegisterForm.tsx
 msgid "Already have an account?"
 msgstr "Already have an account?"
 
-#: src/constants/menu.ts
-#: src/constants/menu.ts
+#: src/pages/courses/ielts/index.tsx
+msgid "$249"
+msgstr "$249"
+
+#: src/pages/testimonials/index.tsx
 msgid "Practice"
 msgstr "Practice"
 
@@ -479,6 +685,10 @@ msgstr "A fun and interactive English course designed specifically for kids aged
 msgid "Interactive Quiz"
 msgstr "Interactive Quiz"
 
+#: src/pages/testimonials/index.tsx
+msgid "Real English progress, told by real students."
+msgstr "Real English progress, told by real students."
+
 #: src/pages/contact/index.tsx
 msgid "Email:"
 msgstr "Email:"
@@ -487,22 +697,38 @@ msgstr "Email:"
 msgid "3 - 5 years"
 msgstr "3 - 5 years"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Today, 09:12"
+#~ msgstr "Today, 09:12"
+
 #: src/pages/manage/assignments/index.tsx
 #: src/pages/manage/classes/index.tsx
 msgid "Search"
 msgstr "Search"
 
+#: src/pages/courses/ielts/index.tsx
+msgid "Train prediction, note-taking, and section pacing."
+msgstr "Train prediction, note-taking, and section pacing."
+
 #: src/pages/about/faq/index.tsx
 msgid "Are there any discounts?"
 msgstr "Are there any discounts?"
+
+#: src/modules/CourseLandingPage/index.tsx
+msgid "View Lessons"
+msgstr "View Lessons"
 
 #: src/pages/about/faq/index.tsx
 msgid "Course Information"
 msgstr "Course Information"
 
-#: src/pages/courses/basic/index.tsx
+#: src/pages/lessons/basic/index.tsx
 msgid "Learning objectives"
 msgstr "Learning objectives"
+
+#: src/pages/courses/kids/index.tsx
+msgid "Teacher support, parent updates, and progress review."
+msgstr "Teacher support, parent updates, and progress review."
 
 #: src/components/LoginModal/ResetPassword/PasswordSuccess.tsx
 msgid "You can now use it to login to your account. Remember, always keep your password confidential and complex."
@@ -512,6 +738,14 @@ msgstr "You can now use it to login to your account. Remember, always keep your 
 msgid "Failed to resend code"
 msgstr "Failed to resend code"
 
+#: src/pages/courses/kids/index.tsx
+msgid "Help children learn vocabulary, phonics, listening, and speaking through friendly lessons, games, stories, and creative practice."
+msgstr "Help children learn vocabulary, phonics, listening, and speaking through friendly lessons, games, stories, and creative practice."
+
+#: src/pages/manage/dashboard/index.tsx
+msgid "Create, publish, archive, and edit lesson content."
+msgstr "Create, publish, archive, and edit lesson content."
+
 #: src/components/LoginModal/LoginForm.tsx
 #: src/components/LoginModal/RegisterForm.tsx
 #: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
@@ -520,13 +754,37 @@ msgstr "Failed to resend code"
 msgid "Invalid email"
 msgstr "Invalid email"
 
+#: src/pages/lessons/[slug].tsx
+msgid "Back to lessons"
+msgstr "Back to lessons"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Archive"
+msgstr "Archive"
+
 #: src/pages/about/team/index.tsx
 msgid "Join Our Community"
 msgstr "Join Our Community"
 
+#: src/pages/lessons/index.tsx
+#~ msgid "Preview mode available"
+#~ msgstr "Preview mode available"
+
 #: src/pages/manage/dashboard/index.tsx
 msgid "Welcome back,"
 msgstr "Welcome back,"
+
+#: src/pages/courses/kids/index.tsx
+msgid "Build vocabulary with pictures and stories"
+msgstr "Build vocabulary with pictures and stories"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Estimated minutes"
+msgstr "Estimated minutes"
+
+#: src/pages/courses/online/index.tsx
+msgid "Track progress and adjust your study plan"
+msgstr "Track progress and adjust your study plan"
 
 #: src/components/LoginModal/RegisterForm.tsx
 #: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
@@ -558,6 +816,10 @@ msgstr "or"
 msgid "About Us"
 msgstr "About Us"
 
+#: src/pages/courses/ielts/index.tsx
+msgid "Diagnose strengths and weak skills"
+msgstr "Diagnose strengths and weak skills"
+
 #: src/components/LoginModal/LoginForm.tsx
 #: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
 msgid "Enter your email"
@@ -568,16 +830,16 @@ msgid "Core Skills & Topics"
 msgstr "Core Skills & Topics"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "Registration successful for {0}, thank you {1}!"
-msgstr "Registration successful for {0}, thank you {1}!"
+#~ msgid "Registration successful for {0}, thank you {1}!"
+#~ msgstr "Registration successful for {0}, thank you {1}!"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "Course Level"
-msgstr "Course Level"
+#~ msgid "Course Level"
+#~ msgstr "Course Level"
 
 #: src/pages/testimonials/index.tsx
-msgid "Ready to start your own success story?"
-msgstr "Ready to start your own success story?"
+#~ msgid "Ready to start your own success story?"
+#~ msgstr "Ready to start your own success story?"
 
 #: src/modules/DashboardPage/DashboardChart.tsx
 msgid "Student Growth (6 months)"
@@ -590,16 +852,44 @@ msgstr "Go back"
 
 #: src/constants/menu.ts
 #: src/constants/menu.ts
-msgid "My Lessons"
-msgstr "My Lessons"
+#~ msgid "My Lessons"
+#~ msgstr "My Lessons"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Progress"
+#~ msgstr "Progress"
 
 #: src/pages/testimonials/index.tsx
 msgid "Entrepreneur"
 msgstr "Entrepreneur"
 
-#: src/pages/courses/basic/index.tsx
+#: src/pages/lessons/basic/index.tsx
 msgid "Today's practice path"
 msgstr "Today's practice path"
+
+#: src/pages/courses/basic/index.tsx
+msgid "$99"
+msgstr "$99"
+
+#: src/pages/testimonials/index.tsx
+msgid "What our students say"
+msgstr "What our students say"
+
+#: src/pages/courses/online/index.tsx
+msgid "Self-paced grammar"
+msgstr "Self-paced grammar"
+
+#: src/pages/courses/online/index.tsx
+msgid "Get clear next steps after every module"
+msgstr "Get clear next steps after every module"
+
+#: src/pages/courses/kids/index.tsx
+msgid "Improve listening through stories and songs"
+msgstr "Improve listening through stories and songs"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Add question"
+msgstr "Add question"
 
 #: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
 msgid "Enter current password"
@@ -625,9 +915,21 @@ msgstr "Enter Email Code"
 msgid "Monitor lesson progress, practice consistency, and skill improvement."
 msgstr "Monitor lesson progress, practice consistency, and skill improvement."
 
+#: src/pages/courses/ielts/index.tsx
+msgid "Understand all IELTS test sections"
+msgstr "Understand all IELTS test sections"
+
+#: src/pages/courses/kids/index.tsx
+msgid "Kids · 25 min"
+msgstr "Kids · 25 min"
+
 #: src/pages/testimonials/index.tsx
 msgid "The course content is clear and practical, and the teachers really care about students' progress."
 msgstr "The course content is clear and practical, and the teachers really care about students' progress."
+
+#: src/pages/courses/basic/index.tsx
+msgid "Students preparing for daily English conversations"
+msgstr "Students preparing for daily English conversations"
 
 #: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
 msgid "Current Password"
@@ -637,6 +939,10 @@ msgstr "Current Password"
 msgid "Previous"
 msgstr "Previous"
 
+#: src/pages/courses/basic/index.tsx
+msgid "$49"
+msgstr "$49"
+
 #: src/modules/DashboardPage/DashboardStats.tsx
 msgid "Monthly Revenue"
 msgstr "Monthly Revenue"
@@ -644,6 +950,18 @@ msgstr "Monthly Revenue"
 #: src/constants/menu.ts
 msgid "Course Management"
 msgstr "Course Management"
+
+#: src/pages/lessons/index.tsx
+msgid "Start lesson"
+msgstr "Start lesson"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Progress overview"
+msgstr "Progress overview"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Add option"
+msgstr "Add option"
 
 #: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
 msgid "No worries! Enter your email and we will send you a reset"
@@ -658,8 +976,12 @@ msgid "Facebook"
 msgstr "Facebook"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Lesson title"
-msgstr "Lesson title"
+#~ msgid "Lesson title"
+#~ msgstr "Lesson title"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Publish"
+msgstr "Publish"
 
 #: src/modules/KidEnglishPage/EnglishPath/index.tsx
 msgid "9 - 12 years"
@@ -682,13 +1004,26 @@ msgstr "Unknown"
 msgid "Course Topics"
 msgstr "Course Topics"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/lessons/[slug].tsx
+#: src/pages/manage/student/submissions/index.tsx
+msgid "Score"
+msgstr "Score"
+
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 msgid "Select {0} roadmap"
 msgstr "Select {0} roadmap"
 
 #: src/graphql/error.ts
-msgid "System error! Please try again later."
-msgstr "System error! Please try again later."
+#~ msgid "System error! Please try again later."
+#~ msgstr "System error! Please try again later."
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/lessons/index.tsx
+#: src/pages/manage/student/submissions/index.tsx
+#~ msgid "IELTS speaking part 1"
+#~ msgstr "IELTS speaking part 1"
 
 #: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
 #: src/modules/IeltsPage/IeltsAudio/index.tsx
@@ -715,13 +1050,20 @@ msgstr "Active"
 
 #: src/modules/IeltsPage/IeltsFAQs/index.tsx
 #: src/pages/about/faq/index.tsx
-#: src/pages/pricing-fee/index.tsx
 msgid "Frequently Asked Questions"
 msgstr "Frequently Asked Questions"
 
 #: src/pages/courses/basic/index.tsx
+msgid "Apply the language in real-life scenarios"
+msgstr "Apply the language in real-life scenarios"
+
+#: src/pages/lessons/basic/index.tsx
 msgid "Respond politely with simple complete sentences"
 msgstr "Respond politely with simple complete sentences"
+
+#: src/pages/manage/student/submissions/index.tsx
+#~ msgid "Reviewed"
+#~ msgstr "Reviewed"
 
 #: src/components/LiveChatSupport/index.tsx
 msgid "Close live chat"
@@ -731,6 +1073,10 @@ msgstr "Close live chat"
 msgid "You don't have permission to access this page."
 msgstr "You don't have permission to access this page."
 
+#: src/constants/menu.ts
+#~ msgid "Student Management"
+#~ msgstr "Student Management"
+
 #: src/pages/manage/profile/index.tsx
 msgid "Updated personal info!"
 msgstr "Updated personal info!"
@@ -738,6 +1084,14 @@ msgstr "Updated personal info!"
 #: src/components/LoginModal/RegisterForm.tsx
 msgid "I agree to the <0>Privacy Policy</0>"
 msgstr "I agree to the <0>Privacy Policy</0>"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Review writing and speaking with clear feedback"
+msgstr "Review writing and speaking with clear feedback"
+
+#: src/pages/courses/kids/index.tsx
+msgid "Fun weekly lessons with guided home practice."
+msgstr "Fun weekly lessons with guided home practice."
 
 #: src/pages/about/mission/index.tsx
 msgid "A glimpse into our passion and dedication to quality English education."
@@ -747,6 +1101,14 @@ msgstr "A glimpse into our passion and dedication to quality English education."
 msgid "Class Management"
 msgstr "Class Management"
 
+#: src/pages/lessons/index.tsx
+#~ msgid "30 min"
+#~ msgstr "30 min"
+
+#: src/pages/courses/online/index.tsx
+msgid "Online · 35 min"
+msgstr "Online · 35 min"
+
 #: src/hooks/useStatusLabel.tsx
 msgid "Canceled"
 msgstr "Canceled"
@@ -755,15 +1117,23 @@ msgstr "Canceled"
 msgid "No materials found"
 msgstr "No materials found"
 
+#: src/pages/lessons/[slug].tsx
+#~ msgid "Practice short greetings, polite replies, and simple introductions without seeing answer keys before submitting."
+#~ msgstr "Practice short greetings, polite replies, and simple introductions without seeing answer keys before submitting."
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Needs feedback"
+msgstr "Needs feedback"
+
 #: src/components/Header/index.tsx
 #: src/layouts/admin-layout/AdminHeaderbar.tsx
 msgid "Open menu"
 msgstr "Open menu"
 
-#: src/components/Header/index.tsx
 #: src/constants/menu.ts
 #: src/constants/menu.ts
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/manage/dashboard/index.tsx
 msgid "Create Exercise"
 msgstr "Create Exercise"
 
@@ -775,18 +1145,26 @@ msgstr "Working Professional"
 #~ msgid "A confident young professional giving a presentation in English, standing in front of a small audience, business casual attire, modern office or seminar room, confident gestures, clear and bright lighting"
 #~ msgstr "A confident young professional giving a presentation in English, standing in front of a small audience, business casual attire, modern office or seminar room, confident gestures, clear and bright lighting"
 
-#: src/pages/courses/basic/index.tsx
+#: src/pages/lessons/basic/index.tsx
 msgid "Practice time"
 msgstr "Practice time"
 
 #: src/constants/menu.ts
 #: src/constants/menu.ts
-msgid "Payments"
-msgstr "Payments"
+#~ msgid "Payments"
+#~ msgstr "Payments"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Simulate test days with full practice sets"
+msgstr "Simulate test days with full practice sets"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Build essays with strong structure and accurate language."
+msgstr "Build essays with strong structure and accurate language."
 
 #: src/pages/courses/online/index.tsx
-msgid "2 months"
-msgstr "2 months"
+#~ msgid "2 months"
+#~ msgstr "2 months"
 
 #: src/pages/about/mission/index.tsx
 msgid "We understand that every learner is unique. Our experienced instructors design tailored lesson plans that meet individual goals, pace, and learning styles for optimal progress."
@@ -804,6 +1182,14 @@ msgstr "Good evening"
 msgid "Main navigation"
 msgstr "Main navigation"
 
+#: src/pages/courses/kids/index.tsx
+msgid "Learn sounds, letters, and simple pronunciation habits."
+msgstr "Learn sounds, letters, and simple pronunciation habits."
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Reading skills"
+msgstr "Reading skills"
+
 #: src/modules/IeltsPage/IeltsFAQs/index.tsx
 msgid "Our IELTS course typically runs for 3 months with flexible scheduling options."
 msgstr "Our IELTS course typically runs for 3 months with flexible scheduling options."
@@ -817,12 +1203,16 @@ msgid "Join now"
 msgstr "Join now"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "For those who know the basics and want to improve conversation, writing, and comprehension."
-msgstr "For those who know the basics and want to improve conversation, writing, and comprehension."
+#~ msgid "For those who know the basics and want to improve conversation, writing, and comprehension."
+#~ msgstr "For those who know the basics and want to improve conversation, writing, and comprehension."
 
 #: src/modules/KidEnglishPage/Registration/index.tsx
 msgid "Register for Kid English Course"
 msgstr "Register for Kid English Course"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "You have not created any lessons yet."
+msgstr "You have not created any lessons yet."
 
 #: src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
 msgid "Scan the QR or copy info below to pay"
@@ -854,13 +1244,26 @@ msgstr "Pay Invoice"
 msgid "Invoice"
 msgstr "Invoice"
 
+#: src/pages/courses/basic/index.tsx
+msgid "Talk about schedules, habits, and simple plans."
+msgstr "Talk about schedules, habits, and simple plans."
+
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Teacher review board"
-msgstr "Teacher review board"
+#~ msgid "Teacher review board"
+#~ msgstr "Teacher review board"
+
+#: src/pages/lessons/[slug].tsx
+msgid "Answers submitted successfully"
+msgstr "Answers submitted successfully"
 
 #: src/pages/testimonials/index.tsx
-msgid "Curious what our students think? Here's what they say after transforming their English skills!"
-msgstr "Curious what our students think? Here's what they say after transforming their English skills!"
+#~ msgid "Curious what our students think? Here's what they say after transforming their English skills!"
+#~ msgstr "Curious what our students think? Here's what they say after transforming their English skills!"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/lessons/[slug].tsx
+#~ msgid "Failed to load lesson"
+#~ msgstr "Failed to load lesson"
 
 #: src/modules/LandingPage/CoursesSection/index.tsx
 msgid "Build everyday vocabulary, pronunciation, and simple conversations with guided practice from day one."
@@ -879,8 +1282,8 @@ msgid "Join thousands of successful learners and start your journey today!"
 msgstr "Join thousands of successful learners and start your journey today!"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "Focused speaking practice to improve fluency and confidence in daily conversations."
-msgstr "Focused speaking practice to improve fluency and confidence in daily conversations."
+#~ msgid "Focused speaking practice to improve fluency and confidence in daily conversations."
+#~ msgstr "Focused speaking practice to improve fluency and confidence in daily conversations."
 
 #: src/constants/menu.ts
 #~ msgid "My Assignments"
@@ -898,9 +1301,30 @@ msgstr "Send"
 msgid "Combine art and language skills by drawing and describing pictures related to lessons."
 msgstr "Combine art and language skills by drawing and describing pictures related to lessons."
 
+#: src/pages/courses/ielts/index.tsx
+msgid "Train listening, reading, writing, and speaking with exam strategies, guided practice, and feedback designed for measurable band improvement."
+msgstr "Train listening, reading, writing, and speaking with exam strategies, guided practice, and feedback designed for measurable band improvement."
+
 #: src/pages/about/team/index.tsx
 msgid "Marketing Manager"
 msgstr "Marketing Manager"
+
+#: src/pages/courses/online/index.tsx
+msgid "Working adults balancing study with a busy week"
+msgstr "Working adults balancing study with a busy week"
+
+#: src/pages/courses/online/index.tsx
+msgid "Access lessons on desktop and mobile"
+msgstr "Access lessons on desktop and mobile"
+
+#: src/pages/courses/basic/index.tsx
+msgid "Speak English clearly in everyday situations."
+msgstr "Speak English clearly in everyday situations."
+
+#: src/components/ErrorBoundary/index.tsx
+#: src/components/ErrorState/index.tsx
+msgid "Try again"
+msgstr "Try again"
 
 #: src/components/LoginModal/RegisterForm.tsx
 msgid "Please enter your password"
@@ -910,6 +1334,10 @@ msgstr "Please enter your password"
 msgid "A comprehensive English course that boosts your confidence in communication and certification exams."
 msgstr "A comprehensive English course that boosts your confidence in communication and certification exams."
 
+#: src/pages/lessons/[slug].tsx
+msgid "Preview mode"
+msgstr "Preview mode"
+
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
 msgid "Register for IELTS Course"
 msgstr "Register for IELTS Course"
@@ -918,17 +1346,21 @@ msgstr "Register for IELTS Course"
 msgid "Total Teachers"
 msgstr "Total Teachers"
 
-#: src/pages/courses/basic/index.tsx
+#: src/pages/lessons/basic/index.tsx
 msgid "Record and review your pronunciation practice"
 msgstr "Record and review your pronunciation practice"
+
+#: src/pages/courses/online/index.tsx
+msgid "Online · 25 min"
+msgstr "Online · 25 min"
 
 #: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
 msgid "Media Devices API not supported"
 msgstr "Media Devices API not supported"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "No prerequisites. We welcome all levels from beginners to advanced learners."
-msgstr "No prerequisites. We welcome all levels from beginners to advanced learners."
+#~ msgid "No prerequisites. We welcome all levels from beginners to advanced learners."
+#~ msgstr "No prerequisites. We welcome all levels from beginners to advanced learners."
 
 #: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
 msgid "Reset Password"
@@ -940,24 +1372,41 @@ msgstr "Note"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "Create Lesson"
 msgstr "Create Lesson"
 
+#: src/pages/lessons/index.tsx
+#~ msgid "Preview lesson"
+#~ msgstr "Preview lesson"
+
+#: src/pages/manage/dashboard/index.tsx
+msgid "Track completion and learners needing support."
+msgstr "Track completion and learners needing support."
+
 #: src/pages/testimonials/index.tsx
-msgid "Highly recommend! The course helped me prepare for my international job interviews."
-msgstr "Highly recommend! The course helped me prepare for my international job interviews."
+#~ msgid "Highly recommend! The course helped me prepare for my international job interviews."
+#~ msgstr "Highly recommend! The course helped me prepare for my international job interviews."
 
 #: src/modules/KidEnglishPage/Registration/index.tsx
 msgid "Advanced (9-12 years)"
 msgstr "Advanced (9-12 years)"
 
 #: src/pages/courses/basic/index.tsx
+msgid "Practice short dialogues with guided prompts"
+msgstr "Practice short dialogues with guided prompts"
+
+#: src/pages/lessons/basic/index.tsx
 msgid "3 skills"
 msgstr "3 skills"
 
 #: src/components/LiveChatSupport/index.tsx
 msgid "Thank you for your message. Our support team will get back to you shortly."
 msgstr "Thank you for your message. Our support team will get back to you shortly."
+
+#: src/pages/courses/online/index.tsx
+msgid "Prepare for meetings, emails, and presentations."
+msgstr "Prepare for meetings, emails, and presentations."
 
 #: src/modules/KidEnglishPage/EnglishSkills/index.tsx
 msgid "Reading"
@@ -967,7 +1416,12 @@ msgstr "Reading"
 msgid "Correct! IELTS stands for International English Language Testing System."
 msgstr "Correct! IELTS stands for International English Language Testing System."
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Slug"
+msgstr "Slug"
+
 #: src/components/Header/index.tsx
+#: src/pages/courses/kids/index.tsx
 msgid "Kids English"
 msgstr "Kids English"
 
@@ -978,6 +1432,18 @@ msgstr "Optional"
 #: src/pages/privacy.tsx
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Submissions"
+msgstr "Submissions"
+
+#: src/pages/testimonials/index.tsx
+msgid "Confidence"
+msgstr "Confidence"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Speaking mock test"
+msgstr "Speaking mock test"
 
 #: src/pages/contact/index.tsx
 msgid "Send Message"
@@ -992,13 +1458,14 @@ msgid "Practice Speaking - Voice Recorder"
 msgstr "Practice Speaking - Voice Recorder"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "We offer flexible payment plans and special discounts for early sign-ups, groups, and referrals. Contact our support team to learn more about available options."
-msgstr "We offer flexible payment plans and special discounts for early sign-ups, groups, and referrals. Contact our support team to learn more about available options."
+#~ msgid "We offer flexible payment plans and special discounts for early sign-ups, groups, and referrals. Contact our support team to learn more about available options."
+#~ msgstr "We offer flexible payment plans and special discounts for early sign-ups, groups, and referrals. Contact our support team to learn more about available options."
 
 #: src/modules/ManagementPage/Profile/PaymentInfoForm/index.tsx
 msgid "Bank Number"
 msgstr "Bank Number"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/manage/assignments/index.tsx
 msgid "Title"
 msgstr "Title"
@@ -1023,8 +1490,24 @@ msgstr "Master essay writing and report descriptions with clear structures."
 #~ msgstr "My Classes"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "Yes, upon successful course completion, you will receive an official certificate."
-msgstr "Yes, upon successful course completion, you will receive an official certificate."
+#~ msgid "Yes, upon successful course completion, you will receive an official certificate."
+#~ msgstr "Yes, upon successful course completion, you will receive an official certificate."
+
+#: src/pages/courses/kids/index.tsx
+msgid "Review progress with parent-friendly milestones"
+msgstr "Review progress with parent-friendly milestones"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Write clearer Task 1 and Task 2 responses"
+msgstr "Write clearer Task 1 and Task 2 responses"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "We could not load student submissions right now. Please try again."
+msgstr "We could not load student submissions right now. Please try again."
+
+#: src/pages/testimonials/index.tsx
+msgid "Business communication"
+msgstr "Business communication"
 
 #: src/modules/EnglishOnlinePage/OnlineCourseCard/index.tsx
 #: src/modules/EnglishOnlinePage/OnlineCourseCard/index.tsx
@@ -1034,7 +1517,6 @@ msgstr "Duration:"
 #: src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx
 #: src/modules/ManagementPage/Student/Materials/MaterialStatusFilter.tsx
 #: src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx
-#: src/pages/courses/online/index.tsx
 #: src/pages/manage/assignments/index.tsx
 #: src/pages/manage/classes/index.tsx
 msgid "All"
@@ -1047,6 +1529,10 @@ msgstr "Comment"
 #: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
 msgid "Pronunciation tip"
 msgstr "Pronunciation tip"
+
+#: src/pages/courses/basic/index.tsx
+msgid "Daily routines"
+msgstr "Daily routines"
 
 #: src/modules/LandingPage/FeaturesSection/index.tsx
 msgid "Learn anytime, anywhere"
@@ -1083,7 +1569,6 @@ msgstr "Edit Lesson"
 
 #: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx
 #: src/pages/manage/classes/index.tsx
-#: src/pages/pricing-fee/index.tsx
 msgid "Description"
 msgstr "Description"
 
@@ -1091,22 +1576,41 @@ msgstr "Description"
 msgid "Thanks to these courses, my English communication at work has improved significantly."
 msgstr "Thanks to these courses, my English communication at work has improved significantly."
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Option B"
+#~ msgstr "Option B"
+
 #: src/components/LoginModal/LoginForm.tsx
 #: src/components/LoginModal/RegisterForm.tsx
 #: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
 #: src/modules/ManagementPage/Profile/PersonalInfoForm/index.tsx
 #: src/pages/contact/index.tsx
-#: src/pages/pricing-fee/index.tsx
 msgid "Email"
 msgstr "Email"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Students targeting university admission"
+msgstr "Students targeting university admission"
 
 #: src/modules/KidEnglishPage/EnglishPath/index.tsx
 msgid "Storytelling, role-play, group activities"
 msgstr "Storytelling, role-play, group activities"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Speaking practice"
-msgstr "Speaking practice"
+#~ msgid "Speaking practice"
+#~ msgstr "Speaking practice"
+
+#: src/pages/testimonials/index.tsx
+msgid "Practice sessions completed"
+msgstr "Practice sessions completed"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Assign after publishing so students can submit answers from their lesson detail page."
+#~ msgstr "Assign after publishing so students can submit answers from their lesson detail page."
+
+#: src/pages/testimonials/index.tsx
+msgid "See how learners build confidence through guided lessons, speaking practice, and teacher feedback that fits their schedule."
+msgstr "See how learners build confidence through guided lessons, speaking practice, and teacher feedback that fits their schedule."
 
 #: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
 msgid "Pay now"
@@ -1117,8 +1621,8 @@ msgid "Prepare for real test conditions"
 msgstr "Prepare for real test conditions"
 
 #: src/pages/courses/online/index.tsx
-msgid "Professional"
-msgstr "Professional"
+#~ msgid "Professional"
+#~ msgstr "Professional"
 
 #: src/modules/IeltsPage/IeltsTopics/index.tsx
 msgid "Listening Skills"
@@ -1136,13 +1640,17 @@ msgstr "Money-back if you dont achieve your goals"
 msgid "This English course transformed my confidence. The instructors are amazing and the curriculum is very practical."
 msgstr "This English course transformed my confidence. The instructors are amazing and the curriculum is very practical."
 
+#: src/pages/courses/ielts/index.tsx
+msgid "Practice IELTS task types with timing habits"
+msgstr "Practice IELTS task types with timing habits"
+
 #: src/pages/about/mission/index.tsx
 msgid "Accessible Learning for Everyone"
 msgstr "Accessible Learning for Everyone"
 
 #: src/pages/courses/online/index.tsx
-msgid "5 months"
-msgstr "5 months"
+#~ msgid "5 months"
+#~ msgstr "5 months"
 
 #: src/pages/manage/classes/index.tsx
 msgid "Fee"
@@ -1156,6 +1664,10 @@ msgstr "Fee"
 #: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
 msgid "Pay tuition {invoiceNo}"
 msgstr "Pay tuition {invoiceNo}"
+
+#: src/pages/courses/online/index.tsx
+msgid "Maintain a consistent English practice routine"
+msgstr "Maintain a consistent English practice routine"
 
 #: src/components/LiveChatSupport/index.tsx
 msgid "Live chat support"
@@ -1189,6 +1701,10 @@ msgstr "You've updated the password"
 msgid "Hide password"
 msgstr "Hide password"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Lesson created successfully"
+msgstr "Lesson created successfully"
+
 #: src/components/AvatarUploader/index.tsx
 msgid "No image url returned!"
 msgstr "No image url returned!"
@@ -1202,9 +1718,34 @@ msgstr "No Name"
 msgid "English Class"
 msgstr "English Class"
 
+#: src/pages/testimonials/index.tsx
+msgid "Students feel more confident"
+msgstr "Students feel more confident"
+
+#: src/pages/courses/basic/index.tsx
+msgid "Busy adults who need short, guided practice"
+msgstr "Busy adults who need short, guided practice"
+
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Learning objective"
-msgstr "Learning objective"
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Lesson updated successfully"
+msgstr "Lesson updated successfully"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "$149"
+msgstr "$149"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Learning objective"
+#~ msgstr "Learning objective"
+
+#: src/pages/lessons/[slug].tsx
+#~ msgid "Write or say a short greeting and introduce yourself."
+#~ msgstr "Write or say a short greeting and introduce yourself."
+
+#: src/modules/CourseLandingPage/index.tsx
+msgid "Learning roadmap"
+msgstr "Learning roadmap"
 
 #: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
 msgid "Email sent successfully!"
@@ -1213,6 +1754,11 @@ msgstr "Email sent successfully!"
 #: src/modules/KidEnglishPage/EnglishPath/index.tsx
 msgid "Age"
 msgstr "Age"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/lessons/[slug].tsx
+msgid "Correct answer"
+msgstr "Correct answer"
 
 #: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
 msgid "Listen first, then repeat each line with a natural rhythm."
@@ -1227,16 +1773,28 @@ msgid "Can I get a refund if I cancel?"
 msgstr "Can I get a refund if I cancel?"
 
 #: src/constants/menu.ts
-msgid "Payment Management"
-msgstr "Payment Management"
+#~ msgid "Payment Management"
+#~ msgstr "Payment Management"
+
+#: src/pages/testimonials/index.tsx
+msgid "Explore lessons"
+msgstr "Explore lessons"
+
+#: src/components/ErrorBoundary/index.tsx
+msgid "The page could not be rendered. You can try again without losing the whole app."
+msgstr "The page could not be rendered. You can try again without losing the whole app."
 
 #: src/pages/courses/online/index.tsx
-msgid "Practical lessons focused on everyday conversations, idioms, and expressions for fluency."
-msgstr "Practical lessons focused on everyday conversations, idioms, and expressions for fluency."
+#~ msgid "Practical lessons focused on everyday conversations, idioms, and expressions for fluency."
+#~ msgstr "Practical lessons focused on everyday conversations, idioms, and expressions for fluency."
+
+#: src/pages/courses/kids/index.tsx
+msgid "Use short role plays to make English feel natural."
+msgstr "Use short role plays to make English feel natural."
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Management tools coming next"
-msgstr "Management tools coming next"
+#~ msgid "Management tools coming next"
+#~ msgstr "Management tools coming next"
 
 #: src/components/LoginModal/RegisterForm.tsx
 msgid "Registration successful! Welcome to English Class!"
@@ -1247,14 +1805,14 @@ msgid "Develop basic writing and reading skills"
 msgstr "Develop basic writing and reading skills"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "How can I contact my instructor?"
-msgstr "How can I contact my instructor?"
+#~ msgid "How can I contact my instructor?"
+#~ msgstr "How can I contact my instructor?"
 
 #: src/pages/about/team/index.tsx
 msgid "Technical Lead"
 msgstr "Technical Lead"
 
-#: src/pages/courses/basic/index.tsx
+#: src/pages/lessons/basic/index.tsx
 msgid "Lesson progress"
 msgstr "Lesson progress"
 
@@ -1277,16 +1835,20 @@ msgstr "View Details"
 msgid "Rows per page:"
 msgstr "Rows per page:"
 
-#: src/components/Header/index.tsx
 #: src/constants/menu.ts
 #: src/constants/menu.ts
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/manage/dashboard/index.tsx
 msgid "Student Submissions"
 msgstr "Student Submissions"
 
 #: src/components/Footer/index.tsx
 msgid "Telegram"
 msgstr "Telegram"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Update lesson"
+msgstr "Update lesson"
 
 #: src/components/LoginModal/RegisterForm.tsx
 msgid "Please accept Terms and Conditions"
@@ -1296,7 +1858,6 @@ msgstr "Please accept Terms and Conditions"
 msgid "Name required"
 msgstr "Name required"
 
-#: src/components/Header/index.tsx
 #: src/constants/menu.ts
 msgid "Users"
 msgstr "Users"
@@ -1305,28 +1866,55 @@ msgstr "Users"
 msgid "Lesson 01"
 msgstr "Lesson 01"
 
+#: src/pages/courses/online/index.tsx
+msgid "Online Flex"
+msgstr "Online Flex"
+
 #: src/pages/manage/assignments/index.tsx
 #: src/pages/manage/classes/index.tsx
 msgid "Class Name"
 msgstr "Class Name"
 
+#: src/pages/courses/online/index.tsx
+msgid "Online · 15 min"
+msgstr "Online · 15 min"
+
 #: src/modules/ManagementPage/Student/Materials/MaterialStatusFilter.tsx
 msgid "Doc"
 msgstr "Doc"
 
+#: src/pages/lessons/[slug].tsx
+msgid "Explanations and correct answers are shown only after submission."
+msgstr "Explanations and correct answers are shown only after submission."
+
 #: src/pages/pricing-fee/index.tsx
-msgid "What is the refund policy?"
-msgstr "What is the refund policy?"
+#~ msgid "What is the refund policy?"
+#~ msgstr "What is the refund policy?"
+
+#: src/pages/testimonials/index.tsx
+msgid "Clear learning path"
+msgstr "Clear learning path"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Use strategies for reading and listening accuracy"
+msgstr "Use strategies for reading and listening accuracy"
 
 #: src/modules/LandingPage/TestimonialsSection/index.tsx
 msgid "The flexible schedule perfectly fits working students."
 msgstr "The flexible schedule perfectly fits working students."
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Archived"
+#~ msgstr "Archived"
+
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 msgid "Study Info"
 msgstr "Study Info"
 
-#: src/components/Header/index.tsx
+#: src/pages/testimonials/index.tsx
+msgid "Class engagement"
+msgstr "Class engagement"
+
 #: src/constants/menu.ts
 msgid "Settings"
 msgstr "Settings"
@@ -1339,14 +1927,18 @@ msgstr "Admin"
 msgid "Type your message..."
 msgstr "Type your message..."
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Publishing workflow"
+msgstr "Publishing workflow"
+
 #: src/components/LoginModal/LoginForm.tsx
 msgid "Forgot password?"
 msgstr "Forgot password?"
 
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/contact/index.tsx
-#: src/pages/courses/basic/index.tsx
-#: src/pages/pricing-fee/index.tsx
+#: src/pages/lessons/basic/index.tsx
 msgid "Beginner"
 msgstr "Beginner"
 
@@ -1368,23 +1960,30 @@ msgstr "Pending"
 msgid "Unpaid / Overdue"
 msgstr "Unpaid / Overdue"
 
+#: src/pages/courses/basic/index.tsx
+msgid "Travel basics"
+msgstr "Travel basics"
+
 #: src/pages/courses/online/index.tsx
-msgid "Conversational English"
-msgstr "Conversational English"
+#~ msgid "Conversational English"
+#~ msgstr "Conversational English"
 
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
 #: src/pages/contact/index.tsx
-#: src/pages/pricing-fee/index.tsx
 msgid "Select Course"
 msgstr "Select Course"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Dialogue"
-msgstr "Dialogue"
+#~ msgid "Dialogue"
+#~ msgstr "Dialogue"
 
 #: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
 msgid "Send Recording"
 msgstr "Send Recording"
+
+#: src/modules/CourseLandingPage/index.tsx
+msgid "Course outcomes"
+msgstr "Course outcomes"
 
 #: src/pages/about/faq/index.tsx
 msgid "We offer Beginner, Intermediate, Advanced courses, Conversation Practice, and IELTS preparation to suit every level."
@@ -1393,6 +1992,10 @@ msgstr "We offer Beginner, Intermediate, Advanced courses, Conversation Practice
 #: src/modules/IeltsPage/IeltsAudio/index.tsx
 msgid "Listening Practice"
 msgstr "Listening Practice"
+
+#: src/pages/lessons/index.tsx
+msgid "Browse student-safe lesson cards with level, time, skill focus, and completion status. Answer keys stay out of the frontend."
+msgstr "Browse student-safe lesson cards with level, time, skill focus, and completion status. Answer keys stay out of the frontend."
 
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 msgid "Prepare for IELTS Junior exam"
@@ -1448,12 +2051,37 @@ msgid "Prepare for A1-A2 level exams"
 msgstr "Prepare for A1-A2 level exams"
 
 #: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+#: src/pages/lessons/[slug].tsx
 msgid "Your answer"
 msgstr "Your answer"
+
+#: src/modules/CourseLandingPage/index.tsx
+msgid "Lesson modules"
+msgstr "Lesson modules"
 
 #: src/pages/privacy.tsx
 msgid "We are committed to protecting your personal information and will not share it with third parties. All data is used solely to improve user experience and enhance our services."
 msgstr "We are committed to protecting your personal information and will not share it with third parties. All data is used solely to improve user experience and enhance our services."
+
+#: src/pages/lessons/index.tsx
+msgid "Back to Dashboard"
+msgstr "Back to Dashboard"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Prompt"
+msgstr "Prompt"
+
+#: src/pages/courses/basic/index.tsx
+msgid "Beginner · 20 min"
+msgstr "Beginner · 20 min"
+
+#: src/pages/lessons/[slug].tsx
+#~ msgid "Complete the sentence: My name ___ Lan."
+#~ msgstr "Complete the sentence: My name ___ Lan."
+
+#: src/pages/lessons/index.tsx
+#~ msgid "22 min"
+#~ msgstr "22 min"
 
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 msgid "Develop essay writing skills"
@@ -1480,8 +2108,8 @@ msgid "Draft practice prompts, quiz tasks, and speaking activities for your less
 msgstr "Draft practice prompts, quiz tasks, and speaking activities for your lessons."
 
 #: src/pages/courses/online/index.tsx
-msgid "General"
-msgstr "General"
+#~ msgid "General"
+#~ msgstr "General"
 
 #: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
 msgid "Min 6 chars"
@@ -1491,9 +2119,41 @@ msgstr "Min 6 chars"
 msgid "Introduce simple stories, picture books, and reading comprehension activities."
 msgstr "Introduce simple stories, picture books, and reading comprehension activities."
 
+#: src/pages/courses/online/index.tsx
+msgid "Live speaking lab"
+msgstr "Live speaking lab"
+
+#: src/pages/courses/online/index.tsx
+msgid "Live coaching, feedback, and a personalized study plan."
+msgstr "Live coaching, feedback, and a personalized study plan."
+
 #: src/modules/KidEnglishPage/EnglishSkills/index.tsx
 msgid "Practice active listening through stories, songs, and audio exercises tailored for kids."
 msgstr "Practice active listening through stories, songs, and audio exercises tailored for kids."
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Assigned class IDs"
+msgstr "Assigned class IDs"
+
+#: src/pages/testimonials/index.tsx
+msgid "Practical wins from students learning for work, school, interviews, and everyday conversations."
+msgstr "Practical wins from students learning for work, school, interviews, and everyday conversations."
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Modules"
+msgstr "Modules"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Due date"
+#~ msgstr "Due date"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Exam · 30 min"
+msgstr "Exam · 30 min"
+
+#: src/pages/courses/basic/index.tsx
+msgid "Build practical listening, speaking, and response skills with guided lessons for greetings, classroom talk, shopping, travel, and daily conversation."
+msgstr "Build practical listening, speaking, and response skills with guided lessons for greetings, classroom talk, shopping, travel, and daily conversation."
 
 #: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
 msgid "Comment:"
@@ -1525,12 +2185,16 @@ msgid "Sign in With Google"
 msgstr "Sign in With Google"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Search..."
-msgstr "Search..."
+#~ msgid "Search..."
+#~ msgstr "Search..."
 
 #: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
 msgid "Step 1"
 msgstr "Step 1"
+
+#: src/pages/courses/online/index.tsx
+msgid "Complete weekly video lessons and practice tasks"
+msgstr "Complete weekly video lessons and practice tasks"
 
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 msgid "Refine listening and speaking skills"
@@ -1569,13 +2233,25 @@ msgstr "Loading..."
 msgid "Your session has expired. Please sign in again."
 msgstr "Your session has expired. Please sign in again."
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Remove question"
+msgstr "Remove question"
+
+#: src/pages/courses/kids/index.tsx
+msgid "Parents looking for a guided after-school program"
+msgstr "Parents looking for a guided after-school program"
+
 #: src/pages/pricing-fee/index.tsx
-msgid "For learners aiming for fluency, advanced grammar, idioms, and professional English usage."
-msgstr "For learners aiming for fluency, advanced grammar, idioms, and professional English usage."
+#~ msgid "For learners aiming for fluency, advanced grammar, idioms, and professional English usage."
+#~ msgstr "For learners aiming for fluency, advanced grammar, idioms, and professional English usage."
 
 #: src/constants/menu.ts
-msgid "Score Management"
-msgstr "Score Management"
+#~ msgid "Score Management"
+#~ msgstr "Score Management"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Option"
+msgstr "Option"
 
 #: src/hooks/useStatusLabel.tsx
 #: src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx
@@ -1584,8 +2260,17 @@ msgid "Submitted"
 msgstr "Submitted"
 
 #: src/modules/KidEnglishPage/EnglishSkills/index.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "Speaking"
 msgstr "Speaking"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Explanation"
+msgstr "Explanation"
+
+#: src/pages/courses/online/index.tsx
+msgid "Practice conversations with teacher-guided prompts."
+msgstr "Practice conversations with teacher-guided prompts."
 
 #: src/pages/about/mission/index.tsx
 msgid "Innovative Teaching Methods"
@@ -1596,11 +2281,20 @@ msgid "Guided speaking practice"
 msgstr "Guided speaking practice"
 
 #: src/pages/contact/index.tsx
-#: src/pages/pricing-fee/index.tsx
 msgid "Email is required"
 msgstr "Email is required"
 
+#: src/pages/courses/online/index.tsx
+msgid "Join live speaking sessions for real interaction"
+msgstr "Join live speaking sessions for real interaction"
+
+#: src/pages/manage/dashboard/index.tsx
+msgid "Build practice questions and assign lesson work."
+msgstr "Build practice questions and assign lesson work."
+
 #: src/constants/role.ts
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/testimonials/index.tsx
 msgid "Student"
 msgstr "Student"
@@ -1609,7 +2303,6 @@ msgstr "Student"
 msgid "Head of Curriculum"
 msgstr "Head of Curriculum"
 
-#: src/constants/menu.ts
 #: src/pages/manage/student/payment/index.tsx
 msgid "Payment History"
 msgstr "Payment History"
@@ -1629,23 +2322,30 @@ msgid "Are there prerequisites for online courses?"
 msgstr "Are there prerequisites for online courses?"
 
 #: src/components/Header/index.tsx
-msgid "Pricing"
-msgstr "Pricing"
+#~ msgid "Pricing"
+#~ msgstr "Pricing"
 
 #: src/constants/menu.ts
-msgid "Event Management"
-msgstr "Event Management"
+#~ msgid "Event Management"
+#~ msgstr "Event Management"
+
+#: src/pages/lessons/index.tsx
+msgid "You do not have any lessons assigned yet."
+msgstr "You do not have any lessons assigned yet."
 
 #: src/components/AvatarUploader/index.tsx
 msgid "Avatar updated!"
 msgstr "Avatar updated!"
+
+#: src/pages/testimonials/index.tsx
+msgid "Opening registration page..."
+msgstr "Opening registration page..."
 
 #: src/pages/about/faq/index.tsx
 msgid "Each course typically lasts 3 months with weekly sessions. Conversation Practice is usually 1 month."
 msgstr "Each course typically lasts 3 months with weekly sessions. Conversation Practice is usually 1 month."
 
 #: src/pages/contact/index.tsx
-#: src/pages/pricing-fee/index.tsx
 msgid "Please select a course"
 msgstr "Please select a course"
 
@@ -1653,9 +2353,17 @@ msgstr "Please select a course"
 msgid "Learn English naturally through fun songs and rhymes that improve pronunciation and rhythm."
 msgstr "Learn English naturally through fun songs and rhymes that improve pronunciation and rhythm."
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Publish from lesson management"
+msgstr "Publish from lesson management"
+
 #: src/modules/DashboardPage/DashboardStats.tsx
 msgid "Total Students"
 msgstr "Total Students"
+
+#: src/pages/lessons/[slug].tsx
+#~ msgid "This is the natural polite reply when meeting someone for the first time."
+#~ msgstr "This is the natural polite reply when meeting someone for the first time."
 
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 msgid "Develop academic writing skills"
@@ -1666,12 +2374,18 @@ msgid "Open live chat"
 msgstr "Open live chat"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "Are there any prerequisites?"
-msgstr "Are there any prerequisites?"
+#~ msgid "Are there any prerequisites?"
+#~ msgstr "Are there any prerequisites?"
 
 #: src/modules/BasicCommunicationPage/QuizSection/index.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/lessons/[slug].tsx
 msgid "Question"
 msgstr "Question"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Practice skimming, scanning, and question matching."
+msgstr "Practice skimming, scanning, and question matching."
 
 #: src/components/ProfileDropdown/index.tsx
 msgid "My profile"
@@ -1686,9 +2400,17 @@ msgstr "Get Started"
 msgid "Please confirm your password"
 msgstr "Please confirm your password"
 
-#: src/pages/courses/basic/index.tsx
+#: src/pages/lessons/basic/index.tsx
 msgid "18 min"
 msgstr "18 min"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Exam · 40 min"
+msgstr "Exam · 40 min"
+
+#: src/components/ErrorState/index.tsx
+msgid "We could not load this content. Please try again."
+msgstr "We could not load this content. Please try again."
 
 #: src/modules/KidEnglishPage/EnglishSkills/index.tsx
 msgid "Listening"
@@ -1698,17 +2420,42 @@ msgstr "Listening"
 msgid "Expert-level essay and speaking skills"
 msgstr "Expert-level essay and speaking skills"
 
+#: src/components/Header/DesktopMenu.tsx
+#: src/components/Header/MobileMenu.tsx
+msgid "Go to Dashboard"
+msgstr "Go to Dashboard"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Average completion"
+msgstr "Average completion"
+
 #: src/modules/KidEnglishPage/EnglishPath/index.tsx
 msgid "Reading comprehension, writing skills, oral presentation"
 msgstr "Reading comprehension, writing skills, oral presentation"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "You will get access to our online platform where you can message your instructor anytime."
-msgstr "You will get access to our online platform where you can message your instructor anytime."
+#~ msgid "You will get access to our online platform where you can message your instructor anytime."
+#~ msgstr "You will get access to our online platform where you can message your instructor anytime."
+
+#: src/pages/courses/kids/index.tsx
+msgid "Family Plan"
+msgstr "Family Plan"
+
+#: src/pages/courses/basic/index.tsx
+msgid "Practice names, small talk, and polite first conversations."
+msgstr "Practice names, small talk, and polite first conversations."
 
 #: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
 msgid "Password is required"
 msgstr "Password is required"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Delete"
+msgstr "Delete"
+
+#: src/pages/lessons/index.tsx
+#~ msgid "Available"
+#~ msgstr "Available"
 
 #: src/pages/manage/assignments/index.tsx
 #: src/pages/manage/classes/index.tsx
@@ -1719,9 +2466,17 @@ msgstr "Created"
 msgid "Advanced English"
 msgstr "Advanced English"
 
+#: src/pages/lessons/index.tsx
+msgid "Completion"
+msgstr "Completion"
+
 #: src/components/ProfileSection/index.tsx
 msgid "Cancel"
 msgstr "Cancel"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Writing workshop"
+msgstr "Writing workshop"
 
 #: src/pages/testimonials/index.tsx
 msgid "University Student"
@@ -1763,6 +2518,10 @@ msgstr "Dedicated teacher focused on helping students gain confidence and fluenc
 msgid "Unable to verify?"
 msgstr "Unable to verify?"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Average score"
+msgstr "Average score"
+
 #: src/pages/about/team/index.tsx
 msgid "Product Manager"
 msgstr "Product Manager"
@@ -1781,18 +2540,19 @@ msgid "Develop confidence and fluency with mock speaking tests and feedback."
 msgstr "Develop confidence and fluency with mock speaking tests and feedback."
 
 #: src/pages/testimonials/index.tsx
-msgid "Graduate Student"
-msgstr "Graduate Student"
+#~ msgid "Graduate Student"
+#~ msgstr "Graduate Student"
 
 #: src/pages/testimonials/index.tsx
-msgid "Real feedback from students who have achieved outstanding results with our English courses."
-msgstr "Real feedback from students who have achieved outstanding results with our English courses."
+#~ msgid "Real feedback from students who have achieved outstanding results with our English courses."
+#~ msgstr "Real feedback from students who have achieved outstanding results with our English courses."
 
 #: src/modules/KidEnglishPage/EnglishPath/index.tsx
 msgid "6 - 8 years"
 msgstr "6 - 8 years"
 
 #: src/components/ProfileSection/index.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/manage/assignments/index.tsx
 #: src/pages/manage/classes/index.tsx
 msgid "Edit"
@@ -1801,6 +2561,15 @@ msgstr "Edit"
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 msgid "Prepare for IELTS band 5.0"
 msgstr "Prepare for IELTS band 5.0"
+
+#: src/pages/testimonials/index.tsx
+msgid "Learner outcomes"
+msgstr "Learner outcomes"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/manage/student/submissions/index.tsx
+#~ msgid "Today"
+#~ msgstr "Today"
 
 #: src/pages/about/faq/index.tsx
 msgid "Watch Our Course Overview Video"
@@ -1815,16 +2584,21 @@ msgid "Yes, upon successful completion you will receive a certificate recognized
 msgstr "Yes, upon successful completion you will receive a certificate recognized by our institution."
 
 #: src/hooks/useStatusLabel.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "Draft"
 msgstr "Draft"
 
 #: src/pages/courses/online/index.tsx
-msgid "Improve your speaking skills through practical conversation practice."
-msgstr "Improve your speaking skills through practical conversation practice."
+#~ msgid "Improve your speaking skills through practical conversation practice."
+#~ msgstr "Improve your speaking skills through practical conversation practice."
 
 #: src/pages/pricing-fee/index.tsx
-msgid "For learners starting from scratch, focusing on basic grammar, vocabulary, and speaking skills."
-msgstr "For learners starting from scratch, focusing on basic grammar, vocabulary, and speaking skills."
+#~ msgid "For learners starting from scratch, focusing on basic grammar, vocabulary, and speaking skills."
+#~ msgstr "For learners starting from scratch, focusing on basic grammar, vocabulary, and speaking skills."
+
+#: src/pages/manage/student/progress/index.tsx
+#~ msgid "Failed to load progress"
+#~ msgstr "Failed to load progress"
 
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 msgid "Duration: 3 months"
@@ -1835,9 +2609,12 @@ msgid "Please enter your email"
 msgstr "Please enter your email"
 
 #: src/modules/LandingPage/TestimonialsSection/index.tsx
-#: src/pages/testimonials/index.tsx
 msgid "What Our Students Say"
 msgstr "What Our Students Say"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "We could not load your teacher lessons right now. Please try again."
+msgstr "We could not load your teacher lessons right now. Please try again."
 
 #: src/modules/KidEnglishPage/FunActivities/index.tsx
 msgid "Interactive Games"
@@ -1850,6 +2627,10 @@ msgstr "Aim for band 7.0+"
 #: src/pages/manage/assignments/index.tsx
 msgid "Deadline"
 msgstr "Deadline"
+
+#: src/pages/courses/online/index.tsx
+msgid "Remote learners who need a flexible schedule"
+msgstr "Remote learners who need a flexible schedule"
 
 #: src/helpers/locales.ts
 msgid "Vietnamese"
@@ -1866,7 +2647,6 @@ msgstr "Invalid phone number"
 #: src/components/LoginModal/LoginForm.tsx
 #: src/components/LoginModal/LoginForm.tsx
 #: src/components/LoginModal/RegisterForm.tsx
-#: src/pages/pricing-fee/index.tsx
 msgid "Register"
 msgstr "Register"
 
@@ -1882,7 +2662,6 @@ msgstr "Method"
 msgid "N/A"
 msgstr "N/A"
 
-#: src/constants/menu.ts
 #: src/pages/manage/student/materials/index.tsx
 msgid "Materials"
 msgstr "Materials"
@@ -1891,11 +2670,23 @@ msgstr "Materials"
 msgid "Meet Our Team"
 msgstr "Meet Our Team"
 
+#: src/pages/lessons/index.tsx
+msgid "We could not load your assigned lessons right now. Please try again."
+msgstr "We could not load your assigned lessons right now. Please try again."
+
 #: src/modules/ManagementPage/Student/Materials/StudentMaterialTable.tsx
 #: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
 #: src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
 msgid "Class"
 msgstr "Class"
+
+#: src/pages/lessons/[slug].tsx
+#~ msgid "A strong answer includes a greeting, your name, and a polite closing phrase."
+#~ msgstr "A strong answer includes a greeting, your name, and a polite closing phrase."
+
+#: src/pages/lessons/index.tsx
+msgid "Login to start"
+msgstr "Login to start"
 
 #: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
 msgid "Scan Momo QR to pay."
@@ -1921,8 +2712,8 @@ msgid "Register Now"
 msgstr "Register Now"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "Email is invalid"
-msgstr "Email is invalid"
+#~ msgid "Email is invalid"
+#~ msgstr "Email is invalid"
 
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
 #: src/modules/KidEnglishPage/Registration/index.tsx
@@ -1941,21 +2732,45 @@ msgstr "Account Name:"
 msgid "Schedule"
 msgstr "Schedule"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Progress chart scaffold"
+#~ msgstr "Progress chart scaffold"
+
 #: src/modules/KidEnglishPage/EnglishSkills/index.tsx
 msgid "Encourage confident speaking with role plays, dialogues, and pronunciation games."
 msgstr "Encourage confident speaking with role plays, dialogues, and pronunciation games."
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Listening strategy"
+msgstr "Listening strategy"
 
 #: src/modules/DashboardPage/DashboardStats.tsx
 msgid "Active Classes"
 msgstr "Active Classes"
 
 #: src/pages/courses/online/index.tsx
-msgid "English for Beginners"
-msgstr "English for Beginners"
+#~ msgid "English for Beginners"
+#~ msgstr "English for Beginners"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Practice fluency, coherence, vocabulary, and confidence."
+msgstr "Practice fluency, coherence, vocabulary, and confidence."
+
+#: src/constants/menu.ts
+#~ msgid "Teacher Management"
+#~ msgstr "Teacher Management"
+
+#: src/pages/testimonials/index.tsx
+msgid "Speaking confidence"
+msgstr "Speaking confidence"
 
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 msgid "Master intermediate grammar and vocabulary"
 msgstr "Master intermediate grammar and vocabulary"
+
+#: src/pages/courses/kids/index.tsx
+msgid "A playful English path for young learners."
+msgstr "A playful English path for young learners."
 
 #: src/components/LoginModal/RegisterForm.tsx
 msgid "Welcome Back!"
@@ -1966,6 +2781,10 @@ msgstr "Welcome Back!"
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
 msgid "Submit"
 msgstr "Submit"
+
+#: src/pages/lessons/[slug].tsx
+#~ msgid "Nice to meet you too."
+#~ msgstr "Nice to meet you too."
 
 #: src/pages/about/faq/index.tsx
 msgid "Do I get a certificate after course completion?"
@@ -1984,6 +2803,14 @@ msgstr "Next"
 msgid "I improved my business English tremendously. The classes fit well into my busy schedule."
 msgstr "I improved my business English tremendously. The classes fit well into my busy schedule."
 
+#: src/pages/courses/ielts/index.tsx
+msgid "Learners who need structured band-score practice"
+msgstr "Learners who need structured band-score practice"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Lesson workspace"
+msgstr "Lesson workspace"
+
 #: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
 msgid "Amount"
 msgstr "Amount"
@@ -2000,6 +2827,10 @@ msgstr "How do I register for a course?"
 msgid "Transfer Info:"
 msgstr "Transfer Info:"
 
+#: src/pages/courses/kids/index.tsx
+msgid "Recognize common words and classroom phrases"
+msgstr "Recognize common words and classroom phrases"
+
 #: src/modules/IeltsPage/IeltsFAQs/index.tsx
 msgid "What is the duration of the IELTS Preparation course?"
 msgstr "What is the duration of the IELTS Preparation course?"
@@ -2012,9 +2843,17 @@ msgstr "What levels of English courses do you offer?"
 msgid "Advanced essay writing"
 msgstr "Advanced essay writing"
 
+#: src/pages/courses/kids/index.tsx
+msgid "Story time"
+msgstr "Story time"
+
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
 msgid "Email Address"
 msgstr "Email Address"
+
+#: src/pages/courses/kids/index.tsx
+msgid "Young learners who need more speaking confidence"
+msgstr "Young learners who need more speaking confidence"
 
 #: src/components/Header/index.tsx
 #: src/components/PageHeader/index.tsx
@@ -2023,6 +2862,7 @@ msgid "Home"
 msgstr "Home"
 
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "Objectives"
 msgstr "Objectives"
 
@@ -2030,10 +2870,18 @@ msgstr "Objectives"
 msgid "Mock exams with detailed analysis"
 msgstr "Mock exams with detailed analysis"
 
+#: src/pages/courses/basic/index.tsx
+msgid "Greetings and introductions"
+msgstr "Greetings and introductions"
+
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 msgid "Duration: 6 months"
 msgstr "Duration: 6 months"
+
+#: src/pages/manage/student/progress/index.tsx
+msgid "Total lessons"
+msgstr "Total lessons"
 
 #: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
 msgid "Back"
@@ -2052,32 +2900,92 @@ msgid "Go home"
 msgstr "Go home"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Publishing checklist"
-msgstr "Publishing checklist"
+#~ msgid "Publishing checklist"
+#~ msgstr "Publishing checklist"
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Full coaching plan with writing and speaking feedback."
+msgstr "Full coaching plan with writing and speaking feedback."
+
+#: src/modules/CourseLandingPage/index.tsx
+msgid "Pricing packages"
+msgstr "Pricing packages"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Manage draft and published lessons in one place."
+msgstr "Manage draft and published lessons in one place."
+
+#: src/pages/courses/basic/index.tsx
+msgid "Beginner · 18 min"
+msgstr "Beginner · 18 min"
+
+#: src/components/Header/index.tsx
+#: src/constants/menu.ts
+#: src/constants/menu.ts
+#: src/pages/manage/dashboard/index.tsx
+msgid "Lessons"
+msgstr "Lessons"
+
+#: src/pages/courses/kids/index.tsx
+msgid "Stay motivated with playful learning routines"
+msgstr "Stay motivated with playful learning routines"
 
 #: src/pages/about/mission/index.tsx
 msgid "Personalized Learning Paths"
 msgstr "Personalized Learning Paths"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/manage/student/submissions/index.tsx
+#~ msgid "Failed to load submissions"
+#~ msgstr "Failed to load submissions"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Last week"
+#~ msgstr "Last week"
+
 #: src/pages/about/faq/index.tsx
 msgid "A stable internet connection and a device with video/audio capability are required. Basic computer skills are recommended."
 msgstr "A stable internet connection and a device with video/audio capability are required. Basic computer skills are recommended."
+
+#: src/modules/CourseLandingPage/index.tsx
+msgid "Target learners"
+msgstr "Target learners"
 
 #: src/pages/manage/profile/index.tsx
 msgid "Basic Information"
 msgstr "Basic Information"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Option D"
+#~ msgstr "Option D"
+
 #: src/modules/KidEnglishPage/FunActivities/index.tsx
 msgid "Enjoy captivating stories with colorful illustrations and simple text, perfect for young learners."
 msgstr "Enjoy captivating stories with colorful illustrations and simple text, perfect for young learners."
+
+#: src/pages/courses/kids/index.tsx
+msgid "Vocabulary games"
+msgstr "Vocabulary games"
 
 #: src/modules/LandingPage/CoursesSection/index.tsx
 #~ msgid "A focused student studying for IELTS, surrounded by textbooks and laptop, calm and quiet library environment, serious and determined expression, academic atmosphere with charts and notes visible"
 #~ msgstr "A focused student studying for IELTS, surrounded by textbooks and laptop, calm and quiet library environment, serious and determined expression, academic atmosphere with charts and notes visible"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Loading lesson..."
+msgstr "Loading lesson..."
+
+#: src/pages/lessons/basic/index.tsx
+#~ msgid "Today&apos;s practice path"
+#~ msgstr "Today&apos;s practice path"
+
 #: src/components/Header/index.tsx
 msgid "Contact"
 msgstr "Contact"
+
+#: src/pages/courses/online/index.tsx
+msgid "Students who want guided online practice"
+msgstr "Students who want guided online practice"
 
 #: src/pages/about/team/index.tsx
 msgid "A passionate group of educators, innovators, and leaders dedicated to empowering learners worldwide."
@@ -2092,20 +3000,31 @@ msgstr "IELTS Preparation Course"
 msgid "View"
 msgstr "View"
 
+#: src/pages/manage/student/submissions/index.tsx
+#~ msgid "Waiting for feedback"
+#~ msgstr "Waiting for feedback"
+
 #: src/pages/manage/classes/index.tsx
 msgid "Students"
 msgstr "Students"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Exercise details"
+msgstr "Exercise details"
+
+#: src/pages/manage/dashboard/index.tsx
+msgid "Manage lessons, build exercises, and review student progress from the teacher tools."
+msgstr "Manage lessons, build exercises, and review student progress from the teacher tools."
+
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
 #: src/pages/contact/index.tsx
-#: src/pages/pricing-fee/index.tsx
 msgid "Conversation Practice"
 msgstr "Conversation Practice"
 
-#: src/components/Header/index.tsx
 #: src/constants/menu.ts
 #: src/constants/menu.ts
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/manage/dashboard/index.tsx
 msgid "Student Progress"
 msgstr "Student Progress"
 
@@ -2137,12 +3056,32 @@ msgid "Search by assignment, class..."
 msgstr "Search by assignment, class..."
 
 #: src/constants/menu.ts
-msgid "PAYMENT"
-msgstr "PAYMENT"
+#~ msgid "PAYMENT"
+#~ msgstr "PAYMENT"
+
+#: src/modules/CourseLandingPage/index.tsx
+msgid "Contact Advisor"
+msgstr "Contact Advisor"
 
 #: src/modules/BasicCommunicationPage/QuizSection/index.tsx
 msgid "I"
 msgstr "I"
+
+#: src/pages/lessons/index.tsx
+#~ msgid "35 min"
+#~ msgstr "35 min"
+
+#: src/modules/CourseLandingPage/index.tsx
+msgid "Start Learning"
+msgstr "Start Learning"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Skill type"
+msgstr "Skill type"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Start with a lesson draft, add practice questions, then publish it for your students."
+msgstr "Start with a lesson draft, add practice questions, then publish it for your students."
 
 #: src/constants/menu.ts
 msgid "Overview Dashboard"
@@ -2152,6 +3091,11 @@ msgstr "Overview Dashboard"
 msgid "Account No:"
 msgstr "Account No:"
 
+#: src/pages/lessons/[slug].tsx
+#: src/pages/lessons/index.tsx
+msgid "min"
+msgstr "min"
+
 #: src/modules/DashboardPage/DashboardChart.tsx
 msgid "Students vs Teachers"
 msgstr "Students vs Teachers"
@@ -2160,9 +3104,17 @@ msgstr "Students vs Teachers"
 msgid "English"
 msgstr "English"
 
+#: src/pages/courses/online/index.tsx
+msgid "Progress review"
+msgstr "Progress review"
+
 #: src/pages/pricing-fee/index.tsx
-msgid "Duration"
-msgstr "Duration"
+#~ msgid "Duration"
+#~ msgstr "Duration"
+
+#: src/pages/lessons/index.tsx
+msgid "Choose your next English lesson."
+msgstr "Choose your next English lesson."
 
 #: src/components/LoginModal/LoginForm.tsx
 msgid "Don't have an account?"
@@ -2179,6 +3131,10 @@ msgstr "Passwords do not match"
 #: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
 msgid "Pause after each speaker line before recording your reply."
 msgstr "Pause after each speaker line before recording your reply."
+
+#: src/pages/lessons/[slug].tsx
+msgid "Submit answers"
+msgstr "Submit answers"
 
 #: src/components/AvatarUploader/index.tsx
 msgid "Update avatar failed!"
@@ -2198,12 +3154,20 @@ msgid "Teacher"
 msgstr "Teacher"
 
 #: src/pages/testimonials/index.tsx
-msgid "Software Engineer"
-msgstr "Software Engineer"
+#~ msgid "Software Engineer"
+#~ msgstr "Software Engineer"
+
+#: src/pages/courses/kids/index.tsx
+msgid "$59"
+msgstr "$59"
 
 #: src/pages/about/mission/index.tsx
 msgid "Our courses use the latest pedagogical research, incorporating interactive activities, technology, and real-world communication practice to create an engaging and effective learning environment."
 msgstr "Our courses use the latest pedagogical research, incorporating interactive activities, technology, and real-world communication practice to create an engaging and effective learning environment."
+
+#: src/pages/courses/kids/index.tsx
+msgid "Practice animals, colors, family, food, and school words."
+msgstr "Practice animals, colors, family, food, and school words."
 
 #: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
 msgid "Date"
@@ -2217,6 +3181,10 @@ msgstr "Full refunds are available within the first week of class. Partial refun
 msgid "Resend code"
 msgstr "Resend code"
 
+#: src/pages/testimonials/index.tsx
+msgid "Workplace English"
+msgstr "Workplace English"
+
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 msgid "Improve grammar and vocabulary to B1 level"
 msgstr "Improve grammar and vocabulary to B1 level"
@@ -2225,17 +3193,56 @@ msgstr "Improve grammar and vocabulary to B1 level"
 msgid "I'm fine, thank you. And you?"
 msgstr "I'm fine, thank you. And you?"
 
+#: src/pages/lessons/[slug].tsx
+msgid "points"
+msgstr "points"
+
+#: src/pages/lessons/index.tsx
+msgid "Not started"
+msgstr "Not started"
+
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 msgid "One-on-one coaching sessions"
 msgstr "One-on-one coaching sessions"
 
+#: src/pages/courses/basic/index.tsx
+msgid "Coached"
+msgstr "Coached"
+
 #: src/pages/courses/online/index.tsx
-msgid "Select the course that fits your learning goals. Click \"View Details\" for more info."
-msgstr "Select the course that fits your learning goals. Click \"View Details\" for more info."
+#~ msgid "Select the course that fits your learning goals. Click \"View Details\" for more info."
+#~ msgstr "Select the course that fits your learning goals. Click \"View Details\" for more info."
+
+#: src/pages/courses/basic/index.tsx
+msgid "Improve pronunciation through repeated practice"
+msgstr "Improve pronunciation through repeated practice"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "We could not load student progress right now. Please try again."
+msgstr "We could not load student progress right now. Please try again."
 
 #: src/modules/KidEnglishPage/EnglishSkills/index.tsx
 msgid "Develop basic writing skills with fun activities like drawing, labeling, and short sentences."
 msgstr "Develop basic writing skills with fun activities like drawing, labeling, and short sentences."
+
+#: src/pages/courses/kids/index.tsx
+msgid "Join guided speaking games and role plays"
+msgstr "Join guided speaking games and role plays"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/manage/student/submissions/index.tsx
+msgid "Lesson"
+msgstr "Lesson"
+
+#: src/pages/courses/online/index.tsx
+msgid "Choose a learning track that matches your goal"
+msgstr "Choose a learning track that matches your goal"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Question type"
+msgstr "Question type"
 
 #: src/components/Header/DesktopMenu.tsx
 #: src/components/Header/MobileMenu.tsx
@@ -2244,26 +3251,47 @@ msgid "Logout"
 msgstr "Logout"
 
 #: src/pages/courses/online/index.tsx
-msgid "Business English"
-msgstr "Business English"
+#~ msgid "Business English"
+#~ msgstr "Business English"
+
+#: src/pages/lessons/[slug].tsx
+msgid "Failed to submit answers"
+msgstr "Failed to submit answers"
+
+#: src/pages/lessons/index.tsx
+#~ msgid "Exam speaking"
+#~ msgstr "Exam speaking"
 
 #: src/pages/contact/index.tsx
 msgid "Have questions or feedback? Send us a message and we will get back to you soon."
 msgstr "Have questions or feedback? Send us a message and we will get back to you soon."
 
 #: src/hooks/useStatusLabel.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/lessons/[slug].tsx
+#: src/pages/manage/student/submissions/index.tsx
 msgid "Passed"
 msgstr "Passed"
 
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/contact/index.tsx
-#: src/pages/pricing-fee/index.tsx
 msgid "Intermediate"
 msgstr "Intermediate"
 
 #: src/modules/KidEnglishPage/Registration/index.tsx
 msgid "Child's Name"
 msgstr "Child's Name"
+
+#: src/components/ErrorBoundary/index.tsx
+#: src/components/ErrorState/index.tsx
+msgid "Something went wrong"
+msgstr "Something went wrong"
+
+#: src/pages/courses/online/index.tsx
+msgid "Study live and self-paced lessons from anywhere with structured modules, practice tasks, and support for speaking, business, and exam goals."
+msgstr "Study live and self-paced lessons from anywhere with structured modules, practice tasks, and support for speaking, business, and exam goals."
 
 #: src/constants/menu.ts
 #: src/constants/menu.ts
@@ -2276,6 +3304,9 @@ msgstr "TEACHING"
 msgid "We've sent a code to {email}"
 msgstr "We've sent a code to {email}"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/manage/classes/index.tsx
 msgid "Level"
 msgstr "Level"
@@ -2296,6 +3327,10 @@ msgstr "Play games that reinforce vocabulary and grammar while keeping kids enga
 msgid "Activities:"
 msgstr "Activities:"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Submission queue"
+msgstr "Submission queue"
+
 #: src/modules/BasicCommunicationPage/DialogueSection/index.tsx
 msgid "Ben:"
 msgstr "Ben:"
@@ -2308,9 +3343,14 @@ msgstr "Type your answer here..."
 msgid "Prepare basic English grammar and vocabulary"
 msgstr "Prepare basic English grammar and vocabulary"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/manage/student/submissions/index.tsx
+msgid "Submissions could not be loaded"
+msgstr "Submissions could not be loaded"
+
 #: src/pages/pricing-fee/index.tsx
-msgid "Register for a Course"
-msgstr "Register for a Course"
+#~ msgid "Register for a Course"
+#~ msgstr "Register for a Course"
 
 #: src/modules/IeltsPage/IeltsQuiz/index.tsx
 msgid "International English Language Testing System"
@@ -2320,11 +3360,23 @@ msgstr "International English Language Testing System"
 msgid "Sorry, your password must be at least 8 characters"
 msgstr "Sorry, your password must be at least 8 characters"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Class or student"
+#~ msgstr "Class or student"
+
 #: src/components/LoginModal/RegisterForm.tsx
 #: src/components/LoginModal/ResetPassword/ResetPasswordForm.tsx
 #: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
 msgid "Confirm Password"
 msgstr "Confirm Password"
+
+#: src/pages/testimonials/index.tsx
+msgid "Daily speaking"
+msgstr "Daily speaking"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Students submit from assigned lessons"
+msgstr "Students submit from assigned lessons"
 
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 msgid "Build English foundation and communication skills"
@@ -2334,7 +3386,6 @@ msgstr "Build English foundation and communication skills"
 msgid "Start Recording"
 msgstr "Start Recording"
 
-#: src/components/Header/index.tsx
 #: src/components/Header/index.tsx
 #: src/constants/menu.ts
 msgid "Courses"
@@ -2360,6 +3411,10 @@ msgstr "Driving product innovation and user experience for seamless and effectiv
 msgid "English Class All Rights Reserved"
 msgstr "English Class All Rights Reserved"
 
+#: src/pages/manage/dashboard/index.tsx
+msgid "Review your submitted answers and scores."
+msgstr "Review your submitted answers and scores."
+
 #: src/components/LiveChatSupport/index.tsx
 msgid "Send message"
 msgstr "Send message"
@@ -2375,6 +3430,11 @@ msgstr "Updated payment method!"
 #: src/components/LoginModal/RegisterForm.tsx
 msgid "Already a member? Log in and enjoy your AI shopping experience with your personalized dashboard, rewards, and more."
 msgstr "Already a member? Log in and enjoy your AI shopping experience with your personalized dashboard, rewards, and more."
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/lessons/index.tsx
+#~ msgid "Business meeting phrases"
+#~ msgstr "Business meeting phrases"
 
 #: src/components-shared/CommonTable/index.tsx
 #: src/components-shared/CommonTable/TableBodyContent.tsx
@@ -2398,8 +3458,12 @@ msgid "Focus on listening and speaking skills"
 msgstr "Focus on listening and speaking skills"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "This scaffold is ready for API-backed lesson management workflows."
-msgstr "This scaffold is ready for API-backed lesson management workflows."
+#~ msgid "This scaffold is ready for API-backed lesson management workflows."
+#~ msgstr "This scaffold is ready for API-backed lesson management workflows."
+
+#: src/pages/courses/basic/index.tsx
+msgid "Use polite complete sentences naturally"
+msgstr "Use polite complete sentences naturally"
 
 #: src/modules/LandingPage/CoursesSection/index.tsx
 msgid "Beginner English"
@@ -2409,19 +3473,29 @@ msgstr "Beginner English"
 msgid "Hello! How are you today?"
 msgstr "Hello! How are you today?"
 
+#: src/pages/courses/ielts/index.tsx
+msgid "Professionals preparing for migration or work"
+msgstr "Professionals preparing for migration or work"
+
 #: src/pages/about/faq/index.tsx
 msgid "Are classes online or in-person?"
 msgstr "Are classes online or in-person?"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "Do you offer certificates?"
-msgstr "Do you offer certificates?"
+#~ msgid "Do you offer certificates?"
+#~ msgstr "Do you offer certificates?"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/lessons/[slug].tsx
+msgid "Lesson could not be loaded"
+msgstr "Lesson could not be loaded"
 
 #: src/modules/LandingPage/FeaturesSection/index.tsx
 msgid "Native Teachers"
 msgstr "Native Teachers"
 
 #: src/hooks/useStatusLabel.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "Completed"
 msgstr "Completed"
 
@@ -2429,16 +3503,35 @@ msgstr "Completed"
 msgid "Scan VietQR code with your banking app."
 msgstr "Scan VietQR code with your banking app."
 
+#: src/pages/lessons/index.tsx
+msgid "Your teacher will assign lessons here when they are ready."
+msgstr "Your teacher will assign lessons here when they are ready."
+
 #: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
 msgid "Speak clearly and keep a natural conversation pace."
 msgstr "Speak clearly and keep a natural conversation pace."
+
+#: src/pages/courses/kids/index.tsx
+msgid "Listen, repeat, and answer simple story questions."
+msgstr "Listen, repeat, and answer simple story questions."
+
+#: src/pages/courses/kids/index.tsx
+msgid "Speak and play"
+msgstr "Speak and play"
+
+#: src/pages/courses/online/index.tsx
+msgid "$159"
+msgstr "$159"
+
+#: src/pages/lessons/[slug].tsx
+msgid "Submit your answers"
+msgstr "Submit your answers"
 
 #: src/modules/EnglishOnlinePage/OnlineCourseCard/index.tsx
 msgid "Price:"
 msgstr "Price:"
 
 #: src/modules/BasicCommunicationPage/HeaderSection/index.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "Quiz"
 msgstr "Quiz"
 
@@ -2446,17 +3539,49 @@ msgstr "Quiz"
 msgid "Learning Analytics"
 msgstr "Learning Analytics"
 
+#: src/pages/lessons/index.tsx
+#~ msgid "Preview"
+#~ msgstr "Preview"
+
+#: src/pages/manage/student/progress/index.tsx
+msgid "We could not load your progress right now. Please try again."
+msgstr "We could not load your progress right now. Please try again."
+
+#: src/pages/courses/basic/index.tsx
+msgid "Starter"
+msgstr "Starter"
+
 #: src/pages/contact/index.tsx
 msgid "Contact Information"
 msgstr "Contact Information"
+
+#: src/pages/courses/kids/index.tsx
+msgid "Play Starter"
+msgstr "Play Starter"
+
+#: src/pages/manage/student/progress/index.tsx
+msgid "Average progress"
+msgstr "Average progress"
+
+#: src/pages/courses/basic/index.tsx
+msgid "Self-paced lessons with essential practice tasks."
+msgstr "Self-paced lessons with essential practice tasks."
 
 #: src/modules/KidEnglishPage/Registration/index.tsx
 msgid "Submit Registration"
 msgstr "Submit Registration"
 
+#: src/pages/courses/online/index.tsx
+msgid "$79"
+msgstr "$79"
+
 #: src/components/LoginModal/ResetPassword/ForgotPasswordForm.tsx
 msgid "Failed to send reset email"
 msgstr "Failed to send reset email"
+
+#: src/pages/courses/basic/index.tsx
+msgid "Use essential phrases for directions, tickets, and hotels."
+msgstr "Use essential phrases for directions, tickets, and hotels."
 
 #: src/modules/BasicCommunicationPage/QuizSection/index.tsx
 msgid "Arrange the words to form a correct sentence: 'fine / am / I'"
@@ -2470,42 +3595,74 @@ msgstr "Please enter your name"
 msgid "Founder & CEO"
 msgstr "Founder & CEO"
 
+#: src/pages/courses/basic/index.tsx
+msgid "Build confidence for everyday English"
+msgstr "Build confidence for everyday English"
+
 #: src/pages/manage/profile/index.tsx
 msgid "Payment Method"
 msgstr "Payment Method"
 
-#: src/components/Header/index.tsx
+#: src/pages/courses/basic/index.tsx
+msgid "Classroom English"
+msgstr "Classroom English"
+
+#: src/pages/courses/kids/index.tsx
+msgid "$119"
+msgstr "$119"
+
 #: src/constants/menu.ts
 #: src/constants/menu.ts
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/manage/dashboard/index.tsx
 msgid "Lesson Management"
 msgstr "Lesson Management"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Failed to load student progress"
+#~ msgstr "Failed to load student progress"
+
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/contact/index.tsx
-#: src/pages/pricing-fee/index.tsx
 msgid "Advanced"
 msgstr "Advanced"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Remove"
+msgstr "Remove"
 
 #: src/modules/ManagementPage/Profile/PasswordForm/index.tsx
 msgid "Confirm your password"
 msgstr "Confirm your password"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Lesson description"
-msgstr "Lesson description"
+#~ msgid "Lesson description"
+#~ msgstr "Lesson description"
+
+#: src/pages/lessons/[slug].tsx
+msgid "Teacher feedback pending."
+msgstr "Teacher feedback pending."
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Exercise checklist"
+#~ msgstr "Exercise checklist"
 
 #: src/constants/menu.ts
-msgid "Scores"
-msgstr "Scores"
+#~ msgid "Scores"
+#~ msgstr "Scores"
+
+#: src/pages/courses/basic/index.tsx
+msgid "Record speaking tasks and review pronunciation"
+msgstr "Record speaking tasks and review pronunciation"
 
 #: src/modules/KidEnglishPage/FunActivities/index.tsx
 msgid "Songs & Rhymes"
 msgstr "Songs & Rhymes"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "Select the course that best suits your English learning journey. Each course is carefully designed to help you progress step-by-step with experienced instructors and proven methods."
-msgstr "Select the course that best suits your English learning journey. Each course is carefully designed to help you progress step-by-step with experienced instructors and proven methods."
+#~ msgid "Select the course that best suits your English learning journey. Each course is carefully designed to help you progress step-by-step with experienced instructors and proven methods."
+#~ msgstr "Select the course that best suits your English learning journey. Each course is carefully designed to help you progress step-by-step with experienced instructors and proven methods."
 
 #: src/components/ProfileSection/index.tsx
 msgid "Save"
@@ -2523,25 +3680,41 @@ msgstr "Master all IELTS question types"
 msgid "Login successfully"
 msgstr "Login successfully"
 
+#: src/pages/courses/basic/index.tsx
+msgid "New learners who want a confident foundation"
+msgstr "New learners who want a confident foundation"
+
 #: src/modules/BasicCommunicationPage/QuizSection/index.tsx
 msgid "Your sentence will appear here"
 msgstr "Your sentence will appear here"
 
 #: src/constants/menu.ts
-msgid "Events"
-msgstr "Events"
+#~ msgid "Events"
+#~ msgstr "Events"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Use filters to find lessons, submissions, or students."
-msgstr "Use filters to find lessons, submissions, or students."
+#~ msgid "Use filters to find lessons, submissions, or students."
+#~ msgstr "Use filters to find lessons, submissions, or students."
+
+#: src/pages/manage/dashboard/index.tsx
+msgid "Review submitted answers and learner outcomes."
+msgstr "Review submitted answers and learner outcomes."
 
 #: src/components/LoginModal/RegisterForm.tsx
 msgid "Registering..."
 msgstr "Registering..."
 
+#: src/pages/courses/basic/index.tsx
+msgid "Ask questions, request help, and respond to teachers clearly."
+msgstr "Ask questions, request help, and respond to teachers clearly."
+
 #: src/pages/manage/profile/index.tsx
 msgid "Password changed successfully!"
 msgstr "Password changed successfully!"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Published"
+#~ msgstr "Published"
 
 #: src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx
 #: src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx
@@ -2549,28 +3722,46 @@ msgstr "Password changed successfully!"
 #: src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx
 #: src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx
 #: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/manage/assignments/index.tsx
 #: src/pages/manage/assignments/index.tsx
 #: src/pages/manage/classes/index.tsx
 #: src/pages/manage/classes/index.tsx
 #: src/pages/manage/scores/index.tsx
+#: src/pages/manage/student/submissions/index.tsx
 msgid "Status"
 msgstr "Status"
 
 #: src/constants/menu.ts
 #: src/constants/menu.ts
 #: src/constants/menu.ts
-#: src/constants/menu.ts
 msgid "LEARNING"
 msgstr "LEARNING"
+
+#: src/pages/courses/kids/index.tsx
+msgid "Kids · 22 min"
+msgstr "Kids · 22 min"
 
 #: src/modules/BasicCommunicationPage/HeaderSection/index.tsx
 msgid "Master essential phrases, greetings, and polite expressions to kickstart your English conversation skills."
 msgstr "Master essential phrases, greetings, and polite expressions to kickstart your English conversation skills."
 
+#: src/pages/courses/online/index.tsx
+msgid "Check completed tasks and plan your next lesson."
+msgstr "Check completed tasks and plan your next lesson."
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Assign homework"
+#~ msgstr "Assign homework"
+
 #: src/modules/BasicCommunicationPage/VoiceRecorderSection/index.tsx
 msgid "Recording in progress"
 msgstr "Recording in progress"
+
+#: src/pages/courses/online/index.tsx
+msgid "Self-paced access with weekly live practice options."
+msgstr "Self-paced access with weekly live practice options."
 
 #: src/modules/KidEnglishPage/EnglishSkills/index.tsx
 msgid "Vocabulary & Grammar"
@@ -2584,6 +3775,10 @@ msgstr "Paid"
 #: src/components/LoginModal/ResetPassword/VerifyEmailForm.tsx
 msgid "Verification code is required"
 msgstr "Verification code is required"
+
+#: src/pages/manage/student/progress/index.tsx
+msgid "Progress could not be loaded"
+msgstr "Progress could not be loaded"
 
 #: src/modules/IeltsPage/IeltsAudio/index.tsx
 msgid "Listen to the audio below and try to answer related questions."
@@ -2603,9 +3798,13 @@ msgstr "Video"
 msgid "Close menu"
 msgstr "Close menu"
 
+#: src/pages/courses/basic/index.tsx
+msgid "Start and respond to common conversations"
+msgstr "Start and respond to common conversations"
+
 #: src/pages/pricing-fee/index.tsx
-msgid "1 month"
-msgstr "1 month"
+#~ msgid "1 month"
+#~ msgstr "1 month"
 
 #: src/modules/BasicCommunicationPage/QuizSection/index.tsx
 msgid "Complete the sentence: 'I ____ fine, thank you.'"
@@ -2620,8 +3819,8 @@ msgid "Send Request"
 msgstr "Send Request"
 
 #: src/constants/menu.ts
-msgid "Course Materials"
-msgstr "Course Materials"
+#~ msgid "Course Materials"
+#~ msgstr "Course Materials"
 
 #: src/pages/about/faq/index.tsx
 msgid "Contact Page"
@@ -2632,17 +3831,13 @@ msgid "Registration failed. Please try again."
 msgstr "Registration failed. Please try again."
 
 #: src/pages/courses/online/index.tsx
-msgid "Focused training on IELTS Listening, Reading, Writing and Speaking with test strategies."
-msgstr "Focused training on IELTS Listening, Reading, Writing and Speaking with test strategies."
+#~ msgid "Focused training on IELTS Listening, Reading, Writing and Speaking with test strategies."
+#~ msgstr "Focused training on IELTS Listening, Reading, Writing and Speaking with test strategies."
 
 #: src/pages/about/faq/index.tsx
 msgid "Course Overview"
 msgstr "Course Overview"
 
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
-#: src/constants/menu.ts
 #: src/constants/menu.ts
 #: src/constants/menu.ts
 #: src/constants/menu.ts
@@ -2657,24 +3852,28 @@ msgstr "Speaking Practice"
 msgid "Beginner (3-5 years)"
 msgstr "Beginner (3-5 years)"
 
+#: src/pages/courses/kids/index.tsx
+msgid "Kids · 18 min"
+msgstr "Kids · 18 min"
+
 #: src/components/LoginModal/RegisterForm.tsx
 msgid "I accept the <0>Terms and Conditions</0>"
 msgstr "I accept the <0>Terms and Conditions</0>"
 
 #: src/pages/pricing-fee/index.tsx
-msgid "You can request a full refund within the first two weeks of your course if you are not satisfied."
-msgstr "You can request a full refund within the first two weeks of your course if you are not satisfied."
+#~ msgid "You can request a full refund within the first two weeks of your course if you are not satisfied."
+#~ msgstr "You can request a full refund within the first two weeks of your course if you are not satisfied."
 
 #: src/pages/courses/online/index.tsx
-msgid "4 months"
-msgstr "4 months"
+#~ msgid "4 months"
+#~ msgstr "4 months"
 
 #: src/pages/courses/online/index.tsx
 #: src/pages/pricing-fee/index.tsx
 #: src/pages/pricing-fee/index.tsx
 #: src/pages/pricing-fee/index.tsx
-msgid "3 months"
-msgstr "3 months"
+#~ msgid "3 months"
+#~ msgstr "3 months"
 
 #: src/components/AvatarUploader/index.tsx
 msgid "File type must be JPG, PNG, GIF or HEIC."
@@ -2688,6 +3887,10 @@ msgstr "Message"
 msgid "Course Roadmaps"
 msgstr "Course Roadmaps"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Failed to update lesson"
+msgstr "Failed to update lesson"
+
 #: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
 msgid "No QR available for this payment method."
 msgstr "No QR available for this payment method."
@@ -2695,6 +3898,10 @@ msgstr "No QR available for this payment method."
 #: src/modules/LandingPage/FeaturesSection/index.tsx
 msgid "Flexible Schedule"
 msgstr "Flexible Schedule"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Active students"
+msgstr "Active students"
 
 #: src/pages/testimonials/index.tsx
 msgid "Marketing Specialist"
@@ -2712,6 +3919,10 @@ msgstr "Learning Path & Stages"
 msgid "Terms of Service"
 msgstr "Terms of Service"
 
+#: src/pages/courses/kids/index.tsx
+msgid "Kids · 20 min"
+msgstr "Kids · 20 min"
+
 #: src/modules/KidEnglishPage/Introduction/index.tsx
 msgid "Kid English Learning Program"
 msgstr "Kid English Learning Program"
@@ -2723,6 +3934,23 @@ msgstr "Good night"
 #: src/pages/manage/classes/index.tsx
 msgid "Search by class name, teacher..."
 msgstr "Search by class name, teacher..."
+
+#: src/constants/menu.ts
+#~ msgid "Teachers"
+#~ msgstr "Teachers"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/pages/manage/student/submissions/index.tsx
+#~ msgid "Yesterday"
+#~ msgstr "Yesterday"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Search lessons..."
+msgstr "Search lessons..."
+
+#: src/pages/lessons/index.tsx
+msgid "Lesson library"
+msgstr "Lesson library"
 
 #: src/constants/menu.ts
 msgid "User Management"
@@ -2739,6 +3967,18 @@ msgstr "Writing Tasks"
 #: src/pages/about/faq/index.tsx
 msgid "How long is each course?"
 msgstr "How long is each course?"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "No lessons found."
+#~ msgstr "No lessons found."
+
+#: src/pages/courses/ielts/index.tsx
+msgid "Structured IELTS lessons with weekly practice tasks."
+msgstr "Structured IELTS lessons with weekly practice tasks."
+
+#: src/pages/manage/dashboard/index.tsx
+msgid "Open assigned lessons and continue your practice."
+msgstr "Open assigned lessons and continue your practice."
 
 #: src/components/LoginModal/RegisterForm.tsx
 msgid "Please accept Privacy Policy"
@@ -2777,8 +4017,17 @@ msgid "Login"
 msgstr "Login"
 
 #: src/components/Header/index.tsx
+#: src/pages/courses/basic/index.tsx
 msgid "Basic Communication"
 msgstr "Basic Communication"
+
+#: src/pages/courses/kids/index.tsx
+msgid "Speak in short, confident sentences"
+msgstr "Speak in short, confident sentences"
+
+#: src/pages/courses/online/index.tsx
+msgid "Improve speaking and listening from home"
+msgstr "Improve speaking and listening from home"
 
 #: src/modules/LandingPage/CoursesSection/index.tsx
 msgid "Our courses"
@@ -2792,34 +4041,58 @@ msgstr "Focus:"
 msgid "System Settings"
 msgstr "System Settings"
 
+#: src/pages/lessons/[slug].tsx
+msgid "We could not load this lesson right now. Please try again."
+msgstr "We could not load this lesson right now. Please try again."
+
 #: src/modules/KidEnglishPage/FunActivities/index.tsx
 msgid "Creative Drawing"
 msgstr "Creative Drawing"
 
+#: src/pages/lessons/[slug].tsx
+msgid "Review required"
+msgstr "Review required"
+
+#: src/pages/courses/online/index.tsx
+msgid "Online Plus"
+msgstr "Online Plus"
+
 #: src/modules/IeltsPage/IeltsQuiz/index.tsx
 msgid "Incorrect. Please try again."
 msgstr "Incorrect. Please try again."
+
+#: src/pages/lessons/[slug].tsx
+#~ msgid "Choose the best reply: \"Nice to meet you.\""
+#~ msgstr "Choose the best reply: \"Nice to meet you.\""
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "Update lesson structure, objectives, and practice activities in one place."
 msgstr "Update lesson structure, objectives, and practice activities in one place."
 
 #: src/constants/menu.ts
-msgid "Assignments"
-msgstr "Assignments"
+#~ msgid "Assignments"
+#~ msgstr "Assignments"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Lesson details"
-msgstr "Lesson details"
+#~ msgid "Lesson details"
+#~ msgstr "Lesson details"
 
 #: src/modules/ManagementPage/Profile/BasicInfoForm/index.tsx
 #: src/modules/ManagementPage/Student/Payments/PaymentQRSection.tsx
 msgid "Phone"
 msgstr "Phone"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#~ msgid "Yesterday, 18:40"
+#~ msgstr "Yesterday, 18:40"
+
 #: src/pages/contact/index.tsx
 msgid "Failed to send message. Please try again later."
 msgstr "Failed to send message. Please try again later."
+
+#: src/pages/lessons/[slug].tsx
+#~ msgid "Use \"is\" with a singular name introduction."
+#~ msgstr "Use \"is\" with a singular name introduction."
 
 #: src/pages/about/faq/index.tsx
 msgid "You can register directly on our website by selecting your desired course and completing the enrollment form."
@@ -2829,1100 +4102,6 @@ msgstr "You can register directly on our website by selecting your desired cours
 msgid "No payments found."
 msgstr "No payments found."
 
-#: src/pages/testimonials/index.tsx
-msgid "Learner outcomes"
-msgstr "Learner outcomes"
-
-#: src/pages/testimonials/index.tsx
-msgid "Real English progress, told by real students."
-msgstr "Real English progress, told by real students."
-
-#: src/pages/testimonials/index.tsx
-msgid "See how learners build confidence through guided lessons, speaking practice, and teacher feedback that fits their schedule."
-msgstr "See how learners build confidence through guided lessons, speaking practice, and teacher feedback that fits their schedule."
-
-#: src/pages/testimonials/index.tsx
-msgid "Opening registration page..."
-msgstr "Opening registration page..."
-
-#: src/pages/testimonials/index.tsx
-msgid "Explore lessons"
-msgstr "Explore lessons"
-
-#: src/pages/testimonials/index.tsx
-msgid "Average learner rating"
-msgstr "Average learner rating"
-
-#: src/pages/testimonials/index.tsx
-msgid "Students feel more confident"
-msgstr "Students feel more confident"
-
-#: src/pages/testimonials/index.tsx
-msgid "Practice sessions completed"
-msgstr "Practice sessions completed"
-
-#: src/pages/testimonials/index.tsx
-msgid "What our students say"
-msgstr "What our students say"
-
-#: src/pages/testimonials/index.tsx
-msgid "Practical wins from students learning for work, school, interviews, and everyday conversations."
-msgstr "Practical wins from students learning for work, school, interviews, and everyday conversations."
-
-#: src/pages/testimonials/index.tsx
-msgid "Confidence"
-msgstr "Confidence"
-
-#: src/pages/testimonials/index.tsx
-msgid "Speaking confidence"
-msgstr "Speaking confidence"
-
-#: src/pages/testimonials/index.tsx
-msgid "Business communication"
-msgstr "Business communication"
-
-#: src/pages/testimonials/index.tsx
-msgid "Class engagement"
-msgstr "Class engagement"
-
-#: src/pages/testimonials/index.tsx
-msgid "Daily speaking"
-msgstr "Daily speaking"
-
-#: src/pages/testimonials/index.tsx
-msgid "Clear learning path"
-msgstr "Clear learning path"
-
-#: src/pages/testimonials/index.tsx
-msgid "Workplace English"
-msgstr "Workplace English"
-
-#: src/components/Header/index.tsx
-msgid "Lessons"
-msgstr "Lessons"
-
-#: src/components/Header/DesktopMenu.tsx
-#: src/components/Header/MobileMenu.tsx
-msgid "Go to Dashboard"
-msgstr "Go to Dashboard"
-
-#: src/constants/menu.ts
-msgid "Teachers"
-msgstr "Teachers"
-
-#: src/constants/menu.ts
-msgid "Teacher Management"
-msgstr "Teacher Management"
-
-#: src/constants/menu.ts
-msgid "Student Management"
-msgstr "Student Management"
-
-#: src/constants/menu.ts
-#: src/pages/manage/student/submissions/index.tsx
-msgid "Submissions/Scores"
-msgstr "Submissions/Scores"
-
-#: src/modules/CourseLandingPage/index.tsx
-msgid "Start Learning"
-msgstr "Start Learning"
-
-#: src/modules/CourseLandingPage/index.tsx
-msgid "View Lessons"
-msgstr "View Lessons"
-
-#: src/modules/CourseLandingPage/index.tsx
-msgid "Contact Advisor"
-msgstr "Contact Advisor"
-
-#: src/modules/CourseLandingPage/index.tsx
-msgid "Target learners"
-msgstr "Target learners"
-
-#: src/modules/CourseLandingPage/index.tsx
-msgid "Learning roadmap"
-msgstr "Learning roadmap"
-
-#: src/modules/CourseLandingPage/index.tsx
-msgid "Course outcomes"
-msgstr "Course outcomes"
-
-#: src/modules/CourseLandingPage/index.tsx
-msgid "Pricing packages"
-msgstr "Pricing packages"
-
-#: src/modules/CourseLandingPage/index.tsx
-msgid "Lesson modules"
-msgstr "Lesson modules"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Speak English clearly in everyday situations."
-msgstr "Speak English clearly in everyday situations."
-
-#: src/pages/courses/basic/index.tsx
-msgid "Build practical listening, speaking, and response skills with guided lessons for greetings, classroom talk, shopping, travel, and daily conversation."
-msgstr "Build practical listening, speaking, and response skills with guided lessons for greetings, classroom talk, shopping, travel, and daily conversation."
-
-#: src/pages/courses/basic/index.tsx
-msgid "New learners who want a confident foundation"
-msgstr "New learners who want a confident foundation"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Students preparing for daily English conversations"
-msgstr "Students preparing for daily English conversations"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Busy adults who need short, guided practice"
-msgstr "Busy adults who need short, guided practice"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Learn core phrases and sentence patterns"
-msgstr "Learn core phrases and sentence patterns"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Practice short dialogues with guided prompts"
-msgstr "Practice short dialogues with guided prompts"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Record speaking tasks and review pronunciation"
-msgstr "Record speaking tasks and review pronunciation"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Apply the language in real-life scenarios"
-msgstr "Apply the language in real-life scenarios"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Start and respond to common conversations"
-msgstr "Start and respond to common conversations"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Use polite complete sentences naturally"
-msgstr "Use polite complete sentences naturally"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Improve pronunciation through repeated practice"
-msgstr "Improve pronunciation through repeated practice"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Build confidence for everyday English"
-msgstr "Build confidence for everyday English"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/pages/courses/basic/index.tsx
-#: src/pages/lessons/index.tsx
-#: src/pages/manage/student/submissions/index.tsx
-msgid "Greetings and introductions"
-msgstr "Greetings and introductions"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Practice names, small talk, and polite first conversations."
-msgstr "Practice names, small talk, and polite first conversations."
-
-#: src/pages/courses/basic/index.tsx
-msgid "Beginner · 18 min"
-msgstr "Beginner · 18 min"
-
-#: src/pages/courses/basic/index.tsx
-#: src/pages/lessons/index.tsx
-msgid "Classroom English"
-msgstr "Classroom English"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Ask questions, request help, and respond to teachers clearly."
-msgstr "Ask questions, request help, and respond to teachers clearly."
-
-#: src/pages/courses/basic/index.tsx
-msgid "Beginner · 22 min"
-msgstr "Beginner · 22 min"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Daily routines"
-msgstr "Daily routines"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Talk about schedules, habits, and simple plans."
-msgstr "Talk about schedules, habits, and simple plans."
-
-#: src/pages/courses/basic/index.tsx
-msgid "Beginner · 20 min"
-msgstr "Beginner · 20 min"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Travel basics"
-msgstr "Travel basics"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Use essential phrases for directions, tickets, and hotels."
-msgstr "Use essential phrases for directions, tickets, and hotels."
-
-#: src/pages/courses/basic/index.tsx
-msgid "Beginner · 25 min"
-msgstr "Beginner · 25 min"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Starter"
-msgstr "Starter"
-
-#: src/pages/courses/basic/index.tsx
-msgid "$49"
-msgstr "$49"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Self-paced lessons with essential practice tasks."
-msgstr "Self-paced lessons with essential practice tasks."
-
-#: src/pages/courses/basic/index.tsx
-msgid "Coached"
-msgstr "Coached"
-
-#: src/pages/courses/basic/index.tsx
-msgid "$99"
-msgstr "$99"
-
-#: src/pages/courses/basic/index.tsx
-msgid "Guided learning with teacher feedback and speaking review."
-msgstr "Guided learning with teacher feedback and speaking review."
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Prepare for IELTS with a focused study system."
-msgstr "Prepare for IELTS with a focused study system."
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Train listening, reading, writing, and speaking with exam strategies, guided practice, and feedback designed for measurable band improvement."
-msgstr "Train listening, reading, writing, and speaking with exam strategies, guided practice, and feedback designed for measurable band improvement."
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Students targeting university admission"
-msgstr "Students targeting university admission"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Professionals preparing for migration or work"
-msgstr "Professionals preparing for migration or work"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Learners who need structured band-score practice"
-msgstr "Learners who need structured band-score practice"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Diagnose strengths and weak skills"
-msgstr "Diagnose strengths and weak skills"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Practice IELTS task types with timing habits"
-msgstr "Practice IELTS task types with timing habits"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Review writing and speaking with clear feedback"
-msgstr "Review writing and speaking with clear feedback"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Simulate test days with full practice sets"
-msgstr "Simulate test days with full practice sets"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Understand all IELTS test sections"
-msgstr "Understand all IELTS test sections"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Use strategies for reading and listening accuracy"
-msgstr "Use strategies for reading and listening accuracy"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Write clearer Task 1 and Task 2 responses"
-msgstr "Write clearer Task 1 and Task 2 responses"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Answer speaking prompts with better structure"
-msgstr "Answer speaking prompts with better structure"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Listening strategy"
-msgstr "Listening strategy"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Train prediction, note-taking, and section pacing."
-msgstr "Train prediction, note-taking, and section pacing."
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Exam · 35 min"
-msgstr "Exam · 35 min"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Reading skills"
-msgstr "Reading skills"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Practice skimming, scanning, and question matching."
-msgstr "Practice skimming, scanning, and question matching."
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Exam · 40 min"
-msgstr "Exam · 40 min"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Writing workshop"
-msgstr "Writing workshop"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Build essays with strong structure and accurate language."
-msgstr "Build essays with strong structure and accurate language."
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Exam · 45 min"
-msgstr "Exam · 45 min"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Speaking mock test"
-msgstr "Speaking mock test"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Practice fluency, coherence, vocabulary, and confidence."
-msgstr "Practice fluency, coherence, vocabulary, and confidence."
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Exam · 30 min"
-msgstr "Exam · 30 min"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Intensive"
-msgstr "Intensive"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "$149"
-msgstr "$149"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Structured IELTS lessons with weekly practice tasks."
-msgstr "Structured IELTS lessons with weekly practice tasks."
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Band Booster"
-msgstr "Band Booster"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "$249"
-msgstr "$249"
-
-#: src/pages/courses/ielts/index.tsx
-msgid "Full coaching plan with writing and speaking feedback."
-msgstr "Full coaching plan with writing and speaking feedback."
-
-#: src/pages/courses/kids/index.tsx
-msgid "A playful English path for young learners."
-msgstr "A playful English path for young learners."
-
-#: src/pages/courses/kids/index.tsx
-msgid "Help children learn vocabulary, phonics, listening, and speaking through friendly lessons, games, stories, and creative practice."
-msgstr "Help children learn vocabulary, phonics, listening, and speaking through friendly lessons, games, stories, and creative practice."
-
-#: src/pages/courses/kids/index.tsx
-msgid "Children starting English for the first time"
-msgstr "Children starting English for the first time"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Young learners who need more speaking confidence"
-msgstr "Young learners who need more speaking confidence"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Parents looking for a guided after-school program"
-msgstr "Parents looking for a guided after-school program"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Build vocabulary with pictures and stories"
-msgstr "Build vocabulary with pictures and stories"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Practice phonics and simple sentence patterns"
-msgstr "Practice phonics and simple sentence patterns"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Join guided speaking games and role plays"
-msgstr "Join guided speaking games and role plays"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Review progress with parent-friendly milestones"
-msgstr "Review progress with parent-friendly milestones"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Recognize common words and classroom phrases"
-msgstr "Recognize common words and classroom phrases"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Speak in short, confident sentences"
-msgstr "Speak in short, confident sentences"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Improve listening through stories and songs"
-msgstr "Improve listening through stories and songs"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Stay motivated with playful learning routines"
-msgstr "Stay motivated with playful learning routines"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Phonics friends"
-msgstr "Phonics friends"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Learn sounds, letters, and simple pronunciation habits."
-msgstr "Learn sounds, letters, and simple pronunciation habits."
-
-#: src/pages/courses/kids/index.tsx
-msgid "Kids · 20 min"
-msgstr "Kids · 20 min"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Story time"
-msgstr "Story time"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Listen, repeat, and answer simple story questions."
-msgstr "Listen, repeat, and answer simple story questions."
-
-#: src/pages/courses/kids/index.tsx
-msgid "Kids · 25 min"
-msgstr "Kids · 25 min"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Vocabulary games"
-msgstr "Vocabulary games"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Practice animals, colors, family, food, and school words."
-msgstr "Practice animals, colors, family, food, and school words."
-
-#: src/pages/courses/kids/index.tsx
-msgid "Kids · 18 min"
-msgstr "Kids · 18 min"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Speak and play"
-msgstr "Speak and play"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Use short role plays to make English feel natural."
-msgstr "Use short role plays to make English feel natural."
-
-#: src/pages/courses/kids/index.tsx
-msgid "Kids · 22 min"
-msgstr "Kids · 22 min"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Play Starter"
-msgstr "Play Starter"
-
-#: src/pages/courses/kids/index.tsx
-msgid "$59"
-msgstr "$59"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Fun weekly lessons with guided home practice."
-msgstr "Fun weekly lessons with guided home practice."
-
-#: src/pages/courses/kids/index.tsx
-msgid "Family Plan"
-msgstr "Family Plan"
-
-#: src/pages/courses/kids/index.tsx
-msgid "$119"
-msgstr "$119"
-
-#: src/pages/courses/kids/index.tsx
-msgid "Teacher support, parent updates, and progress review."
-msgstr "Teacher support, parent updates, and progress review."
-
-#: src/pages/courses/online/index.tsx
-msgid "Flexible online English lessons that fit your week."
-msgstr "Flexible online English lessons that fit your week."
-
-#: src/pages/courses/online/index.tsx
-msgid "Study live and self-paced lessons from anywhere with structured modules, practice tasks, and support for speaking, business, and exam goals."
-msgstr "Study live and self-paced lessons from anywhere with structured modules, practice tasks, and support for speaking, business, and exam goals."
-
-#: src/pages/courses/online/index.tsx
-msgid "Remote learners who need a flexible schedule"
-msgstr "Remote learners who need a flexible schedule"
-
-#: src/pages/courses/online/index.tsx
-msgid "Working adults balancing study with a busy week"
-msgstr "Working adults balancing study with a busy week"
-
-#: src/pages/courses/online/index.tsx
-msgid "Students who want guided online practice"
-msgstr "Students who want guided online practice"
-
-#: src/pages/courses/online/index.tsx
-msgid "Choose a learning track that matches your goal"
-msgstr "Choose a learning track that matches your goal"
-
-#: src/pages/courses/online/index.tsx
-msgid "Complete weekly video lessons and practice tasks"
-msgstr "Complete weekly video lessons and practice tasks"
-
-#: src/pages/courses/online/index.tsx
-msgid "Join live speaking sessions for real interaction"
-msgstr "Join live speaking sessions for real interaction"
-
-#: src/pages/courses/online/index.tsx
-msgid "Track progress and adjust your study plan"
-msgstr "Track progress and adjust your study plan"
-
-#: src/pages/courses/online/index.tsx
-msgid "Maintain a consistent English practice routine"
-msgstr "Maintain a consistent English practice routine"
-
-#: src/pages/courses/online/index.tsx
-msgid "Improve speaking and listening from home"
-msgstr "Improve speaking and listening from home"
-
-#: src/pages/courses/online/index.tsx
-msgid "Access lessons on desktop and mobile"
-msgstr "Access lessons on desktop and mobile"
-
-#: src/pages/courses/online/index.tsx
-msgid "Get clear next steps after every module"
-msgstr "Get clear next steps after every module"
-
-#: src/pages/courses/online/index.tsx
-msgid "Live speaking lab"
-msgstr "Live speaking lab"
-
-#: src/pages/courses/online/index.tsx
-msgid "Practice conversations with teacher-guided prompts."
-msgstr "Practice conversations with teacher-guided prompts."
-
-#: src/pages/courses/online/index.tsx
-msgid "Online · 30 min"
-msgstr "Online · 30 min"
-
-#: src/pages/courses/online/index.tsx
-msgid "Self-paced grammar"
-msgstr "Self-paced grammar"
-
-#: src/pages/courses/online/index.tsx
-msgid "Review grammar patterns with short exercises."
-msgstr "Review grammar patterns with short exercises."
-
-#: src/pages/courses/online/index.tsx
-msgid "Online · 25 min"
-msgstr "Online · 25 min"
-
-#: src/pages/courses/online/index.tsx
-msgid "Business track"
-msgstr "Business track"
-
-#: src/pages/courses/online/index.tsx
-msgid "Prepare for meetings, emails, and presentations."
-msgstr "Prepare for meetings, emails, and presentations."
-
-#: src/pages/courses/online/index.tsx
-msgid "Online · 35 min"
-msgstr "Online · 35 min"
-
-#: src/pages/courses/online/index.tsx
-msgid "Progress review"
-msgstr "Progress review"
-
-#: src/pages/courses/online/index.tsx
-msgid "Check completed tasks and plan your next lesson."
-msgstr "Check completed tasks and plan your next lesson."
-
-#: src/pages/courses/online/index.tsx
-msgid "Online · 15 min"
-msgstr "Online · 15 min"
-
-#: src/pages/courses/online/index.tsx
-msgid "Online Flex"
-msgstr "Online Flex"
-
-#: src/pages/courses/online/index.tsx
-msgid "$79"
-msgstr "$79"
-
-#: src/pages/courses/online/index.tsx
-msgid "Self-paced access with weekly live practice options."
-msgstr "Self-paced access with weekly live practice options."
-
-#: src/pages/courses/online/index.tsx
-msgid "Online Plus"
-msgstr "Online Plus"
-
-#: src/pages/courses/online/index.tsx
-msgid "$159"
-msgstr "$159"
-
-#: src/pages/courses/online/index.tsx
-msgid "Live coaching, feedback, and a personalized study plan."
-msgstr "Live coaching, feedback, and a personalized study plan."
-
-#: src/pages/lessons/index.tsx
-msgid "Available"
-msgstr "Available"
-
-#: src/pages/lessons/index.tsx
-msgid "22 min"
-msgstr "22 min"
-
-#: src/pages/lessons/index.tsx
-msgid "Not started"
-msgstr "Not started"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/pages/lessons/index.tsx
-#: src/pages/manage/student/submissions/index.tsx
-msgid "IELTS speaking part 1"
-msgstr "IELTS speaking part 1"
-
-#: src/pages/lessons/index.tsx
-msgid "30 min"
-msgstr "30 min"
-
-#: src/pages/lessons/index.tsx
-msgid "Exam speaking"
-msgstr "Exam speaking"
-
-#: src/pages/lessons/index.tsx
-msgid "Preview"
-msgstr "Preview"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/pages/lessons/index.tsx
-msgid "Business meeting phrases"
-msgstr "Business meeting phrases"
-
-#: src/pages/lessons/index.tsx
-msgid "35 min"
-msgstr "35 min"
-
-#: src/pages/lessons/index.tsx
-msgid "Lesson library"
-msgstr "Lesson library"
-
-#: src/pages/lessons/index.tsx
-msgid "Preview mode available"
-msgstr "Preview mode available"
-
-#: src/pages/lessons/index.tsx
-msgid "Choose your next English lesson."
-msgstr "Choose your next English lesson."
-
-#: src/pages/lessons/index.tsx
-msgid "Browse student-safe lesson cards with level, time, skill focus, and completion status. Answer keys stay out of the frontend."
-msgstr "Browse student-safe lesson cards with level, time, skill focus, and completion status. Answer keys stay out of the frontend."
-
-#: src/pages/lessons/index.tsx
-msgid "Completion"
-msgstr "Completion"
-
-#: src/pages/lessons/index.tsx
-msgid "Start lesson"
-msgstr "Start lesson"
-
-#: src/pages/lessons/index.tsx
-msgid "Preview lesson"
-msgstr "Preview lesson"
-
-#: src/pages/lessons/index.tsx
-msgid "Login to start"
-msgstr "Login to start"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Published"
-msgstr "Published"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/pages/manage/student/submissions/index.tsx
-msgid "Today"
-msgstr "Today"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/pages/manage/student/submissions/index.tsx
-msgid "Yesterday"
-msgstr "Yesterday"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Last week"
-msgstr "Last week"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Search lessons..."
-msgstr "Search lessons..."
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Option A"
-msgstr "Option A"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Option B"
-msgstr "Option B"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Option C"
-msgstr "Option C"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Option D"
-msgstr "Option D"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Options"
-msgstr "Options"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Correct answer"
-msgstr "Correct answer"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Explanation"
-msgstr "Explanation"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Today, 09:12"
-msgstr "Today, 09:12"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Yesterday, 18:40"
-msgstr "Yesterday, 18:40"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Active students"
-msgstr "Active students"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Average completion"
-msgstr "Average completion"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Needs feedback"
-msgstr "Needs feedback"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Lesson workspace"
-msgstr "Lesson workspace"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Manage draft and published lessons in one place."
-msgstr "Manage draft and published lessons in one place."
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/pages/manage/student/submissions/index.tsx
-msgid "Lesson"
-msgstr "Lesson"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Modules"
-msgstr "Modules"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Publish"
-msgstr "Publish"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Archive"
-msgstr "Archive"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Exercise details"
-msgstr "Exercise details"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Exercise checklist"
-msgstr "Exercise checklist"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Submission queue"
-msgstr "Submission queue"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/pages/manage/student/submissions/index.tsx
-msgid "Score"
-msgstr "Score"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/pages/manage/student/submissions/index.tsx
-msgid "Submitted time"
-msgstr "Submitted time"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Review"
-msgstr "Review"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Progress overview"
-msgstr "Progress overview"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Progress chart scaffold"
-msgstr "Progress chart scaffold"
-
-#: src/pages/manage/student/progress/index.tsx
-msgid "Completed lessons"
-msgstr "Completed lessons"
-
-#: src/pages/manage/student/progress/index.tsx
-msgid "Practice streak"
-msgstr "Practice streak"
-
-#: src/pages/manage/student/progress/index.tsx
-msgid "Average score"
-msgstr "Average score"
-
-#: src/pages/manage/student/submissions/index.tsx
-msgid "Reviewed"
-msgstr "Reviewed"
-
-#: src/pages/manage/student/submissions/index.tsx
-msgid "Waiting for feedback"
-msgstr "Waiting for feedback"
-
-#: src/pages/lessons/basic/index.tsx
-msgid "Today&apos;s practice path"
-msgstr "Today&apos;s practice path"
-
-#: src/pages/lessons/[slug].tsx
-msgid "Practice short greetings, polite replies, and simple introductions without seeing answer keys before submitting."
-msgstr "Practice short greetings, polite replies, and simple introductions without seeing answer keys before submitting."
-
-#: src/pages/lessons/[slug].tsx
-msgid "Choose the best reply: "Nice to meet you.""
-msgstr "Choose the best reply: "Nice to meet you.""
-
-#: src/pages/lessons/[slug].tsx
-msgid "Nice to meet you too."
-msgstr "Nice to meet you too."
-
-#: src/pages/lessons/[slug].tsx
-msgid "I am twelve."
-msgstr "I am twelve."
-
-#: src/pages/lessons/[slug].tsx
-msgid "Goodbye."
-msgstr "Goodbye."
-
-#: src/pages/lessons/[slug].tsx
-msgid "This is the natural polite reply when meeting someone for the first time."
-msgstr "This is the natural polite reply when meeting someone for the first time."
-
-#: src/pages/lessons/[slug].tsx
-msgid "Complete the sentence: My name ___ Lan."
-msgstr "Complete the sentence: My name ___ Lan."
-
-#: src/pages/lessons/[slug].tsx
-msgid "Use "is" with a singular name introduction."
-msgstr "Use "is" with a singular name introduction."
-
-#: src/pages/lessons/[slug].tsx
-msgid "Write or say a short greeting and introduce yourself."
-msgstr "Write or say a short greeting and introduce yourself."
-
-#: src/pages/lessons/[slug].tsx
-msgid "Hello, my name is Lan. Nice to meet you."
-msgstr "Hello, my name is Lan. Nice to meet you."
-
-#: src/pages/lessons/[slug].tsx
-msgid "A strong answer includes a greeting, your name, and a polite closing phrase."
-msgstr "A strong answer includes a greeting, your name, and a polite closing phrase."
-
-#: src/pages/lessons/[slug].tsx
-msgid "Preview mode"
-msgstr "Preview mode"
-
-#: src/pages/lessons/[slug].tsx
-msgid "points"
-msgstr "points"
-
-#: src/pages/lessons/[slug].tsx
-msgid "Your speaking response"
-msgstr "Your speaking response"
-
-#: src/pages/lessons/[slug].tsx
-msgid "Back to lessons"
-msgstr "Back to lessons"
-
-#: src/pages/lessons/[slug].tsx
-msgid "Submit your answers"
-msgstr "Submit your answers"
-
-#: src/pages/lessons/[slug].tsx
-msgid "Explanations and correct answers are shown only after submission."
-msgstr "Explanations and correct answers are shown only after submission."
-
-#: src/pages/lessons/[slug].tsx
-msgid "Submit answers"
-msgstr "Submit answers"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Archived"
-msgstr "Archived"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Question type"
-msgstr "Question type"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Option"
-msgstr "Option"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Needs review"
-msgstr "Needs review"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Delete"
-msgstr "Delete"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Slug"
-msgstr "Slug"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Estimated minutes"
-msgstr "Estimated minutes"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Remove question"
-msgstr "Remove question"
-
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "Multiple choice"
 msgstr "Multiple choice"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Fill blank"
-msgstr "Fill blank"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Prompt"
-msgstr "Prompt"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Remove"
-msgstr "Remove"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Add option"
-msgstr "Add option"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Add question"
-msgstr "Add question"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Assign homework"
-msgstr "Assign homework"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Class or student"
-msgstr "Class or student"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Due date"
-msgstr "Due date"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Assign after publishing so students can submit answers from their lesson detail page."
-msgstr "Assign after publishing so students can submit answers from their lesson detail page."
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/pages/lessons/index.tsx
-msgid "Failed to load lessons"
-msgstr "Failed to load lessons"
-
-#: src/pages/lessons/[slug].tsx
-#: src/pages/lessons/index.tsx
-msgid "Flexible"
-msgstr "Flexible"
-
-#: src/pages/lessons/[slug].tsx
-msgid "Failed to load lesson"
-msgstr "Failed to load lesson"
-
-#: src/pages/lessons/[slug].tsx
-msgid "Answers submitted successfully"
-msgstr "Answers submitted successfully"
-
-#: src/pages/lessons/[slug].tsx
-msgid "Failed to submit answers"
-msgstr "Failed to submit answers"
-
-#: src/pages/lessons/[slug].tsx
-msgid "Review required"
-msgstr "Review required"
-
-#: src/pages/lessons/[slug].tsx
-msgid "Teacher feedback pending."
-msgstr "Teacher feedback pending."
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Lesson updated successfully"
-msgstr "Lesson updated successfully"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Failed to update lesson"
-msgstr "Failed to update lesson"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Lesson deleted successfully"
-msgstr "Lesson deleted successfully"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Failed to delete lesson"
-msgstr "Failed to delete lesson"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "} size="small" startIcon={<EditIcon />} > <Trans>Edit</Trans> </Button> <Button size="small" startIcon={<PublishIcon />} onClick={() => updateLessonStatus(lesson, "published")} > <Trans>Publish</Trans> </Button> <Button size="small" color="error" startIcon={<DeleteIcon />} onClick={() => deleteLesson(lesson)} > <Trans>Delete</Trans> </Button> <Button size="small" color="inherit" startIcon={<ArchiveIcon />} onClick={() => updateLessonStatus(lesson, "archived")} > <Trans>Archive</Trans> </Button> </Stack> </TableCell> </TableRow> ))} {!loading && lessons.length === 0 && ( <TableRow> <TableCell colSpan={6} align="center" sx={{ py: 5 }}> <Trans>No lessons found.</Trans> </TableCell> </TableRow> )} </TableBody> </Table> </TableContainer> </Paper> ); } function LessonEditorScaffold() { return ( <Grid container spacing={3}> <Grid item xs={12} lg={8}> <Paper elevation={0} sx={{ p: { xs: 2.5, md: 3 }, borderRadius: 4, border: "1px solid #e2e8f0", boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)", }} > <Typography variant="h6" sx={{ mb: 2, fontWeight: 800 }}> <Trans>Lesson details</Trans> </Typography> <Stack spacing={2.5}> <TextField label={<Trans>Lesson title</Trans>} fullWidth /> <TextField label={<Trans>Learning objective</Trans>} fullWidth /> <TextField label={<Trans>Lesson description</Trans>} minRows={5} multiline fullWidth /> </Stack> </Paper> </Grid> <Grid item xs={12} lg={4}> <Paper elevation={0} sx={{ p: { xs: 2.5, md: 3 }, borderRadius: 4, border: "1px solid #e2e8f0", boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)", }} > <Typography variant="h6" sx={{ mb: 2, fontWeight: 800 }}> <Trans>Publishing checklist</Trans> </Typography> <Stack spacing={1.5}> {[ <Trans key="dialogue">Dialogue</Trans>, <Trans key="quiz">Quiz</Trans>, <Trans key="speaking">Speaking practice</Trans>, ].map((item, index) => ( <Chip key={index} label={item} color={index === 0 ? "primary" : "default"} variant={index === 0 ? "filled" : "outlined"} sx={{ justifyContent: "flex-start", borderRadius: 2 }} /> ))} </Stack> </Paper> </Grid> </Grid> ); } function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) { const [form, setForm] = useState<LessonInput>({ estimatedMinutes: 30, level: "beginner", objectives: "", skillType: "", slug: "", status: "draft", title: "", }); const [saving, setSaving] = useState(false); const [questions, setQuestions] = useState<QuestionDraft[]>([ { correctAnswer: "", explanation: "", id: "question-1", prompt: "", score: 10, type: "multiple_choice", options: ["", "", "", ""], }, ]); const addQuestion = () => { setQuestions((current) => [ ...current, { id:"
-msgstr "} size="small" startIcon={<EditIcon />} > <Trans>Edit</Trans> </Button> <Button size="small" startIcon={<PublishIcon />} onClick={() => updateLessonStatus(lesson, "published")} > <Trans>Publish</Trans> </Button> <Button size="small" color="error" startIcon={<DeleteIcon />} onClick={() => deleteLesson(lesson)} > <Trans>Delete</Trans> </Button> <Button size="small" color="inherit" startIcon={<ArchiveIcon />} onClick={() => updateLessonStatus(lesson, "archived")} > <Trans>Archive</Trans> </Button> </Stack> </TableCell> </TableRow> ))} {!loading && lessons.length === 0 && ( <TableRow> <TableCell colSpan={6} align="center" sx={{ py: 5 }}> <Trans>No lessons found.</Trans> </TableCell> </TableRow> )} </TableBody> </Table> </TableContainer> </Paper> ); } function LessonEditorScaffold() { return ( <Grid container spacing={3}> <Grid item xs={12} lg={8}> <Paper elevation={0} sx={{ p: { xs: 2.5, md: 3 }, borderRadius: 4, border: "1px solid #e2e8f0", boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)", }} > <Typography variant="h6" sx={{ mb: 2, fontWeight: 800 }}> <Trans>Lesson details</Trans> </Typography> <Stack spacing={2.5}> <TextField label={<Trans>Lesson title</Trans>} fullWidth /> <TextField label={<Trans>Learning objective</Trans>} fullWidth /> <TextField label={<Trans>Lesson description</Trans>} minRows={5} multiline fullWidth /> </Stack> </Paper> </Grid> <Grid item xs={12} lg={4}> <Paper elevation={0} sx={{ p: { xs: 2.5, md: 3 }, borderRadius: 4, border: "1px solid #e2e8f0", boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)", }} > <Typography variant="h6" sx={{ mb: 2, fontWeight: 800 }}> <Trans>Publishing checklist</Trans> </Typography> <Stack spacing={1.5}> {[ <Trans key="dialogue">Dialogue</Trans>, <Trans key="quiz">Quiz</Trans>, <Trans key="speaking">Speaking practice</Trans>, ].map((item, index) => ( <Chip key={index} label={item} color={index === 0 ? "primary" : "default"} variant={index === 0 ? "filled" : "outlined"} sx={{ justifyContent: "flex-start", borderRadius: 2 }} /> ))} </Stack> </Paper> </Grid> </Grid> ); } function ExerciseBuilderScaffold({ lessonId }: { lessonId?: string }) { const [form, setForm] = useState<LessonInput>({ estimatedMinutes: 30, level: "beginner", objectives: "", skillType: "", slug: "", status: "draft", title: "", }); const [saving, setSaving] = useState(false); const [questions, setQuestions] = useState<QuestionDraft[]>([ { correctAnswer: "", explanation: "", id: "question-1", prompt: "", score: 10, type: "multiple_choice", options: ["", "", "", ""], }, ]); const addQuestion = () => { setQuestions((current) => [ ...current, { id:"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Lesson created successfully"
-msgstr "Lesson created successfully"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Failed to save lesson"
-msgstr "Failed to save lesson"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/pages/manage/student/submissions/index.tsx
-msgid "Failed to load submissions"
-msgstr "Failed to load submissions"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Failed to load student progress"
-msgstr "Failed to load student progress"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "No lessons found."
-msgstr "No lessons found."
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Skill type"
-msgstr "Skill type"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Update lesson"
-msgstr "Update lesson"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Create lesson"
-msgstr "Create lesson"
-
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Progress"
-msgstr "Progress"
-
-#: src/pages/manage/student/progress/index.tsx
-msgid "Failed to load progress"
-msgstr "Failed to load progress"
-
-#: src/pages/manage/student/progress/index.tsx
-msgid "Total lessons"
-msgstr "Total lessons"
-
-#: src/pages/manage/student/progress/index.tsx
-msgid "Average progress"
-msgstr "Average progress"
-
-#: src/pages/lessons/index.tsx
-#: src/pages/lessons/[slug].tsx
-msgid "min"
-msgstr "min"

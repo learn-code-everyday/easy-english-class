@@ -88,3 +88,7 @@ export function expireAuthSession(redirectTo = "/login") {
     window.location.assign(redirectTo);
   }
 }
+
+export function getSafeApiErrorMessage() {
+  return "We could not complete this request. Please try again.";
+}

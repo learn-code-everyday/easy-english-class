@@ -6,17 +6,27 @@ import { toast } from "@/helpers/toast";
 
 import { expireAuthSession, isAuthSessionError } from "./session";
 
+let hasShownSessionExpiredToast = false;
+
 export const ErrorLink = onError(({ graphQLErrors, networkError }) => {
   try {
     if (isAuthSessionError({ graphQLErrors, networkError })) {
-      toast.error(t`Your session has expired. Please sign in again.`);
+      if (!hasShownSessionExpiredToast) {
+        hasShownSessionExpiredToast = true;
+        toast.error(t`Your session has expired. Please sign in again.`);
+      }
       expireAuthSession("/login");
       return;
     }
 
     if (graphQLErrors) {
       graphQLErrors.forEach(({ message, locations, path, extensions }) => {
-        console.error({ message, locations, path });
+        console.error("GraphQL error", {
+          message,
+          locations,
+          path,
+          extensions,
+        });
         if (
           extensions?.code === "FORBIDDEN" ||
           message?.includes("Insufficient permission")
@@ -34,16 +44,14 @@ export const ErrorLink = onError(({ graphQLErrors, networkError }) => {
           if (window.location.pathname !== "/") {
             window.location.assign("/");
           }
-        } else {
-          toast.error(message);
         }
       });
     }
 
     if (networkError) {
-      toast.error(`[Network error]: ${networkError.message || networkError}`);
+      console.error("Network error", networkError);
     }
   } catch (error) {
-    toast.error(t`System error! Please try again later.`);
+    console.error("Apollo error handler failed", error);
   }
 });
