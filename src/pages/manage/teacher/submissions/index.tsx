@@ -1,8 +1,8 @@
 import AdminLayout from "@/layouts/admin-layout/AdminLayout";
-import LessonManagementScaffold from "@/modules/ManagementPage/Teacher/LessonManagementScaffold";
+import TeacherSubmissionReview from "@/modules/AssignmentWorkflow/TeacherSubmissionReview";
 
 export default function StudentSubmissionsPage() {
-  return <LessonManagementScaffold mode="student-submissions" />;
+  return <TeacherSubmissionReview />;
 }
 
 StudentSubmissionsPage.Layout = AdminLayout;

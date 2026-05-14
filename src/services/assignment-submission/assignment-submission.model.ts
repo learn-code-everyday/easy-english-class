@@ -7,6 +7,7 @@ export interface AssignmentSubmission extends BaseModel {
   id: string;
   assignment: Assignment;
   student: User;
+  answers?: Array<{ answer: string; questionId: string }>;
   fileUrl: string;
   note: string;
   submitTime: string;

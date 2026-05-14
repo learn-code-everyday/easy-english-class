@@ -63,19 +63,19 @@ export const getAdminMenu = () => [
 export const getTeacherMenu = () => [
   {
     categoryCode: t`TEACHING`,
-    code: "lesson-management",
+    code: "assignment-management",
     icon: "course",
-    title: t`Lesson Management`,
-    header: t`Lesson Management`,
-    url: "/manage/teacher/lessons",
+    title: t`Assignment Management`,
+    header: t`Assignment Management`,
+    url: "/manage/teacher/assignments",
   },
   {
     categoryCode: t`TEACHING`,
-    code: "create-exercise",
+    code: "create-assignment",
     icon: "assignment",
-    title: t`Create Exercise`,
-    header: t`Create Exercise`,
-    url: "/manage/teacher/exercises/create",
+    title: t`Create Assignment`,
+    header: t`Create Assignment`,
+    url: "/manage/teacher/assignments/create",
   },
   {
     categoryCode: t`TEACHING`,
@@ -99,11 +99,11 @@ export const getTeacherMenu = () => [
 export const getStudentMenu = () => [
   {
     categoryCode: t`LEARNING`,
-    code: "my-lessons",
+    code: "my-assignments",
     icon: "class",
-    title: t`Lessons`,
-    header: t`Lessons`,
-    url: "/lessons",
+    title: t`Assignments`,
+    header: t`Assignments`,
+    url: "/assignments",
   },
   {
     categoryCode: t`LEARNING`,

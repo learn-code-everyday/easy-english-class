@@ -1,8 +1,8 @@
 import AdminLayout from "@/layouts/admin-layout/AdminLayout";
 import TeacherAssignmentList from "@/modules/AssignmentWorkflow/TeacherAssignmentList";
 
-export default function ManageAssignmentsPage() {
+export default function TeacherAssignmentsPage() {
   return <TeacherAssignmentList />;
 }
 
-ManageAssignmentsPage.Layout = AdminLayout;
+TeacherAssignmentsPage.Layout = AdminLayout;
