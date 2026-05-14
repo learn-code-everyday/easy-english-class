@@ -73,7 +73,7 @@ msgstr "I'm great, thanks for asking!"
 msgid "Type"
 msgstr "Type"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/hooks/useTeacherLessons.ts
 msgid "Lesson deleted successfully"
 msgstr "Lesson deleted successfully"
 
@@ -171,8 +171,8 @@ msgstr "Basic vocabulary, phonics, colors, numbers, simple sentences"
 #~ msgid "Options"
 #~ msgstr "Options"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/StudentProgressPanel.tsx
+#: src/modules/TeacherLessonManagement/components/StudentSubmissionsTable.tsx
 #: src/pages/lessons/[slug].tsx
 #: src/pages/manage/student/submissions/index.tsx
 msgid "Needs review"
@@ -202,7 +202,7 @@ msgstr "Type your message"
 msgid "Sign up to create an Account"
 msgstr "Sign up to create an Account"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonEmptyState.tsx
 msgid "Create your first lesson to assign homework to students."
 msgstr "Create your first lesson to assign homework to students."
 
@@ -210,7 +210,7 @@ msgstr "Create your first lesson to assign homework to students."
 msgid "Open"
 msgstr "Open"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/hooks/useTeacherLessons.ts
 msgid "Failed to delete lesson"
 msgstr "Failed to delete lesson"
 
@@ -252,7 +252,7 @@ msgstr "I have paid"
 msgid "Intermediate English"
 msgstr "Intermediate English"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 msgid "Create lesson"
 msgstr "Create lesson"
 
@@ -284,7 +284,7 @@ msgstr "New Here?"
 #~ msgid "Master English skills tailored for professional and business contexts."
 #~ msgstr "Master English skills tailored for professional and business contexts."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/StudentProgressPanel.tsx
 msgid "Student progress could not be loaded"
 msgstr "Student progress could not be loaded"
 
@@ -335,7 +335,7 @@ msgstr "We could not load your submissions right now. Please try again."
 msgid "Visionary leader passionate about education and technology, guiding our mission with commitment and heart."
 msgstr "Visionary leader passionate about education and technology, guiding our mission with commitment and heart."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 msgid "Failed to save lesson"
 msgstr "Failed to save lesson"
 
@@ -398,11 +398,11 @@ msgstr "Our Mission"
 msgid "Review grammar patterns with short exercises."
 msgstr "Review grammar patterns with short exercises."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/LessonManagementScaffold.tsx
 msgid "We could not load this lesson for editing. Please try again."
 msgstr "We could not load this lesson for editing. Please try again."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonErrorState.tsx
 #: src/pages/lessons/index.tsx
 msgid "Lessons could not be loaded"
 msgstr "Lessons could not be loaded"
@@ -411,7 +411,7 @@ msgstr "Lessons could not be loaded"
 msgid "Basic Communication in English"
 msgstr "Basic Communication in English"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/StudentSubmissionsTable.tsx
 #: src/pages/manage/student/submissions/index.tsx
 msgid "Submitted time"
 msgstr "Submitted time"
@@ -444,7 +444,7 @@ msgstr "Children starting English for the first time"
 msgid "Resend code ({countdown})"
 msgstr "Resend code ({countdown})"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/StudentSubmissionsTable.tsx
 msgid "Review"
 msgstr "Review"
 
@@ -456,7 +456,7 @@ msgstr "Referral Code"
 msgid "Account No"
 msgstr "Account No"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/QuestionEditor.tsx
 msgid "Fill blank"
 msgstr "Fill blank"
 
@@ -498,7 +498,7 @@ msgstr "Page"
 msgid "Name"
 msgstr "Name"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonErrorState.tsx
 msgid "Retry"
 msgstr "Retry"
 
@@ -536,8 +536,8 @@ msgstr "Failed"
 msgid "Show password"
 msgstr "Show password"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListTable.tsx
+#: src/modules/TeacherLessonManagement/components/StudentSubmissionsTable.tsx
 #: src/pages/manage/assignments/index.tsx
 #: src/pages/manage/classes/index.tsx
 msgid "Actions"
@@ -664,7 +664,7 @@ msgstr "Lead Instructor"
 msgid "Technical Support"
 msgstr "Technical Support"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 msgid "Save as draft"
 msgstr "Save as draft"
 
@@ -765,7 +765,7 @@ msgstr "Invalid email"
 msgid "Back to lessons"
 msgstr "Back to lessons"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListActions.tsx
 msgid "Archive"
 msgstr "Archive"
 
@@ -785,7 +785,7 @@ msgstr "Welcome back,"
 msgid "Build vocabulary with pictures and stories"
 msgstr "Build vocabulary with pictures and stories"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 msgid "Estimated minutes"
 msgstr "Estimated minutes"
 
@@ -798,7 +798,7 @@ msgstr "Track progress and adjust your study plan"
 msgid "Password must be at least 6 characters"
 msgstr "Password must be at least 6 characters"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonEmptyState.tsx
 msgid "Adjust your search or filters to see more lessons."
 msgstr "Adjust your search or filters to see more lessons."
 
@@ -806,7 +806,7 @@ msgstr "Adjust your search or filters to see more lessons."
 msgid "Get ready for your IELTS exam with comprehensive lessons, real test strategies, and expert coaching to boost your score."
 msgstr "Get ready for your IELTS exam with comprehensive lessons, real test strategies, and expert coaching to boost your score."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 msgid "Review Queue"
 msgstr "Review Queue"
 
@@ -814,7 +814,7 @@ msgstr "Review Queue"
 #~ msgid "Teaching Materials"
 #~ msgstr "Teaching Materials"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 msgid "Teacher Workspace"
 msgstr "Teacher Workspace"
 
@@ -827,8 +827,8 @@ msgstr "or"
 msgid "About Us"
 msgstr "About Us"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListTable.tsx
+#: src/modules/TeacherLessonManagement/components/LessonMobileCards.tsx
 msgid "{0} min"
 msgstr "{0} min"
 
@@ -903,7 +903,7 @@ msgstr "Get clear next steps after every module"
 msgid "Improve listening through stories and songs"
 msgstr "Improve listening through stories and songs"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 msgid "Add question"
 msgstr "Add question"
 
@@ -927,7 +927,7 @@ msgstr "Child's Age"
 msgid "Enter Email Code"
 msgstr "Enter Email Code"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 msgid "Monitor lesson progress, practice consistency, and skill improvement."
 msgstr "Monitor lesson progress, practice consistency, and skill improvement."
 
@@ -971,11 +971,11 @@ msgstr "Course Management"
 msgid "Start lesson"
 msgstr "Start lesson"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/StudentProgressPanel.tsx
 msgid "Progress overview"
 msgstr "Progress overview"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/QuestionOptionsFieldArray.tsx
 msgid "Add option"
 msgstr "Add option"
 
@@ -995,7 +995,7 @@ msgstr "Facebook"
 #~ msgid "Lesson title"
 #~ msgstr "Lesson title"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListActions.tsx
 msgid "Publish"
 msgstr "Publish"
 
@@ -1020,8 +1020,8 @@ msgstr "Unknown"
 msgid "Course Topics"
 msgstr "Course Topics"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/QuestionEditor.tsx
+#: src/modules/TeacherLessonManagement/components/StudentSubmissionsTable.tsx
 #: src/pages/lessons/[slug].tsx
 #: src/pages/manage/student/submissions/index.tsx
 msgid "Score"
@@ -1137,7 +1137,7 @@ msgstr "No materials found"
 #~ msgid "Practice short greetings, polite replies, and simple introductions without seeing answer keys before submitting."
 #~ msgstr "Practice short greetings, polite replies, and simple introductions without seeing answer keys before submitting."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/hooks/useTeacherProgress.ts
 msgid "Needs feedback"
 msgstr "Needs feedback"
 
@@ -1148,7 +1148,7 @@ msgstr "Open menu"
 
 #: src/constants/menu.ts
 #: src/constants/menu.ts
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 #: src/pages/manage/dashboard/index.tsx
 msgid "Create Exercise"
 msgstr "Create Exercise"
@@ -1337,8 +1337,7 @@ msgstr "Access lessons on desktop and mobile"
 msgid "Speak English clearly in everyday situations."
 msgstr "Speak English clearly in everyday situations."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonEmptyState.tsx
 msgid "No matching lessons found"
 msgstr "No matching lessons found"
 
@@ -1391,11 +1390,10 @@ msgstr "Reset Password"
 msgid "Note"
 msgstr "Note"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonEmptyState.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListFilters.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 msgid "Create Lesson"
 msgstr "Create Lesson"
 
@@ -1439,7 +1437,7 @@ msgstr "Reading"
 msgid "Correct! IELTS stands for International English Language Testing System."
 msgstr "Correct! IELTS stands for International English Language Testing System."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 msgid "Slug"
 msgstr "Slug"
 
@@ -1456,7 +1454,7 @@ msgstr "Optional"
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/StudentProgressPanel.tsx
 msgid "Submissions"
 msgstr "Submissions"
 
@@ -1464,7 +1462,7 @@ msgstr "Submissions"
 msgid "Confidence"
 msgstr "Confidence"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListTable.tsx
 msgid "Updated At"
 msgstr "Updated At"
 
@@ -1492,7 +1490,7 @@ msgstr "Practice Speaking - Voice Recorder"
 msgid "Bank Number"
 msgstr "Bank Number"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 #: src/pages/manage/assignments/index.tsx
 msgid "Title"
 msgstr "Title"
@@ -1528,7 +1526,7 @@ msgstr "Review progress with parent-friendly milestones"
 msgid "Write clearer Task 1 and Task 2 responses"
 msgstr "Write clearer Task 1 and Task 2 responses"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/StudentSubmissionsTable.tsx
 msgid "We could not load student submissions right now. Please try again."
 msgstr "We could not load student submissions right now. Please try again."
 
@@ -1590,7 +1588,7 @@ msgstr "Click start and practice speaking the sample dialogue above. Record your
 msgid "Inactive"
 msgstr "Inactive"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 msgid "Edit Lesson"
 msgstr "Edit Lesson"
 
@@ -1700,12 +1698,11 @@ msgstr "Maintain a consistent English practice routine"
 msgid "Live chat support"
 msgstr "Live chat support"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonErrorState.tsx
 msgid "Please try again later."
 msgstr "Please try again later."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 msgid "Lesson Editor"
 msgstr "Lesson Editor"
 
@@ -1732,7 +1729,7 @@ msgstr "You've updated the password"
 msgid "Hide password"
 msgstr "Hide password"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 msgid "Lesson created successfully"
 msgstr "Lesson created successfully"
 
@@ -1749,7 +1746,7 @@ msgstr "No Name"
 msgid "English Class"
 msgstr "English Class"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListTable.tsx
 msgid "Estimated Time"
 msgstr "Estimated Time"
 
@@ -1761,8 +1758,8 @@ msgstr "Students feel more confident"
 msgid "Busy adults who need short, guided practice"
 msgstr "Busy adults who need short, guided practice"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
+#: src/modules/TeacherLessonManagement/hooks/useTeacherLessons.ts
 msgid "Lesson updated successfully"
 msgstr "Lesson updated successfully"
 
@@ -1790,7 +1787,7 @@ msgstr "Email sent successfully!"
 msgid "Age"
 msgstr "Age"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/QuestionEditor.tsx
 #: src/pages/lessons/[slug].tsx
 msgid "Correct answer"
 msgstr "Correct answer"
@@ -1872,7 +1869,7 @@ msgstr "Rows per page:"
 
 #: src/constants/menu.ts
 #: src/constants/menu.ts
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 #: src/pages/manage/dashboard/index.tsx
 msgid "Student Submissions"
 msgstr "Student Submissions"
@@ -1881,7 +1878,7 @@ msgstr "Student Submissions"
 msgid "Telegram"
 msgstr "Telegram"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 msgid "Update lesson"
 msgstr "Update lesson"
 
@@ -1938,7 +1935,7 @@ msgstr "Use strategies for reading and listening accuracy"
 msgid "The flexible schedule perfectly fits working students."
 msgstr "The flexible schedule perfectly fits working students."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListFilters.tsx
 msgid "Archived"
 msgstr "Archived"
 
@@ -1962,7 +1959,7 @@ msgstr "Admin"
 msgid "Type your message..."
 msgstr "Type your message..."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 msgid "Publishing workflow"
 msgstr "Publishing workflow"
 
@@ -1971,8 +1968,8 @@ msgid "Forgot password?"
 msgstr "Forgot password?"
 
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListFilters.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 #: src/pages/contact/index.tsx
 #: src/pages/lessons/basic/index.tsx
 msgid "Beginner"
@@ -2103,7 +2100,7 @@ msgstr "We are committed to protecting your personal information and will not sh
 msgid "Back to Dashboard"
 msgstr "Back to Dashboard"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/QuestionEditor.tsx
 msgid "Prompt"
 msgstr "Prompt"
 
@@ -2135,11 +2132,11 @@ msgstr "Failed to update password"
 msgid "Good morning"
 msgstr "Good morning"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 msgid "Review submitted exercises, leave feedback, and track completion status."
 msgstr "Review submitted exercises, leave feedback, and track completion status."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 msgid "Draft practice prompts, quiz tasks, and speaking activities for your lessons."
 msgstr "Draft practice prompts, quiz tasks, and speaking activities for your lessons."
 
@@ -2167,7 +2164,7 @@ msgstr "Live coaching, feedback, and a personalized study plan."
 msgid "Practice active listening through stories, songs, and audio exercises tailored for kids."
 msgstr "Practice active listening through stories, songs, and audio exercises tailored for kids."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 msgid "Assigned class IDs"
 msgstr "Assigned class IDs"
 
@@ -2248,11 +2245,11 @@ msgstr "Our mission extends beyond language skills. We aim to open doors to glob
 msgid "Creative strategist bringing our message to students worldwide and growing our community."
 msgstr "Creative strategist bringing our message to students worldwide and growing our community."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 msgid "Exercise Builder"
 msgstr "Exercise Builder"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListFilters.tsx
 msgid "All levels"
 msgstr "All levels"
 
@@ -2273,7 +2270,7 @@ msgstr "Loading..."
 msgid "Your session has expired. Please sign in again."
 msgstr "Your session has expired. Please sign in again."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/QuestionEditor.tsx
 msgid "Remove question"
 msgstr "Remove question"
 
@@ -2289,7 +2286,7 @@ msgstr "Parents looking for a guided after-school program"
 #~ msgid "Score Management"
 #~ msgstr "Score Management"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/QuestionOptionsFieldArray.tsx
 msgid "Option"
 msgstr "Option"
 
@@ -2300,11 +2297,11 @@ msgid "Submitted"
 msgstr "Submitted"
 
 #: src/modules/KidEnglishPage/EnglishSkills/index.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/QuestionEditor.tsx
 msgid "Speaking"
 msgstr "Speaking"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/QuestionEditor.tsx
 msgid "Explanation"
 msgstr "Explanation"
 
@@ -2320,8 +2317,7 @@ msgstr "Innovative Teaching Methods"
 msgid "Guided speaking practice"
 msgstr "Guided speaking practice"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonEmptyState.tsx
 msgid "No lessons created yet"
 msgstr "No lessons created yet"
 
@@ -2338,8 +2334,8 @@ msgid "Build practice questions and assign lesson work."
 msgstr "Build practice questions and assign lesson work."
 
 #: src/constants/role.ts
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/StudentProgressPanel.tsx
+#: src/modules/TeacherLessonManagement/components/StudentSubmissionsTable.tsx
 #: src/pages/testimonials/index.tsx
 msgid "Student"
 msgstr "Student"
@@ -2398,7 +2394,7 @@ msgstr "Please select a course"
 msgid "Learn English naturally through fun songs and rhymes that improve pronunciation and rhythm."
 msgstr "Learn English naturally through fun songs and rhymes that improve pronunciation and rhythm."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 msgid "Publish from lesson management"
 msgstr "Publish from lesson management"
 
@@ -2423,7 +2419,7 @@ msgstr "Open live chat"
 #~ msgstr "Are there any prerequisites?"
 
 #: src/modules/BasicCommunicationPage/QuizSection/index.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/QuestionEditor.tsx
 #: src/pages/lessons/[slug].tsx
 msgid "Question"
 msgstr "Question"
@@ -2470,7 +2466,7 @@ msgstr "Expert-level essay and speaking skills"
 msgid "Go to Dashboard"
 msgstr "Go to Dashboard"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/hooks/useTeacherProgress.ts
 msgid "Average completion"
 msgstr "Average completion"
 
@@ -2494,7 +2490,7 @@ msgstr "Practice names, small talk, and polite first conversations."
 msgid "Password is required"
 msgstr "Password is required"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListActions.tsx
 msgid "Delete"
 msgstr "Delete"
 
@@ -2536,8 +2532,7 @@ msgstr "Duration: 4 months"
 msgid "Verification code must be 6 digits"
 msgstr "Verification code must be 6 digits"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 msgid "Create, organize, and review lesson content before publishing it to students."
 msgstr "Create, organize, and review lesson content before publishing it to students."
 
@@ -2563,7 +2558,7 @@ msgstr "Dedicated teacher focused on helping students gain confidence and fluenc
 msgid "Unable to verify?"
 msgstr "Unable to verify?"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/StudentProgressPanel.tsx
 msgid "Average score"
 msgstr "Average score"
 
@@ -2597,7 +2592,7 @@ msgid "6 - 8 years"
 msgstr "6 - 8 years"
 
 #: src/components/ProfileSection/index.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListActions.tsx
 #: src/pages/manage/assignments/index.tsx
 #: src/pages/manage/classes/index.tsx
 msgid "Edit"
@@ -2629,9 +2624,8 @@ msgid "Yes, upon successful completion you will receive a certificate recognized
 msgstr "Yes, upon successful completion you will receive a certificate recognized by our institution."
 
 #: src/hooks/useStatusLabel.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListActions.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListFilters.tsx
 msgid "Draft"
 msgstr "Draft"
 
@@ -2854,7 +2848,7 @@ msgstr "I improved my business English tremendously. The classes fit well into m
 msgid "Learners who need structured band-score practice"
 msgstr "Learners who need structured band-score practice"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListTable.tsx
 msgid "Lesson workspace"
 msgstr "Lesson workspace"
 
@@ -2909,7 +2903,7 @@ msgid "Home"
 msgstr "Home"
 
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 msgid "Objectives"
 msgstr "Objectives"
 
@@ -2958,7 +2952,7 @@ msgstr "Full coaching plan with writing and speaking feedback."
 msgid "Pricing packages"
 msgstr "Pricing packages"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListTable.tsx
 msgid "Manage draft and published lessons in one place."
 msgstr "Manage draft and published lessons in one place."
 
@@ -2994,7 +2988,7 @@ msgstr "Personalized Learning Paths"
 msgid "A stable internet connection and a device with video/audio capability are required. Basic computer skills are recommended."
 msgstr "A stable internet connection and a device with video/audio capability are required. Basic computer skills are recommended."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListFilters.tsx
 msgid "All statuses"
 msgstr "All statuses"
 
@@ -3022,7 +3016,7 @@ msgstr "Vocabulary games"
 #~ msgid "A focused student studying for IELTS, surrounded by textbooks and laptop, calm and quiet library environment, serious and determined expression, academic atmosphere with charts and notes visible"
 #~ msgstr "A focused student studying for IELTS, surrounded by textbooks and laptop, calm and quiet library environment, serious and determined expression, academic atmosphere with charts and notes visible"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/LessonManagementScaffold.tsx
 msgid "Loading lesson..."
 msgstr "Loading lesson..."
 
@@ -3059,7 +3053,7 @@ msgstr "View"
 msgid "Students"
 msgstr "Students"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 msgid "Exercise details"
 msgstr "Exercise details"
 
@@ -3074,7 +3068,7 @@ msgstr "Conversation Practice"
 
 #: src/constants/menu.ts
 #: src/constants/menu.ts
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 #: src/pages/manage/dashboard/index.tsx
 msgid "Student Progress"
 msgstr "Student Progress"
@@ -3126,7 +3120,7 @@ msgstr "I"
 msgid "Start Learning"
 msgstr "Start Learning"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 msgid "Skill type"
 msgstr "Skill type"
 
@@ -3268,12 +3262,12 @@ msgstr "Coached"
 msgid "Improve pronunciation through repeated practice"
 msgstr "Improve pronunciation through repeated practice"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListTable.tsx
+#: src/modules/TeacherLessonManagement/components/LessonMobileCards.tsx
 msgid "Loading lessons..."
 msgstr "Loading lessons..."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/StudentProgressPanel.tsx
 msgid "We could not load student progress right now. Please try again."
 msgstr "We could not load student progress right now. Please try again."
 
@@ -3285,8 +3279,8 @@ msgstr "Develop basic writing skills with fun activities like drawing, labeling,
 msgid "Join guided speaking games and role plays"
 msgstr "Join guided speaking games and role plays"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListTable.tsx
+#: src/modules/TeacherLessonManagement/components/StudentSubmissionsTable.tsx
 #: src/pages/manage/student/submissions/index.tsx
 msgid "Lesson"
 msgstr "Lesson"
@@ -3295,8 +3289,8 @@ msgstr "Lesson"
 msgid "Choose a learning track that matches your goal"
 msgstr "Choose a learning track that matches your goal"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/QuestionEditor.tsx
+#: src/modules/TeacherLessonManagement/components/QuestionEditor.tsx
 msgid "Question type"
 msgstr "Question type"
 
@@ -3323,16 +3317,16 @@ msgid "Have questions or feedback? Send us a message and we will get back to you
 msgstr "Have questions or feedback? Send us a message and we will get back to you soon."
 
 #: src/hooks/useStatusLabel.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/StudentSubmissionsTable.tsx
+#: src/modules/TeacherLessonManagement/components/StudentSubmissionsTable.tsx
 #: src/pages/lessons/[slug].tsx
 #: src/pages/manage/student/submissions/index.tsx
 msgid "Passed"
 msgstr "Passed"
 
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListFilters.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 #: src/pages/contact/index.tsx
 msgid "Intermediate"
 msgstr "Intermediate"
@@ -3361,11 +3355,11 @@ msgstr "TEACHING"
 msgid "We've sent a code to {email}"
 msgstr "We've sent a code to {email}"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListFilters.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListFilters.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListTable.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 #: src/pages/manage/classes/index.tsx
 msgid "Level"
 msgstr "Level"
@@ -3386,7 +3380,7 @@ msgstr "Play games that reinforce vocabulary and grammar while keeping kids enga
 msgid "Activities:"
 msgstr "Activities:"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/StudentSubmissionsTable.tsx
 msgid "Submission queue"
 msgstr "Submission queue"
 
@@ -3402,7 +3396,7 @@ msgstr "Type your answer here..."
 msgid "Prepare basic English grammar and vocabulary"
 msgstr "Prepare basic English grammar and vocabulary"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/StudentSubmissionsTable.tsx
 #: src/pages/manage/student/submissions/index.tsx
 msgid "Submissions could not be loaded"
 msgstr "Submissions could not be loaded"
@@ -3433,7 +3427,7 @@ msgstr "Confirm Password"
 msgid "Daily speaking"
 msgstr "Daily speaking"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 msgid "Students submit from assigned lessons"
 msgstr "Students submit from assigned lessons"
 
@@ -3504,7 +3498,7 @@ msgstr "No data"
 msgid "Late"
 msgstr "Late"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListFilters.tsx
 msgid "Search by title, slug, or skill type..."
 msgstr "Search by title, slug, or skill type..."
 
@@ -3548,7 +3542,7 @@ msgstr "Are classes online or in-person?"
 #~ msgid "Do you offer certificates?"
 #~ msgstr "Do you offer certificates?"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/LessonManagementScaffold.tsx
 #: src/pages/lessons/[slug].tsx
 msgid "Lesson could not be loaded"
 msgstr "Lesson could not be loaded"
@@ -3558,7 +3552,7 @@ msgid "Native Teachers"
 msgstr "Native Teachers"
 
 #: src/hooks/useStatusLabel.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/StudentProgressPanel.tsx
 msgid "Completed"
 msgstr "Completed"
 
@@ -3598,7 +3592,7 @@ msgstr "Price:"
 msgid "Quiz"
 msgstr "Quiz"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 msgid "Learning Analytics"
 msgstr "Learning Analytics"
 
@@ -3676,7 +3670,7 @@ msgstr "$119"
 
 #: src/constants/menu.ts
 #: src/constants/menu.ts
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 #: src/pages/manage/dashboard/index.tsx
 msgid "Lesson Management"
 msgstr "Lesson Management"
@@ -3686,13 +3680,13 @@ msgstr "Lesson Management"
 #~ msgstr "Failed to load student progress"
 
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListFilters.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherLessonForm.tsx
 #: src/pages/contact/index.tsx
 msgid "Advanced"
 msgstr "Advanced"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/QuestionOptionsFieldArray.tsx
 msgid "Remove"
 msgstr "Remove"
 
@@ -3776,7 +3770,7 @@ msgstr "Ask questions, request help, and respond to teachers clearly."
 msgid "Password changed successfully!"
 msgstr "Password changed successfully!"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListFilters.tsx
 msgid "Published"
 msgstr "Published"
 
@@ -3786,10 +3780,10 @@ msgstr "Published"
 #: src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx
 #: src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx
 #: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListFilters.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListFilters.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListTable.tsx
+#: src/modules/TeacherLessonManagement/components/StudentProgressPanel.tsx
 #: src/pages/manage/assignments/index.tsx
 #: src/pages/manage/assignments/index.tsx
 #: src/pages/manage/classes/index.tsx
@@ -3945,7 +3939,7 @@ msgstr "I accept the <0>Terms and Conditions</0>"
 msgid "File type must be JPG, PNG, GIF or HEIC."
 msgstr "File type must be JPG, PNG, GIF or HEIC."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/LessonListTable.tsx
 msgid "Skill Type"
 msgstr "Skill Type"
 
@@ -3957,7 +3951,7 @@ msgstr "Message"
 msgid "Course Roadmaps"
 msgstr "Course Roadmaps"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/hooks/useTeacherLessons.ts
 msgid "Failed to update lesson"
 msgstr "Failed to update lesson"
 
@@ -3969,7 +3963,7 @@ msgstr "No QR available for this payment method."
 msgid "Flexible Schedule"
 msgstr "Flexible Schedule"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/hooks/useTeacherProgress.ts
 msgid "Active students"
 msgstr "Active students"
 
@@ -4135,7 +4129,7 @@ msgstr "Incorrect. Please try again."
 #~ msgid "Choose the best reply: \"Nice to meet you.\""
 #~ msgstr "Choose the best reply: \"Nice to meet you.\""
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/TeacherHero.tsx
 msgid "Update lesson structure, objectives, and practice activities in one place."
 msgstr "Update lesson structure, objectives, and practice activities in one place."
 
@@ -4172,6 +4166,6 @@ msgstr "You can register directly on our website by selecting your desired cours
 msgid "No payments found."
 msgstr "No payments found."
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/TeacherLessonManagement/components/QuestionEditor.tsx
 msgid "Multiple choice"
 msgstr "Multiple choice"
