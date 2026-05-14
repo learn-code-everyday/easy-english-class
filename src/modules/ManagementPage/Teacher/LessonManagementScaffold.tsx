@@ -1,1 +1,1 @@
-export { default } from "@/modules/TeacherLessonManagement/LessonManagementScaffold";
+export { default } from "../../TeacherLessonManagement/LessonManagementScaffold";
