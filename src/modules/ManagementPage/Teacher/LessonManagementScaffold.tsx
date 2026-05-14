@@ -3,6 +3,7 @@ import AddIcon from "@mui/icons-material/Add";
 import ArchiveIcon from "@mui/icons-material/Archive";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import PublishIcon from "@mui/icons-material/Publish";
 import SearchIcon from "@mui/icons-material/Search";
 import {
@@ -295,98 +296,155 @@ function LessonListScaffold() {
           sx={{ minWidth: { md: 280 } }}
         />
       </Stack>
-      <TableContainer>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>
-                <Trans>Lesson</Trans>
-              </TableCell>
-              <TableCell>
-                <Trans>Level</Trans>
-              </TableCell>
-              <TableCell>
-                <Trans>Status</Trans>
-              </TableCell>
-              <TableCell>
-                <Trans>Modules</Trans>
-              </TableCell>
-              <TableCell>
-                <Trans>Updated</Trans>
-              </TableCell>
-              <TableCell align="right">
-                <Trans>Actions</Trans>
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {lessons.map((lesson) => (
-              <TableRow key={lesson.id || lesson.slug} hover>
-                <TableCell sx={{ fontWeight: 800 }}>{lesson.title}</TableCell>
-                <TableCell>{lesson.level}</TableCell>
-                <TableCell>
-                  <Chip
-                    label={lesson.status || t`Draft`}
-                    size="small"
-                    color={
-                      lesson.status === "published"
-                        ? "success"
-                        : lesson.status === "archived"
-                          ? "default"
-                          : "warning"
-                    }
-                    sx={{ borderRadius: 2, fontWeight: 800 }}
-                  />
-                </TableCell>
-                <TableCell>{lesson.questions?.length || 0}</TableCell>
-                <TableCell>{lesson.updatedAt || "-"}</TableCell>
-                <TableCell align="right">
-                  <Stack direction="row" justifyContent="flex-end" spacing={1}>
-                    <Button
-                      component={Link}
-                      href={`/manage/teacher/lessons/${lesson.id}/edit`}
-                      size="small"
-                      startIcon={<EditIcon />}
-                    >
-                      <Trans>Edit</Trans>
-                    </Button>
-                    <Button
-                      size="small"
-                      startIcon={<PublishIcon />}
-                      onClick={() => updateLessonStatus(lesson, "published")}
-                    >
-                      <Trans>Publish</Trans>
-                    </Button>
-                    <Button
-                      size="small"
-                      color="error"
-                      startIcon={<DeleteIcon />}
-                      onClick={() => deleteLesson(lesson)}
-                    >
-                      <Trans>Delete</Trans>
-                    </Button>
-                    <Button
-                      size="small"
-                      color="inherit"
-                      startIcon={<ArchiveIcon />}
-                      onClick={() => updateLessonStatus(lesson, "archived")}
-                    >
-                      <Trans>Archive</Trans>
-                    </Button>
-                  </Stack>
-                </TableCell>
-              </TableRow>
-            ))}
-            {!loading && lessons.length === 0 && (
+      {!loading && lessons.length === 0 ? (
+        <Paper
+          elevation={0}
+          sx={{
+            backgroundColor: "#f8fafc",
+            border: "1px solid #dbeafe",
+            borderRadius: 3,
+            px: { xs: 2.5, md: 4 },
+            py: { xs: 5, md: 6 },
+          }}
+        >
+          <Stack alignItems="center" spacing={2.25} textAlign="center">
+            <Box
+              sx={{
+                alignItems: "center",
+                backgroundColor: "#ffffff",
+                border: "1px solid #bfdbfe",
+                borderRadius: 3,
+                color: "#2563eb",
+                display: "flex",
+                height: 60,
+                justifyContent: "center",
+                width: 60,
+              }}
+            >
+              <LibraryBooksIcon fontSize="large" />
+            </Box>
+            <Box>
+              <Typography
+                component="h2"
+                sx={{
+                  color: "#0f172a",
+                  fontSize: { xs: 22, md: 28 },
+                  fontWeight: 900,
+                  letterSpacing: 0,
+                  lineHeight: 1.2,
+                }}
+              >
+                <Trans>You have not created any lessons yet.</Trans>
+              </Typography>
+              <Typography sx={{ color: "#64748b", lineHeight: 1.7, mt: 1 }}>
+                <Trans>
+                  Start with a lesson draft, add practice questions, then
+                  publish it for your students.
+                </Trans>
+              </Typography>
+            </Box>
+            <Button
+              component={Link}
+              href="/manage/teacher/lessons/create"
+              startIcon={<AddIcon />}
+              variant="contained"
+              sx={{ borderRadius: 2, fontWeight: 900, textTransform: "none" }}
+            >
+              <Trans>Create Lesson</Trans>
+            </Button>
+          </Stack>
+        </Paper>
+      ) : (
+        <TableContainer>
+          <Table>
+            <TableHead>
               <TableRow>
-                <TableCell colSpan={6} align="center" sx={{ py: 5 }}>
-                  <Trans>No lessons found.</Trans>
+                <TableCell>
+                  <Trans>Lesson</Trans>
+                </TableCell>
+                <TableCell>
+                  <Trans>Level</Trans>
+                </TableCell>
+                <TableCell>
+                  <Trans>Status</Trans>
+                </TableCell>
+                <TableCell>
+                  <Trans>Modules</Trans>
+                </TableCell>
+                <TableCell>
+                  <Trans>Updated</Trans>
+                </TableCell>
+                <TableCell align="right">
+                  <Trans>Actions</Trans>
                 </TableCell>
               </TableRow>
-            )}
-          </TableBody>
-        </Table>
-      </TableContainer>
+            </TableHead>
+            <TableBody>
+              {lessons.map((lesson) => (
+                <TableRow key={lesson.id || lesson.slug} hover>
+                  <TableCell sx={{ fontWeight: 800 }}>{lesson.title}</TableCell>
+                  <TableCell>{lesson.level}</TableCell>
+                  <TableCell>
+                    <Chip
+                      label={lesson.status || t`Draft`}
+                      size="small"
+                      color={
+                        lesson.status === "published"
+                          ? "success"
+                          : lesson.status === "archived"
+                            ? "default"
+                            : "warning"
+                      }
+                      sx={{ borderRadius: 2, fontWeight: 800 }}
+                    />
+                  </TableCell>
+                  <TableCell>{lesson.questions?.length || 0}</TableCell>
+                  <TableCell>{lesson.updatedAt || "-"}</TableCell>
+                  <TableCell align="right">
+                    <Stack
+                      direction="row"
+                      justifyContent="flex-end"
+                      spacing={1}
+                    >
+                      <Button
+                        component={Link}
+                        href={`/manage/teacher/lessons/${lesson.id}/edit`}
+                        size="small"
+                        startIcon={<EditIcon />}
+                      >
+                        <Trans>Edit</Trans>
+                      </Button>
+                      <Button
+                        size="small"
+                        startIcon={<PublishIcon />}
+                        onClick={() => updateLessonStatus(lesson, "published")}
+                      >
+                        <Trans>Publish</Trans>
+                      </Button>
+                      <Button
+                        size="small"
+                        color="error"
+                        startIcon={<DeleteIcon />}
+                        onClick={() => deleteLesson(lesson)}
+                      >
+                        <Trans>Delete</Trans>
+                      </Button>
+                      <Button
+                        size="small"
+                        color="inherit"
+                        startIcon={<ArchiveIcon />}
+                        onClick={() => updateLessonStatus(lesson, "archived")}
+                      >
+                        <Trans>Archive</Trans>
+                      </Button>
+                    </Stack>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      )}
     </Paper>
   );
 }
