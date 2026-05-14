@@ -138,14 +138,16 @@ export const getDashboardOnlyMenu = () => [
 // --GET MENU BY ROLE--
 export function getMenuByRoleAndType(role: UserRoles, userType?: UserTypes) {
   const user = { role, userType };
-  if (isTeacherUser({ role: UserRoles.USER, userType })) {
-    return [...getDashboardOnlyMenu(), ...getTeacherMenu()];
-  }
-  if (isStudentUser({ role: UserRoles.USER, userType })) {
-    return [...getDashboardOnlyMenu(), ...getStudentMenu()];
-  }
+
   if (isAdminUser(user)) {
     return [...getDashboardOnlyMenu(), ...getAdminMenu()];
   }
+  if (isTeacherUser(user)) {
+    return [...getDashboardOnlyMenu(), ...getTeacherMenu()];
+  }
+  if (isStudentUser(user)) {
+    return [...getDashboardOnlyMenu(), ...getStudentMenu()];
+  }
+
   return getDashboardOnlyMenu();
 }
