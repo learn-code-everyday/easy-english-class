@@ -36,6 +36,19 @@ const LESSON_FIELDS = `
   updatedAt
 `;
 
+const TEACHER_LESSON_LIST_FIELDS = `
+  id
+  title
+  slug
+  level
+  skillType
+  status
+  estimatedMinutes
+  objectives
+  updatedAt
+  assignedToClassIds
+`;
+
 const QUESTION_FIELDS_FOR_STUDENT = `
   id
   type
@@ -45,12 +58,6 @@ const QUESTION_FIELDS_FOR_STUDENT = `
     value
   }
   score
-`;
-
-const QUESTION_FIELDS_FOR_TEACHER = `
-  ${QUESTION_FIELDS_FOR_STUDENT}
-  correctAnswer
-  explanation
 `;
 
 const SUBMISSION_FIELDS = `
@@ -172,10 +179,7 @@ class LessonRepository {
         query TeacherLessonList {
           teacherLessonList {
             data {
-              ${LESSON_FIELDS}
-              questions {
-                ${QUESTION_FIELDS_FOR_TEACHER}
-              }
+              ${TEACHER_LESSON_LIST_FIELDS}
             }
             total
           }

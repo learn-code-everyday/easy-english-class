@@ -45,7 +45,6 @@ msgstr "Dừng ghi âm"
 msgid "My Progress"
 msgstr "Tiến độ của tôi"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/manage/assignments/index.tsx
 #: src/pages/manage/classes/index.tsx
 msgid "Updated"
@@ -202,6 +201,10 @@ msgstr "Nhập tin nhắn của bạn"
 #: src/components/LoginModal/RegisterForm.tsx
 msgid "Sign up to create an Account"
 msgstr "Đăng ký tài khoản mới"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Create your first lesson to assign homework to students."
+msgstr "Tạo bài học đầu tiên để giao bài tập về nhà cho học viên."
 
 #: src/pages/manage/dashboard/index.tsx
 msgid "Open"
@@ -791,6 +794,10 @@ msgstr "Theo dõi tiến độ và điều chỉnh kế hoạch học"
 msgid "Password must be at least 6 characters"
 msgstr "Mật khẩu tối thiểu 6 ký tự"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Adjust your search or filters to see more lessons."
+msgstr "Điều chỉnh tìm kiếm hoặc bộ lọc để xem thêm bài học."
+
 #: src/modules/IeltsPage/IeltsIntro/index.tsx
 msgid "Get ready for your IELTS exam with comprehensive lessons, real test strategies, and expert coaching to boost your score."
 msgstr "Sẵn sàng cho kỳ thi IELTS với bài học toàn diện, chiến lược làm bài thực tế và sự hướng dẫn chuyên môn để nâng cao điểm số."
@@ -815,6 +822,10 @@ msgstr "hoặc"
 #: src/components/Header/index.tsx
 msgid "About Us"
 msgstr "Về chúng tôi"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "{0} min"
+msgstr "{0} phút"
 
 #: src/pages/courses/ielts/index.tsx
 msgid "Diagnose strengths and weak skills"
@@ -1211,8 +1222,8 @@ msgid "Register for Kid English Course"
 msgstr "Đăng ký khóa tiếng Anh cho trẻ em"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "You have not created any lessons yet."
-msgstr "Bạn chưa tạo bài học nào."
+#~ msgid "You have not created any lessons yet."
+#~ msgstr "Bạn chưa tạo bài học nào."
 
 #: src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
 msgid "Scan the QR or copy info below to pay"
@@ -1321,6 +1332,10 @@ msgstr "Truy cập bài học trên máy tính và di động"
 msgid "Speak English clearly in everyday situations."
 msgstr "Nói tiếng Anh rõ ràng trong các tình huống hằng ngày."
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "No matching lessons found"
+msgstr "Không tìm thấy bài học phù hợp"
+
 #: src/components/ErrorBoundary/index.tsx
 #: src/components/ErrorState/index.tsx
 msgid "Try again"
@@ -1370,6 +1385,7 @@ msgstr "Đặt lại mật khẩu"
 msgid "Note"
 msgstr "Ghi chú"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
@@ -1440,6 +1456,10 @@ msgstr "Bài nộp"
 #: src/pages/testimonials/index.tsx
 msgid "Confidence"
 msgstr "Sự tự tin"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Updated At"
+msgstr "Cập nhật lúc"
 
 #: src/pages/courses/ielts/index.tsx
 msgid "Speaking mock test"
@@ -1718,6 +1738,10 @@ msgstr "Không có tên"
 msgid "English Class"
 msgstr "Lớp học tiếng Anh"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Estimated Time"
+msgstr "Thời lượng dự kiến"
+
 #: src/pages/testimonials/index.tsx
 msgid "Students feel more confident"
 msgstr "Học viên cảm thấy tự tin hơn"
@@ -1904,8 +1928,8 @@ msgid "The flexible schedule perfectly fits working students."
 msgstr "Lịch học linh hoạt rất phù hợp với học viên đang đi làm."
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#~ msgid "Archived"
-#~ msgstr "Đã lưu trữ"
+msgid "Archived"
+msgstr "Đã lưu trữ"
 
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 msgid "Study Info"
@@ -1936,6 +1960,7 @@ msgid "Forgot password?"
 msgstr "Quên mật khẩu?"
 
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/contact/index.tsx
 #: src/pages/lessons/basic/index.tsx
@@ -2140,8 +2165,8 @@ msgid "Practical wins from students learning for work, school, interviews, and e
 msgstr "Những kết quả thực tế từ học viên học cho công việc, trường học, phỏng vấn và giao tiếp hằng ngày."
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Modules"
-msgstr "Mô-đun"
+#~ msgid "Modules"
+#~ msgstr "Mô-đun"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #~ msgid "Due date"
@@ -2216,6 +2241,10 @@ msgstr "Nhà chiến lược sáng tạo đưa thông điệp của chúng tôi 
 msgid "Exercise Builder"
 msgstr "Trình tạo bài luyện tập"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "All levels"
+msgstr "Tất cả cấp độ"
+
 #: src/modules/IeltsPage/IeltsTopics/index.tsx
 msgid "Practice with authentic IELTS listening materials to improve comprehension."
 msgstr "Luyện tập với tài liệu nghe IELTS thực tế để cải thiện khả năng hiểu."
@@ -2279,6 +2308,10 @@ msgstr "Phương pháp giảng dạy đổi mới"
 #: src/modules/BasicCommunicationPage/HeaderSection/index.tsx
 msgid "Guided speaking practice"
 msgstr "Luyện nói có hướng dẫn"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "No lessons created yet"
+msgstr "Chưa có bài học nào"
 
 #: src/pages/contact/index.tsx
 msgid "Email is required"
@@ -2584,6 +2617,7 @@ msgid "Yes, upon successful completion you will receive a certificate recognized
 msgstr "Có, sau khi hoàn thành thành công, bạn sẽ nhận được chứng chỉ được tổ chức của chúng tôi công nhận."
 
 #: src/hooks/useStatusLabel.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "Draft"
 msgstr "Nháp"
@@ -2947,6 +2981,10 @@ msgstr "Lộ trình học cá nhân hóa"
 msgid "A stable internet connection and a device with video/audio capability are required. Basic computer skills are recommended."
 msgstr "Cần có kết nối internet ổn định và thiết bị có khả năng video/âm thanh. Nên có kỹ năng máy tính cơ bản."
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "All statuses"
+msgstr "Tất cả trạng thái"
+
 #: src/modules/CourseLandingPage/index.tsx
 msgid "Target learners"
 msgstr "Đối tượng học viên"
@@ -3080,8 +3118,8 @@ msgid "Skill type"
 msgstr "Loại kỹ năng"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Start with a lesson draft, add practice questions, then publish it for your students."
-msgstr "Bắt đầu với bản nháp bài học, thêm câu hỏi luyện tập, rồi xuất bản cho học viên."
+#~ msgid "Start with a lesson draft, add practice questions, then publish it for your students."
+#~ msgstr "Bắt đầu với bản nháp bài học, thêm câu hỏi luyện tập, rồi xuất bản cho học viên."
 
 #: src/constants/menu.ts
 msgid "Overview Dashboard"
@@ -3218,6 +3256,10 @@ msgid "Improve pronunciation through repeated practice"
 msgstr "Cải thiện phát âm qua luyện tập lặp lại"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Loading lessons..."
+msgstr "Đang tải bài học..."
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "We could not load student progress right now. Please try again."
 msgstr "Hiện tại chúng tôi không thể tải tiến độ học viên. Vui lòng thử lại."
 
@@ -3276,6 +3318,7 @@ msgstr "Đạt"
 
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/contact/index.tsx
 msgid "Intermediate"
 msgstr "Trung cấp"
@@ -3304,6 +3347,8 @@ msgstr "GIẢNG DẠY"
 msgid "We've sent a code to {email}"
 msgstr "Chúng tôi đã gửi mã đến {email}"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
@@ -3444,6 +3489,10 @@ msgstr "Không có dữ liệu"
 #: src/hooks/useStatusLabel.tsx
 msgid "Late"
 msgstr "Nộp muộn"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Search by title, slug, or skill type..."
+msgstr "Tìm theo tiêu đề, slug hoặc kỹ năng..."
 
 #: src/pages/about/mission/index.tsx
 msgid "Learning is more fun and effective in a supportive community. We foster a welcoming environment where students connect, practice, and grow together with mentorship and guidance at every step."
@@ -3624,6 +3673,7 @@ msgstr "Quản lý bài học"
 
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/contact/index.tsx
 msgid "Advanced"
 msgstr "Nâng cao"
@@ -3713,8 +3763,8 @@ msgid "Password changed successfully!"
 msgstr "Mật khẩu đã thay đổi thành công!"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#~ msgid "Published"
-#~ msgstr "Đã xuất bản"
+msgid "Published"
+msgstr "Đã xuất bản"
 
 #: src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx
 #: src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx
@@ -3722,6 +3772,8 @@ msgstr "Mật khẩu đã thay đổi thành công!"
 #: src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx
 #: src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx
 #: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/manage/assignments/index.tsx
@@ -3879,6 +3931,10 @@ msgstr "Tôi đồng ý với <0>Điều khoản dịch vụ</0>"
 msgid "File type must be JPG, PNG, GIF or HEIC."
 msgstr "Loại tệp phải là JPG, PNG, GIF hoặc HEIC."
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Skill Type"
+msgstr "Loại kỹ năng"
+
 #: src/pages/contact/index.tsx
 msgid "Message"
 msgstr "Tin nhắn"
@@ -3945,8 +4001,8 @@ msgstr "Tìm theo tên lớp, giáo viên..."
 #~ msgstr "Hôm qua"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Search lessons..."
-msgstr "Tìm bài học..."
+#~ msgid "Search lessons..."
+#~ msgstr "Tìm bài học..."
 
 #: src/pages/lessons/index.tsx
 msgid "Lesson library"

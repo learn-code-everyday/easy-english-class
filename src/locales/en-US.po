@@ -45,7 +45,6 @@ msgstr "Stop Recording"
 msgid "My Progress"
 msgstr "My Progress"
 
-#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/manage/assignments/index.tsx
 #: src/pages/manage/classes/index.tsx
 msgid "Updated"
@@ -202,6 +201,10 @@ msgstr "Type your message"
 #: src/components/LoginModal/RegisterForm.tsx
 msgid "Sign up to create an Account"
 msgstr "Sign up to create an Account"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Create your first lesson to assign homework to students."
+msgstr "Create your first lesson to assign homework to students."
 
 #: src/pages/manage/dashboard/index.tsx
 msgid "Open"
@@ -791,6 +794,10 @@ msgstr "Track progress and adjust your study plan"
 msgid "Password must be at least 6 characters"
 msgstr "Password must be at least 6 characters"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Adjust your search or filters to see more lessons."
+msgstr "Adjust your search or filters to see more lessons."
+
 #: src/modules/IeltsPage/IeltsIntro/index.tsx
 msgid "Get ready for your IELTS exam with comprehensive lessons, real test strategies, and expert coaching to boost your score."
 msgstr "Get ready for your IELTS exam with comprehensive lessons, real test strategies, and expert coaching to boost your score."
@@ -815,6 +822,10 @@ msgstr "or"
 #: src/components/Header/index.tsx
 msgid "About Us"
 msgstr "About Us"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "{0} min"
+msgstr "{0} min"
 
 #: src/pages/courses/ielts/index.tsx
 msgid "Diagnose strengths and weak skills"
@@ -1211,8 +1222,8 @@ msgid "Register for Kid English Course"
 msgstr "Register for Kid English Course"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "You have not created any lessons yet."
-msgstr "You have not created any lessons yet."
+#~ msgid "You have not created any lessons yet."
+#~ msgstr "You have not created any lessons yet."
 
 #: src/modules/ManagementPage/Student/Payments/PaynowModal.tsx
 msgid "Scan the QR or copy info below to pay"
@@ -1321,6 +1332,10 @@ msgstr "Access lessons on desktop and mobile"
 msgid "Speak English clearly in everyday situations."
 msgstr "Speak English clearly in everyday situations."
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "No matching lessons found"
+msgstr "No matching lessons found"
+
 #: src/components/ErrorBoundary/index.tsx
 #: src/components/ErrorState/index.tsx
 msgid "Try again"
@@ -1370,6 +1385,7 @@ msgstr "Reset Password"
 msgid "Note"
 msgstr "Note"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
@@ -1440,6 +1456,10 @@ msgstr "Submissions"
 #: src/pages/testimonials/index.tsx
 msgid "Confidence"
 msgstr "Confidence"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Updated At"
+msgstr "Updated At"
 
 #: src/pages/courses/ielts/index.tsx
 msgid "Speaking mock test"
@@ -1718,6 +1738,10 @@ msgstr "No Name"
 msgid "English Class"
 msgstr "English Class"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Estimated Time"
+msgstr "Estimated Time"
+
 #: src/pages/testimonials/index.tsx
 msgid "Students feel more confident"
 msgstr "Students feel more confident"
@@ -1904,8 +1928,8 @@ msgid "The flexible schedule perfectly fits working students."
 msgstr "The flexible schedule perfectly fits working students."
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#~ msgid "Archived"
-#~ msgstr "Archived"
+msgid "Archived"
+msgstr "Archived"
 
 #: src/modules/LandingPage/CourseRoadmap/index.tsx
 msgid "Study Info"
@@ -1936,6 +1960,7 @@ msgid "Forgot password?"
 msgstr "Forgot password?"
 
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/contact/index.tsx
 #: src/pages/lessons/basic/index.tsx
@@ -2140,8 +2165,8 @@ msgid "Practical wins from students learning for work, school, interviews, and e
 msgstr "Practical wins from students learning for work, school, interviews, and everyday conversations."
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Modules"
-msgstr "Modules"
+#~ msgid "Modules"
+#~ msgstr "Modules"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #~ msgid "Due date"
@@ -2216,6 +2241,10 @@ msgstr "Creative strategist bringing our message to students worldwide and growi
 msgid "Exercise Builder"
 msgstr "Exercise Builder"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "All levels"
+msgstr "All levels"
+
 #: src/modules/IeltsPage/IeltsTopics/index.tsx
 msgid "Practice with authentic IELTS listening materials to improve comprehension."
 msgstr "Practice with authentic IELTS listening materials to improve comprehension."
@@ -2279,6 +2308,10 @@ msgstr "Innovative Teaching Methods"
 #: src/modules/BasicCommunicationPage/HeaderSection/index.tsx
 msgid "Guided speaking practice"
 msgstr "Guided speaking practice"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "No lessons created yet"
+msgstr "No lessons created yet"
 
 #: src/pages/contact/index.tsx
 msgid "Email is required"
@@ -2584,6 +2617,7 @@ msgid "Yes, upon successful completion you will receive a certificate recognized
 msgstr "Yes, upon successful completion you will receive a certificate recognized by our institution."
 
 #: src/hooks/useStatusLabel.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "Draft"
 msgstr "Draft"
@@ -2947,6 +2981,10 @@ msgstr "Personalized Learning Paths"
 msgid "A stable internet connection and a device with video/audio capability are required. Basic computer skills are recommended."
 msgstr "A stable internet connection and a device with video/audio capability are required. Basic computer skills are recommended."
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "All statuses"
+msgstr "All statuses"
+
 #: src/modules/CourseLandingPage/index.tsx
 msgid "Target learners"
 msgstr "Target learners"
@@ -3080,8 +3118,8 @@ msgid "Skill type"
 msgstr "Skill type"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Start with a lesson draft, add practice questions, then publish it for your students."
-msgstr "Start with a lesson draft, add practice questions, then publish it for your students."
+#~ msgid "Start with a lesson draft, add practice questions, then publish it for your students."
+#~ msgstr "Start with a lesson draft, add practice questions, then publish it for your students."
 
 #: src/constants/menu.ts
 msgid "Overview Dashboard"
@@ -3218,6 +3256,10 @@ msgid "Improve pronunciation through repeated practice"
 msgstr "Improve pronunciation through repeated practice"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Loading lessons..."
+msgstr "Loading lessons..."
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 msgid "We could not load student progress right now. Please try again."
 msgstr "We could not load student progress right now. Please try again."
 
@@ -3276,6 +3318,7 @@ msgstr "Passed"
 
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/contact/index.tsx
 msgid "Intermediate"
 msgstr "Intermediate"
@@ -3304,6 +3347,8 @@ msgstr "TEACHING"
 msgid "We've sent a code to {email}"
 msgstr "We've sent a code to {email}"
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
@@ -3444,6 +3489,10 @@ msgstr "No data"
 #: src/hooks/useStatusLabel.tsx
 msgid "Late"
 msgstr "Late"
+
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Search by title, slug, or skill type..."
+msgstr "Search by title, slug, or skill type..."
 
 #: src/pages/about/mission/index.tsx
 msgid "Learning is more fun and effective in a supportive community. We foster a welcoming environment where students connect, practice, and grow together with mentorship and guidance at every step."
@@ -3624,6 +3673,7 @@ msgstr "Lesson Management"
 
 #: src/modules/IeltsPage/IeltsRegister/index.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/contact/index.tsx
 msgid "Advanced"
 msgstr "Advanced"
@@ -3713,8 +3763,8 @@ msgid "Password changed successfully!"
 msgstr "Password changed successfully!"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-#~ msgid "Published"
-#~ msgstr "Published"
+msgid "Published"
+msgstr "Published"
 
 #: src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx
 #: src/modules/ManagementPage/Student/Assignments/AssignmentStatusFilter.tsx
@@ -3722,6 +3772,8 @@ msgstr "Password changed successfully!"
 #: src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx
 #: src/modules/ManagementPage/Student/Payments/PaymentStatusFilter.tsx
 #: src/modules/ManagementPage/Student/Payments/PaymentTable.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
 #: src/pages/manage/assignments/index.tsx
@@ -3879,6 +3931,10 @@ msgstr "I accept the <0>Terms and Conditions</0>"
 msgid "File type must be JPG, PNG, GIF or HEIC."
 msgstr "File type must be JPG, PNG, GIF or HEIC."
 
+#: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
+msgid "Skill Type"
+msgstr "Skill Type"
+
 #: src/pages/contact/index.tsx
 msgid "Message"
 msgstr "Message"
@@ -3945,8 +4001,8 @@ msgstr "Search by class name, teacher..."
 #~ msgstr "Yesterday"
 
 #: src/modules/ManagementPage/Teacher/LessonManagementScaffold.tsx
-msgid "Search lessons..."
-msgstr "Search lessons..."
+#~ msgid "Search lessons..."
+#~ msgstr "Search lessons..."
 
 #: src/pages/lessons/index.tsx
 msgid "Lesson library"
